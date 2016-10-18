@@ -9,10 +9,18 @@ public class RobotHoverInfo : MonoBehaviour
     public GameObject[] Player1Team;
     public GameObject[] Player2Team;
 
-	// Use this for initialization
-	void Start ()
+    public GameObject leftRobotImage;
+    public GameObject rightRobotImage;
+
+    public Sprite TestRobot;
+
+    public Image[] images;
+
+    // Use this for initialization
+    void Start ()
     {
-	
+        leftRobotImage = GameObject.Find("Player1SelectedRobot");
+        rightRobotImage = GameObject.Find("Player2SelectedRobot");
 	}
 	
 	// Update is called once per frame
@@ -21,7 +29,8 @@ public class RobotHoverInfo : MonoBehaviour
 	    if(EventSystem.current.currentSelectedGameObject.name == "TopLeft")
         {
             GameObject.Find("Player1SelectedRobot").GetComponent<Image>().color = Color.red;
-            //GameObject.Find("Player1SelectedRobot").GetComponent<Image>().sprite = 
+           //GameObject.Find("Player1SelectedRobot").GetComponent<Image>().sprite = TestRobot;
+           //leftRobotImage.GetComponent<Image>().sprite = TestRobot;
         }
 
         if (EventSystem.current.currentSelectedGameObject.name == "TopRight")
