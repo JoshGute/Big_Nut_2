@@ -16,6 +16,8 @@ public class RobotHoverInfo : MonoBehaviour
 
     public Image[] images;
 
+    public int RobotType;
+
     // Use this for initialization
     void Start ()
     {
@@ -28,9 +30,8 @@ public class RobotHoverInfo : MonoBehaviour
     {
 	    if(EventSystem.current.currentSelectedGameObject.name == "TopLeft")
         {
-            GameObject.Find("Player1SelectedRobot").GetComponent<Image>().color = Color.red;
-           //GameObject.Find("Player1SelectedRobot").GetComponent<Image>().sprite = TestRobot;
-           //leftRobotImage.GetComponent<Image>().sprite = TestRobot;
+           GameObject.Find("Player1SelectedRobot").GetComponent<Image>().color = Color.red;
+           leftRobotImage.GetComponent<Image>().sprite = TestRobot;
         }
 
         if (EventSystem.current.currentSelectedGameObject.name == "TopRight")
