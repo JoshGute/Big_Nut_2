@@ -30,72 +30,49 @@ public class TeamManager : MonoBehaviour
 	
     private void Spawn(string sOwner_)
     {
-        //print("spawn called");
+        print("spawn called");
 
         if (sOwner_ == pOwner.tag)
         {
-<<<<<<< HEAD
-            bool bSpawned = false;
-            int randNum = Random.Range(0, sSpawnPoints.Length);
+            if (iDeaths == gTeam.Length)
 
-            if (bPrioritySpawn)
-=======
-            if(iDeaths == gTeam.Length)
->>>>>>> origin/master
             {
                 Victory(sOwner_);
             }
+
             else
             {
-<<<<<<< HEAD
-                while(!bSpawned)
-                {
-                    if (sSpawnPoints[randNum].bIsSafe)
-                    {
-                        GameObject gRobot = Instantiate(gTeam[iDeaths], sSpawnPoints[randNum].transform.position, gTeam[iDeaths].transform.rotation) as GameObject;
-                        pOwner.TagRobot(gRobot);
-                        ++iDeaths;
-                        bSpawned = true;
-                    }
+                bool bSpawned = false;
+                int randNum = Random.Range(0, sSpawnPoints.Length);
 
-                    else
-                    {
-                        randNum = Random.Range(0, sSpawnPoints.Length);
-                    }
-                }            
-            }
-            
-=======
                 if (bPrioritySpawn)
                 {
+                    print("Priority spawn");
                     GameObject gRobot = Instantiate(gTeam[iDeaths], sPrioritySpawn.transform.position, gTeam[iDeaths].transform.rotation) as GameObject;
                     pOwner.TagRobot(gRobot);
                     ++iDeaths;
+                    bSpawned = true;
                 }
+
                 else
                 {
-                    //print("array of spawns being made");
-                    sSafeSpawns = new Spawnpoint[sSpawnPoints.Length];
-                    print(sSafeSpawns.Length);
-
-                    for (int i = 0; i < sSpawnPoints.Length; i++)
+                    while (!bSpawned)
                     {
-                        if (sSpawnPoints[i].bIsSafe)
+                        if (sSpawnPoints[randNum].bIsSafe)
                         {
-                            sSafeSpawns[i] = sSpawnPoints[i];
-                            //print(sSafeSpawns[i] + " is safe");
+                            GameObject gRobot = Instantiate(gTeam[iDeaths], sSpawnPoints[randNum].transform.position, gTeam[iDeaths].transform.rotation) as GameObject;
+                            pOwner.TagRobot(gRobot);
+                            ++iDeaths;
+                            bSpawned = true;
+                        }
+
+                        else
+                        {
+                            randNum = Random.Range(0, sSpawnPoints.Length);
                         }
                     }
-
-                    int randNum = Random.Range(0, sSafeSpawns.Length);
-                    //print("The randomy selected spawnpoint is " + randNum);
-                   // print("spawning " + gTeam[iDeaths] + "at " + sSafeSpawns[randNum]);
-                    GameObject gRobot = Instantiate(gTeam[iDeaths], sSafeSpawns[randNum].transform.position, gTeam[iDeaths].transform.rotation) as GameObject;
-                    pOwner.TagRobot(gRobot);
-                    ++iDeaths;
                 }
-            }           
->>>>>>> origin/master
-        }
+            }
+        }                     
     }
 }

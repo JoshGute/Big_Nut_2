@@ -29,8 +29,9 @@ public class BodyScript : MonoBehaviour
         rb.freezeRotation = true;
         InvokeRepeating("updateLifeTime", 0, 1);
 
-		Renderer batteryRender = BatteryPack.GetComponent<Renderer>();
-		batteryRender.material.SetColor ("_Color", Color.green);
+        Renderer batteryRender = BatteryPack.GetComponent<Renderer>();
+        batteryRender.sharedMaterial.SetColor ("_Color", Color.green);
+       // BatteryPack.GetComponent<Light>().color = Color.green;
     }
 	
     public void updateLifeTime()
@@ -43,11 +44,14 @@ public class BodyScript : MonoBehaviour
         }
 		if (fLifetime <= YellowLife) 
 		{
-			batteryRender.material.SetColor ("_Color", Color.yellow);
+            Debug.Log("YellowLife");
+            batteryRender.sharedMaterial.SetColor ("_Color", Color.yellow);
+            //BatteryPack.GetComponent<Light>().color = Color.yellow;
 		}
 		if (fLifetime <= RedLife)
 		{
-			batteryRender.material.SetColor ("_Color", Color.red);
+            batteryRender.sharedMaterial.SetColor ("_Color", Color.red);
+            //BatteryPack.GetComponent<Light>().color = Color.red;
 		}
         else if (fLifetime <= 0)
         {
