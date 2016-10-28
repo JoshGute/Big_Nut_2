@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
                 }
                 if (prevState.Buttons.LeftShoulder == ButtonState.Released && state.Buttons.LeftShoulder == ButtonState.Pressed)
                 {
-                    print("I wish God loved me enough to let me die");
+                    //print("I wish God loved me enough to let me die");
                     inputManager(3);
                 }
                 if (prevState.Buttons.Back == ButtonState.Released && state.Buttons.Back == ButtonState.Pressed)
@@ -103,8 +103,6 @@ public class PlayerController : MonoBehaviour
                     bBody.transform.localEulerAngles = new Vector3(bBody.transform.rotation.x, -90, bBody.transform.rotation.z);
                 }
             }
-
-
         }
     }
 
@@ -116,13 +114,13 @@ public class PlayerController : MonoBehaviour
                 {
                     if(bBody.bGrounded)
                     {
-                        //bBody.rb.AddForce(transform.up * bBody.fJumpSpeed);
+                        //print("You're cute");
                         bBody.rb.velocity = new Vector3(0, bBody.fJumpSpeed, 0);
                     }
                     else if(!bBody.bGrounded && bBody.iJumps > 0)
                     {
+                        //print("Murder me");
                         StartCoroutine(Dash(bBody.fDashTime));
-                        //bBody.rb.AddForce(new Vector3(KeyAxisH, KeyAxisV, 0) * bBody.fJumpSpeed);
                         bBody.rb.velocity = new Vector3(KeyAxisH, KeyAxisV, 0) * bBody.fJumpSpeed;
                         --bBody.iJumps;
                     }
@@ -155,9 +153,9 @@ public class PlayerController : MonoBehaviour
         sSword = gRobot_.GetComponentInChildren<SwordScript>();
 
         //this is super superfulous(fuck spelling lmao) and and probably be made into tags. 
-        bBody.sOwner = tag;
+        /*bBody.sOwner = tag;
         gGun.sOwner = tag;
-        sSword.sOwner = tag;
+        sSword.sOwner = tag;*/
         //like so
         bBody.tag = tag;
         gGun.tag = tag;
