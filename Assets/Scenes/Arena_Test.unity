@@ -2294,9 +2294,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pOwner: {fileID: 1808512096}
   gTeam:
-  - {fileID: 1000013843657678, guid: 21b4bf2b123b44a418afc2e8873d0ac0, type: 2}
-  - {fileID: 1000013843657678, guid: 21b4bf2b123b44a418afc2e8873d0ac0, type: 2}
-  - {fileID: 1000013843657678, guid: 21b4bf2b123b44a418afc2e8873d0ac0, type: 2}
+  - {fileID: 1000013012438292, guid: e6c61c4670b03ac47ab97f654ce35bc9, type: 2}
+  - {fileID: 1000013012438292, guid: e6c61c4670b03ac47ab97f654ce35bc9, type: 2}
+  - {fileID: 1000013012438292, guid: e6c61c4670b03ac47ab97f654ce35bc9, type: 2}
   sSpawnPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -2730,9 +2730,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pOwner: {fileID: 1683947885}
   gTeam:
-  - {fileID: 1000013843657678, guid: 21b4bf2b123b44a418afc2e8873d0ac0, type: 2}
-  - {fileID: 1000013843657678, guid: 21b4bf2b123b44a418afc2e8873d0ac0, type: 2}
-  - {fileID: 1000013843657678, guid: 21b4bf2b123b44a418afc2e8873d0ac0, type: 2}
+  - {fileID: 1000013012438292, guid: e6c61c4670b03ac47ab97f654ce35bc9, type: 2}
+  - {fileID: 1000013012438292, guid: e6c61c4670b03ac47ab97f654ce35bc9, type: 2}
+  - {fileID: 1000013012438292, guid: e6c61c4670b03ac47ab97f654ce35bc9, type: 2}
   sSpawnPoints:
   - {fileID: 0}
   - {fileID: 0}
