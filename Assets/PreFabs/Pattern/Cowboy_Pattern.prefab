@@ -43,9 +43,8 @@ MonoBehaviour:
   sOwner: 
   aBullets:
   - {fileID: 114000013363939026, guid: aa70a5a0b49cdc147a603dbbdb6b8ec9, type: 2}
-  - {fileID: 114000013133602830, guid: d14426bab323b70409436b580e33081c, type: 2}
   fFireRate: 0
-  iBulletsPerTick: 2
+  iBulletsPerTick: 1
   fLifeTime: 0
 --- !u!1001 &100100000
 Prefab:
