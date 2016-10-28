@@ -28,3 +28,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/Physics Material/BasicLevel.physicMaterial
+*.physicMaterial
+Assets/Physics Material/BasicLevel.physicMaterial
+Assets/Physics Material/BasicLevel.physicMaterial

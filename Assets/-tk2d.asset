@@ -25,6 +25,14 @@ MonoBehaviour:
     dataGUID: 
     managed: 0
     loadable: 0
+  - assetGUID: b4a3dc99226790240afadd42e1a061b2
+    dataGUID: 
+    managed: 0
+    loadable: 0
+  - assetGUID: 91f70b1f1070d07439bf5d85a44c541c
+    dataGUID: 
+    managed: 0
+    loadable: 0
   fontIndex:
   - assetGUID: 063b15d80dbb4604d890600a64c79cf8
     dataGUID: e7a6b09a73c6b2b4f8060096ddbd3b5e
@@ -725,6 +733,91 @@ MonoBehaviour:
     - 1475176396.82276
     - 1475176396.82276
     - 1475176396.82276
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Bots
+    spriteCollectionGUID: bfa93ebaf8df9a64db92cf0720c58640
+    spriteCollectionDataGUID: cccb431ad5b20784aa6300c63e8cf18a
+    spriteNames:
+    - Cowboy_Head
+    - legleft/0
+    - legleft/1
+    - legleft/2
+    - legleft/3
+    - legleft/4
+    - legleft/5
+    - legleft/6
+    - legleft/7
+    - legleft/8
+    - legleft/9
+    - legleft/10
+    - legleft/11
+    - legright/0
+    - legright/1
+    - legright/2
+    - legright/3
+    - legright/4
+    - legright/5
+    - legright/6
+    - legright/7
+    - legright/8
+    - legright/9
+    - legright/10
+    - legright/11
+    spriteTextureGUIDs:
+    - 467624e10c7588f478b17f7dbf98299a
+    - b6dc6941845fab74fb68d7ff57047a1a
+    - b6dc6941845fab74fb68d7ff57047a1a
+    - b6dc6941845fab74fb68d7ff57047a1a
+    - b6dc6941845fab74fb68d7ff57047a1a
+    - b6dc6941845fab74fb68d7ff57047a1a
+    - b6dc6941845fab74fb68d7ff57047a1a
+    - b6dc6941845fab74fb68d7ff57047a1a
+    - b6dc6941845fab74fb68d7ff57047a1a
+    - b6dc6941845fab74fb68d7ff57047a1a
+    - b6dc6941845fab74fb68d7ff57047a1a
+    - b6dc6941845fab74fb68d7ff57047a1a
+    - b6dc6941845fab74fb68d7ff57047a1a
+    - c6ec7d6cf88bbc4438c6d857c60b7dbb
+    - c6ec7d6cf88bbc4438c6d857c60b7dbb
+    - c6ec7d6cf88bbc4438c6d857c60b7dbb
+    - c6ec7d6cf88bbc4438c6d857c60b7dbb
+    - c6ec7d6cf88bbc4438c6d857c60b7dbb
+    - c6ec7d6cf88bbc4438c6d857c60b7dbb
+    - c6ec7d6cf88bbc4438c6d857c60b7dbb
+    - c6ec7d6cf88bbc4438c6d857c60b7dbb
+    - c6ec7d6cf88bbc4438c6d857c60b7dbb
+    - c6ec7d6cf88bbc4438c6d857c60b7dbb
+    - c6ec7d6cf88bbc4438c6d857c60b7dbb
+    - c6ec7d6cf88bbc4438c6d857c60b7dbb
+    spriteTextureTimeStamps:
+    - 1476442185.96354
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
     managedSpriteCollection: 0
     loadable: 0
     assetName: 
