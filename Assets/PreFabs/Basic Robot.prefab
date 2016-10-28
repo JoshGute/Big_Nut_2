@@ -662,7 +662,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sOwner: 
   rb: {fileID: 0}
-  fLifetime: 3
+  fLifetime: 60
+  YellowLife: 0
+  RedLife: 0
+  BatteryPack: {fileID: 0}
   bGrounded: 0
   iMaxJumps: 3
   iJumps: 0

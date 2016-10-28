@@ -7,6 +7,10 @@ public class BodyScript : MonoBehaviour
 
     public Rigidbody rb;
     public float fLifetime;
+	public float YellowLife;
+	public float RedLife;
+
+	public GameObject BatteryPack;
 
     public bool bGrounded;
     public int iMaxJumps;
@@ -24,19 +28,33 @@ public class BodyScript : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         InvokeRepeating("updateLifeTime", 0, 1);
+
+		Renderer batteryRender = BatteryPack.GetComponent<Renderer>();
+		batteryRender.material.SetColor ("_Color", Color.green);
     }
 	
     public void updateLifeTime()
     {
+		Renderer batteryRender = BatteryPack.GetComponent<Renderer>();
+
         if (fLifetime > 0)
         {
             --fLifetime;
         }
+		if (fLifetime <= YellowLife) 
+		{
+			batteryRender.material.SetColor ("_Color", Color.yellow);
+		}
+		if (fLifetime <= RedLife)
+		{
+			batteryRender.material.SetColor ("_Color", Color.red);
+		}
         else if (fLifetime <= 0)
         {
             Explode();
             CancelInvoke();
         }
+		Debug.Log (fLifetime);
     }
 
     public void Explode()

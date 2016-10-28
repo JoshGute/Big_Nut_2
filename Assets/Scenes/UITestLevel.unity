@@ -565,6 +565,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1373482538 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011156419288, guid: 730512906706845ecb4e7498dfdc89ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 1762350306}
 --- !u!1 &1469235676 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010519141212, guid: 332134ab5684e394492f093235ddd913,
@@ -726,6 +731,26 @@ Prefab:
     - target: {fileID: 4000012035157132, guid: 730512906706845ecb4e7498dfdc89ce, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012859886578, guid: 730512906706845ecb4e7498dfdc89ce,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012619589882, guid: 730512906706845ecb4e7498dfdc89ce,
+        type: 2}
+      propertyPath: BatteryPack
+      value: 
+      objectReference: {fileID: 1373482538}
+    - target: {fileID: 114000012619589882, guid: 730512906706845ecb4e7498dfdc89ce,
+        type: 2}
+      propertyPath: YellowLife
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012619589882, guid: 730512906706845ecb4e7498dfdc89ce,
+        type: 2}
+      propertyPath: RedLife
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 730512906706845ecb4e7498dfdc89ce, type: 2}
