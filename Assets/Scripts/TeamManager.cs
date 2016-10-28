@@ -7,7 +7,6 @@ public class TeamManager : MonoBehaviour
     public GameObject[] gTeam;
     public Spawnpoint[] sSpawnPoints;
     public Spawnpoint sPrioritySpawn;
-    private Spawnpoint[] sSafeSpawns;
     public int iDeaths;
     private bool bPrioritySpawn = true;
 	// Use this for initialization
@@ -32,6 +31,9 @@ public class TeamManager : MonoBehaviour
 
         if (sOwner_ == pOwner.tag)
         {
+            bool bSpawned = false;
+            int randNum = Random.Range(0, sSpawnPoints.Length);
+
             if (bPrioritySpawn)
             {
                 GameObject gRobot = Instantiate(gTeam[iDeaths], sPrioritySpawn.transform.position, gTeam[iDeaths].transform.rotation) as GameObject;
@@ -40,25 +42,21 @@ public class TeamManager : MonoBehaviour
             }
             else
             {
-                print("array of spawns being made");
-                sSafeSpawns = new Spawnpoint[sSpawnPoints.Length];
-                print(sSafeSpawns.Length);
-
-                for (int i = 0; i < sSpawnPoints.Length; i++)
+                while(!bSpawned)
                 {
-                    if (sSpawnPoints[i].bIsSafe)
+                    if (sSpawnPoints[randNum].bIsSafe)
                     {
-                        sSafeSpawns[i] = sSpawnPoints[i];
-                        print(sSafeSpawns[i] + " is safe");
+                        GameObject gRobot = Instantiate(gTeam[iDeaths], sSpawnPoints[randNum].transform.position, gTeam[iDeaths].transform.rotation) as GameObject;
+                        pOwner.TagRobot(gRobot);
+                        ++iDeaths;
+                        bSpawned = true;
                     }
-                }
 
-                int randNum = Random.Range(0, sSafeSpawns.Length);
-                print("The randomy selected spawnpoint is " + randNum);
-                print("spawning " + gTeam[iDeaths] + "at " + sSafeSpawns[randNum]);
-                GameObject gRobot = Instantiate(gTeam[iDeaths], sSafeSpawns[randNum].transform.position, gTeam[iDeaths].transform.rotation) as GameObject;
-                pOwner.TagRobot(gRobot);
-                ++iDeaths;
+                    else
+                    {
+                        randNum = Random.Range(0, sSpawnPoints.Length);
+                    }
+                }            
             }
             
         }
