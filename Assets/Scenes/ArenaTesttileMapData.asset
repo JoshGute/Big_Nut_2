@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb356b9a6a1da084695128b00c8721be, type: 3}
-  m_Name: TestTileMapData
+  m_Name: ArenaTesttileMapData
   m_EditorClassIdentifier: 
-  tileSize: {x: 1.6, y: 1.6, z: 5}
+  tileSize: {x: 1.6, y: 1.6, z: 0}
   tileOrigin: {x: -0.8, y: -0.8, z: 0}
   tileType: 0
   colorMode: 0

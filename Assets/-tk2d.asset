@@ -737,39 +737,47 @@ MonoBehaviour:
     loadable: 0
     assetName: 
     version: 3
-  - name: Bots
-    spriteCollectionGUID: bfa93ebaf8df9a64db92cf0720c58640
-    spriteCollectionDataGUID: cccb431ad5b20784aa6300c63e8cf18a
+  - name: CowboyBot_SpriteCollection
+    spriteCollectionGUID: b727ecddaa61ac8408a6c266494f8ad4
+    spriteCollectionDataGUID: b0d117f18541f3643901cc4446d2dc95
     spriteNames:
-    - Cowboy_Head
-    - legleft/0
-    - legleft/1
-    - legleft/2
-    - legleft/3
-    - legleft/4
-    - legleft/5
-    - legleft/6
-    - legleft/7
-    - legleft/8
-    - legleft/9
-    - legleft/10
-    - legleft/11
-    - legright/0
-    - legright/1
-    - legright/2
-    - legright/3
-    - legright/4
-    - legright/5
-    - legright/6
-    - legright/7
-    - legright/8
-    - legright/9
-    - legright/10
-    - legright/11
+    - CowboyBot_Sword
+    - CowboyBot_LeftLeg_Run/0
+    - CowboyBot_Head
+    - CowboyBot_Body
+    - CowboyBot_Gun
+    - CowboyBot_LeftLeg_Run/1
+    - CowboyBot_Leg
+    - CowboyBot_LeftLeg_Run/2
+    - CowboyBot_LeftLeg_Run/3
+    - CowboyBot_LeftLeg_Run/4
+    - CowboyBot_LeftLeg_Run/5
+    - CowboyBot_LeftLeg_Run/6
+    - CowboyBot_LeftLeg_Run/7
+    - CowboyBot_LeftLeg_Run/8
+    - CowboyBot_LeftLeg_Run/9
+    - CowboyBot_LeftLeg_Run/10
+    - CowboyBot_LeftLeg_Run/11
+    - CowboyBot_RightLeg_Run/0
+    - CowboyBot_RightLeg_Run/1
+    - CowboyBot_RightLeg_Run/2
+    - CowboyBot_RightLeg_Run/3
+    - CowboyBot_RightLeg_Run/4
+    - CowboyBot_RightLeg_Run/5
+    - CowboyBot_RightLeg_Run/6
+    - CowboyBot_RightLeg_Run/7
+    - CowboyBot_RightLeg_Run/8
+    - CowboyBot_RightLeg_Run/9
+    - CowboyBot_RightLeg_Run/10
+    - CowboyBot_RightLeg_Run/11
     spriteTextureGUIDs:
+    - 7c6ed040b2bb7aa4ca1c069b43cf2b78
+    - b6dc6941845fab74fb68d7ff57047a1a
     - 467624e10c7588f478b17f7dbf98299a
+    - a300281297d828344bd0625a9e4b1073
+    - dd81d5ca8cb841f428c45c8787efede0
     - b6dc6941845fab74fb68d7ff57047a1a
-    - b6dc6941845fab74fb68d7ff57047a1a
+    - b1046dd8b58a3f94fb620d407fdadf5c
     - b6dc6941845fab74fb68d7ff57047a1a
     - b6dc6941845fab74fb68d7ff57047a1a
     - b6dc6941845fab74fb68d7ff57047a1a
@@ -793,9 +801,13 @@ MonoBehaviour:
     - c6ec7d6cf88bbc4438c6d857c60b7dbb
     - c6ec7d6cf88bbc4438c6d857c60b7dbb
     spriteTextureTimeStamps:
+    - 1476446010.97679
+    - 1477065665.35367
     - 1476442185.96354
+    - 1476443738.61888
+    - 1476444661.75236
     - 1477065665.35367
-    - 1477065665.35367
+    - 1477593639.91656
     - 1477065665.35367
     - 1477065665.35367
     - 1477065665.35367

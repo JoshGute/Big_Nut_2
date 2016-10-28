@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000012584878304}
+  m_RootGameObject: {fileID: 1000012133232628}
   m_IsPrefabParent: 1
---- !u!1 &1000012584878304
+--- !u!1 &1000012133232628
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000011648864620}
-  - 114: {fileID: 114000013919095446}
+  - 4: {fileID: 4000012025402974}
+  - 114: {fileID: 114000012534346726}
   m_Layer: 0
-  m_Name: Bots
+  m_Name: CowboyBot_SpriteCollection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &4000011648864620
+--- !u!4 &4000012025402974
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012584878304}
+  m_GameObject: {fileID: 1000012133232628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,12 +40,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &114000013919095446
+--- !u!114 &114000012534346726
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012584878304}
+  m_GameObject: {fileID: 1000012133232628}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84c7a4b4ee15890498f818262bca0312, type: 3}
@@ -112,11 +112,93 @@ MonoBehaviour:
   atlasWidth: 64
   atlasHeight: 128
   forceSquareAtlas: 0
-  atlasWastage: 55.126953
+  atlasWastage: 30.871582
   allowMultipleAtlases: 0
   removeDuplicates: 1
   textureParams:
-  - name: Cowboy_Head
+  - name: CowboyBot_Sword
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 2800000, guid: 7c6ed040b2bb7aa4ca1c069b43cf2b78, type: 3}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    colliderData: []
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: CowboyBot_LeftLeg_Run/0
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 2800000, guid: b6dc6941845fab74fb68d7ff57047a1a, type: 3}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 1
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 1
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    regionId: 0
+    colliderType: 0
+    colliderData: []
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: CowboyBot_Head
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -157,11 +239,11 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legleft/0
+  - name: CowboyBot_Body
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b6dc6941845fab74fb68d7ff57047a1a, type: 3}
+    texture: {fileID: 2800000, guid: a300281297d828344bd0625a9e4b1073, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -174,19 +256,19 @@ MonoBehaviour:
     diceUnitX: 64
     diceUnitY: 64
     diceFilter: 0
-    pad: 1
+    pad: 0
     extraPadding: 0
     source: 0
     fromSpriteSheet: 0
-    hasSpriteSheetId: 1
+    hasSpriteSheetId: 0
     spriteSheetId: 0
     spriteSheetX: 0
     spriteSheetY: 0
-    extractRegion: 1
+    extractRegion: 0
     regionX: 0
     regionY: 0
-    regionW: 34
-    regionH: 34
+    regionW: 0
+    regionH: 0
     regionId: 0
     colliderType: 0
     colliderData: []
@@ -198,7 +280,48 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legleft/1
+  - name: CowboyBot_Gun
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 2800000, guid: dd81d5ca8cb841f428c45c8787efede0, type: 3}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    colliderData: []
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: CowboyBot_LeftLeg_Run/1
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -239,7 +362,48 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legleft/2
+  - name: CowboyBot_Leg
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 2800000, guid: b1046dd8b58a3f94fb620d407fdadf5c, type: 3}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    colliderData: []
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: CowboyBot_LeftLeg_Run/2
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -280,7 +444,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legleft/3
+  - name: CowboyBot_LeftLeg_Run/3
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -321,7 +485,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legleft/4
+  - name: CowboyBot_LeftLeg_Run/4
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -362,7 +526,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legleft/5
+  - name: CowboyBot_LeftLeg_Run/5
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -403,7 +567,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legleft/6
+  - name: CowboyBot_LeftLeg_Run/6
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -444,7 +608,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legleft/7
+  - name: CowboyBot_LeftLeg_Run/7
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -485,7 +649,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legleft/8
+  - name: CowboyBot_LeftLeg_Run/8
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -526,7 +690,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legleft/9
+  - name: CowboyBot_LeftLeg_Run/9
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -567,7 +731,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legleft/10
+  - name: CowboyBot_LeftLeg_Run/10
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -608,7 +772,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legleft/11
+  - name: CowboyBot_LeftLeg_Run/11
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -649,7 +813,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legright/0
+  - name: CowboyBot_RightLeg_Run/0
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -690,7 +854,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legright/1
+  - name: CowboyBot_RightLeg_Run/1
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -731,7 +895,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legright/2
+  - name: CowboyBot_RightLeg_Run/2
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -772,7 +936,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legright/3
+  - name: CowboyBot_RightLeg_Run/3
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -813,7 +977,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legright/4
+  - name: CowboyBot_RightLeg_Run/4
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -854,7 +1018,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legright/5
+  - name: CowboyBot_RightLeg_Run/5
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -895,7 +1059,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legright/6
+  - name: CowboyBot_RightLeg_Run/6
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -936,7 +1100,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legright/7
+  - name: CowboyBot_RightLeg_Run/7
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -977,7 +1141,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legright/8
+  - name: CowboyBot_RightLeg_Run/8
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -1018,7 +1182,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legright/9
+  - name: CowboyBot_RightLeg_Run/9
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -1059,7 +1223,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legright/10
+  - name: CowboyBot_RightLeg_Run/10
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -1100,7 +1264,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: legright/11
+  - name: CowboyBot_RightLeg_Run/11
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
@@ -1141,15 +1305,15 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  spriteCollection: {fileID: 114000011487725178, guid: cccb431ad5b20784aa6300c63e8cf18a,
+  spriteCollection: {fileID: 114000011553179504, guid: b0d117f18541f3643901cc4446d2dc95,
     type: 2}
   premultipliedAlpha: 0
   altMaterials:
-  - {fileID: 2100000, guid: 3c55c9de090250a4cbe5cbb9edef9f65, type: 2}
+  - {fileID: 2100000, guid: b1bf5a6be5ee64b419393e348efc7df6, type: 2}
   atlasMaterials:
-  - {fileID: 2100000, guid: 3c55c9de090250a4cbe5cbb9edef9f65, type: 2}
+  - {fileID: 2100000, guid: b1bf5a6be5ee64b419393e348efc7df6, type: 2}
   atlasTextures:
-  - {fileID: 2800000, guid: f036b5fa30ae8c443b39aba6c0c13236, type: 3}
+  - {fileID: 2800000, guid: 308664e39f0af364ba4130b176ee6b7b, type: 3}
   atlasTextureFiles: []
   useTk2dCamera: 0
   targetHeight: 640
@@ -1157,7 +1321,7 @@ MonoBehaviour:
   sizeDef:
     type: 1
     orthoSize: 10
-    pixelsPerMeter: 100
+    pixelsPerMeter: 25
     width: 960
     height: 640
   globalScale: 1
