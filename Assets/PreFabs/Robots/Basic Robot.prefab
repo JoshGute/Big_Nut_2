@@ -232,7 +232,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013012438292}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -12.59282, y: 4.724695, z: -37.720276}
+  m_LocalPosition: {x: -7.91, y: 2.3, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_Children:
@@ -813,14 +813,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sOwner: 
-  PatternSpawn: {fileID: 0}
+  PatternSpawn: {fileID: 1000012167601182}
   fFireRate: 0.1
   fTimerForNext: 0
   gBulletPattern: {fileID: 11431516, guid: d915008ba94c4dc4ea3793276fc156f5, type: 2}
   ShootingNoise: {fileID: 8300000, guid: 155ce38328889644e9a9ca7834ffae58, type: 3}
   ReloadNoise: {fileID: 8300000, guid: 5e6e6d26b356f9d47900c2540475a1ac, type: 3}
   MissNoise: {fileID: 0}
-  RobotAudioSource: {fileID: 0}
+  RobotAudioSource: {fileID: 82000012484167676}
   iMaxRounds: 6
   fReloadSpeed: 0.5
   fReloadTimer: 0
