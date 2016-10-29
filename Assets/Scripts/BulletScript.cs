@@ -12,6 +12,17 @@ public class BulletScript : MonoBehaviour
     public float fSpeed = 10.0f;
     private Rigidbody rb;
 
+    [SerializeField]
+    private float fDamage;
+
+    public float Damage
+    {
+      get
+      {
+        return fDamage;
+      }
+    }
+
 	// Use this for initialization
 	void Start ()
     {

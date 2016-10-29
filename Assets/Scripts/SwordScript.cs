@@ -26,7 +26,15 @@ public class SwordScript : MonoBehaviour
 
   //Damage dealt by weapon.
   [SerializeField]
-  private float Damage;
+  private float fDamage;
+
+  public float Damage
+  {
+    get
+    {
+      return fDamage;
+    }
+  }
 
   //The time in seconds for Cooldown after attacking.
   [SerializeField]

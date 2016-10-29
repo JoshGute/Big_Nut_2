@@ -36,29 +36,29 @@ public class BodyScript : MonoBehaviour
 	
     public void updateLifeTime()
     {
-		Renderer batteryRender = BatteryPack.GetComponent<Renderer>();
+		  Renderer batteryRender = BatteryPack.GetComponent<Renderer>();
 
-        if (fLifetime > 0)
-        {
-            --fLifetime;
-        }
-		if (fLifetime <= YellowLife) 
-		{
-            Debug.Log("YellowLife");
-            batteryRender.sharedMaterial.SetColor ("_Color", Color.yellow);
-            //BatteryPack.GetComponent<Light>().color = Color.yellow;
-		}
-		if (fLifetime <= RedLife)
-		{
-            batteryRender.sharedMaterial.SetColor ("_Color", Color.red);
-            //BatteryPack.GetComponent<Light>().color = Color.red;
-		}
-        else if (fLifetime <= 0)
-        {
-            Explode();
-            CancelInvoke();
-        }
-		Debug.Log (fLifetime);
+      if (fLifetime > 0)
+      {
+          --fLifetime;
+      }
+		  if (fLifetime <= YellowLife) 
+		  {
+          Debug.Log("YellowLife");
+          batteryRender.sharedMaterial.SetColor ("_Color", Color.yellow);
+          //BatteryPack.GetComponent<Light>().color = Color.yellow;
+		  }
+		  if (fLifetime <= RedLife)
+		  {
+          batteryRender.sharedMaterial.SetColor ("_Color", Color.red);
+          //BatteryPack.GetComponent<Light>().color = Color.red;
+		  }
+      else if (fLifetime <= 0)
+      {
+          Explode();
+          CancelInvoke();
+      }
+		    //Debug.Log (fLifetime);
     }
 
     public void Explode()
@@ -80,8 +80,6 @@ public class BodyScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-
-
         if (collision.gameObject.tag == "Ground")
         {
             iJumps = iMaxJumps;
@@ -96,6 +94,33 @@ public class BodyScript : MonoBehaviour
             bGrounded = false;   
         }
     }
+
+    //HAHAHAHAHAHAHA THIS IS THE 3RD TIME I'VE WRITTEN THIS FUNCTION. AHAHAHAHAHAHAHAHAHA - Linus
+    void TakeDamage(float damage)
+    {
+      fLifetime -= damage;  
+    }
+
+    void OnTriggerEnter(Collider trigger)
+    {
+      //Being hit by Bullet
+      if (trigger.gameObject.tag == "Bullet" && trigger.gameObject.GetComponent<BulletScript>().sOwner != sOwner)
+      {
+        TakeDamage(trigger.gameObject.GetComponent<BulletScript>().Damage);
+
+        updateLifeTime();
+      }
+
+      //Being hit by a Sword
+      //(trigger is the hitbox attached to sword in this case. the info is in the sword arm parent so that's why do getcomponentinparent)
+      else if(trigger.gameObject.tag == "Sword" && trigger.gameObject.GetComponentInParent<SwordScript>().sOwner != sOwner)
+      {
+        TakeDamage(trigger.gameObject.GetComponentInParent<SwordScript>().Damage);
+
+        updateLifeTime();
+      }
+    }
+
     //Deprecated. Use the new damage function linus wrote.
     /*void OnTriggerEnter(Collider trigger)
     {

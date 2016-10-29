@@ -152,10 +152,12 @@ public class PlayerController : MonoBehaviour
         gGun = gRobot_.GetComponentInChildren<GunScript>();
         sSword = gRobot_.GetComponentInChildren<SwordScript>();
 
-        //this is super superfulous(fuck spelling lmao) and and probably be made into tags. 
-        /*bBody.sOwner = tag;
+        //this is super superfulous(fuck spelling lmao) and and probably be made into tags. - josh
+        //actually it is still useful so we are using it again - linus
+
+        bBody.sOwner = tag;
         gGun.sOwner = tag;
-        sSword.sOwner = tag;*/
+        sSword.sOwner = tag;
         //like so
         bBody.tag = tag;
         gGun.tag = tag;
