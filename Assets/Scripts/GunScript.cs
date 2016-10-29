@@ -29,10 +29,9 @@ public class GunScript : MonoBehaviour
 
     public virtual void Shoot()
     {
-        RobotAudioSource.PlayOneShot(ShootingNoise);
-
         if (fTimerForNext >= fFireRate)
         {
+            RobotAudioSource.PlayOneShot(ShootingNoise);
             GameObject bulletPattern = Instantiate(gBulletPattern, PatternSpawn.transform.position, transform.rotation) as GameObject;
             fTimerForNext = 0;
         }
