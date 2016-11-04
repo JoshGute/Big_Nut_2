@@ -25,11 +25,7 @@ MonoBehaviour:
     dataGUID: 
     managed: 0
     loadable: 0
-  - assetGUID: b4a3dc99226790240afadd42e1a061b2
-    dataGUID: 
-    managed: 0
-    loadable: 0
-  - assetGUID: 91f70b1f1070d07439bf5d85a44c541c
+  - assetGUID: a34aadbebb880f645b43a43154b845a7
     dataGUID: 
     managed: 0
     loadable: 0
@@ -770,12 +766,34 @@ MonoBehaviour:
     - CowboyBot_RightLeg_Run/9
     - CowboyBot_RightLeg_Run/10
     - CowboyBot_RightLeg_Run/11
+    - CowboyBot_Gun_Shoot/0
+    - CowboyBot_Gun_Shoot/1
+    - CowboyBot_Gun_Shoot/2
+    - CowboyBot_Gun_Shoot/3
+    - CowboyBot_Body_Move/0
+    - CowboyBot_Body_Move/1
+    - CowboyBot_Body_Move/2
+    - CowboyBot_Body_Move/3
+    - CowboyBot_Body_Move/4
+    - CowboyBot_Body_Move/5
+    - CowboyBot_Head_Move/0
+    - CowboyBot_Head_Move/1
+    - CowboyBot_Head_Move/2
+    - CowboyBot_Head_Move/3
+    - CowboyBot_Head_Move/4
+    - CowboyBot_Head_Move/5
+    - CowboyBot_Gun_Move/0
+    - CowboyBot_Gun_Move/1
+    - CowboyBot_Gun_Move/2
+    - CowboyBot_Gun_Move/3
+    - CowboyBot_Gun_Move/4
+    - CowboyBot_Gun_Move/5
     spriteTextureGUIDs:
     - 7c6ed040b2bb7aa4ca1c069b43cf2b78
     - b6dc6941845fab74fb68d7ff57047a1a
-    - 467624e10c7588f478b17f7dbf98299a
+    - b5c988b4b51d33d4197aad06102835d8
     - a300281297d828344bd0625a9e4b1073
-    - dd81d5ca8cb841f428c45c8787efede0
+    - f1cd1dfb805e1ad498f5624f40edef35
     - b6dc6941845fab74fb68d7ff57047a1a
     - b1046dd8b58a3f94fb620d407fdadf5c
     - b6dc6941845fab74fb68d7ff57047a1a
@@ -800,36 +818,80 @@ MonoBehaviour:
     - c6ec7d6cf88bbc4438c6d857c60b7dbb
     - c6ec7d6cf88bbc4438c6d857c60b7dbb
     - c6ec7d6cf88bbc4438c6d857c60b7dbb
+    - 31d9c2ed11f4a5948a0194ed58db0454
+    - 31d9c2ed11f4a5948a0194ed58db0454
+    - 31d9c2ed11f4a5948a0194ed58db0454
+    - 31d9c2ed11f4a5948a0194ed58db0454
+    - 140a3f76c06310b46afa13690a66aa19
+    - 140a3f76c06310b46afa13690a66aa19
+    - 140a3f76c06310b46afa13690a66aa19
+    - 140a3f76c06310b46afa13690a66aa19
+    - 140a3f76c06310b46afa13690a66aa19
+    - 140a3f76c06310b46afa13690a66aa19
+    - 0ec41df272720284dbb16188cf691542
+    - 0ec41df272720284dbb16188cf691542
+    - 0ec41df272720284dbb16188cf691542
+    - 0ec41df272720284dbb16188cf691542
+    - 0ec41df272720284dbb16188cf691542
+    - 0ec41df272720284dbb16188cf691542
+    - b10f054a42cfe5f4dbf32e2e70621b4a
+    - b10f054a42cfe5f4dbf32e2e70621b4a
+    - b10f054a42cfe5f4dbf32e2e70621b4a
+    - b10f054a42cfe5f4dbf32e2e70621b4a
+    - b10f054a42cfe5f4dbf32e2e70621b4a
+    - b10f054a42cfe5f4dbf32e2e70621b4a
     spriteTextureTimeStamps:
-    - 1477656532.6838
-    - 1477656532.66479
-    - 1477656532.56881
-    - 1477656532.5548
-    - 1477656532.5618
-    - 1477656532.66479
-    - 1477656532.66881
-    - 1477656532.66479
-    - 1477656532.66479
-    - 1477656532.66479
-    - 1477656532.66479
-    - 1477656532.66479
-    - 1477656532.66479
-    - 1477656532.66479
-    - 1477656532.66479
-    - 1477656532.66479
-    - 1477656532.66479
-    - 1477656532.6758
-    - 1477656532.6758
-    - 1477656532.6758
-    - 1477656532.6758
-    - 1477656532.6758
-    - 1477656532.6758
-    - 1477656532.6758
-    - 1477656532.6758
-    - 1477656532.6758
-    - 1477656532.6758
-    - 1477656532.6758
-    - 1477656532.6758
+    - 1476446010.97679
+    - 1477065665.35367
+    - 1478207997.05227
+    - 1476443738.61888
+    - 1478209588.92889
+    - 1477065665.35367
+    - 1477593639.91656
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065665.35367
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1477065806.14235
+    - 1478209617.03998
+    - 1478209617.03998
+    - 1478209617.03998
+    - 1478209617.03998
+    - 1478206162.95831
+    - 1478206162.95831
+    - 1478206162.95831
+    - 1478206162.95831
+    - 1478206162.95831
+    - 1478206162.95831
+    - 1478207720.24935
+    - 1478207720.24935
+    - 1478207720.24935
+    - 1478207720.24935
+    - 1478207720.24935
+    - 1478207720.24935
+    - 1478209430.27255
+    - 1478209430.27255
+    - 1478209430.27255
+    - 1478209430.27255
+    - 1478209430.27255
+    - 1478209430.27255
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

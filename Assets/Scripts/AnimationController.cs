@@ -1,11 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//*State Machine Enums*//
+//Called 'custom' animation state because unity already has an animation state class. 
+public class CustomAnimationStates
+{
+  public enum AnimState { Idle, Run, Shoot, Stab, Jump };
+}
 
 /*Much of this code taken from a 2d toolkit website tutorial and expanded upon.*/
 public class AnimationController : MonoBehaviour {
 
-  //Reference to the animator components of each body part.
+  //*References to the animator components of each body part.*//
   [SerializeField]
   private tk2dSpriteAnimator HeadAnimator;
 
@@ -24,15 +30,86 @@ public class AnimationController : MonoBehaviour {
   [SerializeField]
   private tk2dSpriteAnimator RightLegAnimator;
 
+  private bool isMoving;
+
 	// Use this for initialization
 	void Start ()
   {
-
+    //CustomAnimationStates.AnimState currAnimState;
+    //currAnimState = CustomAnimationStates.AnimState.Idle;
 	}
 
   // Update is called once per frame
   void Update()
   {
+    if(Input.GetKeyDown(KeyCode.A))
+    {
+      UpdateAnimState(CustomAnimationStates.AnimState.Run);
+      isMoving = true;
+    }
 
+    if(Input.GetKeyDown(KeyCode.W))
+    {
+      UpdateAnimState(CustomAnimationStates.AnimState.Idle);
+      isMoving = false;
+    }
+
+    if(Input.GetKeyDown(KeyCode.Space))
+    {
+      UpdateAnimState(CustomAnimationStates.AnimState.Shoot);
+    }
+  }
+
+  void PreviousAnimDelegate(tk2dSpriteAnimator sprite, tk2dSpriteAnimationClip clip)
+  {
+    if(isMoving)
+    {
+      GunAnimator.Play("Gun_Move");
+    }
+    else
+    {
+      GunAnimator.Play("Gun_Idle");
+    }
+
+  }
+
+  void UpdateAnimState(CustomAnimationStates.AnimState newAnimState)
+  {
+    switch (newAnimState)
+    {
+      case CustomAnimationStates.AnimState.Idle:
+        LeftLegAnimator.Play("LeftLeg_Idle");
+        RightLegAnimator.Play("RightLeg_Idle");
+        BodyAnimator.Play("Body_Idle");
+        HeadAnimator.Play("Head_Idle");
+        GunAnimator.Play("Gun_Idle");
+        break;
+
+      case CustomAnimationStates.AnimState.Jump:
+
+        break;
+
+      case CustomAnimationStates.AnimState.Run:
+        LeftLegAnimator.Play("LeftLeg_Run");
+        RightLegAnimator.Play("RightLeg_Run");
+        BodyAnimator.Play("Body_Move");
+        HeadAnimator.Play("Head_Move");
+        GunAnimator.Play("Gun_Move");
+        break;
+
+      case CustomAnimationStates.AnimState.Shoot:
+        GunAnimator.Play("Gun_Shoot");
+
+        GunAnimator.AnimationCompleted = PreviousAnimDelegate;
+
+        break;
+
+      case CustomAnimationStates.AnimState.Stab:
+
+        break;
+
+      default:
+        break;
+    }
   }
 }
