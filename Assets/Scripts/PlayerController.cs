@@ -20,11 +20,13 @@ public class PlayerController : MonoBehaviour
     public BodyScript bBody;
     public GunScript gGun;
     public SwordScript sSword;
+    public AnimationController aController;
 
     private GamePadState state;
     private GamePadState prevState;
 
     private bool bController;
+    private bool bRunning = false;
 
 
     void Start()
@@ -77,11 +79,11 @@ public class PlayerController : MonoBehaviour
                 }
                 if (prevState.Buttons.RightShoulder == ButtonState.Released && state.Buttons.RightShoulder == ButtonState.Pressed)
                 {
+                    aController.changeAnimation(3);
                     inputManager(2);
                 }
                 if (prevState.Buttons.LeftShoulder == ButtonState.Released && state.Buttons.LeftShoulder == ButtonState.Pressed)
                 {
-                    //print("I wish God loved me enough to let me die");
                     inputManager(3);
                 }
                 if (prevState.Buttons.Back == ButtonState.Released && state.Buttons.Back == ButtonState.Pressed)
@@ -91,7 +93,13 @@ public class PlayerController : MonoBehaviour
             }
 
             if (KeyAxisH != 0)
-            { 
+            {
+                if (!bRunning)
+                {
+                    aController.changeAnimation(1);
+                    bRunning = true;
+                }
+               
                 if (KeyAxisH > 0)
                 {
                     bBody.rb.velocity = new Vector3((KeyAxisH * bBody.fMoveSpeed * Time.deltaTime), bBody.rb.velocity.y, bBody.rb.velocity.z);
@@ -103,23 +111,31 @@ public class PlayerController : MonoBehaviour
                     bBody.transform.localEulerAngles = new Vector3(bBody.transform.rotation.x, -90, bBody.transform.rotation.z);
                 }
             }
+
+            else if(KeyAxisH == 0)
+            {
+                if (bRunning)
+                {
+                    aController.changeAnimation(2);
+                    bRunning = false;
+                }
+
+            }
         }
     }
 
-    private void inputManager(int iInput)
+    private void inputManager(int iInput_)
     {
-        switch (iInput)
+        switch (iInput_)
         {
             case 1:
                 {
                     if(bBody.bGrounded)
                     {
-                        //print("You're cute");
                         bBody.rb.velocity = new Vector3(0, bBody.fJumpSpeed, 0);
                     }
                     else if(!bBody.bGrounded && bBody.iJumps > 0)
                     {
-                        //print("Murder me");
                         StartCoroutine(Dash(bBody.fDashTime));
                         bBody.rb.velocity = new Vector3(KeyAxisH, KeyAxisV, 0) * bBody.fJumpSpeed;
                         --bBody.iJumps;
@@ -152,16 +168,25 @@ public class PlayerController : MonoBehaviour
         gGun = gRobot_.GetComponentInChildren<GunScript>();
         sSword = gRobot_.GetComponentInChildren<SwordScript>();
 
+        if(gRobot_.GetComponentInChildren<AnimationController>())
+        {
+            aController = gRobot_.GetComponentInChildren<AnimationController>();
+        }
+
+
         //this is super superfulous(fuck spelling lmao) and and probably be made into tags. - josh
         //actually it is still useful so we are using it again - linus
+        //this is correct - Josh
 
         bBody.sOwner = tag;
         gGun.sOwner = tag;
         sSword.sOwner = tag;
-        //like so
+
         bBody.tag = tag;
         gGun.tag = tag;
         sSword.tag = tag;
+
+    
     }
 
     IEnumerator Dash(float dashTime)
