@@ -32,7 +32,8 @@ public class GunScript : MonoBehaviour
         if (fTimerForNext >= fFireRate)
         {
             RobotAudioSource.PlayOneShot(ShootingNoise);
-            GameObject bulletPattern = Instantiate(gBulletPattern, PatternSpawn.transform.position, transform.rotation) as GameObject;
+            GameObject bulletPattern = Instantiate(gBulletPattern.gameObject, PatternSpawn.transform.position, transform.rotation) as GameObject;
+            bulletPattern.GetComponent<GunPattern>().sOwner = sOwner;
             fTimerForNext = 0;
         }
     }

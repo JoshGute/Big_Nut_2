@@ -26,7 +26,6 @@ public class BulletScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        print(transform.forward);
         rb = GetComponent<Rigidbody>();
         if(Direction.y == 0)
         {
@@ -44,5 +43,14 @@ public class BulletScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void OnTriggerEnter(Collider trigger)
+    {
+        if (trigger.gameObject.tag != sOwner)
+        {
+            Destroy(gameObject);
+        }
+
     }
 }
