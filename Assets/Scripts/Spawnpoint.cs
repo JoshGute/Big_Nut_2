@@ -5,7 +5,7 @@ public class Spawnpoint : MonoBehaviour
 {
     public bool bIsSafe = true;
 
-    void OnTriggerEnter(Collider Coll)
+    void OnTriggerStay(Collider Coll)
     {
         if(Coll.gameObject.layer == 10)
         {
