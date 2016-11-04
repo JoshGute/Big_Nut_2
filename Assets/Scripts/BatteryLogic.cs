@@ -1,33 +1,60 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class BatteryLogic : MonoBehaviour
 {
 
-    public float BatteryLife;
+    public float YellowLife;
+    public float RedLife;
 
-	// Use this for initialization
-	void Start ()
+    public GameObject BatteryPack;
+    public BodyScript Parent;
+
+    public Slider HealthBar;
+    public Color FullHealth;
+    public Color MediumHealth;
+    public Color LowHealth;
+
+    Light LightColor;
+    Renderer BatteryRender;
+
+    // Use this for initialization
+    void Start ()
     {
-        Renderer rend = GetComponent<Renderer>();
-        rend.material.SetColor("_Color", Color.green);
-	}
+        Parent = GetComponentInParent<BodyScript>();
+        //LightColor = GetComponent<Light>();
+
+        //LightColor.color = FullHealth;
+
+       BatteryRender = GetComponent<Renderer>();
+       BatteryRender.material.SetColor("_Color", FullHealth);
+
+        //HealthBar.maxValue = fLifetime;
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        BatteryLife -= Time.deltaTime;
-        Renderer rend = GetComponent<Renderer>();
-
-        if (BatteryLife <= 40)
+        if (Parent.fLifetime <= YellowLife)
         {
-            rend.material.SetColor("_Color", Color.yellow);
+            //Debug.Log("yellow");
+            //LightColor.color = MediumHealth;
+            BatteryRender.material.SetColor("_Color", MediumHealth);
+            // HealthBar.normalizedValue = fLifetime;
+            //batteryRender.sharedMaterial.SetColor("_Color", Color.yellow);
         }
 
-        if (BatteryLife <= 20)
+        if (Parent.fLifetime <= RedLife)
         {
-            rend.material.SetColor("_Color", Color.red);
-        } 
+            //LightColor.color = LowHealth;
+            //Debug.Log("red");
+            BatteryRender.material.SetColor("_Color", LowHealth);
+
+            //batteryRender.sharedMaterial.SetColor("_Color", Color.red);
+            //BatteryPack.GetComponent<Light>().color = Color.red;
+        }
 
     }
 }

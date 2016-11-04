@@ -64,6 +64,7 @@ GameObject:
   - 65: {fileID: 65000013067787092}
   - 23: {fileID: 23000014231054400}
   - 108: {fileID: 108000010297245640}
+  - 114: {fileID: 114000010744302652}
   m_Layer: 0
   m_Name: Battery
   m_TagString: Untagged
@@ -738,6 +739,25 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114000010744302652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012709192386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2734c39686ff8d4419f8a2ba4e255725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  YellowLife: 50
+  RedLife: 30
+  BatteryPack: {fileID: 1000012709192386}
+  Parent: {fileID: 114000013702234704}
+  HealthBar: {fileID: 0}
+  FullHealth: {r: 0, g: 1, b: 0, a: 0}
+  MediumHealth: {r: 1, g: 1, b: 0, a: 0}
+  LowHealth: {r: 1, g: 0, b: 0, a: 0}
 --- !u!114 &114000010997704908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -769,7 +789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2876f5fafb9d2c948b31b8438bad2b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 5
+  fDamage: 0
   CooldownTime: 1
   WeaponHitBox: {fileID: 1000013925037972}
   attackCurve:
@@ -807,11 +827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sOwner: 
   rb: {fileID: 0}
-  fLifetime: 10
-  YellowLife: 6
-  RedLife: 4
-  BatteryPack: {fileID: 1000011942278122, guid: 982f88176107ab74483282c7e5806604,
-    type: 2}
+  fLifetime: 60
   bGrounded: 0
   iMaxJumps: 3
   iJumps: 0
