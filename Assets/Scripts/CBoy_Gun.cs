@@ -33,13 +33,13 @@ public class CBoy_Gun : GunScript
 
     public override void Shoot()
     {
-        RobotAudioSource.PlayOneShot(ShootingNoise);
-
         if (fTimerForNext >= fFireRate && iBullets > 0)
         {
-            GameObject bulletPattern = Instantiate(gBulletPattern, 
-                                                    PatternSpawn.transform.position, 
-                                                    transform.rotation) as GameObject;
+            print("umm");
+            RobotAudioSource.PlayOneShot(ShootingNoise);
+            GameObject bulletPattern;
+            bulletPattern = Instantiate(gBulletPattern.gameObject, PatternSpawn.transform.position, transform.rotation) as GameObject;
+            bulletPattern.GetComponent<GunPattern>().sOwner = sOwner;
             fTimerForNext = 0;
             iBullets -= 1;
         }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class BodyScript : MonoBehaviour
 {
@@ -7,10 +8,6 @@ public class BodyScript : MonoBehaviour
 
     public Rigidbody rb;
     public float fLifetime;
-	public float YellowLife;
-	public float RedLife;
-
-	public GameObject BatteryPack;
 
     public bool bGrounded;
     public int iMaxJumps;
@@ -29,30 +26,14 @@ public class BodyScript : MonoBehaviour
         rb.freezeRotation = true;
         InvokeRepeating("updateLifeTime", 0, 1);
 
-        Renderer batteryRender = BatteryPack.GetComponent<Renderer>();
-        batteryRender.sharedMaterial.SetColor ("_Color", Color.green);
-       // BatteryPack.GetComponent<Light>().color = Color.green;
     }
 	
     public void updateLifeTime()
     {
-		  Renderer batteryRender = BatteryPack.GetComponent<Renderer>();
-
       if (fLifetime > 0)
       {
-          --fLifetime;
+          --fLifetime;         
       }
-		  if (fLifetime <= YellowLife) 
-		  {
-          Debug.Log("YellowLife");
-          batteryRender.sharedMaterial.SetColor ("_Color", Color.yellow);
-          //BatteryPack.GetComponent<Light>().color = Color.yellow;
-		  }
-		  if (fLifetime <= RedLife)
-		  {
-          batteryRender.sharedMaterial.SetColor ("_Color", Color.red);
-          //BatteryPack.GetComponent<Light>().color = Color.red;
-		  }
       else if (fLifetime <= 0)
       {
           Explode();

@@ -45,11 +45,12 @@ public class TeamManager : MonoBehaviour
                 bool bSpawned = false;
                 int randNum = Random.Range(0, sSpawnPoints.Length);
 
-                if (bPrioritySpawn)
+                if (sPrioritySpawn.bIsSafe)
                 {
-                    print("Priority spawn");
+                    //print("Priority spawn");
                     GameObject gRobot = Instantiate(gTeam[iDeaths], sPrioritySpawn.transform.position, gTeam[iDeaths].transform.rotation) as GameObject;
                     pOwner.TagRobot(gRobot);
+                    print(gRobot);
                     ++iDeaths;
                     bSpawned = true;
                 }
