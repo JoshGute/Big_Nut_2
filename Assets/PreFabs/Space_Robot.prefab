@@ -712,7 +712,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -793,9 +793,6 @@ MonoBehaviour:
   sOwner: 
   rb: {fileID: 0}
   fLifetime: 5
-  YellowLife: 0
-  RedLife: 0
-  BatteryPack: {fileID: 1000012326604402}
   bGrounded: 0
   iMaxJumps: 3
   iJumps: 0
@@ -849,7 +846,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2734c39686ff8d4419f8a2ba4e255725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BatteryLife: 100
+  YellowLife: 0
+  RedLife: 0
+  BatteryPack: {fileID: 0}
+  Parent: {fileID: 0}
+  HealthBar: {fileID: 0}
+  FullHealth: {r: 0, g: 0, b: 0, a: 0}
+  MediumHealth: {r: 0, g: 0, b: 0, a: 0}
+  LowHealth: {r: 0, g: 0, b: 0, a: 0}
 --- !u!136 &136000013260673362
 CapsuleCollider:
   m_ObjectHideFlags: 1

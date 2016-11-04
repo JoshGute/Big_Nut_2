@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class BodyScript : MonoBehaviour
 {
     public string sOwner;
+    public GameObject gSkin;
 
     public Rigidbody rb;
     public float fLifetime;
@@ -19,7 +20,6 @@ public class BodyScript : MonoBehaviour
     public delegate void DeathAction(string sOwner_);
     public static event DeathAction Die;
 
-    // Use this for initialization
     void Start ()
     {
         rb = GetComponent<Rigidbody>();
@@ -39,24 +39,46 @@ public class BodyScript : MonoBehaviour
           Explode();
           CancelInvoke();
       }
-		    //Debug.Log (fLifetime);
     }
 
     public void Explode()
     {
-        foreach (Transform child in transform)
+        if (gSkin)
         {
-            child.GetComponent<Rigidbody>().useGravity = true;
-            child.GetComponent<Rigidbody>().isKinematic = false;
-            child.GetComponent<Rigidbody>().AddExplosionForce(50.0f, child.transform.position, 30.0f);
-            child.transform.rotation = Random.rotation;
+            print("skin detected");
+            foreach (Transform child in gSkin.transform)
+            {
+                if (child.GetComponent<Rigidbody>())
+                {
+                    child.GetComponent<BoxCollider>().enabled = true;
+                    child.GetComponent<Rigidbody>().useGravity = true;
+                    child.GetComponent<Rigidbody>().isKinematic = false;
+                    child.GetComponent<Rigidbody>().AddExplosionForce(10.0f, child.transform.position, 2.0f);
+                }
+            }
+            gSkin.transform.DetachChildren();
+            rb.AddExplosionForce(5.0f, transform.position, 2.0f);
+            Die(sOwner);
+            Destroy(gameObject);
         }
-        rb.freezeRotation = false;
-        transform.rotation = Random.rotation;
-        transform.DetachChildren();
-        rb.AddExplosionForce(300.0f, transform.position, 30.0f);
-        Die(sOwner);
-        Destroy(gameObject);
+
+        else
+        {
+            print("no skin here");
+            foreach (Transform child in transform)
+            {
+                if (child.GetComponent<Rigidbody>())
+                {
+                    child.GetComponent<Rigidbody>().useGravity = true;
+                    child.GetComponent<Rigidbody>().isKinematic = false;
+                    child.GetComponent<Rigidbody>().AddExplosionForce(10.0f, child.transform.position, 2.0f);
+                }
+            }
+            transform.DetachChildren();
+            rb.AddExplosionForce(5.0f, transform.position, 2.0f);
+            Die(sOwner);
+            Destroy(gameObject);
+        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -101,13 +123,4 @@ public class BodyScript : MonoBehaviour
         updateLifeTime();
       }
     }
-
-    //Deprecated. Use the new damage function linus wrote.
-    /*void OnTriggerEnter(Collider trigger)
-    {
-        if (trigger.gameObject.tag == "Bullet" && trigger.gameObject.GetComponent<BulletScript>().sOwner != sOwner)
-        {
-            updateLifeTime();
-        }
-    }*/
 }

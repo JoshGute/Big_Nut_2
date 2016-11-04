@@ -40,24 +40,26 @@ public class AnimationController : MonoBehaviour {
 	}
 
   // Update is called once per frame
-  void Update()
+  public void changeAnimation(int iInput_)
   {
-    if(Input.GetKeyDown(KeyCode.A))
-    {
-      UpdateAnimState(CustomAnimationStates.AnimState.Run);
-      isMoving = true;
-    }
-
-    if(Input.GetKeyDown(KeyCode.W))
-    {
-      UpdateAnimState(CustomAnimationStates.AnimState.Idle);
-      isMoving = false;
-    }
-
-    if(Input.GetKeyDown(KeyCode.Space))
-    {
-      UpdateAnimState(CustomAnimationStates.AnimState.Shoot);
-    }
+        switch (iInput_)
+        {
+            case 1:
+                {
+                    UpdateAnimState(CustomAnimationStates.AnimState.Run);
+                    break;
+                }
+            case 2:
+                {
+                    UpdateAnimState(CustomAnimationStates.AnimState.Idle);
+                    break;
+                }
+            case 3:
+                {
+                    UpdateAnimState(CustomAnimationStates.AnimState.Shoot);
+                    break;
+                }
+        }
   }
 
   void PreviousAnimDelegate(tk2dSpriteAnimator sprite, tk2dSpriteAnimationClip clip)
