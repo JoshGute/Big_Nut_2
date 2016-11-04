@@ -31,7 +31,7 @@ public class RobotHoverInfo : MonoBehaviour
 	    if(EventSystem.current.currentSelectedGameObject.name == "TopLeft")
         {
            GameObject.Find("Player1SelectedRobot").GetComponent<Image>().color = Color.red;
-			//GameObject.Find ("Player1SelectedRobot").GetComponent<Image>().sprite = TestRobot;
+		    GameObject.Find ("Player1SelectedRobot").GetComponent<Image>().sprite = TestRobot;
            //leftRobotImage.GetComponent<Image>().sprite = TestRobot;
 			//leftRobotImage.GetComponent<SpriteRenderer>().sprite = TestRobot;
         }
