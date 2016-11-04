@@ -35,10 +35,10 @@ public class CBoy_Gun : GunScript
     {
         if (fTimerForNext >= fFireRate && iBullets > 0)
         {
+            print("umm");
             RobotAudioSource.PlayOneShot(ShootingNoise);
             GameObject bulletPattern;
             bulletPattern = Instantiate(gBulletPattern.gameObject, PatternSpawn.transform.position, transform.rotation) as GameObject;
-            print(bulletPattern);
             bulletPattern.GetComponent<GunPattern>().sOwner = sOwner;
             fTimerForNext = 0;
             iBullets -= 1;

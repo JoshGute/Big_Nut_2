@@ -104,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012153658314}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.70710677}
-  m_LocalPosition: {x: -1.9057455, y: 2.3647084, z: 0}
+  m_LocalPosition: {x: -3.6432617, y: 3.2349226, z: -6.6198463}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
   m_Children:
@@ -280,6 +280,7 @@ MonoBehaviour:
   Direction: {x: 0, y: 0, z: 1}
   sOwner: 
   fSpeed: 100
+  fDamage: 10
 --- !u!114 &114000010908349124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -295,6 +296,7 @@ MonoBehaviour:
   Direction: {x: 0, y: 0, z: 1}
   sOwner: 
   fSpeed: 100
+  fDamage: 10
 --- !u!114 &114000013133602830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -310,6 +312,7 @@ MonoBehaviour:
   Direction: {x: 0, y: 0, z: 1}
   sOwner: 
   fSpeed: 100
+  fDamage: 10
 --- !u!135 &135000010089563402
 SphereCollider:
   m_ObjectHideFlags: 1

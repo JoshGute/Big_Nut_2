@@ -110,7 +110,7 @@ MonoBehaviour:
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
   fSpeed: 125
-  fDamage: 5
+  fDamage: 10
 --- !u!135 &135000013529898942
 SphereCollider:
   m_ObjectHideFlags: 1
