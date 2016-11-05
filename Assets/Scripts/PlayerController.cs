@@ -137,7 +137,8 @@ public class PlayerController : MonoBehaviour
                     else if(!bBody.bGrounded && bBody.iJumps > 0)
                     {
                         StartCoroutine(Dash(bBody.fDashTime));
-                        bBody.rb.velocity = new Vector3(KeyAxisH, KeyAxisV, 0) * bBody.fJumpSpeed;
+                        bBody.rb.velocity = new Vector3(KeyAxisH, KeyAxisV, 0) * bBody.fJumpSpeed * 2;
+                        print(bBody.rb.velocity);
                         --bBody.iJumps;
                     }
                     break;
@@ -191,9 +192,9 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Dash(float dashTime)
     {
-        bBody.rb.velocity = new Vector3(0, 0, 0);
         bBody.rb.useGravity = false;
         yield return new WaitForSeconds(dashTime);
         bBody.rb.useGravity = true;
+        bBody.rb.velocity = new Vector3(0, 0, 0);
     }
 }
