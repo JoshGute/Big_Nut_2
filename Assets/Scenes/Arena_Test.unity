@@ -218,6 +218,10 @@ Prefab:
       propertyPath: m_Name
       value: Spawnpoint2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011568204912, guid: 62ddbf20cc3994247bf56d1d9f6411ba, type: 2}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62ddbf20cc3994247bf56d1d9f6411ba, type: 2}
   m_IsPrefabParent: 0
@@ -1535,6 +1539,11 @@ Prefab:
       propertyPath: m_AnchorMin.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012883609860, guid: 332134ab5684e394492f093235ddd913,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Arena_Test
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 332134ab5684e394492f093235ddd913, type: 2}
   m_IsPrefabParent: 0
@@ -2062,6 +2071,10 @@ Prefab:
       propertyPath: m_Name
       value: Spawnpoint2
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011568204912, guid: 62ddbf20cc3994247bf56d1d9f6411ba, type: 2}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62ddbf20cc3994247bf56d1d9f6411ba, type: 2}
   m_IsPrefabParent: 0
@@ -2361,6 +2374,10 @@ Prefab:
     - target: {fileID: 4000013164631420, guid: 62ddbf20cc3994247bf56d1d9f6411ba, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011568204912, guid: 62ddbf20cc3994247bf56d1d9f6411ba, type: 2}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62ddbf20cc3994247bf56d1d9f6411ba, type: 2}

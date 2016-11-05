@@ -54,6 +54,7 @@ public class BodyScript : MonoBehaviour
                     child.GetComponent<Rigidbody>().useGravity = true;
                     child.GetComponent<Rigidbody>().isKinematic = false;
                     child.GetComponent<Rigidbody>().AddExplosionForce(10.0f, child.transform.position, 2.0f);
+                    child.gameObject.layer = 11;
                 }
             }
             gSkin.transform.DetachChildren();
@@ -71,7 +72,9 @@ public class BodyScript : MonoBehaviour
                 {
                     child.GetComponent<Rigidbody>().useGravity = true;
                     child.GetComponent<Rigidbody>().isKinematic = false;
+                    child.GetComponent<Rigidbody>().useGravity = true;
                     child.GetComponent<Rigidbody>().AddExplosionForce(10.0f, child.transform.position, 2.0f);
+                    child.gameObject.layer = 11;
                 }
             }
             transform.DetachChildren();

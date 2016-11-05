@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
 
     private bool bController;
     private bool bRunning = false;
+    private bool bDashing = false;
 
 
     void Start()
@@ -100,12 +101,12 @@ public class PlayerController : MonoBehaviour
                     bRunning = true;
                 }
                
-                if (KeyAxisH > 0)
+                if (KeyAxisH > 0 && !bDashing)
                 {
                     bBody.rb.velocity = new Vector3((KeyAxisH * bBody.fMoveSpeed * Time.deltaTime), bBody.rb.velocity.y, bBody.rb.velocity.z);
                     bBody.transform.localEulerAngles = new Vector3(bBody.transform.rotation.x, 90, bBody.transform.rotation.z);
                 }
-                else if (KeyAxisH < 0)
+                else if (KeyAxisH < 0 && !bDashing)
                 {
                     bBody.rb.velocity = new Vector3((KeyAxisH * bBody.fMoveSpeed * Time.deltaTime), bBody.rb.velocity.y, bBody.rb.velocity.z);
                     bBody.transform.localEulerAngles = new Vector3(bBody.transform.rotation.x, -90, bBody.transform.rotation.z);
@@ -138,7 +139,6 @@ public class PlayerController : MonoBehaviour
                     {
                         StartCoroutine(Dash(bBody.fDashTime));
                         bBody.rb.velocity = new Vector3(KeyAxisH, KeyAxisV, 0) * bBody.fJumpSpeed * 2;
-                        print(bBody.rb.velocity);
                         --bBody.iJumps;
                     }
                     break;
@@ -193,8 +193,10 @@ public class PlayerController : MonoBehaviour
     IEnumerator Dash(float dashTime)
     {
         bBody.rb.useGravity = false;
+        bDashing = true;
         yield return new WaitForSeconds(dashTime);
         bBody.rb.useGravity = true;
         bBody.rb.velocity = new Vector3(0, 0, 0);
+        bDashing = false;
     }
 }

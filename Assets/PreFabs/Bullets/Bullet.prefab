@@ -106,11 +106,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 50
+  MaxDistance: 25
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
   fSpeed: 125
-  fDamage: 10
+  fDamage: 3
 --- !u!135 &135000013529898942
 SphereCollider:
   m_ObjectHideFlags: 1
