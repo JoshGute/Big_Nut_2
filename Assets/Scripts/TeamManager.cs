@@ -55,7 +55,7 @@ public class TeamManager : MonoBehaviour
                     bSpawned = true;
                 }
 
-                else
+                else if(sPrioritySpawn.bIsSafe == false)
                 {
                     while (!bSpawned)
                     {

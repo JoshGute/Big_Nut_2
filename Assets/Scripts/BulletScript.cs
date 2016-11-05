@@ -47,7 +47,7 @@ public class BulletScript : MonoBehaviour
 
     void OnTriggerEnter(Collider trigger)
     {
-        if (trigger.gameObject.tag != sOwner)
+        if (trigger.gameObject.tag != sOwner && trigger.gameObject.layer != 5)
         {
             Destroy(gameObject);
         }
