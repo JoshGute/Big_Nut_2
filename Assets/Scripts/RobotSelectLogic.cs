@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using XInputDotNetPure;
 
 public class RobotSelectLogic : MonoBehaviour
 {
@@ -12,6 +13,20 @@ public class RobotSelectLogic : MonoBehaviour
 
     private RectTransform SelectorTransform;
 
+    private float KeyAxisH;
+    private float KeyAxisV;
+
+    private GamePadState State;
+
+    private bool bController;
+
+    public bool bDisabled;
+
+    public string Horizontal = "Horizontal_P1";
+    public string Vertical = "Vertical_P1";
+
+    public PlayerIndex playerIndex;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -21,6 +36,41 @@ public class RobotSelectLogic : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        if(!bDisabled)
+        {
+            State = GamePad.GetState(playerIndex);
+
+            KeyAxisH = State.ThumbSticks.Left.X;
+            KeyAxisV = State.ThumbSticks.Left.Y;
+
+            { 
+            if(KeyAxisH != 0)
+            {
+                if (KeyAxisH > 0 && SelectorTransform.localPosition.x < 75)
+                {
+                    SelectorTransform.localPosition += new Vector3(125, 0, 0);
+                }
+                if (KeyAxisH < 0 && SelectorTransform.localPosition.x > -50)
+                {
+                    SelectorTransform.localPosition += new Vector3(-125, 0, 0);
+                }
+
+            }
+            if(KeyAxisV != 0)
+            {
+                if (KeyAxisV > 0 && SelectorTransform.localPosition.y < 170)
+                {
+                    SelectorTransform.localPosition += new Vector3(0, 115, 0);
+                }
+                if (KeyAxisV < 0 && SelectorTransform.localPosition.y > -170)
+                {
+                    SelectorTransform.localPosition += new Vector3(0, -115, 0);
+                }
+            }
+            
+         }
+
+
         if (PlayerNumber == 1)
         {
             if(Input.GetKeyDown(KeyCode.W) && SelectorTransform.localPosition.y < 170)
@@ -41,6 +91,8 @@ public class RobotSelectLogic : MonoBehaviour
             }
 
         }
+
+
         if (PlayerNumber == 2)
         {
             if (Input.GetKeyDown(KeyCode.UpArrow) && SelectorTransform.localPosition.y < 170)
