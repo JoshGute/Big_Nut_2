@@ -10,6 +10,7 @@ TagManager:
   - Bullet1
   - Bullet
   - Sword
+  - RobotSelect
   layers:
   - Default
   - TransparentFX
