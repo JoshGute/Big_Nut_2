@@ -508,6 +508,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013136861892, guid: ee580aa97b782974eb028edbde2a293a, type: 2}
+      propertyPath: m_TagString
+      value: RobotSelect
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee580aa97b782974eb028edbde2a293a, type: 2}
   m_IsPrefabParent: 0
@@ -794,6 +798,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010252294232, guid: 2630f19d41d226844b359ef51913be6e, type: 2}
+      propertyPath: m_TagString
+      value: RobotSelect
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2630f19d41d226844b359ef51913be6e, type: 2}
   m_IsPrefabParent: 0
@@ -838,6 +846,18 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!65 &636314695
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 636314692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!224 &636314696 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224000013979356294, guid: 2c5018bbda90ad04996191991cc0d8a5,
@@ -1023,6 +1043,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013874184072, guid: 200bde66decf0ad4a926b577a7f8fb8a, type: 2}
+      propertyPath: m_TagString
+      value: RobotSelect
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 200bde66decf0ad4a926b577a7f8fb8a, type: 2}
   m_IsPrefabParent: 0
@@ -1188,6 +1212,11 @@ MonoBehaviour:
   PlayerSelector: {fileID: 698078601}
   PlayerNumber: 2
   Position: {x: 0, y: 0, z: 0}
+  bDisabled: 0
+  Horizontal: Horizontal_P1
+  Vertical: Vertical_P1
+  playerIndex: 1
+  MoveTimer: 5
 --- !u!114 &698078604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1456,6 +1485,15 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013314323584, guid: 2c5018bbda90ad04996191991cc0d8a5, type: 2}
+      propertyPath: m_TagString
+      value: RobotSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011441360180, guid: 2c5018bbda90ad04996191991cc0d8a5,
+        type: 2}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c5018bbda90ad04996191991cc0d8a5, type: 2}
   m_IsPrefabParent: 0
@@ -1592,6 +1630,23 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224000014114869706, guid: 200bde66decf0ad4a926b577a7f8fb8a,
     type: 2}
   m_PrefabInternal: {fileID: 654401226}
+--- !u!1 &789015215 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010252294232, guid: 2630f19d41d226844b359ef51913be6e,
+    type: 2}
+  m_PrefabInternal: {fileID: 417633316}
+--- !u!65 &789015219
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789015215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &873297402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,6 +1760,11 @@ MonoBehaviour:
   PlayerSelector: {fileID: 930929511}
   PlayerNumber: 1
   Position: {x: 0, y: 0, z: 0}
+  bDisabled: 0
+  Horizontal: Horizontal_P1
+  Vertical: Vertical_P1
+  playerIndex: 0
+  MoveTimer: 0
 --- !u!114 &930929514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1839,6 +1899,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1318340986}
+--- !u!1 &1323227206 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011868794998, guid: 13364757e6db8df458312fdf1583c2b0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1868978068}
+--- !u!65 &1323227207
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1323227206}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1345481883
 Prefab:
   m_ObjectHideFlags: 0
@@ -1960,6 +2037,10 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011004669278, guid: 03deea82b65ef2c4ca526ca066b07db3, type: 2}
+      propertyPath: m_TagString
+      value: RobotSelect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 03deea82b65ef2c4ca526ca066b07db3, type: 2}
@@ -2175,6 +2256,40 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ac4e9e582401d04692cbf0d7120d3d9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1409763100 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012647599728, guid: 6477056274f95b546acb9bfeeb8e0f1c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2055628617}
+--- !u!65 &1409763104
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1409763100}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1482506109 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011004669278, guid: 03deea82b65ef2c4ca526ca066b07db3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1345481883}
+--- !u!65 &1482506110
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1482506109}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1509463252
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,6 +2474,10 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011496231830, guid: 4fae2ba58b256df4ea10985bbb1bf689, type: 2}
+      propertyPath: m_TagString
+      value: RobotSelect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4fae2ba58b256df4ea10985bbb1bf689, type: 2}
@@ -2671,6 +2790,57 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1345481883}
   m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!1 &1766392680 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013136861892, guid: ee580aa97b782974eb028edbde2a293a,
+    type: 2}
+  m_PrefabInternal: {fileID: 327519217}
+--- !u!65 &1766392681
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1766392680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1824176100 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011496231830, guid: 4fae2ba58b256df4ea10985bbb1bf689,
+    type: 2}
+  m_PrefabInternal: {fileID: 1534164325}
+--- !u!65 &1824176101
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1824176100}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1841027288 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013874184072, guid: 200bde66decf0ad4a926b577a7f8fb8a,
+    type: 2}
+  m_PrefabInternal: {fileID: 654401226}
+--- !u!65 &1841027292
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1841027288}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1868978068
 Prefab:
   m_ObjectHideFlags: 0
@@ -2792,6 +2962,10 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011868794998, guid: 13364757e6db8df458312fdf1583c2b0, type: 2}
+      propertyPath: m_TagString
+      value: RobotSelect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13364757e6db8df458312fdf1583c2b0, type: 2}
@@ -3208,6 +3382,10 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012647599728, guid: 6477056274f95b546acb9bfeeb8e0f1c, type: 2}
+      propertyPath: m_TagString
+      value: RobotSelect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6477056274f95b546acb9bfeeb8e0f1c, type: 2}
