@@ -1402,6 +1402,7 @@ MonoBehaviour:
   fMoveSpeed: 500
   fJumpSpeed: 10
   fDashTime: 0.25
+  acHitNoise: {fileID: 0}
 --- !u!114 &114000014076014372
 MonoBehaviour:
   m_ObjectHideFlags: 1

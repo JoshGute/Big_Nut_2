@@ -13,6 +13,9 @@ public class TeamManager : MonoBehaviour
     private bool bPrioritySpawn = true;
     // Use this for initialization
 
+    public AudioClip acSpawnNoise;
+    private AudioSource asNoiseMaker;
+
     public delegate void TeamWin(string sOwner);
     public static event TeamWin Victory;
 
@@ -27,6 +30,7 @@ public class TeamManager : MonoBehaviour
     }
 	void Start ()
     {
+        asNoiseMaker = GetComponent<AudioSource>();
         Spawn(pOwner.tag);
 	}
 	
@@ -36,7 +40,14 @@ public class TeamManager : MonoBehaviour
 
         if (sOwner_ == pOwner.tag)
         {
-            cCamera.GetComponent<FollowCam>().Shake(0.5f);
+            if(iDeaths > 0)
+            {
+                asNoiseMaker.PlayOneShot(acSpawnNoise);
+                cCamera.GetComponent<FollowCam>().Shake(0.5f);
+            }
+            
+
+            
             if (iDeaths == gTeam.Length)
 
             {

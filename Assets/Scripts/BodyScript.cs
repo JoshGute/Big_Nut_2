@@ -15,13 +15,19 @@ public class BodyScript : MonoBehaviour
     public int iJumps;
     public float fMoveSpeed;
     public float fJumpSpeed;
-    public float fDashTime;
+    public float fDashTime; 
+
+    public AudioClip acHitNoise;
+
+    private AudioSource asNoiseMaker;
+   
 
     public delegate void DeathAction(string sOwner_);
     public static event DeathAction Die;
 
     void Start ()
     {
+        asNoiseMaker = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         InvokeRepeating("updateLifeTime", 0, 1);
@@ -36,6 +42,7 @@ public class BodyScript : MonoBehaviour
       }
       else if (fLifetime <= 0)
       {
+          
           Explode();
           CancelInvoke();
       }
@@ -117,6 +124,7 @@ public class BodyScript : MonoBehaviour
     //HAHAHAHAHAHAHA THIS IS THE 3RD TIME I'VE WRITTEN THIS FUNCTION. AHAHAHAHAHAHAHAHAHA - Linus
     void TakeDamage(float damage)
     {
+        asNoiseMaker.PlayOneShot(acHitNoise);
         fLifetime -= damage;
 
         foreach (Transform child in gSkin.transform)
