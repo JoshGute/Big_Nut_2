@@ -33,7 +33,7 @@ public class ScaleOverTime : MonoBehaviour {
 
                 TargetToScale.localScale += ScalePerTick;
 
-                if(TargetToScale.localScale.x >= ScalePerTick.x)
+                if(TargetToScale.localScale.x >= MaxScale.x)
                 {
                     ScaleMet = true;
                 }

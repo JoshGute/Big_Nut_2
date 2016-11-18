@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede7fbf1e702b32459bd524d658bb28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxScale: {x: 10, y: 10, z: 10}
+  MaxScale: {x: 2, y: 2, z: 2}
   ScalePerTick: {x: 0.25, y: 0.25, z: 0.25}
   fScaleRate: 0.3
 --- !u!114 &114000011645967776
@@ -121,10 +121,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 50
+  MaxDistance: 20
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
   fSpeed: 10
+  BlowUpWithTime: 1
+  TimeToBlowUp: 2.5
+  fDamage: 2.5
 --- !u!136 &136000010101472068
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -30,7 +30,7 @@ public class GunPattern : MonoBehaviour {
             {
                 GameObject newBullet;
                 newBullet = Instantiate(aBullets[i].gameObject, transform.position, transform.rotation) as GameObject;
-                print(sOwner);
+                //print(sOwner);
                 newBullet.GetComponent<BulletScript>().sOwner = sOwner;
                 //aBullets[i].sOwner = sOwner;
             }
