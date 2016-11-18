@@ -3,6 +3,8 @@ using System.Collections;
 
 public class TeamManager : MonoBehaviour
 {
+
+    public Camera cCamera;
     public PlayerController pOwner;
     public GameObject[] gTeam;
     public Spawnpoint[] sSpawnPoints;
@@ -34,6 +36,7 @@ public class TeamManager : MonoBehaviour
 
         if (sOwner_ == pOwner.tag)
         {
+            cCamera.GetComponent<FollowCam>().Shake(0.5f);
             if (iDeaths == gTeam.Length)
 
             {
@@ -53,6 +56,15 @@ public class TeamManager : MonoBehaviour
                     print(gRobot);
                     ++iDeaths;
                     bSpawned = true;
+                    if (pOwner.tag == "Player1")
+                    {
+                        cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 1);
+                    }
+
+                    else
+                    {
+                        cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 2);
+                    }
                 }
 
                 else if(sPrioritySpawn.bIsSafe == false)
@@ -65,6 +77,15 @@ public class TeamManager : MonoBehaviour
                             pOwner.TagRobot(gRobot);
                             ++iDeaths;
                             bSpawned = true;
+                            if (pOwner.tag == "Player1")
+                            {
+                                cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 1);
+                            }
+
+                            else
+                            {
+                                cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 2);
+                            }
                         }
 
                         else

@@ -25,6 +25,7 @@ GameObject:
   - 114: {fileID: 114000011258191188}
   - 65: {fileID: 65000012986789860}
   - 54: {fileID: 54000011966980746}
+  - 114: {fileID: 114000012919506488}
   m_Layer: 0
   m_Name: LeftLeg
   m_TagString: Untagged
@@ -45,6 +46,7 @@ GameObject:
   - 54: {fileID: 54000010732092184}
   - 114: {fileID: 114000013524260782}
   - 65: {fileID: 65000013745130462}
+  - 114: {fileID: 114000013625581672}
   m_Layer: 10
   m_Name: CowBoy_Gun
   m_TagString: Player1
@@ -82,6 +84,7 @@ GameObject:
   - 114: {fileID: 114000012242666566}
   - 54: {fileID: 54000011084707506}
   - 65: {fileID: 65000011715678152}
+  - 114: {fileID: 114000012511578738}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -138,6 +141,7 @@ GameObject:
   - 114: {fileID: 114000012523560044}
   - 65: {fileID: 65000010757346530}
   - 54: {fileID: 54000011692828028}
+  - 114: {fileID: 114000010255019668}
   m_Layer: 0
   m_Name: RightLeg
   m_TagString: Untagged
@@ -159,6 +163,7 @@ GameObject:
   - 114: {fileID: 114000011138111722}
   - 54: {fileID: 54000013818236802}
   - 65: {fileID: 65000013098047258}
+  - 114: {fileID: 114000012333262626}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -217,6 +222,7 @@ GameObject:
   - 54: {fileID: 54000013022311654}
   - 114: {fileID: 114000012205196932}
   - 65: {fileID: 65000013959983664}
+  - 114: {fileID: 114000012915379480}
   m_Layer: 10
   m_Name: Sword
   m_TagString: Sword
@@ -437,7 +443,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014240113850}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -7.438526, y: 0.30151907, z: 6.116103}
+  m_LocalPosition: {x: 0, y: 2.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_Children:
@@ -853,7 +859,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 40
   m_CollisionDetection: 0
 --- !u!54 &54000010732092184
 Rigidbody:
@@ -868,7 +874,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 40
   m_CollisionDetection: 0
 --- !u!54 &54000011023262670
 Rigidbody:
@@ -898,7 +904,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 40
   m_CollisionDetection: 0
 --- !u!54 &54000011692828028
 Rigidbody:
@@ -913,7 +919,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 40
   m_CollisionDetection: 0
 --- !u!54 &54000011966980746
 Rigidbody:
@@ -928,7 +934,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 40
   m_CollisionDetection: 0
 --- !u!54 &54000013022311654
 Rigidbody:
@@ -943,7 +949,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 40
   m_CollisionDetection: 0
 --- !u!54 &54000013818236802
 Rigidbody:
@@ -958,7 +964,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 40
   m_CollisionDetection: 0
 --- !u!65 &65000010757346530
 BoxCollider:
@@ -1154,6 +1160,18 @@ MonoBehaviour:
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
   renderLayer: 0
+--- !u!114 &114000010255019668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011820765770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8139975dcb1594db1186683e162b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bShaking: 0
 --- !u!114 &114000010547132518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1291,6 +1309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sOwner: 
   gSkin: {fileID: 1000011121934648}
+  gOilSpring: {fileID: 1000012298988896, guid: 78109e786aaa8c94e8bd805a324862f1, type: 2}
   rb: {fileID: 0}
   fLifetime: 60
   bGrounded: 0
@@ -1390,6 +1409,30 @@ MonoBehaviour:
   library: {fileID: 114000010897886846, guid: a34aadbebb880f645b43a43154b845a7, type: 2}
   defaultClipId: 8
   playAutomatically: 0
+--- !u!114 &114000012333262626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011902276994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8139975dcb1594db1186683e162b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bShaking: 0
+--- !u!114 &114000012511578738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011413013268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8139975dcb1594db1186683e162b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bShaking: 0
 --- !u!114 &114000012523560044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1423,6 +1466,30 @@ MonoBehaviour:
   FullHealth: {r: 0, g: 1, b: 0, a: 0}
   MediumHealth: {r: 1, g: 1, b: 0, a: 0}
   LowHealth: {r: 1, g: 0, b: 0, a: 0}
+--- !u!114 &114000012915379480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014023088338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8139975dcb1594db1186683e162b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bShaking: 0
+--- !u!114 &114000012919506488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010439813010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8139975dcb1594db1186683e162b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bShaking: 0
 --- !u!114 &114000013434269778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1474,6 +1541,18 @@ MonoBehaviour:
   library: {fileID: 11400000, guid: 18a39674a9b14f54b97497254e83b349, type: 2}
   defaultClipId: 0
   playAutomatically: 0
+--- !u!114 &114000013625581672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010772693418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8139975dcb1594db1186683e162b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bShaking: 0
 --- !u!136 &136000010533634320
 CapsuleCollider:
   m_ObjectHideFlags: 1

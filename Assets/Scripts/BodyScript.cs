@@ -6,7 +6,7 @@ public class BodyScript : MonoBehaviour
 {
     public string sOwner;
     public GameObject gSkin;
-
+    public GameObject gOilSpring;
     public Rigidbody rb;
     public float fLifetime;
 
@@ -43,6 +43,9 @@ public class BodyScript : MonoBehaviour
 
     public void Explode()
     {
+        Instantiate(gOilSpring, transform.position + gOilSpring.transform.position, gOilSpring.transform.rotation);
+
+
         if (gSkin)
         {
             print("skin detected");
@@ -56,9 +59,13 @@ public class BodyScript : MonoBehaviour
                     child.GetComponent<Rigidbody>().AddExplosionForce(10.0f, child.transform.position, 2.0f);
                     child.gameObject.layer = 11;
                 }
+                if (child.GetComponent<tk2dSprite>())
+                {
+                    child.GetComponent<tk2dSprite>().color = Color.white;
+                }
             }
             gSkin.transform.DetachChildren();
-            rb.AddExplosionForce(5.0f, transform.position, 2.0f);
+            rb.AddExplosionForce(10.0f, transform.position, 2.0f);
             Die(sOwner);
             Destroy(gameObject);
         }
@@ -91,6 +98,13 @@ public class BodyScript : MonoBehaviour
             iJumps = iMaxJumps;
             bGrounded = true;
         }
+
+        if (collision.gameObject.tag == "Bullet" && collision.gameObject.GetComponent<BulletScript>().sOwner != sOwner)
+        {
+            TakeDamage(collision.gameObject.GetComponent<BulletScript>().Damage);
+
+            updateLifeTime();
+        }
     }
 
     void OnCollisionExit(Collision collision)
@@ -104,7 +118,23 @@ public class BodyScript : MonoBehaviour
     //HAHAHAHAHAHAHA THIS IS THE 3RD TIME I'VE WRITTEN THIS FUNCTION. AHAHAHAHAHAHAHAHAHA - Linus
     void TakeDamage(float damage)
     {
-      fLifetime -= damage;  
+        fLifetime -= damage;
+
+        foreach (Transform child in gSkin.transform)
+        {
+            if (child.GetComponent<tk2dSprite>())
+            {
+                StartCoroutine(Flash(child.GetComponent<tk2dSprite>()));
+
+            }
+            /*Vector3 startPosition = child.transform.position;
+            if (child.GetComponent<Shaker>())
+            {
+                Vector3 StartPostion = child.transform.localPosition;
+                child.GetComponent<Shaker>().toggleShake();
+            }
+            child.transform.position = startPosition;*/
+        }
     }
 
     void OnTriggerEnter(Collider trigger)
@@ -125,5 +155,13 @@ public class BodyScript : MonoBehaviour
 
         updateLifeTime();
       }
+
+    }
+
+    private IEnumerator Flash(tk2dSprite SkinPart_)
+    {
+        SkinPart_.color = Color.black;
+        yield return new WaitForSeconds(.05f);
+        SkinPart_.color = Color.white;
     }
 }
