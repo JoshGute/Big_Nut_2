@@ -50,10 +50,8 @@ public class TeamManager : MonoBehaviour
 
                 if (sPrioritySpawn.bIsSafe)
                 {
-                    //print("Priority spawn");
                     GameObject gRobot = Instantiate(gTeam[iDeaths], sPrioritySpawn.transform.position, gTeam[iDeaths].transform.rotation) as GameObject;
                     pOwner.TagRobot(gRobot);
-                    print(gRobot);
                     ++iDeaths;
                     bSpawned = true;
                     if (pOwner.tag == "Player1")

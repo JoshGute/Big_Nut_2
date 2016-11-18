@@ -43,8 +43,8 @@ public class BodyScript : MonoBehaviour
 
     public void Explode()
     {
-        Instantiate(gOilSpring, transform.position + gOilSpring.transform.position, gOilSpring.transform.rotation);
-
+        GameObject gOilSpring_ = Instantiate(gOilSpring.gameObject, transform.position + gOilSpring.transform.position, gOilSpring.transform.rotation) as GameObject;
+        gOilSpring_.transform.parent = gSkin.transform; 
 
         if (gSkin)
         {
@@ -65,7 +65,6 @@ public class BodyScript : MonoBehaviour
                 }
             }
             gSkin.transform.DetachChildren();
-            rb.AddExplosionForce(10.0f, transform.position, 2.0f);
             Die(sOwner);
             Destroy(gameObject);
         }
@@ -127,34 +126,24 @@ public class BodyScript : MonoBehaviour
                 StartCoroutine(Flash(child.GetComponent<tk2dSprite>()));
 
             }
-            /*Vector3 startPosition = child.transform.position;
-            if (child.GetComponent<Shaker>())
-            {
-                Vector3 StartPostion = child.transform.localPosition;
-                child.GetComponent<Shaker>().toggleShake();
-            }
-            child.transform.position = startPosition;*/
         }
     }
 
     void OnTriggerEnter(Collider trigger)
     {
       //Being hit by Bullet
-      if (trigger.gameObject.tag == "Bullet" && trigger.gameObject.GetComponent<BulletScript>().sOwner != sOwner)
-      {
-        TakeDamage(trigger.gameObject.GetComponent<BulletScript>().Damage);
-
-        updateLifeTime();
-      }
+        if (trigger.gameObject.tag == "Bullet" && trigger.gameObject.GetComponent<BulletScript>().sOwner != sOwner)
+        {
+            TakeDamage(trigger.gameObject.GetComponent<BulletScript>().Damage);
+        }
 
       //Being hit by a Sword
       //(trigger is the hitbox attached to sword in this case. the info is in the sword arm parent so that's why do getcomponentinparent)
-      else if(trigger.gameObject.tag == "Sword" && trigger.gameObject.GetComponentInParent<SwordScript>().sOwner != sOwner)
-      {
-        TakeDamage(trigger.gameObject.GetComponentInParent<SwordScript>().Damage);
-
-        updateLifeTime();
-      }
+        else if(trigger.gameObject.tag == "Sword" && trigger.gameObject.GetComponentInParent<SwordScript>().sOwner != sOwner)
+        {
+            TakeDamage(trigger.gameObject.GetComponentInParent<SwordScript>().Damage);
+            rb.velocity = (trigger.transform.forward * trigger.gameObject.GetComponentInParent<SwordScript>().Damage * 2);
+        }
 
     }
 
