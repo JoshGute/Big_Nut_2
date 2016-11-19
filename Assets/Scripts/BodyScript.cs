@@ -51,7 +51,8 @@ public class BodyScript : MonoBehaviour
     public void Explode()
     {
         GameObject gOilSpring_ = Instantiate(gOilSpring.gameObject, transform.position + gOilSpring.transform.position, gOilSpring.transform.rotation) as GameObject;
-        gOilSpring_.transform.parent = gSkin.transform; 
+        gOilSpring_.transform.parent = gSkin.transform;
+        GetComponentInChildren<AnimationController>().changeAnimation(2);
 
         if (gSkin)
         {

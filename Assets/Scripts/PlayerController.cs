@@ -29,11 +29,6 @@ public class PlayerController : MonoBehaviour
     private bool bRunning = false;
     private bool bDashing = false;
 
-
-    void Start()
-    {
-        
-    }
     void Update ()
     {
         if (!bDisabled)
@@ -174,7 +169,6 @@ public class PlayerController : MonoBehaviour
             aController = gRobot_.GetComponentInChildren<AnimationController>();
         }
 
-
         //this is super superfulous(fuck spelling lmao) and and probably be made into tags. - josh
         //actually it is still useful so we are using it again - linus
         //this is correct - Josh
@@ -185,9 +179,7 @@ public class PlayerController : MonoBehaviour
 
         bBody.tag = tag;
         gGun.tag = tag;
-        sSword.tag = tag;
-
-    
+        sSword.tag = tag;    
     }
 
     IEnumerator Dash(float dashTime)
