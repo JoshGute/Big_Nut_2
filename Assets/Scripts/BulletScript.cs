@@ -12,6 +12,9 @@ public class BulletScript : MonoBehaviour
     public float fSpeed = 10.0f;
     private Rigidbody rb;
 
+    public bool BlowUpWithTime;
+    public float TimeToBlowUp;
+
     [SerializeField]
     private float fDamage;
 
@@ -43,6 +46,15 @@ public class BulletScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (BlowUpWithTime)
+        {
+            TimeToBlowUp -= Time.deltaTime;
+            if (TimeToBlowUp <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     void OnTriggerEnter(Collider trigger)
@@ -51,6 +63,13 @@ public class BulletScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
 
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag != sOwner && col.gameObject.layer != 0 && BlowUpWithTime)
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -29,11 +29,11 @@ public class ScaleOverTime : MonoBehaviour {
             if (FTimertoNextScale >= fScaleRate)
             {
                 FTimertoNextScale = 0;
-                print("scale time");
+                //print("scale time");
 
                 TargetToScale.localScale += ScalePerTick;
 
-                if(TargetToScale.localScale.x >= ScalePerTick.x)
+                if(TargetToScale.localScale.x >= MaxScale.x)
                 {
                     ScaleMet = true;
                 }

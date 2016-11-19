@@ -25,7 +25,7 @@ public class CBoy_Gun : GunScript
                     RobotAudioSource.PlayOneShot(ReloadNoise);
                     iBullets += 1;
                     fReloadTimer = 0;
-                    print(iBullets);
+                    //print(iBullets);
                 }
             }
         }
@@ -35,7 +35,7 @@ public class CBoy_Gun : GunScript
     {
         if (fTimerForNext >= fFireRate && iBullets > 0)
         {
-            print("umm");
+            //print("umm");
             RobotAudioSource.PlayOneShot(ShootingNoise);
             GameObject bulletPattern;
             bulletPattern = Instantiate(gBulletPattern.gameObject, PatternSpawn.transform.position, transform.rotation) as GameObject;
