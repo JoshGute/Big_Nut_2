@@ -42,8 +42,11 @@ public class TeamManager : MonoBehaviour
         {
             if(iDeaths > 0)
             {
-                asNoiseMaker.PlayOneShot(acSpawnNoise);
                 cCamera.GetComponent<FollowCam>().Shake(0.5f);
+                if(iDeaths > 1)
+                {
+                    asNoiseMaker.PlayOneShot(acSpawnNoise);
+                }
             }
             
 

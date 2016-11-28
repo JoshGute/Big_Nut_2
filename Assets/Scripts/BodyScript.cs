@@ -18,8 +18,8 @@ public class BodyScript : MonoBehaviour
     public float fDashTime; 
 
     public AudioClip acHitNoise;
-
-    private AudioSource asNoiseMaker;
+    public AudioClip acExplodeNoise;
+    public AudioSource asNoiseMaker;
    
 
     public delegate void DeathAction(string sOwner_);
@@ -27,7 +27,7 @@ public class BodyScript : MonoBehaviour
 
     void Start ()
     {
-        asNoiseMaker = GetComponent<AudioSource>();
+        //asNoiseMaker = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         InvokeRepeating("updateLifeTime", 0, 1);
@@ -50,6 +50,7 @@ public class BodyScript : MonoBehaviour
 
     public void Explode()
     {
+        asNoiseMaker.PlayOneShot(acExplodeNoise);
         GameObject gOilSpring_ = Instantiate(gOilSpring.gameObject, transform.position + gOilSpring.transform.position, gOilSpring.transform.rotation) as GameObject;
         gOilSpring_.transform.parent = gSkin.transform;
         GetComponentInChildren<AnimationController>().changeAnimation(2);

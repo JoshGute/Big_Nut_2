@@ -2201,7 +2201,7 @@ MonoBehaviour:
   - {fileID: 520207243}
   sPrioritySpawn: {fileID: 808300229}
   iDeaths: 0
-  acSpawnNoise: {fileID: 8300000, guid: 6cc2c25a03d921d46910524e479aeb9f, type: 3}
+  acSpawnNoise: {fileID: 8300000, guid: f0047805d3adf364daf5bc9dae376e03, type: 3}
 --- !u!4 &1702916011
 Transform:
   m_ObjectHideFlags: 0
@@ -3113,7 +3113,7 @@ MonoBehaviour:
   - {fileID: 520207243}
   sPrioritySpawn: {fileID: 378942768}
   iDeaths: 0
-  acSpawnNoise: {fileID: 8300000, guid: 6cc2c25a03d921d46910524e479aeb9f, type: 3}
+  acSpawnNoise: {fileID: 8300000, guid: f0047805d3adf364daf5bc9dae376e03, type: 3}
 --- !u!4 &2125193339
 Transform:
   m_ObjectHideFlags: 0
