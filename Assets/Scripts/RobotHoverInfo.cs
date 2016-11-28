@@ -7,15 +7,12 @@ using UnityEngine.EventSystems;
  * the RobotSelectionLogic talks to this, then this talks to the actual changing UI */
 public class RobotHoverInfo : MonoBehaviour
 {
-    public Image Robot;
-    public Image SelectedRobot;
-    
-
+    public bool isSelectable;
     // Use this for initialization
     void Start ()
     {
-        
-	}
+        isSelectable = true;
+    }
 	
 	// Update is called once per frame
 	void Update ()
