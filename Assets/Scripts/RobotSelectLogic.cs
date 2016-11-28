@@ -38,20 +38,25 @@ public class RobotSelectLogic : MonoBehaviour
 
     private List<GameObject> Team = new List<GameObject>();
 
+    
+
     // Use this for initialization
     void Start ()
     {
         SelectorTransform = GetComponent<RectTransform>();
         CanMove = true;
         MoveTimer = 10;
+        
 	}
 
 	// Update is called once per frame
 	void Update ()
     {
-        if(!bDisabled && CanMove == true)
+        PrevState = State;
+        State = GamePad.GetState(playerIndex);
+
+        if (!bDisabled && CanMove == true)
         {
-            State = GamePad.GetState(playerIndex);
 
             KeyAxisH = State.ThumbSticks.Left.X;
             KeyAxisV = State.ThumbSticks.Left.Y;
@@ -136,8 +141,6 @@ public class RobotSelectLogic : MonoBehaviour
             }
         }
 
-        //raycasting bois
-
         Vector3 backRay = transform.TransformDirection(Vector3.forward);
         Debug.DrawRay(transform.position, backRay, Color.black);
         RaycastHit hit;
@@ -145,17 +148,17 @@ public class RobotSelectLogic : MonoBehaviour
 
         if(Physics.Raycast(transform.position, backRay, out hit))
         {
-            PrevState = State;
-            State = GamePad.GetState(playerIndex);
 
             //Debug.Log(hit.collider.gameObject);
             if(hit.collider.gameObject.name == "TopLeft")
             {
                 SelectedRobot.GetComponent<Image>().sprite = hit.collider.gameObject.GetComponent<Image>().sprite;
-                if (State.Buttons.A == ButtonState.Pressed)
+                
+
+                if (PrevState.Buttons.A == ButtonState.Released && State.Buttons.A == ButtonState.Pressed)
                 {
                     Team.Add(hit.collider.gameObject);
-                    if(Team[0] == hit.collider.gameObject)
+                    if (Team[0] == hit.collider.gameObject)
                     {
                         Robot1.GetComponent<Image>().sprite = Team[0].GetComponent<Image>().sprite;
                     }
@@ -167,36 +170,164 @@ public class RobotSelectLogic : MonoBehaviour
                     {
                         Robot3.GetComponent<Image>().sprite = Team[2].GetComponent<Image>().sprite;
                     }
+                    hit.collider.gameObject.GetComponent<RobotHoverInfo>().isSelectable = false;
                 }
+  
             }
             else if (hit.collider.gameObject.name == "TopRight")
             {
                 SelectedRobot.GetComponent<Image>().sprite = hit.collider.gameObject.GetComponent<Image>().sprite;
-                
+
+                if (PrevState.Buttons.A == ButtonState.Released && State.Buttons.A == ButtonState.Pressed)
+                {
+                    Team.Add(hit.collider.gameObject);
+                    if (Team[0] == hit.collider.gameObject)
+                    {
+                        Robot1.GetComponent<Image>().sprite = Team[0].GetComponent<Image>().sprite;
+                    }
+                    else if (Team[1] == hit.collider.gameObject)
+                    {
+                        Robot2.GetComponent<Image>().sprite = Team[1].GetComponent<Image>().sprite;
+                    }
+                    else if (Team[2] == hit.collider.gameObject)
+                    {
+                        Robot3.GetComponent<Image>().sprite = Team[2].GetComponent<Image>().sprite;
+                    }
+                    hit.collider.gameObject.GetComponent<RobotHoverInfo>().isSelectable = false;
+                }
+
             }
             else if (hit.collider.gameObject.name == "3Left")
             {
                 SelectedRobot.GetComponent<Image>().sprite = hit.collider.gameObject.GetComponent<Image>().sprite;
+
+                if (PrevState.Buttons.A == ButtonState.Released && State.Buttons.A == ButtonState.Pressed)
+                {
+                    Team.Add(hit.collider.gameObject);
+                    if (Team[0] == hit.collider.gameObject)
+                    {
+                        Robot1.GetComponent<Image>().sprite = Team[0].GetComponent<Image>().sprite;
+                    }
+                    else if (Team[1] == hit.collider.gameObject)
+                    {
+                        Robot2.GetComponent<Image>().sprite = Team[1].GetComponent<Image>().sprite;
+                    }
+                    else if (Team[2] == hit.collider.gameObject)
+                    {
+                        Robot3.GetComponent<Image>().sprite = Team[2].GetComponent<Image>().sprite;
+                    }
+                    hit.collider.gameObject.GetComponent<RobotHoverInfo>().isSelectable = false;
+                }
             }
             else if (hit.collider.gameObject.name == "3Right")
             {
                 SelectedRobot.GetComponent<Image>().sprite = hit.collider.gameObject.GetComponent<Image>().sprite;
+
+                if (PrevState.Buttons.A == ButtonState.Released && State.Buttons.A == ButtonState.Pressed)
+                {
+                    Team.Add(hit.collider.gameObject);
+                    if (Team[0] == hit.collider.gameObject)
+                    {
+                        Robot1.GetComponent<Image>().sprite = Team[0].GetComponent<Image>().sprite;
+                    }
+                    else if (Team[1] == hit.collider.gameObject)
+                    {
+                        Robot2.GetComponent<Image>().sprite = Team[1].GetComponent<Image>().sprite;
+                    }
+                    else if (Team[2] == hit.collider.gameObject)
+                    {
+                        Robot3.GetComponent<Image>().sprite = Team[2].GetComponent<Image>().sprite;
+                    }
+                    hit.collider.gameObject.GetComponent<RobotHoverInfo>().isSelectable = false;
+                }
             }
             else if (hit.collider.gameObject.name == "2Left")
             {
                 SelectedRobot.GetComponent<Image>().sprite = hit.collider.gameObject.GetComponent<Image>().sprite;
+
+                if (PrevState.Buttons.A == ButtonState.Released && State.Buttons.A == ButtonState.Pressed)
+                {
+                    Team.Add(hit.collider.gameObject);
+                    if (Team[0] == hit.collider.gameObject)
+                    {
+                        Robot1.GetComponent<Image>().sprite = Team[0].GetComponent<Image>().sprite;
+                    }
+                    else if (Team[1] == hit.collider.gameObject)
+                    {
+                        Robot2.GetComponent<Image>().sprite = Team[1].GetComponent<Image>().sprite;
+                    }
+                    else if (Team[2] == hit.collider.gameObject)
+                    {
+                        Robot3.GetComponent<Image>().sprite = Team[2].GetComponent<Image>().sprite;
+                    }
+                    hit.collider.gameObject.GetComponent<RobotHoverInfo>().isSelectable = false;
+                }
             }
             else if (hit.collider.gameObject.name == "2Right")
             {
                 SelectedRobot.GetComponent<Image>().sprite = hit.collider.gameObject.GetComponent<Image>().sprite;
+
+                if (PrevState.Buttons.A == ButtonState.Released && State.Buttons.A == ButtonState.Pressed)
+                {
+                    Team.Add(hit.collider.gameObject);
+                    if (Team[0] == hit.collider.gameObject)
+                    {
+                        Robot1.GetComponent<Image>().sprite = Team[0].GetComponent<Image>().sprite;
+                    }
+                    else if (Team[1] == hit.collider.gameObject)
+                    {
+                        Robot2.GetComponent<Image>().sprite = Team[1].GetComponent<Image>().sprite;
+                    }
+                    else if (Team[2] == hit.collider.gameObject)
+                    {
+                        Robot3.GetComponent<Image>().sprite = Team[2].GetComponent<Image>().sprite;
+                    }
+                    hit.collider.gameObject.GetComponent<RobotHoverInfo>().isSelectable = false;
+                }
             }
             else if (hit.collider.gameObject.name == "BottomLeft")
             {
                 SelectedRobot.GetComponent<Image>().sprite = hit.collider.gameObject.GetComponent<Image>().sprite;
+
+                if (PrevState.Buttons.A == ButtonState.Released && State.Buttons.A == ButtonState.Pressed)
+                {
+                    Team.Add(hit.collider.gameObject);
+                    if (Team[0] == hit.collider.gameObject)
+                    {
+                        Robot1.GetComponent<Image>().sprite = Team[0].GetComponent<Image>().sprite;
+                    }
+                    else if (Team[1] == hit.collider.gameObject)
+                    {
+                        Robot2.GetComponent<Image>().sprite = Team[1].GetComponent<Image>().sprite;
+                    }
+                    else if (Team[2] == hit.collider.gameObject)
+                    {
+                        Robot3.GetComponent<Image>().sprite = Team[2].GetComponent<Image>().sprite;
+                    }
+                    hit.collider.gameObject.GetComponent<RobotHoverInfo>().isSelectable = false;
+                }
             }
             else if (hit.collider.gameObject.name == "BottomRight")
             {
                 SelectedRobot.GetComponent<Image>().sprite = hit.collider.gameObject.GetComponent<Image>().sprite;
+
+                if (PrevState.Buttons.A == ButtonState.Released && State.Buttons.A == ButtonState.Pressed)
+                {
+                    Team.Add(hit.collider.gameObject);
+                    if (Team[0] == hit.collider.gameObject)
+                    {
+                        Robot1.GetComponent<Image>().sprite = Team[0].GetComponent<Image>().sprite;
+                    }
+                    else if (Team[1] == hit.collider.gameObject)
+                    {
+                        Robot2.GetComponent<Image>().sprite = Team[1].GetComponent<Image>().sprite;
+                    }
+                    else if (Team[2] == hit.collider.gameObject)
+                    {
+                        Robot3.GetComponent<Image>().sprite = Team[2].GetComponent<Image>().sprite;
+                    }
+                    hit.collider.gameObject.GetComponent<RobotHoverInfo>().isSelectable = false;
+                }
             }
         }
 	}
