@@ -741,7 +741,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012310738600, guid: a420800acdb34ce4f82b619580b0e39b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8.3095455
+      value: -8.19
       objectReference: {fileID: 0}
     - target: {fileID: 4000012310738600, guid: a420800acdb34ce4f82b619580b0e39b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -771,22 +771,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 33000013384700618, guid: a420800acdb34ce4f82b619580b0e39b,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 33000012737964194, guid: a420800acdb34ce4f82b619580b0e39b,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 33000012229341494, guid: a420800acdb34ce4f82b619580b0e39b,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 33000012098022458, guid: a420800acdb34ce4f82b619580b0e39b,
+    - target: {fileID: 33000012792650618, guid: a420800acdb34ce4f82b619580b0e39b,
         type: 2}
       propertyPath: m_Mesh
       value: 
@@ -796,7 +781,22 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 33000012792650618, guid: a420800acdb34ce4f82b619580b0e39b,
+    - target: {fileID: 33000012098022458, guid: a420800acdb34ce4f82b619580b0e39b,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 33000012229341494, guid: a420800acdb34ce4f82b619580b0e39b,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 33000012737964194, guid: a420800acdb34ce4f82b619580b0e39b,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 33000013384700618, guid: a420800acdb34ce4f82b619580b0e39b,
         type: 2}
       propertyPath: m_Mesh
       value: 

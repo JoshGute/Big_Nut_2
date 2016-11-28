@@ -2508,7 +2508,7 @@ MonoBehaviour:
   sizeDef:
     type: 1
     orthoSize: 10
-    pixelsPerMeter: 20
+    pixelsPerMeter: 25
     width: 960
     height: 640
   globalScale: 1
