@@ -1,0 +1,2618 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000010810158630}
+  m_IsPrefabParent: 1
+--- !u!1 &1000010810158630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011307604072}
+  - 114: {fileID: 114000012047739118}
+  m_Layer: 0
+  m_Name: AstronautBot_SpriteCollection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000011307604072
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010810158630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114000012047739118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010810158630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d546f34a90531a14eaba82a43b05b86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  materialIdsValid: 1
+  needMaterialInstance: 0
+  spriteDefinitions:
+  - name: astronut_bodyidle/0
+    boundsData:
+    - {x: 0, y: -0.02500005, z: 0}
+    - {x: 1.1, y: 0.75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -0.025000036, z: 0}
+    - {x: 1.5, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.55, y: -0.40000004, z: 0}
+    - {x: 0.55, y: -0.40000004, z: 0}
+    - {x: -0.55, y: 0.34999993, z: 0}
+    - {x: 0.55, y: 0.34999993, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.6484453, y: 0.3515703}
+    - {x: 0.6484453, y: 0.5234297}
+    - {x: 0.7656172, y: 0.3515703}
+    - {x: 0.7656172, y: 0.5234297}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 0}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: a3853912da696ed4d81d0fc784846e8d
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 30
+    regionH: 23
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_bodymove/0
+    boundsData:
+    - {x: 0, y: -0.02500005, z: 0}
+    - {x: 1.1, y: 0.75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -0.025000036, z: 0}
+    - {x: 1.5, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.55, y: -0.40000004, z: 0}
+    - {x: 0.55, y: -0.40000004, z: 0}
+    - {x: -0.55, y: 0.34999993, z: 0}
+    - {x: 0.55, y: 0.34999993, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.6484453, y: 0.3515703}
+    - {x: 0.6484453, y: 0.5234297}
+    - {x: 0.7656172, y: 0.3515703}
+    - {x: 0.7656172, y: 0.5234297}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 0}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 00d29006083ce614dadd67005c0d0709
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 30
+    regionH: 23
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_bodymove/1
+    boundsData:
+    - {x: 0, y: -0.02500005, z: 0}
+    - {x: 1.1, y: 0.75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -0.025000036, z: 0}
+    - {x: 1.5, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.55, y: -0.40000004, z: 0}
+    - {x: 0.55, y: -0.40000004, z: 0}
+    - {x: -0.55, y: 0.34999993, z: 0}
+    - {x: 0.55, y: 0.34999993, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.7656328, y: 0.4765703}
+    - {x: 0.7656328, y: 0.6484297}
+    - {x: 0.8828047, y: 0.4765703}
+    - {x: 0.8828047, y: 0.6484297}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 0}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 00d29006083ce614dadd67005c0d0709
+    extractRegion: 1
+    regionX: 31
+    regionY: 0
+    regionW: 30
+    regionH: 23
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_bodymove/2
+    boundsData:
+    - {x: 0, y: -0.000000059604645, z: 0}
+    - {x: 1.1, y: 0.79999995, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -0.025000036, z: 0}
+    - {x: 1.5, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.55, y: -0.40000004, z: 0}
+    - {x: 0.55, y: -0.40000004, z: 0}
+    - {x: -0.55, y: 0.39999992, z: 0}
+    - {x: 0.55, y: 0.39999992, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.4765703, y: 0.3515703}
+    - {x: 0.6484297, y: 0.3515703}
+    - {x: 0.4765703, y: 0.4765547}
+    - {x: 0.6484297, y: 0.4765547}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 00d29006083ce614dadd67005c0d0709
+    extractRegion: 1
+    regionX: 62
+    regionY: 0
+    regionW: 30
+    regionH: 23
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_bodymove/3
+    boundsData:
+    - {x: 0, y: 0.024999976, z: 0}
+    - {x: 1.1, y: 0.85, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -0.025000036, z: 0}
+    - {x: 1.5, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.55, y: -0.40000004, z: 0}
+    - {x: 0.55, y: -0.40000004, z: 0}
+    - {x: -0.55, y: 0.45, z: 0}
+    - {x: 0.55, y: 0.45, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0000078125, y: 0.5000078}
+    - {x: 0.0000078125, y: 0.6718672}
+    - {x: 0.13280469, y: 0.5000078}
+    - {x: 0.13280469, y: 0.6718672}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 0, y: 1}
+    - {x: 0.99999994, y: 0}
+    - {x: 0.99999994, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 00d29006083ce614dadd67005c0d0709
+    extractRegion: 1
+    regionX: 93
+    regionY: 0
+    regionW: 30
+    regionH: 23
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_bodymove/4
+    boundsData:
+    - {x: 0, y: -0.000000059604645, z: 0}
+    - {x: 1.1, y: 0.79999995, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -0.025000036, z: 0}
+    - {x: 1.5, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.55, y: -0.40000004, z: 0}
+    - {x: 0.55, y: -0.40000004, z: 0}
+    - {x: -0.55, y: 0.39999992, z: 0}
+    - {x: 0.55, y: 0.39999992, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.4765703, y: 0.3515703}
+    - {x: 0.6484297, y: 0.3515703}
+    - {x: 0.4765703, y: 0.4765547}
+    - {x: 0.6484297, y: 0.4765547}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 00d29006083ce614dadd67005c0d0709
+    extractRegion: 1
+    regionX: 124
+    regionY: 0
+    regionW: 30
+    regionH: 23
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_bodymove/5
+    boundsData:
+    - {x: 0, y: -0.02500005, z: 0}
+    - {x: 1.1, y: 0.75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -0.025000036, z: 0}
+    - {x: 1.5, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.55, y: -0.40000004, z: 0}
+    - {x: 0.55, y: -0.40000004, z: 0}
+    - {x: -0.55, y: 0.34999993, z: 0}
+    - {x: 0.55, y: 0.34999993, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.7656328, y: 0.4765703}
+    - {x: 0.7656328, y: 0.6484297}
+    - {x: 0.8828047, y: 0.4765703}
+    - {x: 0.8828047, y: 0.6484297}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 0}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 00d29006083ce614dadd67005c0d0709
+    extractRegion: 1
+    regionX: 155
+    regionY: 0
+    regionW: 30
+    regionH: 23
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_gunidle/0
+    boundsData:
+    - {x: -0.049999982, y: -0.02500005, z: 0}
+    - {x: 1.5999999, y: 0.75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.025000006, y: -0.025000036, z: 0}
+    - {x: 1.95, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.84999996, y: -0.40000004, z: 0}
+    - {x: 0.75, y: -0.40000004, z: 0}
+    - {x: -0.84999996, y: 0.34999993, z: 0}
+    - {x: 0.75, y: 0.34999993, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.5234453, y: 0.117195316}
+    - {x: 0.7734297, y: 0.117195316}
+    - {x: 0.5234453, y: 0.23436719}
+    - {x: 0.7734297, y: 0.23436719}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: b5ca8b16f8a516743ae2a7fe8c069939
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 39
+    regionH: 23
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_gunmove/0
+    boundsData:
+    - {x: -0.049999982, y: -0.02500005, z: 0}
+    - {x: 1.5999999, y: 0.75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.025000006, y: -0.025000036, z: 0}
+    - {x: 1.95, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.84999996, y: -0.40000004, z: 0}
+    - {x: 0.75, y: -0.40000004, z: 0}
+    - {x: -0.84999996, y: 0.34999993, z: 0}
+    - {x: 0.75, y: 0.34999993, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.5234453, y: 0.117195316}
+    - {x: 0.7734297, y: 0.117195316}
+    - {x: 0.5234453, y: 0.23436719}
+    - {x: 0.7734297, y: 0.23436719}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2c65cd839f6603b4ca0a7f0a62dc5465
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 39
+    regionH: 23
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_gunmove/1
+    boundsData:
+    - {x: -0.049999982, y: -0.02500005, z: 0}
+    - {x: 1.5999999, y: 0.75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.025000006, y: -0.025000036, z: 0}
+    - {x: 1.95, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.84999996, y: -0.40000004, z: 0}
+    - {x: 0.75, y: -0.40000004, z: 0}
+    - {x: -0.84999996, y: 0.34999993, z: 0}
+    - {x: 0.75, y: 0.34999993, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.5234453, y: 0.117195316}
+    - {x: 0.7734297, y: 0.117195316}
+    - {x: 0.5234453, y: 0.23436719}
+    - {x: 0.7734297, y: 0.23436719}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2c65cd839f6603b4ca0a7f0a62dc5465
+    extractRegion: 1
+    regionX: 40
+    regionY: 0
+    regionW: 39
+    regionH: 23
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_gunmove/2
+    boundsData:
+    - {x: -0.049999982, y: -0.000000059604645, z: 0}
+    - {x: 1.5999999, y: 0.79999995, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.025000006, y: -0.025000036, z: 0}
+    - {x: 1.95, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.84999996, y: -0.40000004, z: 0}
+    - {x: 0.75, y: -0.40000004, z: 0}
+    - {x: -0.84999996, y: 0.39999992, z: 0}
+    - {x: 0.75, y: 0.39999992, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.2734453, y: 0.0000078125}
+    - {x: 0.5234297, y: 0.0000078125}
+    - {x: 0.2734453, y: 0.124992184}
+    - {x: 0.5234297, y: 0.124992184}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2c65cd839f6603b4ca0a7f0a62dc5465
+    extractRegion: 1
+    regionX: 80
+    regionY: 0
+    regionW: 39
+    regionH: 23
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_gunmove/3
+    boundsData:
+    - {x: -0.049999982, y: 0.024999946, z: 0}
+    - {x: 1.5999999, y: 0.74999994, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.025000006, y: -0.025000036, z: 0}
+    - {x: 1.95, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.84999996, y: -0.35000002, z: 0}
+    - {x: 0.75, y: -0.35000002, z: 0}
+    - {x: -0.84999996, y: 0.39999992, z: 0}
+    - {x: 0.75, y: 0.39999992, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.7734453, y: 0.22657031}
+    - {x: 0.7734453, y: 0.4765547}
+    - {x: 0.8906172, y: 0.22657031}
+    - {x: 0.8906172, y: 0.4765547}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 0}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2c65cd839f6603b4ca0a7f0a62dc5465
+    extractRegion: 1
+    regionX: 120
+    regionY: 0
+    regionW: 39
+    regionH: 23
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_gunmove/4
+    boundsData:
+    - {x: -0.049999982, y: 0.07499997, z: 0}
+    - {x: 1.5999999, y: 0.75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.025000006, y: -0.025000036, z: 0}
+    - {x: 1.95, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.84999996, y: -0.30000004, z: 0}
+    - {x: 0.75, y: -0.30000004, z: 0}
+    - {x: -0.84999996, y: 0.45, z: 0}
+    - {x: 0.75, y: 0.45, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.2578203, y: 0.12500781}
+    - {x: 0.5078047, y: 0.12500781}
+    - {x: 0.2578203, y: 0.24217969}
+    - {x: 0.5078047, y: 0.24217969}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2c65cd839f6603b4ca0a7f0a62dc5465
+    extractRegion: 1
+    regionX: 160
+    regionY: 0
+    regionW: 39
+    regionH: 23
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_gunmove/5
+    boundsData:
+    - {x: -0.049999982, y: 0.049999937, z: 0}
+    - {x: 1.5999999, y: 0.6999999, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.025000006, y: -0.025000036, z: 0}
+    - {x: 1.95, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.84999996, y: -0.30000004, z: 0}
+    - {x: 0.75, y: -0.30000004, z: 0}
+    - {x: -0.84999996, y: 0.39999992, z: 0}
+    - {x: 0.75, y: 0.39999992, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.8906328, y: 0.3593828}
+    - {x: 0.8906328, y: 0.6093672}
+    - {x: 0.9999922, y: 0.3593828}
+    - {x: 0.9999922, y: 0.6093672}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 0}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2c65cd839f6603b4ca0a7f0a62dc5465
+    extractRegion: 1
+    regionX: 200
+    regionY: 0
+    regionW: 39
+    regionH: 23
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_gunshoot/0
+    boundsData:
+    - {x: -0.049999982, y: -0.02500005, z: 0}
+    - {x: 1.5999999, y: 0.75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.025000006, y: -0.025000036, z: 0}
+    - {x: 1.95, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.84999996, y: -0.40000004, z: 0}
+    - {x: 0.75, y: -0.40000004, z: 0}
+    - {x: -0.84999996, y: 0.34999993, z: 0}
+    - {x: 0.75, y: 0.34999993, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.5234453, y: 0.117195316}
+    - {x: 0.7734297, y: 0.117195316}
+    - {x: 0.5234453, y: 0.23436719}
+    - {x: 0.7734297, y: 0.23436719}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ebfbc525dafdc84fbb19196064ee73d
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 39
+    regionH: 23
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_gunshoot/1
+    boundsData:
+    - {x: -0.099999964, y: -0.02500005, z: 0}
+    - {x: 1.6, y: 0.75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.025000006, y: -0.025000036, z: 0}
+    - {x: 1.95, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.9, y: -0.40000004, z: 0}
+    - {x: 0.70000005, y: -0.40000004, z: 0}
+    - {x: -0.9, y: 0.34999993, z: 0}
+    - {x: 0.70000005, y: 0.34999993, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0000078125, y: 0.23438281}
+    - {x: 0.24999219, y: 0.23438281}
+    - {x: 0.0000078125, y: 0.3515547}
+    - {x: 0.24999219, y: 0.3515547}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ebfbc525dafdc84fbb19196064ee73d
+    extractRegion: 1
+    regionX: 40
+    regionY: 0
+    regionW: 39
+    regionH: 23
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_gunshoot/2
+    boundsData:
+    - {x: -0.12499997, y: -0.02500005, z: 0}
+    - {x: 1.55, y: 0.75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.025000006, y: -0.025000036, z: 0}
+    - {x: 1.95, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.9, y: -0.40000004, z: 0}
+    - {x: 0.65000004, y: -0.40000004, z: 0}
+    - {x: -0.9, y: 0.34999993, z: 0}
+    - {x: 0.65000004, y: 0.34999993, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.5078203, y: 0.23438281}
+    - {x: 0.7499922, y: 0.23438281}
+    - {x: 0.5078203, y: 0.3515547}
+    - {x: 0.7499922, y: 0.3515547}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ebfbc525dafdc84fbb19196064ee73d
+    extractRegion: 1
+    regionX: 80
+    regionY: 0
+    regionW: 39
+    regionH: 23
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_gunshoot/3
+    boundsData:
+    - {x: -0.12499997, y: -0.02500005, z: 0}
+    - {x: 1.45, y: 0.75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.025000006, y: -0.025000036, z: 0}
+    - {x: 1.95, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.84999996, y: -0.40000004, z: 0}
+    - {x: 0.6, y: -0.40000004, z: 0}
+    - {x: -0.84999996, y: 0.34999993, z: 0}
+    - {x: 0.6, y: 0.34999993, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.2500078, y: 0.24219531}
+    - {x: 0.4765547, y: 0.24219531}
+    - {x: 0.2500078, y: 0.3593672}
+    - {x: 0.4765547, y: 0.3593672}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ebfbc525dafdc84fbb19196064ee73d
+    extractRegion: 1
+    regionX: 120
+    regionY: 0
+    regionW: 39
+    regionH: 23
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_gunshoot/4
+    boundsData:
+    - {x: 0.025000036, y: -0.02500005, z: 0}
+    - {x: 1.75, y: 0.75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.025000006, y: -0.025000036, z: 0}
+    - {x: 1.95, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.84999996, y: -0.40000004, z: 0}
+    - {x: 0.90000004, y: -0.40000004, z: 0}
+    - {x: -0.84999996, y: 0.34999993, z: 0}
+    - {x: 0.90000004, y: 0.34999993, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0000078125, y: 0.0000078125}
+    - {x: 0.2734297, y: 0.0000078125}
+    - {x: 0.0000078125, y: 0.117179684}
+    - {x: 0.2734297, y: 0.117179684}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ebfbc525dafdc84fbb19196064ee73d
+    extractRegion: 1
+    regionX: 160
+    regionY: 0
+    regionW: 39
+    regionH: 23
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_gunshoot/5
+    boundsData:
+    - {x: -0.024999976, y: -0.02500005, z: 0}
+    - {x: 1.65, y: 0.75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.025000006, y: -0.025000036, z: 0}
+    - {x: 1.95, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.84999996, y: -0.40000004, z: 0}
+    - {x: 0.8, y: -0.40000004, z: 0}
+    - {x: -0.84999996, y: 0.34999993, z: 0}
+    - {x: 0.8, y: 0.34999993, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0000078125, y: 0.117195316}
+    - {x: 0.2578047, y: 0.117195316}
+    - {x: 0.0000078125, y: 0.23436719}
+    - {x: 0.2578047, y: 0.23436719}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ebfbc525dafdc84fbb19196064ee73d
+    extractRegion: 1
+    regionX: 200
+    regionY: 0
+    regionW: 39
+    regionH: 23
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_gunshoot/6
+    boundsData:
+    - {x: -0.024999976, y: -0.02500005, z: 0}
+    - {x: 1.65, y: 0.75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.025000006, y: -0.025000036, z: 0}
+    - {x: 1.95, y: 1.15, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.84999996, y: -0.40000004, z: 0}
+    - {x: 0.8, y: -0.40000004, z: 0}
+    - {x: -0.84999996, y: 0.34999993, z: 0}
+    - {x: 0.8, y: 0.34999993, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.5234453, y: 0.0000078125}
+    - {x: 0.7812422, y: 0.0000078125}
+    - {x: 0.5234453, y: 0.117179684}
+    - {x: 0.7812422, y: 0.117179684}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ebfbc525dafdc84fbb19196064ee73d
+    extractRegion: 1
+    regionX: 240
+    regionY: 0
+    regionW: 39
+    regionH: 23
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_headidle/0
+    boundsData:
+    - {x: 0.000000022351742, y: -0.099999994, z: 0}
+    - {x: 0.5, y: 0.70000005, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.5, y: 0.90000004, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.24999999, y: -0.45000002, z: 0}
+    - {x: 0.25000003, y: -0.45000002, z: 0}
+    - {x: -0.24999999, y: 0.25000003, z: 0}
+    - {x: 0.25000003, y: 0.25000003, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.13282031, y: 0.5312578}
+    - {x: 0.21092969, y: 0.5312578}
+    - {x: 0.13282031, y: 0.6406172}
+    - {x: 0.21092969, y: 0.6406172}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: d59cced0b7b799948a5df8551f3a9871
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 30
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_headmove/0
+    boundsData:
+    - {x: 0.000000022351742, y: -0.099999994, z: 0}
+    - {x: 0.5, y: 0.70000005, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.5, y: 0.90000004, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.24999999, y: -0.45000002, z: 0}
+    - {x: 0.25000003, y: -0.45000002, z: 0}
+    - {x: -0.24999999, y: 0.25000003, z: 0}
+    - {x: 0.25000003, y: 0.25000003, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.13282031, y: 0.5312578}
+    - {x: 0.21092969, y: 0.5312578}
+    - {x: 0.13282031, y: 0.6406172}
+    - {x: 0.21092969, y: 0.6406172}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 842fa01a80439894d928a5e5f2d8b6aa
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 30
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_headmove/1
+    boundsData:
+    - {x: 0.000000022351742, y: -0.050000012, z: 0}
+    - {x: 0.5, y: 0.7, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.5, y: 0.90000004, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.24999999, y: -0.4, z: 0}
+    - {x: 0.25000003, y: -0.4, z: 0}
+    - {x: -0.24999999, y: 0.29999998, z: 0}
+    - {x: 0.25000003, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.13282031, y: 0.5312578}
+    - {x: 0.21092969, y: 0.5312578}
+    - {x: 0.13282031, y: 0.6406172}
+    - {x: 0.21092969, y: 0.6406172}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 842fa01a80439894d928a5e5f2d8b6aa
+    extractRegion: 1
+    regionX: 31
+    regionY: 0
+    regionW: 30
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_headmove/2
+    boundsData:
+    - {x: 0.000000022351742, y: 0, z: 0}
+    - {x: 0.5, y: 0.70000005, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.5, y: 0.90000004, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.24999999, y: -0.35000002, z: 0}
+    - {x: 0.25000003, y: -0.35000002, z: 0}
+    - {x: -0.24999999, y: 0.35000002, z: 0}
+    - {x: 0.25000003, y: 0.35000002, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.13282031, y: 0.5312578}
+    - {x: 0.21092969, y: 0.5312578}
+    - {x: 0.13282031, y: 0.6406172}
+    - {x: 0.21092969, y: 0.6406172}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 842fa01a80439894d928a5e5f2d8b6aa
+    extractRegion: 1
+    regionX: 62
+    regionY: 0
+    regionW: 30
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_headmove/3
+    boundsData:
+    - {x: 0.000000022351742, y: 0.049999997, z: 0}
+    - {x: 0.5, y: 0.70000005, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.5, y: 0.90000004, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.24999999, y: -0.3, z: 0}
+    - {x: 0.25000003, y: -0.3, z: 0}
+    - {x: -0.24999999, y: 0.4, z: 0}
+    - {x: 0.25000003, y: 0.4, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.13282031, y: 0.5312578}
+    - {x: 0.21092969, y: 0.5312578}
+    - {x: 0.13282031, y: 0.6406172}
+    - {x: 0.21092969, y: 0.6406172}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 842fa01a80439894d928a5e5f2d8b6aa
+    extractRegion: 1
+    regionX: 93
+    regionY: 0
+    regionW: 30
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_headmove/4
+    boundsData:
+    - {x: 0.000000022351742, y: 0, z: 0}
+    - {x: 0.5, y: 0.70000005, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.5, y: 0.90000004, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.24999999, y: -0.35000002, z: 0}
+    - {x: 0.25000003, y: -0.35000002, z: 0}
+    - {x: -0.24999999, y: 0.35000002, z: 0}
+    - {x: 0.25000003, y: 0.35000002, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.13282031, y: 0.5312578}
+    - {x: 0.21092969, y: 0.5312578}
+    - {x: 0.13282031, y: 0.6406172}
+    - {x: 0.21092969, y: 0.6406172}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 842fa01a80439894d928a5e5f2d8b6aa
+    extractRegion: 1
+    regionX: 124
+    regionY: 0
+    regionW: 30
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_headmove/5
+    boundsData:
+    - {x: 0.000000022351742, y: -0.050000012, z: 0}
+    - {x: 0.5, y: 0.7, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.5, y: 0.90000004, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.24999999, y: -0.4, z: 0}
+    - {x: 0.25000003, y: -0.4, z: 0}
+    - {x: -0.24999999, y: 0.29999998, z: 0}
+    - {x: 0.25000003, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.13282031, y: 0.5312578}
+    - {x: 0.21092969, y: 0.5312578}
+    - {x: 0.13282031, y: 0.6406172}
+    - {x: 0.21092969, y: 0.6406172}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 842fa01a80439894d928a5e5f2d8b6aa
+    extractRegion: 1
+    regionX: 155
+    regionY: 0
+    regionW: 30
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_leftlegmove/0
+    boundsData:
+    - {x: 0.05000002, y: -0.27500004, z: 0}
+    - {x: 0.40000004, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.14999999, y: -0.85, z: 0}
+    - {x: 0.25000003, y: -0.85, z: 0}
+    - {x: -0.14999999, y: 0.29999998, z: 0}
+    - {x: 0.25000003, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.3828203, y: 0.3593828}
+    - {x: 0.4453047, y: 0.3593828}
+    - {x: 0.3828203, y: 0.5390547}
+    - {x: 0.4453047, y: 0.5390547}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1f3d0043a25a35f479a95a4a9560a664
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_leftlegmove/1
+    boundsData:
+    - {x: -0.049999997, y: -0.27500004, z: 0}
+    - {x: 0.49999997, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.29999998, y: -0.85, z: 0}
+    - {x: 0.19999999, y: -0.85, z: 0}
+    - {x: -0.29999998, y: 0.29999998, z: 0}
+    - {x: 0.19999999, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9140703, y: 0.0000078125}
+    - {x: 0.9921797, y: 0.0000078125}
+    - {x: 0.9140703, y: 0.17967969}
+    - {x: 0.9921797, y: 0.17967969}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1f3d0043a25a35f479a95a4a9560a664
+    extractRegion: 1
+    regionX: 35
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_leftlegmove/2
+    boundsData:
+    - {x: -0.12500001, y: -0.27500004, z: 0}
+    - {x: 0.65, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.45000002, y: -0.85, z: 0}
+    - {x: 0.19999999, y: -0.85, z: 0}
+    - {x: -0.45000002, y: 0.29999998, z: 0}
+    - {x: 0.19999999, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.8828203, y: 0.6093828}
+    - {x: 0.9843672, y: 0.6093828}
+    - {x: 0.8828203, y: 0.7890547}
+    - {x: 0.9843672, y: 0.7890547}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1f3d0043a25a35f479a95a4a9560a664
+    extractRegion: 1
+    regionX: 70
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_leftlegmove/3
+    boundsData:
+    - {x: -0.275, y: -0.15000002, z: 0}
+    - {x: 0.95, y: 0.9, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.75, y: -0.6, z: 0}
+    - {x: 0.19999999, y: -0.6, z: 0}
+    - {x: -0.75, y: 0.29999998, z: 0}
+    - {x: 0.19999999, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.23438281, y: 0.3593828}
+    - {x: 0.3828047, y: 0.3593828}
+    - {x: 0.23438281, y: 0.4999922}
+    - {x: 0.3828047, y: 0.4999922}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1f3d0043a25a35f479a95a4a9560a664
+    extractRegion: 1
+    regionX: 105
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_leftlegmove/4
+    boundsData:
+    - {x: -0.12500001, y: -0.27500004, z: 0}
+    - {x: 0.65, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.45000002, y: -0.85, z: 0}
+    - {x: 0.19999999, y: -0.85, z: 0}
+    - {x: -0.45000002, y: 0.29999998, z: 0}
+    - {x: 0.19999999, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.8828203, y: 0.6093828}
+    - {x: 0.9843672, y: 0.6093828}
+    - {x: 0.8828203, y: 0.7890547}
+    - {x: 0.9843672, y: 0.7890547}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1f3d0043a25a35f479a95a4a9560a664
+    extractRegion: 1
+    regionX: 140
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_leftlegmove/5
+    boundsData:
+    - {x: -0.024999999, y: -0.27500004, z: 0}
+    - {x: 0.45, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.24999999, y: -0.85, z: 0}
+    - {x: 0.19999999, y: -0.85, z: 0}
+    - {x: -0.24999999, y: 0.29999998, z: 0}
+    - {x: 0.19999999, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.16407031, y: 0.3515703}
+    - {x: 0.23436719, y: 0.3515703}
+    - {x: 0.16407031, y: 0.5312422}
+    - {x: 0.23436719, y: 0.5312422}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1f3d0043a25a35f479a95a4a9560a664
+    extractRegion: 1
+    regionX: 175
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_leftlegmove/6
+    boundsData:
+    - {x: 0.05000002, y: -0.27500004, z: 0}
+    - {x: 0.40000004, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.14999999, y: -0.85, z: 0}
+    - {x: 0.25000003, y: -0.85, z: 0}
+    - {x: -0.14999999, y: 0.29999998, z: 0}
+    - {x: 0.25000003, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.3828203, y: 0.3593828}
+    - {x: 0.4453047, y: 0.3593828}
+    - {x: 0.3828203, y: 0.5390547}
+    - {x: 0.4453047, y: 0.5390547}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1f3d0043a25a35f479a95a4a9560a664
+    extractRegion: 1
+    regionX: 210
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_leftlegmove/7
+    boundsData:
+    - {x: 0.14999999, y: -0.27500004, z: 0}
+    - {x: 0.49999997, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.099999994, y: -0.85, z: 0}
+    - {x: 0.39999998, y: -0.85, z: 0}
+    - {x: -0.099999994, y: 0.29999998, z: 0}
+    - {x: 0.39999998, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9140703, y: 0.17969531}
+    - {x: 0.9921797, y: 0.17969531}
+    - {x: 0.9140703, y: 0.3593672}
+    - {x: 0.9921797, y: 0.3593672}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1f3d0043a25a35f479a95a4a9560a664
+    extractRegion: 1
+    regionX: 245
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_leftlegmove/8
+    boundsData:
+    - {x: 0.22500001, y: -0.25, z: 0}
+    - {x: 0.65, y: 1.1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.099999994, y: -0.8, z: 0}
+    - {x: 0.55, y: -0.8, z: 0}
+    - {x: -0.099999994, y: 0.29999998, z: 0}
+    - {x: 0.55, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.23438281, y: 0.5000078}
+    - {x: 0.3359297, y: 0.5000078}
+    - {x: 0.23438281, y: 0.6718672}
+    - {x: 0.3359297, y: 0.6718672}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1f3d0043a25a35f479a95a4a9560a664
+    extractRegion: 1
+    regionX: 280
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_leftlegmove/9
+    boundsData:
+    - {x: 0.375, y: -0.22500001, z: 0}
+    - {x: 0.95000005, y: 1.05, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.099999994, y: -0.75, z: 0}
+    - {x: 0.85, y: -0.75, z: 0}
+    - {x: -0.099999994, y: 0.29999998, z: 0}
+    - {x: 0.85, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0000078125, y: 0.3515703}
+    - {x: 0.0000078125, y: 0.4999922}
+    - {x: 0.16405469, y: 0.3515703}
+    - {x: 0.16405469, y: 0.4999922}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 0}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1f3d0043a25a35f479a95a4a9560a664
+    extractRegion: 1
+    regionX: 315
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_leftlegmove/10
+    boundsData:
+    - {x: 0.22500001, y: -0.25, z: 0}
+    - {x: 0.65, y: 1.1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.099999994, y: -0.8, z: 0}
+    - {x: 0.55, y: -0.8, z: 0}
+    - {x: -0.099999994, y: 0.29999998, z: 0}
+    - {x: 0.55, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.23438281, y: 0.5000078}
+    - {x: 0.3359297, y: 0.5000078}
+    - {x: 0.23438281, y: 0.6718672}
+    - {x: 0.3359297, y: 0.6718672}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1f3d0043a25a35f479a95a4a9560a664
+    extractRegion: 1
+    regionX: 350
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_leftlegmove/11
+    boundsData:
+    - {x: 0.14999999, y: -0.27500004, z: 0}
+    - {x: 0.49999997, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.099999994, y: -0.85, z: 0}
+    - {x: 0.39999998, y: -0.85, z: 0}
+    - {x: -0.099999994, y: 0.29999998, z: 0}
+    - {x: 0.39999998, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9140703, y: 0.17969531}
+    - {x: 0.9921797, y: 0.17969531}
+    - {x: 0.9140703, y: 0.3593672}
+    - {x: 0.9921797, y: 0.3593672}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1f3d0043a25a35f479a95a4a9560a664
+    extractRegion: 1
+    regionX: 385
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_legidle/0
+    boundsData:
+    - {x: 0.05000002, y: -0.27500004, z: 0}
+    - {x: 0.40000004, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.14999999, y: -0.85, z: 0}
+    - {x: 0.25000003, y: -0.85, z: 0}
+    - {x: -0.14999999, y: 0.29999998, z: 0}
+    - {x: 0.25000003, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.3828203, y: 0.3593828}
+    - {x: 0.4453047, y: 0.3593828}
+    - {x: 0.3828203, y: 0.5390547}
+    - {x: 0.4453047, y: 0.5390547}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 0bcf3dce8c0cc5e45a4a66141c9cfb50
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_rightlegmove/0
+    boundsData:
+    - {x: 0.05000002, y: -0.27500004, z: 0}
+    - {x: 0.40000004, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.14999999, y: -0.85, z: 0}
+    - {x: 0.25000003, y: -0.85, z: 0}
+    - {x: -0.14999999, y: 0.29999998, z: 0}
+    - {x: 0.25000003, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.3828203, y: 0.3593828}
+    - {x: 0.4453047, y: 0.3593828}
+    - {x: 0.3828203, y: 0.5390547}
+    - {x: 0.4453047, y: 0.5390547}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: dc23490063c2bc64cb39e89e2a2a67ca
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_rightlegmove/1
+    boundsData:
+    - {x: 0.14999999, y: -0.27500004, z: 0}
+    - {x: 0.49999997, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.099999994, y: -0.85, z: 0}
+    - {x: 0.39999998, y: -0.85, z: 0}
+    - {x: -0.099999994, y: 0.29999998, z: 0}
+    - {x: 0.39999998, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9140703, y: 0.17969531}
+    - {x: 0.9921797, y: 0.17969531}
+    - {x: 0.9140703, y: 0.3593672}
+    - {x: 0.9921797, y: 0.3593672}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: dc23490063c2bc64cb39e89e2a2a67ca
+    extractRegion: 1
+    regionX: 35
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_rightlegmove/2
+    boundsData:
+    - {x: 0.22500001, y: -0.25, z: 0}
+    - {x: 0.65, y: 1.1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.099999994, y: -0.8, z: 0}
+    - {x: 0.55, y: -0.8, z: 0}
+    - {x: -0.099999994, y: 0.29999998, z: 0}
+    - {x: 0.55, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.23438281, y: 0.5000078}
+    - {x: 0.3359297, y: 0.5000078}
+    - {x: 0.23438281, y: 0.6718672}
+    - {x: 0.3359297, y: 0.6718672}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: dc23490063c2bc64cb39e89e2a2a67ca
+    extractRegion: 1
+    regionX: 70
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_rightlegmove/3
+    boundsData:
+    - {x: 0.375, y: -0.22500001, z: 0}
+    - {x: 0.95000005, y: 1.05, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.099999994, y: -0.75, z: 0}
+    - {x: 0.85, y: -0.75, z: 0}
+    - {x: -0.099999994, y: 0.29999998, z: 0}
+    - {x: 0.85, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0000078125, y: 0.3515703}
+    - {x: 0.0000078125, y: 0.4999922}
+    - {x: 0.16405469, y: 0.3515703}
+    - {x: 0.16405469, y: 0.4999922}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 0}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: dc23490063c2bc64cb39e89e2a2a67ca
+    extractRegion: 1
+    regionX: 105
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_rightlegmove/4
+    boundsData:
+    - {x: 0.22500001, y: -0.25, z: 0}
+    - {x: 0.65, y: 1.1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.099999994, y: -0.8, z: 0}
+    - {x: 0.55, y: -0.8, z: 0}
+    - {x: -0.099999994, y: 0.29999998, z: 0}
+    - {x: 0.55, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.23438281, y: 0.5000078}
+    - {x: 0.3359297, y: 0.5000078}
+    - {x: 0.23438281, y: 0.6718672}
+    - {x: 0.3359297, y: 0.6718672}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: dc23490063c2bc64cb39e89e2a2a67ca
+    extractRegion: 1
+    regionX: 140
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_rightlegmove/5
+    boundsData:
+    - {x: 0.14999999, y: -0.27500004, z: 0}
+    - {x: 0.49999997, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.099999994, y: -0.85, z: 0}
+    - {x: 0.39999998, y: -0.85, z: 0}
+    - {x: -0.099999994, y: 0.29999998, z: 0}
+    - {x: 0.39999998, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9140703, y: 0.17969531}
+    - {x: 0.9921797, y: 0.17969531}
+    - {x: 0.9140703, y: 0.3593672}
+    - {x: 0.9921797, y: 0.3593672}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: dc23490063c2bc64cb39e89e2a2a67ca
+    extractRegion: 1
+    regionX: 175
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_rightlegmove/6
+    boundsData:
+    - {x: 0.05000002, y: -0.27500004, z: 0}
+    - {x: 0.40000004, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.14999999, y: -0.85, z: 0}
+    - {x: 0.25000003, y: -0.85, z: 0}
+    - {x: -0.14999999, y: 0.29999998, z: 0}
+    - {x: 0.25000003, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.3828203, y: 0.3593828}
+    - {x: 0.4453047, y: 0.3593828}
+    - {x: 0.3828203, y: 0.5390547}
+    - {x: 0.4453047, y: 0.5390547}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: dc23490063c2bc64cb39e89e2a2a67ca
+    extractRegion: 1
+    regionX: 210
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_rightlegmove/7
+    boundsData:
+    - {x: -0.049999997, y: -0.27500004, z: 0}
+    - {x: 0.49999997, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.29999998, y: -0.85, z: 0}
+    - {x: 0.19999999, y: -0.85, z: 0}
+    - {x: -0.29999998, y: 0.29999998, z: 0}
+    - {x: 0.19999999, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9140703, y: 0.0000078125}
+    - {x: 0.9921797, y: 0.0000078125}
+    - {x: 0.9140703, y: 0.17967969}
+    - {x: 0.9921797, y: 0.17967969}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: dc23490063c2bc64cb39e89e2a2a67ca
+    extractRegion: 1
+    regionX: 245
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_rightlegmove/8
+    boundsData:
+    - {x: -0.12500001, y: -0.27500004, z: 0}
+    - {x: 0.65, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.45000002, y: -0.85, z: 0}
+    - {x: 0.19999999, y: -0.85, z: 0}
+    - {x: -0.45000002, y: 0.29999998, z: 0}
+    - {x: 0.19999999, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.8828203, y: 0.6093828}
+    - {x: 0.9843672, y: 0.6093828}
+    - {x: 0.8828203, y: 0.7890547}
+    - {x: 0.9843672, y: 0.7890547}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: dc23490063c2bc64cb39e89e2a2a67ca
+    extractRegion: 1
+    regionX: 280
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_rightlegmove/9
+    boundsData:
+    - {x: -0.275, y: -0.15000002, z: 0}
+    - {x: 0.95, y: 0.9, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.75, y: -0.6, z: 0}
+    - {x: 0.19999999, y: -0.6, z: 0}
+    - {x: -0.75, y: 0.29999998, z: 0}
+    - {x: 0.19999999, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.23438281, y: 0.3593828}
+    - {x: 0.3828047, y: 0.3593828}
+    - {x: 0.23438281, y: 0.4999922}
+    - {x: 0.3828047, y: 0.4999922}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: dc23490063c2bc64cb39e89e2a2a67ca
+    extractRegion: 1
+    regionX: 315
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_rightlegmove/10
+    boundsData:
+    - {x: -0.12500001, y: -0.27500004, z: 0}
+    - {x: 0.65, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.45000002, y: -0.85, z: 0}
+    - {x: 0.19999999, y: -0.85, z: 0}
+    - {x: -0.45000002, y: 0.29999998, z: 0}
+    - {x: 0.19999999, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.8828203, y: 0.6093828}
+    - {x: 0.9843672, y: 0.6093828}
+    - {x: 0.8828203, y: 0.7890547}
+    - {x: 0.9843672, y: 0.7890547}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: dc23490063c2bc64cb39e89e2a2a67ca
+    extractRegion: 1
+    regionX: 350
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_rightlegmove/11
+    boundsData:
+    - {x: -0.024999999, y: -0.27500004, z: 0}
+    - {x: 0.45, y: 1.15, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1.7, y: 1.7, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.24999999, y: -0.85, z: 0}
+    - {x: 0.19999999, y: -0.85, z: 0}
+    - {x: -0.24999999, y: 0.29999998, z: 0}
+    - {x: 0.19999999, y: 0.29999998, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.16407031, y: 0.3515703}
+    - {x: 0.23436719, y: 0.3515703}
+    - {x: 0.16407031, y: 0.5312422}
+    - {x: 0.23436719, y: 0.5312422}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: dc23490063c2bc64cb39e89e2a2a67ca
+    extractRegion: 1
+    regionX: 385
+    regionY: 0
+    regionW: 34
+    regionH: 34
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: astronut_swordidle/0
+    boundsData:
+    - {x: -0.52500004, y: -0.024999976, z: 0}
+    - {x: 0.85, y: 1.45, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.024999976, y: -0.024999976, z: 0}
+    - {x: 2.15, y: 1.85, z: 0}
+    texelSize: {x: 0.05, y: 0.05}
+    positions:
+    - {x: -0.95000005, y: -0.75, z: 0}
+    - {x: -0.100000024, y: -0.75, z: 0}
+    - {x: -0.95000005, y: 0.70000005, z: 0}
+    - {x: -0.100000024, y: 0.70000005, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.7812578, y: 0.0000078125}
+    - {x: 0.9140547, y: 0.0000078125}
+    - {x: 0.7812578, y: 0.22655469}
+    - {x: 0.9140547, y: 0.22655469}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+    materialId: 0
+    sourceTextureGUID: 64ec110313abb884b8a11a45192f257d
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 43
+    regionH: 37
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  premultipliedAlpha: 0
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: 851ea1dd0b74e0c43a69970a910aa52e, type: 2}
+  textures:
+  - {fileID: 2800000, guid: 82be23846b142f449b17f002505516ba, type: 3}
+  pngTextures: []
+  materialPngTextureId: 00000000
+  textureFilterMode: 0
+  textureMipMaps: 0
+  allowMultipleAtlases: 0
+  spriteCollectionGUID: 4f6d906b5c78805449c91ac6bdcbc792
+  spriteCollectionName: AstronautBot_SpriteCollection
+  assetName: 
+  loadable: 0
+  invOrthoSize: 2
+  halfTargetHeight: 10
+  buildKey: 902696869
+  dataGuid: aa97c167f2880dc4cb4e20c986e0cae3
+  managedSpriteCollection: 0
+  hasPlatformData: 0
+  spriteCollectionPlatforms: []
+  spriteCollectionPlatformGUIDs: []

@@ -40,13 +40,13 @@ MonoBehaviour:
     - x: 0
       y: 0
       layer: 0
-      spriteId: 201
+      spriteId: 58
       blendAmount: 0
-    multiSelectTiles: c9000000
+    multiSelectTiles: 3a000000
     edgeMode: 0
     multiLayer: 0
     overrideWithSpriteBounds: 0
-    brushHash: -2072050560
+    brushHash: 2120410048
   brushes: []
   paletteBrush:
     name: 
@@ -2037,9 +2037,9 @@ MonoBehaviour:
     edgeMode: 0
     multiLayer: 0
     overrideWithSpriteBounds: 1
-    brushHash: -73797952
+    brushHash: 2083531456
   paletteTilesPerRow: 18
-  setupMode: 32
+  setupMode: 1
   showBrush: 1
   showPalette: 1
   layer: 2

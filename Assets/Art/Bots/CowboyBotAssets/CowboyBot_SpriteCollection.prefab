@@ -54,7 +54,7 @@ MonoBehaviour:
   textures: []
   textureRefs: []
   spriteSheets:
-  - texture: {fileID: 2800000, guid: b6dc6941845fab74fb68d7ff57047a1a, type: 3}
+  - texture: {fileID: 2800000, guid: bad018523d8b64144936d3b0d80689eb, type: 3}
     tilesX: 0
     tilesY: 0
     numTiles: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
     splitMethod: 0
     version: 1
     colliderType: 0
-  - texture: {fileID: 2800000, guid: c6ec7d6cf88bbc4438c6d857c60b7dbb, type: 3}
+  - texture: {fileID: 2800000, guid: b9dc61aaab8d4f148b30e77105b2e70d, type: 3}
     tilesX: 0
     tilesY: 0
     numTiles: 0
@@ -90,7 +90,7 @@ MonoBehaviour:
     splitMethod: 0
     version: 1
     colliderType: 0
-  - texture: {fileID: 2800000, guid: 31d9c2ed11f4a5948a0194ed58db0454, type: 3}
+  - texture: {fileID: 2800000, guid: ed794459921c41e469f8e7b33884dfa7, type: 3}
     tilesX: 0
     tilesY: 0
     numTiles: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
     splitMethod: 0
     version: 1
     colliderType: 0
-  - texture: {fileID: 2800000, guid: 140a3f76c06310b46afa13690a66aa19, type: 3}
+  - texture: {fileID: 2800000, guid: f0d5fc2e3fcbd5a4394d4b2cee4bf818, type: 3}
     tilesX: 0
     tilesY: 0
     numTiles: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
     splitMethod: 0
     version: 1
     colliderType: 0
-  - texture: {fileID: 2800000, guid: 0ec41df272720284dbb16188cf691542, type: 3}
+  - texture: {fileID: 2800000, guid: 41b0dba9c38970e4f81ca1cf5b08a55c, type: 3}
     tilesX: 0
     tilesY: 0
     numTiles: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
     splitMethod: 0
     version: 1
     colliderType: 0
-  - texture: {fileID: 2800000, guid: b10f054a42cfe5f4dbf32e2e70621b4a, type: 3}
+  - texture: {fileID: 2800000, guid: 67c0dcc5304a7c64a86fcb142f0413e7, type: 3}
     tilesX: 0
     tilesY: 0
     numTiles: 0
@@ -182,9 +182,9 @@ MonoBehaviour:
   forcedTextureHeight: 2048
   textureCompression: 0
   atlasWidth: 128
-  atlasHeight: 128
+  atlasHeight: 256
   forceSquareAtlas: 0
-  atlasWastage: 28.302002
+  atlasWastage: 48.309326
   allowMultipleAtlases: 0
   removeDuplicates: 1
   textureParams:
@@ -233,7 +233,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b6dc6941845fab74fb68d7ff57047a1a, type: 3}
+    texture: {fileID: 2800000, guid: bad018523d8b64144936d3b0d80689eb, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b5c988b4b51d33d4197aad06102835d8, type: 3}
+    texture: {fileID: 2800000, guid: 7bd55f359c564184193663d7f3bcf2a4, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -315,7 +315,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: a300281297d828344bd0625a9e4b1073, type: 3}
+    texture: {fileID: 2800000, guid: c73d33936ee7c424a8ac4ce9e910d273, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: f1cd1dfb805e1ad498f5624f40edef35, type: 3}
+    texture: {fileID: 2800000, guid: c6c5bd2cd127d804aaafc5e01f21eec7, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -397,7 +397,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b6dc6941845fab74fb68d7ff57047a1a, type: 3}
+    texture: {fileID: 2800000, guid: bad018523d8b64144936d3b0d80689eb, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -438,7 +438,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b1046dd8b58a3f94fb620d407fdadf5c, type: 3}
+    texture: {fileID: 2800000, guid: ebb55c1a570c0e949945137b769ffeca, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -479,7 +479,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b6dc6941845fab74fb68d7ff57047a1a, type: 3}
+    texture: {fileID: 2800000, guid: bad018523d8b64144936d3b0d80689eb, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -520,7 +520,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b6dc6941845fab74fb68d7ff57047a1a, type: 3}
+    texture: {fileID: 2800000, guid: bad018523d8b64144936d3b0d80689eb, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -561,7 +561,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b6dc6941845fab74fb68d7ff57047a1a, type: 3}
+    texture: {fileID: 2800000, guid: bad018523d8b64144936d3b0d80689eb, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -602,7 +602,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b6dc6941845fab74fb68d7ff57047a1a, type: 3}
+    texture: {fileID: 2800000, guid: bad018523d8b64144936d3b0d80689eb, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -643,7 +643,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b6dc6941845fab74fb68d7ff57047a1a, type: 3}
+    texture: {fileID: 2800000, guid: bad018523d8b64144936d3b0d80689eb, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -684,7 +684,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b6dc6941845fab74fb68d7ff57047a1a, type: 3}
+    texture: {fileID: 2800000, guid: bad018523d8b64144936d3b0d80689eb, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -725,7 +725,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b6dc6941845fab74fb68d7ff57047a1a, type: 3}
+    texture: {fileID: 2800000, guid: bad018523d8b64144936d3b0d80689eb, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -766,7 +766,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b6dc6941845fab74fb68d7ff57047a1a, type: 3}
+    texture: {fileID: 2800000, guid: bad018523d8b64144936d3b0d80689eb, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -807,7 +807,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b6dc6941845fab74fb68d7ff57047a1a, type: 3}
+    texture: {fileID: 2800000, guid: bad018523d8b64144936d3b0d80689eb, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -848,7 +848,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b6dc6941845fab74fb68d7ff57047a1a, type: 3}
+    texture: {fileID: 2800000, guid: bad018523d8b64144936d3b0d80689eb, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -889,7 +889,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: c6ec7d6cf88bbc4438c6d857c60b7dbb, type: 3}
+    texture: {fileID: 2800000, guid: b9dc61aaab8d4f148b30e77105b2e70d, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -930,7 +930,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: c6ec7d6cf88bbc4438c6d857c60b7dbb, type: 3}
+    texture: {fileID: 2800000, guid: b9dc61aaab8d4f148b30e77105b2e70d, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -971,7 +971,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: c6ec7d6cf88bbc4438c6d857c60b7dbb, type: 3}
+    texture: {fileID: 2800000, guid: b9dc61aaab8d4f148b30e77105b2e70d, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1012,7 +1012,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: c6ec7d6cf88bbc4438c6d857c60b7dbb, type: 3}
+    texture: {fileID: 2800000, guid: b9dc61aaab8d4f148b30e77105b2e70d, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1053,7 +1053,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: c6ec7d6cf88bbc4438c6d857c60b7dbb, type: 3}
+    texture: {fileID: 2800000, guid: b9dc61aaab8d4f148b30e77105b2e70d, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1094,7 +1094,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: c6ec7d6cf88bbc4438c6d857c60b7dbb, type: 3}
+    texture: {fileID: 2800000, guid: b9dc61aaab8d4f148b30e77105b2e70d, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1135,7 +1135,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: c6ec7d6cf88bbc4438c6d857c60b7dbb, type: 3}
+    texture: {fileID: 2800000, guid: b9dc61aaab8d4f148b30e77105b2e70d, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1176,7 +1176,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: c6ec7d6cf88bbc4438c6d857c60b7dbb, type: 3}
+    texture: {fileID: 2800000, guid: b9dc61aaab8d4f148b30e77105b2e70d, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1217,7 +1217,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: c6ec7d6cf88bbc4438c6d857c60b7dbb, type: 3}
+    texture: {fileID: 2800000, guid: b9dc61aaab8d4f148b30e77105b2e70d, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1258,7 +1258,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: c6ec7d6cf88bbc4438c6d857c60b7dbb, type: 3}
+    texture: {fileID: 2800000, guid: b9dc61aaab8d4f148b30e77105b2e70d, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1299,7 +1299,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: c6ec7d6cf88bbc4438c6d857c60b7dbb, type: 3}
+    texture: {fileID: 2800000, guid: b9dc61aaab8d4f148b30e77105b2e70d, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1340,7 +1340,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: c6ec7d6cf88bbc4438c6d857c60b7dbb, type: 3}
+    texture: {fileID: 2800000, guid: b9dc61aaab8d4f148b30e77105b2e70d, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1381,7 +1381,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 31d9c2ed11f4a5948a0194ed58db0454, type: 3}
+    texture: {fileID: 2800000, guid: ed794459921c41e469f8e7b33884dfa7, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1422,7 +1422,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 31d9c2ed11f4a5948a0194ed58db0454, type: 3}
+    texture: {fileID: 2800000, guid: ed794459921c41e469f8e7b33884dfa7, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1463,7 +1463,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 31d9c2ed11f4a5948a0194ed58db0454, type: 3}
+    texture: {fileID: 2800000, guid: ed794459921c41e469f8e7b33884dfa7, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1504,7 +1504,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 31d9c2ed11f4a5948a0194ed58db0454, type: 3}
+    texture: {fileID: 2800000, guid: ed794459921c41e469f8e7b33884dfa7, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1545,7 +1545,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 140a3f76c06310b46afa13690a66aa19, type: 3}
+    texture: {fileID: 2800000, guid: f0d5fc2e3fcbd5a4394d4b2cee4bf818, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1586,7 +1586,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 140a3f76c06310b46afa13690a66aa19, type: 3}
+    texture: {fileID: 2800000, guid: f0d5fc2e3fcbd5a4394d4b2cee4bf818, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1627,7 +1627,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 140a3f76c06310b46afa13690a66aa19, type: 3}
+    texture: {fileID: 2800000, guid: f0d5fc2e3fcbd5a4394d4b2cee4bf818, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1668,7 +1668,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 140a3f76c06310b46afa13690a66aa19, type: 3}
+    texture: {fileID: 2800000, guid: f0d5fc2e3fcbd5a4394d4b2cee4bf818, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1709,7 +1709,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 140a3f76c06310b46afa13690a66aa19, type: 3}
+    texture: {fileID: 2800000, guid: f0d5fc2e3fcbd5a4394d4b2cee4bf818, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1750,7 +1750,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 140a3f76c06310b46afa13690a66aa19, type: 3}
+    texture: {fileID: 2800000, guid: f0d5fc2e3fcbd5a4394d4b2cee4bf818, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1791,7 +1791,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 0ec41df272720284dbb16188cf691542, type: 3}
+    texture: {fileID: 2800000, guid: 41b0dba9c38970e4f81ca1cf5b08a55c, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1832,7 +1832,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 0ec41df272720284dbb16188cf691542, type: 3}
+    texture: {fileID: 2800000, guid: 41b0dba9c38970e4f81ca1cf5b08a55c, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1873,7 +1873,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 0ec41df272720284dbb16188cf691542, type: 3}
+    texture: {fileID: 2800000, guid: 41b0dba9c38970e4f81ca1cf5b08a55c, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1914,7 +1914,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 0ec41df272720284dbb16188cf691542, type: 3}
+    texture: {fileID: 2800000, guid: 41b0dba9c38970e4f81ca1cf5b08a55c, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1955,7 +1955,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 0ec41df272720284dbb16188cf691542, type: 3}
+    texture: {fileID: 2800000, guid: 41b0dba9c38970e4f81ca1cf5b08a55c, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1996,7 +1996,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 0ec41df272720284dbb16188cf691542, type: 3}
+    texture: {fileID: 2800000, guid: 41b0dba9c38970e4f81ca1cf5b08a55c, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -2037,7 +2037,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b10f054a42cfe5f4dbf32e2e70621b4a, type: 3}
+    texture: {fileID: 2800000, guid: 67c0dcc5304a7c64a86fcb142f0413e7, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -2078,7 +2078,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b10f054a42cfe5f4dbf32e2e70621b4a, type: 3}
+    texture: {fileID: 2800000, guid: 67c0dcc5304a7c64a86fcb142f0413e7, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -2119,7 +2119,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b10f054a42cfe5f4dbf32e2e70621b4a, type: 3}
+    texture: {fileID: 2800000, guid: 67c0dcc5304a7c64a86fcb142f0413e7, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -2160,7 +2160,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b10f054a42cfe5f4dbf32e2e70621b4a, type: 3}
+    texture: {fileID: 2800000, guid: 67c0dcc5304a7c64a86fcb142f0413e7, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -2201,7 +2201,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b10f054a42cfe5f4dbf32e2e70621b4a, type: 3}
+    texture: {fileID: 2800000, guid: 67c0dcc5304a7c64a86fcb142f0413e7, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -2242,7 +2242,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b10f054a42cfe5f4dbf32e2e70621b4a, type: 3}
+    texture: {fileID: 2800000, guid: 67c0dcc5304a7c64a86fcb142f0413e7, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
