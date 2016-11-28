@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - name: AstronautBot_Body
+  - name: Body_Idle
     frames:
     - spriteCollection: {fileID: 114000012047739118, guid: aa97c167f2880dc4cb4e20c986e0cae3,
         type: 2}
@@ -64,7 +64,7 @@ MonoBehaviour:
     fps: 30
     loopStart: 0
     wrapMode: 0
-  - name: AstronautBot_Body_Move
+  - name: Body_Move
     frames:
     - spriteCollection: {fileID: 114000012047739118, guid: aa97c167f2880dc4cb4e20c986e0cae3,
         type: 2}
@@ -111,7 +111,7 @@ MonoBehaviour:
     fps: 15
     loopStart: 0
     wrapMode: 0
-  - name: AstronautBot_Gun
+  - name: Gun_Idle
     frames:
     - spriteCollection: {fileID: 114000012047739118, guid: aa97c167f2880dc4cb4e20c986e0cae3,
         type: 2}
@@ -123,7 +123,7 @@ MonoBehaviour:
     fps: 30
     loopStart: 0
     wrapMode: 0
-  - name: AstronautBot_Gun_Move
+  - name: Gun_Move
     frames:
     - spriteCollection: {fileID: 114000012047739118, guid: aa97c167f2880dc4cb4e20c986e0cae3,
         type: 2}
@@ -170,7 +170,7 @@ MonoBehaviour:
     fps: 15
     loopStart: 0
     wrapMode: 0
-  - name: AstronautBot_Gun_Shoot
+  - name: Gun_Shoot
     frames:
     - spriteCollection: {fileID: 114000012047739118, guid: aa97c167f2880dc4cb4e20c986e0cae3,
         type: 2}
@@ -224,7 +224,7 @@ MonoBehaviour:
     fps: 15
     loopStart: 0
     wrapMode: 2
-  - name: AstronautBot_Head
+  - name: Head_Idle
     frames:
     - spriteCollection: {fileID: 114000012047739118, guid: aa97c167f2880dc4cb4e20c986e0cae3,
         type: 2}
@@ -236,7 +236,7 @@ MonoBehaviour:
     fps: 30
     loopStart: 0
     wrapMode: 0
-  - name: AstronautBot_Head_Move
+  - name: Head_Move
     frames:
     - spriteCollection: {fileID: 114000012047739118, guid: aa97c167f2880dc4cb4e20c986e0cae3,
         type: 2}
@@ -283,7 +283,7 @@ MonoBehaviour:
     fps: 15
     loopStart: 0
     wrapMode: 0
-  - name: AstronautBot_Leg
+  - name: LeftLeg_Idle
     frames:
     - spriteCollection: {fileID: 114000012047739118, guid: aa97c167f2880dc4cb4e20c986e0cae3,
         type: 2}
@@ -295,7 +295,7 @@ MonoBehaviour:
     fps: 30
     loopStart: 0
     wrapMode: 0
-  - name: AstronautBot_LeftLeg_Run
+  - name: LeftLeg_Run
     frames:
     - spriteCollection: {fileID: 114000012047739118, guid: aa97c167f2880dc4cb4e20c986e0cae3,
         type: 2}
@@ -384,7 +384,7 @@ MonoBehaviour:
     fps: 15
     loopStart: 0
     wrapMode: 0
-  - name: AstronautBot_RightLeg_Run
+  - name: RightLeg_Run
     frames:
     - spriteCollection: {fileID: 114000012047739118, guid: aa97c167f2880dc4cb4e20c986e0cae3,
         type: 2}
@@ -473,7 +473,7 @@ MonoBehaviour:
     fps: 15
     loopStart: 0
     wrapMode: 0
-  - name: AstronautBot_Sword
+  - name: Sword_Idle
     frames:
     - spriteCollection: {fileID: 114000012047739118, guid: aa97c167f2880dc4cb4e20c986e0cae3,
         type: 2}
@@ -483,5 +483,17 @@ MonoBehaviour:
       eventInt: 0
       eventFloat: 0
     fps: 15
+    loopStart: 0
+    wrapMode: 0
+  - name: RightLeg_Idle
+    frames:
+    - spriteCollection: {fileID: 114000012047739118, guid: aa97c167f2880dc4cb4e20c986e0cae3,
+        type: 2}
+      spriteId: 40
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    fps: 30
     loopStart: 0
     wrapMode: 0
