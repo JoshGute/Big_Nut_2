@@ -994,19 +994,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 636314692}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4eca4bfa474c6b346bd1b894b06e2dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Robot: {fileID: 636314698}
-  SelectedRobot: {fileID: 0}
---- !u!114 &636314698 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000013845914198, guid: 2c5018bbda90ad04996191991cc0d8a5,
-    type: 2}
-  m_PrefabInternal: {fileID: 718059305}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  isSelectable: 0
 --- !u!1 &650723439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,8 +1757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eca4bfa474c6b346bd1b894b06e2dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Robot: {fileID: 0}
-  SelectedRobot: {fileID: 0}
+  isSelectable: 0
 --- !u!65 &789015219
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2254,8 +2246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eca4bfa474c6b346bd1b894b06e2dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Robot: {fileID: 0}
-  SelectedRobot: {fileID: 0}
+  isSelectable: 0
 --- !u!1001 &1345481883
 Prefab:
   m_ObjectHideFlags: 0
@@ -2513,8 +2504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eca4bfa474c6b346bd1b894b06e2dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Robot: {fileID: 0}
-  SelectedRobot: {fileID: 0}
+  isSelectable: 0
 --- !u!65 &1409763104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2555,8 +2545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eca4bfa474c6b346bd1b894b06e2dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Robot: {fileID: 0}
-  SelectedRobot: {fileID: 0}
+  isSelectable: 0
 --- !u!1 &1509463252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3017,8 +3006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eca4bfa474c6b346bd1b894b06e2dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Robot: {fileID: 0}
-  SelectedRobot: {fileID: 0}
+  isSelectable: 0
 --- !u!1 &1824176100 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011496231830, guid: 4fae2ba58b256df4ea10985bbb1bf689,
@@ -3047,8 +3035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eca4bfa474c6b346bd1b894b06e2dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Robot: {fileID: 0}
-  SelectedRobot: {fileID: 0}
+  isSelectable: 0
 --- !u!1 &1829983272
 GameObject:
   m_ObjectHideFlags: 0
@@ -3133,8 +3120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eca4bfa474c6b346bd1b894b06e2dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Robot: {fileID: 0}
-  SelectedRobot: {fileID: 0}
+  isSelectable: 0
 --- !u!65 &1841027292
 BoxCollider:
   m_ObjectHideFlags: 0

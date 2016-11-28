@@ -234,9 +234,8 @@ GameObject:
   - 33: {fileID: 33000013216893768}
   - 23: {fileID: 23000013535245168}
   - 54: {fileID: 54000010194375388}
+  - 114: {fileID: 114000010610513768}
   - 65: {fileID: 65000011305195044}
-  - 114: {fileID: 114000010628644988}
-  - 82: {fileID: 82000013343559248}
   m_Layer: 10
   m_Name: SpaceMan_Gun
   m_TagString: Player1
@@ -292,7 +291,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010009715562}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.05, y: 11.95, z: 0}
+  m_LocalPosition: {x: 26.05, y: 11.73, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -305,7 +304,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012813209446}
   m_LocalRotation: {x: 0, y: -0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 26.653, y: 10.35, z: -0.89}
+  m_LocalPosition: {x: 26.653, y: 10.12, z: -0.89}
   m_LocalScale: {x: 0.5000011, y: 0.25, z: 1.5000033}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -320,7 +319,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012452091718}
   m_LocalRotation: {x: 0, y: -0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 27.35, y: 10.71, z: 0.6}
+  m_LocalPosition: {x: 27.35, y: 10.49, z: 0.6}
   m_LocalScale: {x: 0.5000013, y: 0.25, z: 1.5000038}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children:
@@ -335,7 +334,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010364464394}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.080008, y: 10.91, z: -0.05}
+  m_LocalPosition: {x: 26.080008, y: 10.69, z: -0.05}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -348,7 +347,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012862544534}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 6.6818495, y: 10.835506, z: -39.85993}
+  m_LocalPosition: {x: -7.69, y: 1.96, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_Children:
@@ -362,7 +361,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011746974646}
   m_LocalRotation: {x: -0, y: 0.7071068, z: 0, w: -0.7071068}
-  m_LocalPosition: {x: -1.3800058, y: 1, z: -0.25}
+  m_LocalPosition: {x: -1.380007, y: 1.0820541, z: -0.25917003}
   m_LocalScale: {x: 1.3333313, y: 8, z: 2}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -427,7 +426,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010636149438}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 24.810003, y: 11.234999, z: -0.15000343}
+  m_LocalPosition: {x: 24.810003, y: 11.02, z: -0.15000343}
   m_LocalScale: {x: 0.62751746, y: 1.2217925, z: 0.8117157}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1206,80 +1205,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!82 &82000013343559248
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012813209446}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.75
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  Priority: 87
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!114 &114000010432631822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1294,6 +1219,30 @@ MonoBehaviour:
   library: {fileID: 114000011557700648, guid: ab6f5e71cb9625c4c93791c2d6abd691, type: 2}
   defaultClipId: 0
   playAutomatically: 0
+--- !u!114 &114000010610513768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012813209446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b815286fb4d41bb459929cbe640bfa6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sOwner: 
+  PatternSpawn: {fileID: 1000010170943358}
+  fFireRate: 0.1
+  fTimerForNext: 0
+  gBulletPattern: {fileID: 114000013968380760, guid: c616a781cc25f4f46a19e278f1a9dd26,
+    type: 2}
+  ShootingNoise: {fileID: 8300000, guid: 155ce38328889644e9a9ca7834ffae58, type: 3}
+  ReloadNoise: {fileID: 8300000, guid: 5e6e6d26b356f9d47900c2540475a1ac, type: 3}
+  MissNoise: {fileID: 0}
+  RobotAudioSource: {fileID: 82000011641141574}
+  iMaxRounds: 6
+  fReloadSpeed: 0.5
+  fReloadTimer: 0
 --- !u!114 &114000010617740592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1318,27 +1267,6 @@ MonoBehaviour:
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
   renderLayer: 0
---- !u!114 &114000010628644988
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012813209446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4113cc77979b9d24882535a7453f96fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sOwner: 
-  PatternSpawn: {fileID: 1000010170943358}
-  fFireRate: 0.75
-  fTimerForNext: 0
-  gBulletPattern: {fileID: 114000013968380760, guid: c616a781cc25f4f46a19e278f1a9dd26,
-    type: 2}
-  ShootingNoise: {fileID: 8300000, guid: bd86b97094fe1004db3e176512f7a4da, type: 3}
-  ReloadNoise: {fileID: 0}
-  MissNoise: {fileID: 0}
-  RobotAudioSource: {fileID: 82000013343559248}
 --- !u!114 &114000010657827420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1399,9 +1327,13 @@ MonoBehaviour:
   fMoveSpeed: 500
   fJumpSpeed: 10
   fDashTime: 0.25
+<<<<<<< HEAD
   acHitNoise: {fileID: 8300000, guid: b069d49ba6e2c6c419d7c8f0b7e0acf6, type: 3}
   acExplodeNoise: {fileID: 8300000, guid: 6cc2c25a03d921d46910524e479aeb9f, type: 3}
   asNoiseMaker: {fileID: 82000011376340186}
+=======
+  acHitNoise: {fileID: 0}
+>>>>>>> origin/master
 --- !u!114 &114000011309431382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1413,8 +1345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5e54113e5604435b8ae87c7754f2725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  library: {fileID: 114000010897886846, guid: a34aadbebb880f645b43a43154b845a7, type: 2}
-  defaultClipId: 0
+  library: {fileID: 114000011557700648, guid: ab6f5e71cb9625c4c93791c2d6abd691, type: 2}
+  defaultClipId: 7
   playAutomatically: 0
 --- !u!114 &114000012113543080
 MonoBehaviour:
@@ -1579,7 +1511,7 @@ MonoBehaviour:
     type: 2}
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
-  _spriteId: 21
+  _spriteId: 22
   boxCollider2D: {fileID: 0}
   polygonCollider2D: []
   edgeCollider2D: []
