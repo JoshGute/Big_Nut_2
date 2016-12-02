@@ -17,6 +17,9 @@ public class HUD : MonoBehaviour {
 
     public Button RestartButton;
 
+    public GameObject P1Corner;
+    public GameObject P2Corner;
+
     void OnEnable()
     {
         BodyScript.Die += UpdateBotsLeft;
