@@ -67,12 +67,15 @@ public class BodyScript : MonoBehaviour
                     child.GetComponent<Rigidbody>().isKinematic = false;
                     child.GetComponent<Rigidbody>().AddExplosionForce(10.0f, child.transform.position, 2.0f);
                     child.gameObject.layer = 11;
+                    child.gameObject.AddComponent<BitFade>();
                 }
+
                 if (child.GetComponent<tk2dSprite>())
                 {
                     child.GetComponent<tk2dSprite>().color = Color.white;
                 }
             }
+
             gSkin.transform.DetachChildren();
             Die(sOwner);
             Destroy(gameObject);
