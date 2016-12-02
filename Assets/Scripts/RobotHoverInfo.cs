@@ -8,10 +8,14 @@ using UnityEngine.EventSystems;
 public class RobotHoverInfo : MonoBehaviour
 {
     public bool isSelectable;
+
+    public RobotInfo Info;
+
     // Use this for initialization
     void Start ()
     {
         isSelectable = true;
+
     }
 	
 	// Update is called once per frame

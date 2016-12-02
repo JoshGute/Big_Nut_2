@@ -971,6 +971,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000013314323584, guid: 2c5018bbda90ad04996191991cc0d8a5,
     type: 2}
   m_PrefabInternal: {fileID: 718059305}
+--- !u!114 &636314693 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000013845914198, guid: 2c5018bbda90ad04996191991cc0d8a5,
+    type: 2}
+  m_PrefabInternal: {fileID: 718059305}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!65 &636314695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1000,6 +1006,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelectable: 0
+  Info:
+    RobotName: TopLeft
+    RobotImage: {fileID: 636314693}
+    TeamPosition: 6
 --- !u!1 &650723439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,6 +1756,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000010252294232, guid: 2630f19d41d226844b359ef51913be6e,
     type: 2}
   m_PrefabInternal: {fileID: 417633316}
+--- !u!114 &789015216 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010864969466, guid: 2630f19d41d226844b359ef51913be6e,
+    type: 2}
+  m_PrefabInternal: {fileID: 417633316}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!114 &789015217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1758,6 +1774,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelectable: 0
+  Info:
+    RobotName: 3Right
+    RobotImage: {fileID: 789015216}
+    TeamPosition: 6
 --- !u!65 &789015219
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2247,6 +2267,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelectable: 0
+  Info:
+    RobotName: BottomRight
+    RobotImage: {fileID: 1323227209}
+    TeamPosition: 6
+--- !u!114 &1323227209 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000014205353488, guid: 13364757e6db8df458312fdf1583c2b0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1868978068}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1345481883
 Prefab:
   m_ObjectHideFlags: 0
@@ -2493,6 +2523,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000012647599728, guid: 6477056274f95b546acb9bfeeb8e0f1c,
     type: 2}
   m_PrefabInternal: {fileID: 2055628617}
+--- !u!114 &1409763101 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011524372266, guid: 6477056274f95b546acb9bfeeb8e0f1c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2055628617}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!114 &1409763102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2505,6 +2541,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelectable: 0
+  Info:
+    RobotName: TopRight
+    RobotImage: {fileID: 1409763101}
+    TeamPosition: 6
 --- !u!65 &1409763104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2546,6 +2586,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelectable: 0
+  Info:
+    RobotName: 3Left
+    RobotImage: {fileID: 1482506112}
+    TeamPosition: 6
+--- !u!114 &1482506112 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011086624956, guid: 03deea82b65ef2c4ca526ca066b07db3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1345481883}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1509463252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3007,6 +3057,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelectable: 0
+  Info:
+    RobotName: BottomLeft
+    RobotImage: {fileID: 1766392683}
+    TeamPosition: 6
+--- !u!114 &1766392683 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000013472510182, guid: ee580aa97b782974eb028edbde2a293a,
+    type: 2}
+  m_PrefabInternal: {fileID: 327519217}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1824176100 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011496231830, guid: 4fae2ba58b256df4ea10985bbb1bf689,
@@ -3036,6 +3096,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelectable: 0
+  Info:
+    RobotName: 2Left
+    RobotImage: {fileID: 1824176103}
+    TeamPosition: 6
+--- !u!114 &1824176103 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011107821078, guid: 4fae2ba58b256df4ea10985bbb1bf689,
+    type: 2}
+  m_PrefabInternal: {fileID: 1534164325}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1829983272
 GameObject:
   m_ObjectHideFlags: 0
@@ -3109,6 +3179,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000013874184072, guid: 200bde66decf0ad4a926b577a7f8fb8a,
     type: 2}
   m_PrefabInternal: {fileID: 654401226}
+--- !u!114 &1841027289 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000013369352910, guid: 200bde66decf0ad4a926b577a7f8fb8a,
+    type: 2}
+  m_PrefabInternal: {fileID: 654401226}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!114 &1841027290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3121,6 +3197,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelectable: 0
+  Info:
+    RobotName: 2Right
+    RobotImage: {fileID: 1841027289}
+    TeamPosition: 6
 --- !u!65 &1841027292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3343,6 +3423,7 @@ GameObject:
   - 223: {fileID: 2036705321}
   - 114: {fileID: 2036705320}
   - 114: {fileID: 2036705319}
+  - 114: {fileID: 2036705323}
   m_Layer: 5
   m_Name: RobotSelection
   m_TagString: Untagged
@@ -3448,6 +3529,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2036705323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2036705318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 435beb915be3d7844be34d31399b89a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bDisabled: 0
+  playerIndex: 0
 --- !u!1 &2038084020
 GameObject:
   m_ObjectHideFlags: 0
