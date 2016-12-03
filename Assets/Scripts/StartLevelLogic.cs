@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using XInputDotNetPure;
 
-public class StartLevelLogic : MonoBehaviour {
+public class StartLevelLogic : MonoBehaviour
+{
 
     private GamePadState State;
     private GamePadState prevState;
@@ -12,13 +14,6 @@ public class StartLevelLogic : MonoBehaviour {
 
     public PlayerIndex playerIndex;
 
-
-	// Use this for initialization
-	void Start ()
-    {
-	
-	}
-	
 	// Update is called once per frame
 	void Update ()
     {
@@ -30,6 +25,7 @@ public class StartLevelLogic : MonoBehaviour {
             if(prevState.Buttons.Start == ButtonState.Released && State.Buttons.Start == ButtonState.Pressed)
             {
                 Debug.Log("start was pressed");
+                SceneManager.LoadScene("IceCavesLevel");
             }
         }
 	

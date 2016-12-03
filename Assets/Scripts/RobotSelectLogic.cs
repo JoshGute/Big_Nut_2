@@ -72,9 +72,6 @@ public class RobotSelectLogic : MonoBehaviour
         Team.Add(new RobotInfo("none", null, TeamSlots.LeftSlot1));
         Team.Add(new RobotInfo("none", null, TeamSlots.LeftSlot2));
         Team.Add(new RobotInfo("none", null, TeamSlots.LeftSlot3));
-
-
-
     }
 
     // Update is called once per frame
