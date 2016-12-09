@@ -290,8 +290,8 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
+  m_HorizontalAxis: Horizontal_P1
+  m_VerticalAxis: Vertical_P1
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 2088687773}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &372659390
@@ -318,12 +318,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 372659387}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -464, y: -261, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 1836759791}
-  m_RootOrder: 4
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1 &999904222
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,7 +484,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &1044814797
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,10 +747,9 @@ RectTransform:
   - {fileID: 1451720134}
   - {fileID: 109904205}
   - {fileID: 1044814798}
-  - {fileID: 372659390}
   - {fileID: 2088687774}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -838,7 +837,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &2088687773
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,10 +871,10 @@ RectTransform:
   m_Children:
   - {fileID: 999904223}
   m_Father: {fileID: 1836759791}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8, y: -180}
+  m_AnchoredPosition: {x: -8, y: -189}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2088687775
@@ -898,7 +897,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.625, g: 0.625, b: 0.625, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.89705884, b: 0.85993904, a: 1}
     m_PressedColor: {r: 0.43382353, g: 0.43382353, b: 0.43382353, a: 1}
     m_DisabledColor: {r: 0.8161765, g: 0.64814013, b: 0.64814013, a: 0.5019608}
     m_ColorMultiplier: 1
