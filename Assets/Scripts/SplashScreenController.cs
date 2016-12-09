@@ -22,6 +22,9 @@ public class SplashScreenController : MonoBehaviour {
 	[SerializeField]
 	private Transform GameSplashScreen;
 
+	[SerializeField]
+	private Animator StartButtonAnimator;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -83,6 +86,7 @@ public class SplashScreenController : MonoBehaviour {
 	IEnumerator ShowStartScreen()
 	{
 		GameSplashScreenAnimator.SetBool("Activate", true);
+		StartButtonAnimator.SetBool ("Activate", true);
 
 		yield return new WaitForSeconds (100f);
 	}

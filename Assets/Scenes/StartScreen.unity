@@ -317,13 +317,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 372659387}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -464, y: -261, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1836759791}
+  m_RootOrder: 4
 --- !u!1 &999904222
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,6 +747,7 @@ RectTransform:
   - {fileID: 1451720134}
   - {fileID: 109904205}
   - {fileID: 1044814798}
+  - {fileID: 372659390}
   - {fileID: 2088687774}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -774,6 +775,7 @@ MonoBehaviour:
   ControllerSplashScreen: {fileID: 1044814798}
   DigipenSplashScreen: {fileID: 109904205}
   GameSplashScreen: {fileID: 231384614}
+  StartButtonAnimator: {fileID: 2088687778}
 --- !u!1 &1991851176
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +853,7 @@ GameObject:
   - 95: {fileID: 2088687778}
   - 114: {fileID: 2088687779}
   m_Layer: 5
-  m_Name: Start Game
+  m_Name: Start Game Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -870,7 +872,7 @@ RectTransform:
   m_Children:
   - {fileID: 999904223}
   m_Father: {fileID: 1836759791}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -8, y: -180}
@@ -889,10 +891,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 2088687775}
+    m_SelectOnDown: {fileID: 2088687775}
+    m_SelectOnLeft: {fileID: 2088687775}
+    m_SelectOnRight: {fileID: 2088687775}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -989,4 +991,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b1788e4563dc842aa97adca1f47591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 
+  level: MainMenu
