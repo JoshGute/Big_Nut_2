@@ -4,7 +4,7 @@ Contributors: --
 Course: GAM400
 Game:   Big Nut
 Date:   12/7/2016
-File:   RemakeScript.cs
+File:   PressAtoPlay.cs
 
 Description:
 
@@ -19,8 +19,19 @@ written consent of DigiPen Institute of Technology is prohibited.
 using UnityEngine;
 using System.Collections;
 
-public class RemakeScript : MonoBehaviour
-{
+public class PressAtoPlay : MonoBehaviour {
+
+    public string LeveltoLoad;
+	// Update is called once per frame
+	void Update ()
+    {
+        if(Input.anyKeyDown)
+        {
+            RebuildLevel(LeveltoLoad);
+        }
+	
+	}
+
     public void RebuildLevel(string sLevelToLoad)
     {
         Application.LoadLevel(sLevelToLoad);
