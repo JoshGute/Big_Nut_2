@@ -12,6 +12,7 @@ TagManager:
   - Sword
   - RobotSelect
   - TeamHolder
+  - Music
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,5 @@
-﻿/*******************************  SpaceTube  *********************************
-Author: Josh 'Avoids Contact' Gutenberg
+﻿/******************************* Ducks in a Row *********************************
+Author: Josh 'Big G' Gutenberg
 Contributors: --
 Course: GAM400
 Game:   Big Nut

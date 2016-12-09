@@ -120,6 +120,8 @@ public class PauseMenu : MonoBehaviour
     {
         Application.LoadLevel(Application.loadedLevel);
         Time.timeScale = 1;
+        gPauseMenu.SetActive(false);
+
     }
 
     public void Quit()
