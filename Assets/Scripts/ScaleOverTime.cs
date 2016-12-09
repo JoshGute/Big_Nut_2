@@ -1,4 +1,4 @@
-﻿/*******************************  SpaceTube  *********************************
+﻿/*******************************  DuckInARow  *********************************
 Author: Glen Aro
 Contributors: --
 Course: GAM400
@@ -30,6 +30,9 @@ public class ScaleOverTime : MonoBehaviour {
     private bool ScaleMet = false;
     private Transform TargetToScale;
 
+    public bool bReturnToOriginalSize;
+    public bool bLooping;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -55,28 +58,30 @@ public class ScaleOverTime : MonoBehaviour {
                 {
                     ScaleMet = true;
                 }
+            }
+        }
 
-                /*
-                if (TargetToScale.localScale.x <= MaxScale.x)
+        if(ScaleMet == true && bReturnToOriginalSize == true)
+        {
+            FTimertoNextScale += Time.deltaTime;
+
+            if (FTimertoNextScale >= fScaleRate)
+            {
+                FTimertoNextScale = 0;
+                //print("scale time");
+
+                TargetToScale.localScale -= ScalePerTick;
+
+                if (TargetToScale.localScale.x <= StartingScale.x)
                 {
-                    TargetToScale.localScale.Set(TargetToScale.localScale.x + ScalePerTick.x, TargetToScale.localScale.y, TargetToScale.localScale.z);
-                    print("scale x");
+
+                    TargetToScale.localScale = StartingScale;
+
+                    if(bLooping)
+                    {
+                        ScaleMet = false;
+                    }
                 }
-                if (TargetToScale.localScale.y <= MaxScale.y)
-                {
-                    TargetToScale.localScale.Set(TargetToScale.localScale.x, TargetToScale.localScale.y + ScalePerTick.y, TargetToScale.localScale.z);
-                    print("scale y");
-                }
-                if (TargetToScale.localScale.z <= MaxScale.z)
-                {
-                    TargetToScale.localScale.Set(TargetToScale.localScale.x, TargetToScale.localScale.y, TargetToScale.localScale.z + ScalePerTick.z);
-                    print("scale z");
-                }
-                
-                else
-                {
-                    ScaleMet = true;
-                }*/
             }
         }
 	}
