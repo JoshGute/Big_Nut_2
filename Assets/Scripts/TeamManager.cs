@@ -1,5 +1,5 @@
-﻿/*******************************  SpaceTube  *********************************
-Author: Josh 'Avoids Contact' Gutenberg
+﻿/*******************************  Ducks in a Row  *********************************
+Author: Josh Gutenberg
 Contributors: Glen Aro
 Course: GAM400
 Game:   Big Nut
@@ -48,6 +48,8 @@ public class TeamManager : MonoBehaviour
     }
 	void Start ()
     {
+        Application.targetFrameRate = 200;
+        Cursor.visible = false;
         asNoiseMaker = GetComponent<AudioSource>();
         Spawn(pOwner.tag);
 	}
@@ -73,6 +75,7 @@ public class TeamManager : MonoBehaviour
 
             {
                 Victory(sOwner_);
+                Cursor.visible = true;
             }
 
             else
