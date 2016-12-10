@@ -17,7 +17,7 @@ MonoBehaviour:
   colorMode: 0
   sortMethod: 0
   generateUv2: 0
-  layersFixedZ: 0
+  layersFixedZ: 1
   useSortingLayers: 0
   tilePrefabs:
   - {fileID: 0}
@@ -2006,9 +2006,9 @@ MonoBehaviour:
     hash: 318935866
     useColor: 1
     generateCollider: 1
-    z: 0.1
+    z: -1
     unityLayer: 0
-    sortingLayerName: 
+    sortingLayerName: Default
     sortingOrder: 0
     skipMeshGeneration: 0
     physicMaterial: {fileID: 0}
@@ -2019,7 +2019,7 @@ MonoBehaviour:
     generateCollider: 1
     z: 0.01
     unityLayer: 0
-    sortingLayerName: 
+    sortingLayerName: Default
     sortingOrder: 0
     skipMeshGeneration: 0
     physicMaterial: {fileID: 0}
@@ -2028,9 +2028,9 @@ MonoBehaviour:
     hash: 1892887448
     useColor: 1
     generateCollider: 1
-    z: 0.2
+    z: 0.02
     unityLayer: 0
-    sortingLayerName: 
+    sortingLayerName: Default
     sortingOrder: 0
     skipMeshGeneration: 0
     physicMaterial: {fileID: 0}
