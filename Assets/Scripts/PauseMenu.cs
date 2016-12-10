@@ -19,14 +19,15 @@ written consent of DigiPen Institute of Technology is prohibited.
 using UnityEngine;
 using System.Collections;
 using XInputDotNetPure;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
     public bool bPaused = false;
 
     public GameObject gPauseMenu;
-    public GameObject gQuitScreen;
-    public GameObject gHowToPlay;
+    public GameObject gstartingButton;
+    public EventSystem eEventSystem;
 
     public PlayerIndex playerIndex;
     GamePadState state;
@@ -92,7 +93,9 @@ public class PauseMenu : MonoBehaviour
             {
                 pController.bDisabled = true;
             }
+
             gPauseMenu.SetActive(true);
+            ChangeButton(gstartingButton);
         }
 
     }
@@ -129,10 +132,10 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void Back(GameObject gCurrent, GameObject gTarget)
+
+    public void ChangeButton(GameObject gTarget_)
     {
-        gCurrent.SetActive(false);
-        gTarget.SetActive(true);
+        eEventSystem.SetSelectedGameObject(gTarget_);
     }
 
 }
