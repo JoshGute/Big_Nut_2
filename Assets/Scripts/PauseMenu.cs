@@ -26,6 +26,7 @@ public class PauseMenu : MonoBehaviour
     public bool bPaused = false;
 
     public GameObject gPauseMenu;
+
     public GameObject gstartingButton;
     public EventSystem eEventSystem;
 
@@ -74,6 +75,16 @@ public class PauseMenu : MonoBehaviour
             {
                 pController.bDisabled = false;
             }
+
+            //GameObject[] gActiveCanvases = gameObject.GetComponentsInChildren<GameObject>();
+            foreach (Transform tChild in transform)
+            {
+                if (tChild.gameObject.activeSelf)
+                {
+                    tChild.gameObject.SetActive(false);
+                }
+            }
+
             gPauseMenu.SetActive(false);
         }
 
