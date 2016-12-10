@@ -52,7 +52,9 @@ public class HUD : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        WinText.gameObject.SetActive(true);
         WinText.text = "";
+        WinText.gameObject.SetActive(false);
         P1robs.GetComponent<Text>().text = PlayerOne.gTeam.Length.ToString();
         P2robs.GetComponent<Text>().text = PlayerTwo.gTeam.Length.ToString();
     }
@@ -83,11 +85,13 @@ public class HUD : MonoBehaviour {
     {
         if (inWinner == "Player1")
         {
+            WinText.gameObject.SetActive(true);
             WinText.text = "Player 1 Wins!";
         }
 
         else if (inWinner == "Player2")
         {
+            WinText.gameObject.SetActive(true);
             WinText.text = "Player 2 Wins!";
         }
 
