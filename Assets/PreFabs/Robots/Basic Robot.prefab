@@ -898,14 +898,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sOwner: 
+  gSkin: {fileID: 0}
+  gOilSpring: {fileID: 0}
   rb: {fileID: 0}
   fLifetime: 60
   bGrounded: 0
   iMaxJumps: 3
   iJumps: 0
-  fMoveSpeed: 500
-  fJumpSpeed: 10
+  fMoveSpeed: 1000
+  fJumpSpeed: 20
   fDashTime: 1
+  acHitNoise: {fileID: 0}
+  acExplodeNoise: {fileID: 0}
+  asNoiseMaker: {fileID: 0}
 --- !u!114 &114000012163116120
 MonoBehaviour:
   m_ObjectHideFlags: 1

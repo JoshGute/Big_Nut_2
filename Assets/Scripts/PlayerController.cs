@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
 
     public BodyScript bBody;
     public GunScript gGun;
-    public SwordScript sSword;
+    public DashScript dDash;
     public AnimationController aController;
 
     private GamePadState state;
@@ -86,20 +86,17 @@ public class PlayerController : MonoBehaviour
                 state = GamePad.GetState(playerIndex);
                 KeyAxisH = state.ThumbSticks.Left.X;
                 KeyAxisV = state.ThumbSticks.Left.Y;
-
-                if (prevState.Buttons.A == ButtonState.Released && state.Buttons.A == ButtonState.Pressed)
+   
+                if (prevState.Triggers.Left > 0f && state.Triggers.Left == 0)
                 {
                     inputManager(1);
                 }
-                if (prevState.Buttons.RightShoulder == ButtonState.Released && state.Buttons.RightShoulder == ButtonState.Pressed)
+                if (prevState.Triggers.Right > 0f && state.Triggers.Right == 0)
                 {
                     aController.changeAnimation(3);
                     inputManager(2);
                 }
-                if (prevState.Buttons.LeftShoulder == ButtonState.Released && state.Buttons.LeftShoulder == ButtonState.Pressed)
-                {
-                    inputManager(3);
-                }
+
                 if (prevState.Buttons.Back == ButtonState.Released && state.Buttons.Back == ButtonState.Pressed)
                 {
                     inputManager(4);
@@ -163,7 +160,7 @@ public class PlayerController : MonoBehaviour
                 }
             case 3:
                 {
-                    sSword.StartCoroutine("Stab");
+                    //sSword.StartCoroutine("Stab");
                     break;
                 }
             case 4:
@@ -180,7 +177,7 @@ public class PlayerController : MonoBehaviour
         bDisabled = false;
         bBody = gRobot_.GetComponent<BodyScript>();
         gGun = gRobot_.GetComponentInChildren<GunScript>();
-        sSword = gRobot_.GetComponentInChildren<SwordScript>();
+        dDash = gRobot_.GetComponentInChildren<DashScript>();
 
         if(gRobot_.GetComponentInChildren<AnimationController>())
         {
@@ -193,20 +190,24 @@ public class PlayerController : MonoBehaviour
 
         bBody.sOwner = tag;
         gGun.sOwner = tag;
-        sSword.sOwner = tag;
+        dDash.sOwner = tag;
 
         bBody.tag = tag;
         gGun.tag = tag;
-        sSword.tag = tag;    
+        dDash.tag = tag;   
     }
 
     IEnumerator Dash(float dashTime)
     {
         bBody.rb.useGravity = false;
         bDashing = true;
+        dDash.gameObject.GetComponent<BoxCollider>().enabled = true;
+        dDash.gameObject.GetComponent<MeshRenderer>().enabled = true;
         yield return new WaitForSeconds(dashTime);
         bBody.rb.useGravity = true;
         bBody.rb.velocity = new Vector3(0, 0, 0);
         bDashing = false;
+        dDash.gameObject.GetComponent<BoxCollider>().enabled = false;
+        dDash.gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

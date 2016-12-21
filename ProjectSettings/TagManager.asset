@@ -9,10 +9,11 @@ TagManager:
   - Player2
   - Bullet1
   - Bullet
-  - Sword
+  - Dash
   - RobotSelect
   - TeamHolder
   - Music
+  - Sword
   layers:
   - Default
   - TransparentFX

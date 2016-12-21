@@ -168,12 +168,12 @@ public class BodyScript : MonoBehaviour
             TakeDamage(trigger.gameObject.GetComponent<BulletScript>().Damage);
         }
 
-      //Being hit by a Sword
+      //Being hit by a Dash
       //(trigger is the hitbox attached to sword in this case. the info is in the sword arm parent so that's why do getcomponentinparent)
-        else if(trigger.gameObject.tag == "Sword" && trigger.gameObject.GetComponentInParent<SwordScript>().sOwner != sOwner)
+        else if(trigger.gameObject.name == "Dash" && trigger.gameObject.GetComponentInParent<DashScript>().sOwner != sOwner)
         {
-            TakeDamage(trigger.gameObject.GetComponentInParent<SwordScript>().Damage);
-            rb.velocity = (trigger.transform.forward * trigger.gameObject.GetComponentInParent<SwordScript>().Damage * 2);
+            TakeDamage(trigger.gameObject.GetComponentInParent<DashScript>().fDamage);
+            rb.velocity = (trigger.transform.forward * trigger.gameObject.GetComponentInParent<DashScript>().fKnockback);
         }
 
     }

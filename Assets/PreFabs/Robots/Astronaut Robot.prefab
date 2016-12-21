@@ -1396,8 +1396,8 @@ MonoBehaviour:
   bGrounded: 0
   iMaxJumps: 3
   iJumps: 0
-  fMoveSpeed: 500
-  fJumpSpeed: 10
+  fMoveSpeed: 1000
+  fJumpSpeed: 20
   fDashTime: 0.25
   acHitNoise: {fileID: 8300000, guid: b069d49ba6e2c6c419d7c8f0b7e0acf6, type: 3}
   acExplodeNoise: {fileID: 8300000, guid: 6cc2c25a03d921d46910524e479aeb9f, type: 3}
