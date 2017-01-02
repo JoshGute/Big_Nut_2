@@ -27,6 +27,9 @@ public class PlayerController : MonoBehaviour
     private float KeyAxisH;
     private float KeyAxisV;
 
+    private float rotateAxisH;
+    private float rotateAxisV;
+
     public string Horizontal = "Horizontal_P1";
     public string Vertical = "Vertical_P1";
     public string Shoot = "Shoot_P1";
@@ -66,6 +69,7 @@ public class PlayerController : MonoBehaviour
                 KeyAxisH = Input.GetAxis(Horizontal);
                 KeyAxisV = Input.GetAxis(Vertical);
 
+
                 if (Input.GetButtonDown(Jump))
                 {
                     inputManager(1);
@@ -86,12 +90,14 @@ public class PlayerController : MonoBehaviour
                 state = GamePad.GetState(playerIndex);
                 KeyAxisH = state.ThumbSticks.Left.X;
                 KeyAxisV = state.ThumbSticks.Left.Y;
-   
-                if (prevState.Triggers.Left > 0f && state.Triggers.Left == 0)
+                rotateAxisH = state.ThumbSticks.Right.X;
+                rotateAxisV = state.ThumbSticks.Right.Y;
+
+                if (prevState.Triggers.Left > 0.1f && state.Triggers.Left == 0)
                 {
                     inputManager(1);
                 }
-                if (prevState.Triggers.Right > 0f && state.Triggers.Right == 0)
+                if (prevState.Triggers.Right > 0.1f && state.Triggers.Right == 0)
                 {
                     aController.changeAnimation(3);
                     inputManager(2);
@@ -101,6 +107,11 @@ public class PlayerController : MonoBehaviour
                 {
                     inputManager(4);
                 }
+            }
+            //this is all movement unfortunately. 
+            if (KeyAxisV != 0 && !bDashing)
+            {
+                bBody.rb.velocity = new Vector3(bBody.rb.velocity.x, (KeyAxisV * bBody.fMoveSpeed * Time.deltaTime), bBody.rb.velocity.z);
             }
 
             if (KeyAxisH != 0)
@@ -130,7 +141,13 @@ public class PlayerController : MonoBehaviour
                     aController.changeAnimation(2);
                     bRunning = false;
                 }
+            }
 
+            //handles rotation
+            if (rotateAxisH != 0 || rotateAxisV != 0)
+            {
+                print("aaa");
+                gGun.transform.rotation = Quaternion.LookRotation(gGun.transform.forward + new Vector3(rotateAxisH, rotateAxisV, 0), gGun.transform.up);
             }
         }
     }
