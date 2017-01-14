@@ -52,8 +52,8 @@ public class BatteryLogic : MonoBehaviour
 
     }
 	
-	// Update is called once per frame
-	void Update ()
+	// uncomment this out when we're ready for the battery to display dashes or whatever -Josh
+	/*void Update ()
     {
         if (Parent.fLifetime <= YellowLife)
         {
@@ -74,5 +74,5 @@ public class BatteryLogic : MonoBehaviour
             //BatteryPack.GetComponent<Light>().color = Color.red;
         }
 
-    }
+    }*/
 }

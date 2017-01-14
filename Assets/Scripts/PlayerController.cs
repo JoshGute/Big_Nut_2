@@ -146,7 +146,6 @@ public class PlayerController : MonoBehaviour
             //handles rotation
             if (rotateAxisH != 0 || rotateAxisV != 0)
             {
-                print("aaa");
                 gGun.transform.rotation = Quaternion.LookRotation(gGun.transform.forward + new Vector3(rotateAxisH, rotateAxisV, 0), gGun.transform.up);
             }
         }

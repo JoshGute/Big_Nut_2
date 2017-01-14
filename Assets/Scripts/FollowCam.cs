@@ -55,8 +55,17 @@ public class FollowCam : MonoBehaviour
     {
         if (bFollow)
         {
-            target = (gPlayer1.transform.position + gPlayer2.transform.position) * 0.5f;
-            transform.position = target + offset;
+            if (gPlayer1 && gPlayer2)
+            {
+                target = (gPlayer1.transform.position + gPlayer2.transform.position) * 0.5f;
+                transform.position = target + offset;
+            }
+
+            else
+            {
+                bFollow = false;
+            }
+
         }
 
         if (bShake && Time.timeScale != 0)

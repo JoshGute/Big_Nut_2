@@ -62,8 +62,8 @@ public class HUD : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        P1hp.GetComponent<Text>().text = PlayerOne.pOwner.bBody.fLifetime.ToString();
-        P2hp.GetComponent<Text>().text = PlayerTwo.pOwner.bBody.fLifetime.ToString();
+        P1hp.GetComponent<Text>().text = PlayerOne.pOwner.bBody.iHealth.ToString();
+        P2hp.GetComponent<Text>().text = PlayerTwo.pOwner.bBody.iHealth.ToString();
     }
 
     void UpdateBotsLeft(string inOwner)
