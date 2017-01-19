@@ -1,6 +1,6 @@
 ﻿/*******************************  SpaceTube  *********************************
 Author: Glen Aro
-Contributors: Matty Lanouette
+Contributors: Matty Lanouette, Josh Gutenberg
 Course: GAM400
 Game:   Big Nut
 Date:   12/7/2016
@@ -20,7 +20,8 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-public class HUD : MonoBehaviour {
+public class HUD : MonoBehaviour
+{
 
     public TeamManager PlayerOne;
     public TeamManager PlayerTwo;
@@ -37,6 +38,9 @@ public class HUD : MonoBehaviour {
 
     public GameObject P1Corner;
     public GameObject P2Corner;
+
+    private int P1Kills;
+    private int P2Kills;
 
     void OnEnable()
     {
@@ -55,8 +59,10 @@ public class HUD : MonoBehaviour {
         WinText.gameObject.SetActive(true);
         WinText.text = "";
         WinText.gameObject.SetActive(false);
-        P1robs.GetComponent<Text>().text = PlayerOne.gTeam.Length.ToString();
-        P2robs.GetComponent<Text>().text = PlayerTwo.gTeam.Length.ToString();
+        P1Kills = 0;
+        P2Kills = 0;
+        P1robs.GetComponent<Text>().text = P1Kills.ToString();
+        P2robs.GetComponent<Text>().text = P2Kills.ToString();
     }
 	
 	// Update is called once per frame
@@ -70,14 +76,16 @@ public class HUD : MonoBehaviour {
     {
         if(inOwner == "Player1")
         {
-            int newdeaths = PlayerOne.gTeam.Length - PlayerOne.iDeaths;
-            P1robs.GetComponent<Text>().text = newdeaths.ToString();
+            //int newdeaths = PlayerOne.gTeam.Length - PlayerOne.iDeaths;
+            ++P2Kills;
+            P2robs.GetComponent<Text>().text = P2Kills.ToString();
         }
 
         else if (inOwner == "Player2")
         {
-            int newdeaths2 = PlayerTwo.gTeam.Length - PlayerTwo.iDeaths;
-            P2robs.GetComponent<Text>().text = newdeaths2.ToString();
+            //int newdeaths2 = PlayerTwo.gTeam.Length - PlayerTwo.iDeaths;
+            ++P1Kills;
+            P1robs.GetComponent<Text>().text = P1Kills.ToString();
         }
     }
 
