@@ -1,7 +1,7 @@
 ﻿/******************************* Ducks in a Row *********************************
 Author: Josh 'Big G' Gutenberg
 Contributors: --
-Course: GAM400
+Course: GAM450
 Game:   Big Nut
 Date:   12/20/2016
 File:   DashScript
