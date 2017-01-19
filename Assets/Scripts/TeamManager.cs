@@ -60,7 +60,8 @@ public class TeamManager : MonoBehaviour
 
         if (sOwner_ == pOwner.tag)
         {
-            if(iDeaths > 0)
+            //this code is relevant for our old wincon, now we have a new one so we'll have to reowrk it to fit.
+            /*if(iDeaths > 0)
             {
                 cCamera.GetComponent<FollowCam>().Shake(0.5f);
                 if(iDeaths > 1)
@@ -68,27 +69,57 @@ public class TeamManager : MonoBehaviour
                     asNoiseMaker.PlayOneShot(acSpawnNoise);
                 }
             }
-            
 
-            
             if (iDeaths == gTeam.Length)
-
             {
                 Victory(sOwner_);
                 Cursor.visible = true;
+            }*/
+
+            bool bSpawned = false;
+            int randNum = Random.Range(0, sSpawnPoints.Length);
+
+            if (sPrioritySpawn.bIsSafe == false)
+            {
+                print("random spawn");
+                while (!bSpawned)
+                {
+                    if (sSpawnPoints[randNum].bIsSafe)
+                    {
+                        GameObject gRobot = Instantiate(gTeam[0], sSpawnPoints[randNum].transform.position, gTeam[0].transform.rotation) as GameObject;
+                        pOwner.TagRobot(gRobot);
+                        ++iDeaths;
+                        bSpawned = true;
+                        if (pOwner.tag == "Player1")
+                        {
+                            cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 1);
+                        }
+
+                        else
+                        {
+                            cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 2);
+                        }
+                    }
+
+                    else
+                    {
+                        randNum = Random.Range(0, sSpawnPoints.Length);
+                    }
+                }
             }
 
             else
             {
-                bool bSpawned = false;
-                int randNum = Random.Range(0, sSpawnPoints.Length);
-
                 if (sPrioritySpawn.bIsSafe)
                 {
-                    GameObject gRobot = Instantiate(gTeam[iDeaths], sPrioritySpawn.transform.position, gTeam[iDeaths].transform.rotation) as GameObject;
+                    print("priority spawn");
+                    GameObject gRobot = Instantiate(gTeam[0], sPrioritySpawn.transform.position, gTeam[0].transform.rotation) as GameObject;
                     pOwner.TagRobot(gRobot);
+
                     ++iDeaths;
+                    print(gTeam[0]);
                     bSpawned = true;
+
                     if (pOwner.tag == "Player1")
                     {
                         cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 1);
@@ -97,34 +128,6 @@ public class TeamManager : MonoBehaviour
                     else
                     {
                         cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 2);
-                    }
-                }
-
-                else if(sPrioritySpawn.bIsSafe == false)
-                {
-                    while (!bSpawned)
-                    {
-                        if (sSpawnPoints[randNum].bIsSafe)
-                        {
-                            GameObject gRobot = Instantiate(gTeam[iDeaths], sSpawnPoints[randNum].transform.position, gTeam[iDeaths].transform.rotation) as GameObject;
-                            pOwner.TagRobot(gRobot);
-                            ++iDeaths;
-                            bSpawned = true;
-                            if (pOwner.tag == "Player1")
-                            {
-                                cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 1);
-                            }
-
-                            else
-                            {
-                                cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 2);
-                            }
-                        }
-
-                        else
-                        {
-                            randNum = Random.Range(0, sSpawnPoints.Length);
-                        }
                     }
                 }
             }

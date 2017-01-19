@@ -26,7 +26,7 @@ public class BodyScript : MonoBehaviour
     public GameObject gSkin;
     public GameObject gOilSpring;
     public Rigidbody rb;
-    public float fLifetime;
+    public int iHealth = 3;
 
     public bool bGrounded;
     public int iMaxJumps;
@@ -48,22 +48,6 @@ public class BodyScript : MonoBehaviour
         //asNoiseMaker = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-        InvokeRepeating("updateLifeTime", 0, 1);
-
-    }
-	
-    public void updateLifeTime()
-    {
-      if (fLifetime > 0)
-      {
-          --fLifetime;         
-      }
-      else if (fLifetime <= 0)
-      {
-          
-          Explode();
-          CancelInvoke();
-      }
     }
 
     public void Explode()
@@ -130,9 +114,7 @@ public class BodyScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Bullet" && collision.gameObject.GetComponent<BulletScript>().sOwner != sOwner)
         {
-            TakeDamage(collision.gameObject.GetComponent<BulletScript>().Damage);
-
-            updateLifeTime();
+            TakeDamage();
         }
     }
 
@@ -145,17 +127,25 @@ public class BodyScript : MonoBehaviour
     }
 
     //HAHAHAHAHAHAHA THIS IS THE 3RD TIME I'VE WRITTEN THIS FUNCTION. AHAHAHAHAHAHAHAHAHA - Linus
-    void TakeDamage(float damage)
+    void TakeDamage()
     {
         asNoiseMaker.PlayOneShot(acHitNoise);
-        fLifetime -= damage;
+        if (iHealth > 1)
+        {
+            --iHealth;
+        }
+
+        else if(iHealth == 1) 
+        {
+            --iHealth;
+            Explode();
+        }
 
         foreach (Transform child in gSkin.transform)
         {
             if (child.GetComponent<tk2dSprite>())
             {
                 StartCoroutine(Flash(child.GetComponent<tk2dSprite>()));
-
             }
         }
     }
@@ -165,17 +155,16 @@ public class BodyScript : MonoBehaviour
       //Being hit by Bullet
         if (trigger.gameObject.tag == "Bullet" && trigger.gameObject.GetComponent<BulletScript>().sOwner != sOwner)
         {
-            TakeDamage(trigger.gameObject.GetComponent<BulletScript>().Damage);
+            TakeDamage();
         }
 
       //Being hit by a Dash
       //(trigger is the hitbox attached to sword in this case. the info is in the sword arm parent so that's why do getcomponentinparent)
         else if(trigger.gameObject.name == "Dash" && trigger.gameObject.GetComponentInParent<DashScript>().sOwner != sOwner)
         {
-            TakeDamage(trigger.gameObject.GetComponentInParent<DashScript>().fDamage);
+            TakeDamage();
             rb.velocity = (trigger.transform.forward * trigger.gameObject.GetComponentInParent<DashScript>().fKnockback);
         }
-
     }
 
     private IEnumerator Flash(tk2dSprite SkinPart_)
