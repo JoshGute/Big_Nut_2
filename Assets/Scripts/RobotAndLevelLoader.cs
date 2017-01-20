@@ -69,7 +69,7 @@ public class RobotAndLevelLoader : MonoBehaviour {
         if (!bDisabled && CanMove == true)
         {
             KeyAxisH = State.ThumbSticks.Left.X;
-            KeyAxisV = State.ThumbSticks.Right.Y;
+            KeyAxisV = State.ThumbSticks.Left.Y;
 
             if (KeyAxisH != 0)
             {
@@ -77,25 +77,31 @@ public class RobotAndLevelLoader : MonoBehaviour {
                 if (KeyAxisH > 0 && SelectorTransform.localPosition.x < 75)
                 {
                     SelectorTransform.localPosition += new Vector3(125, 0, 0);
+                    Debug.Log("MOVE RIGHT");
                 }
                 if (KeyAxisH < 0 && SelectorTransform.localPosition.x > -50)
                 {
                     SelectorTransform.localPosition += new Vector3(-125, 0, 0);
+                    Debug.Log("MOVE LEFT");
                 }
             }
+
             if (KeyAxisV != 0)
             {
                 CanMove = false;
-                if (KeyAxisV > 0 && SelectorTransform.localPosition.y < 170)
+                if (KeyAxisV > 0 && SelectorTransform.localPosition.y < -170)
                 {
                     SelectorTransform.localPosition += new Vector3(0, 115, 0);
+                    Debug.Log("MOVE UP");
                 }
-                if (KeyAxisV < 0 && SelectorTransform.localPosition.y > -170)
+                if (KeyAxisV < 0 && SelectorTransform.localPosition.y > 170)
                 {
                     SelectorTransform.localPosition += new Vector3(0, -115, 0);
+                    Debug.Log("MOVE DOWN");
                 }
             }
         }
+
         if (CanMove == false)
         {
             --MoveTimer;
