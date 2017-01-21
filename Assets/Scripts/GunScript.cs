@@ -26,10 +26,14 @@ public class GunScript : MonoBehaviour
     public GameObject PatternSpawn;
 
     public float fFireRate;
-    public float fTimerForNext = 0;
-    //private bool bShot = true;
+    private float fTimeSinceLastShot;
+    private bool bShot = false;
 
-    public GunPattern gBulletPattern;
+    public GameObject[] BulletsShotPerTick;
+
+    public int iNumberofTicks;
+    public float fLengthOfTick;
+    public float fBulletSpacing;
 
     public AudioClip ShootingNoise;
     public AudioClip ReloadNoise;
@@ -39,20 +43,45 @@ public class GunScript : MonoBehaviour
 
     void Update()
     {
-        if (fTimerForNext < fFireRate)
+        if (bShot)
         {
-            fTimerForNext += Time.deltaTime;
+            fTimeSinceLastShot += Time.deltaTime;
+
+            if (fTimeSinceLastShot >= fFireRate)
+            {
+                bShot = false;
+                RobotAudioSource.PlayOneShot(ReloadNoise);
+                fTimeSinceLastShot = 0;
+            }
         }
     }
 
     public virtual void Shoot()
     {
-        if (fTimerForNext >= fFireRate)
+        if (!bShot)
         {
-            RobotAudioSource.PlayOneShot(ShootingNoise);
-            GameObject bulletPattern = Instantiate(gBulletPattern.gameObject, PatternSpawn.transform.position, transform.rotation) as GameObject;
-            bulletPattern.GetComponent<GunPattern>().sOwner = sOwner;
-            fTimerForNext = 0;
+            StartCoroutine(ShootingGun());
+            bShot = true;
         }
+    }
+
+    private IEnumerator ShootingGun()
+    {
+        for (int i = 0; i < iNumberofTicks; i++)
+        {
+            for (int j = 0; j < BulletsShotPerTick.Length; j++)
+            {
+                GameObject newBullet;
+                newBullet = Instantiate(BulletsShotPerTick[j].gameObject, transform.position, transform.rotation) 
+                                                                                                    as GameObject;
+                newBullet.GetComponent<BulletScript>().sOwner = sOwner;
+
+                yield return new WaitForSeconds(fBulletSpacing);
+            }
+
+            yield return new WaitForSeconds(fLengthOfTick); 
+        }
+
+        yield return new WaitForSeconds(0f);
     }
 }
