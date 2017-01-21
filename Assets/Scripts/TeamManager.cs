@@ -27,7 +27,7 @@ public class TeamManager : MonoBehaviour
     public GameObject[] gTeam;
     public Spawnpoint[] sSpawnPoints;
     public Spawnpoint sPrioritySpawn;
-    public int iDeaths;
+    //public int iDeaths;
     private bool bPrioritySpawn = true;
     // Use this for initialization
 
@@ -60,14 +60,12 @@ public class TeamManager : MonoBehaviour
 
         if (sOwner_ == pOwner.tag)
         {
+            cCamera.GetComponent<FollowCam>().Shake(0.5f);
+            asNoiseMaker.PlayOneShot(acSpawnNoise);
             //this code is relevant for our old wincon, now we have a new one so we'll have to reowrk it to fit.
             /*if(iDeaths > 0)
             {
-                cCamera.GetComponent<FollowCam>().Shake(0.5f);
-                if(iDeaths > 1)
-                {
-                    asNoiseMaker.PlayOneShot(acSpawnNoise);
-                }
+
             }
 
             if (iDeaths == gTeam.Length)
@@ -79,7 +77,7 @@ public class TeamManager : MonoBehaviour
             bool bSpawned = false;
             int randNum = Random.Range(0, sSpawnPoints.Length);
 
-            if (sPrioritySpawn.bIsSafe == false)
+            if (!sPrioritySpawn.bIsSafe)
             {
                 print("random spawn");
                 while (!bSpawned)
@@ -88,7 +86,7 @@ public class TeamManager : MonoBehaviour
                     {
                         GameObject gRobot = Instantiate(gTeam[0], sSpawnPoints[randNum].transform.position, gTeam[0].transform.rotation) as GameObject;
                         pOwner.TagRobot(gRobot);
-                        ++iDeaths;
+                        //++iDeaths;
                         bSpawned = true;
                         if (pOwner.tag == "Player1")
                         {
@@ -108,27 +106,24 @@ public class TeamManager : MonoBehaviour
                 }
             }
 
-            else
+            else if (sPrioritySpawn.bIsSafe)
             {
-                if (sPrioritySpawn.bIsSafe)
+                print("priority spawn");
+                GameObject gRobot = Instantiate(gTeam[0], sPrioritySpawn.transform.position, gTeam[0].transform.rotation) as GameObject;
+                pOwner.TagRobot(gRobot);
+
+                //++iDeaths;
+                print(gTeam[0]);
+                bSpawned = true;
+
+                if (pOwner.tag == "Player1")
                 {
-                    print("priority spawn");
-                    GameObject gRobot = Instantiate(gTeam[0], sPrioritySpawn.transform.position, gTeam[0].transform.rotation) as GameObject;
-                    pOwner.TagRobot(gRobot);
+                    cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 1);
+                }
 
-                    ++iDeaths;
-                    print(gTeam[0]);
-                    bSpawned = true;
-
-                    if (pOwner.tag == "Player1")
-                    {
-                        cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 1);
-                    }
-
-                    else
-                    {
-                        cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 2);
-                    }
+                else
+                {
+                    cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 2);
                 }
             }
         }                     

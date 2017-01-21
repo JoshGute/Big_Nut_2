@@ -1,5 +1,5 @@
 ﻿/*******************************  SpaceTube  *********************************
-Author: Josh 'Avoids Contact' Gutenberg
+Author: Josh Gutenberg
 Contributors: --
 Course: GAM400
 Game:   Big Nut
