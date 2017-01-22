@@ -22,17 +22,19 @@ using UnityEngine;
 
 public class PlayerControllerVer2 : MonoBehaviour {
 
-  int DashDistance = 1;
-
   private Rigidbody Rb;
   private Transform Tr;
 
+  [SerializeField]
+  private Transform dashTargetPos;
   [SerializeField]
   private float TurnSpeed = 5f;
   [SerializeField]
   private float maxSpeed = 25f;
   [SerializeField]
   private float Speed = 100f;
+  [SerializeField]
+  private float DashDistance = 5f;
 
 	// Use this for initialization
 	void Start ()
@@ -42,7 +44,7 @@ public class PlayerControllerVer2 : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
   {
     Vector3 ShipDirection = new Vector3(0f, 1f, 0f);
 
@@ -59,8 +61,6 @@ public class PlayerControllerVer2 : MonoBehaviour {
     if(Input.GetKeyDown(KeyCode.X))
     {
       Dash();
-
-      print(gameObject.transform.position);
     }
 
     if (Input.GetKey(KeyCode.UpArrow))
@@ -74,7 +74,20 @@ public class PlayerControllerVer2 : MonoBehaviour {
     }
   }
 
+  /* Dash Function
+   * Change the 'y' pos of the dash target if you want to change the pos. 
+  */
   void Dash ()
   {
+    Tr.position = dashTargetPos.position;
+
+    //Imperfect, but ultimately not needed because I realized I could just parent a target object the desired
+    // dashdistance away and use that as the target pos to dash to.
+    /*
+    Vector3 DashPos = new Vector3(Mathf.Pow(((Tr.position.x + DashDistance) - Tr.position.x),2), Mathf.Pow(((Tr.position.y + DashDistance) - Tr.position.y),2), 
+      Tr.position.z);
+
+    Tr.position = DashPos;
+    */
   }
 }
