@@ -77,7 +77,28 @@ public class TeamManager : MonoBehaviour
             bool bSpawned = false;
             int randNum = Random.Range(0, sSpawnPoints.Length);
 
-            if (!sPrioritySpawn.bIsSafe)
+            if (sPrioritySpawn.bIsSafe)
+            {
+                print("priority spawn");
+                GameObject gRobot = Instantiate(gTeam[0], sPrioritySpawn.transform.position, gTeam[0].transform.rotation) as GameObject;
+                pOwner.TagRobot(gRobot);
+
+                //++iDeaths;
+                print(gTeam[0]);
+                bSpawned = true;
+
+                if (pOwner.tag == "Player1")
+                {
+                    cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 1);
+                }
+
+                else
+                {
+                    cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 2);
+                }
+            }
+
+            else
             {
                 print("random spawn");
                 while (!bSpawned)
@@ -103,27 +124,6 @@ public class TeamManager : MonoBehaviour
                     {
                         randNum = Random.Range(0, sSpawnPoints.Length);
                     }
-                }
-            }
-
-            else if (sPrioritySpawn.bIsSafe)
-            {
-                print("priority spawn");
-                GameObject gRobot = Instantiate(gTeam[0], sPrioritySpawn.transform.position, gTeam[0].transform.rotation) as GameObject;
-                pOwner.TagRobot(gRobot);
-
-                //++iDeaths;
-                print(gTeam[0]);
-                bSpawned = true;
-
-                if (pOwner.tag == "Player1")
-                {
-                    cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 1);
-                }
-
-                else
-                {
-                    cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 2);
                 }
             }
         }                     

@@ -23,6 +23,15 @@ public class Spawnpoint : MonoBehaviour
 {
     public bool bIsSafe = true;
 
+    void OnTriggerEnter(Collider Coll)
+    {
+        if (Coll.gameObject.layer == 11)
+        {
+            //print("sawn unsafe");
+            bIsSafe = true;
+        }
+    }
+
     void OnTriggerStay(Collider Coll)
     {
         if(Coll.gameObject.layer == 10)
