@@ -25,24 +25,58 @@ public class PlayerControllerVer2 : MonoBehaviour {
   private Rigidbody Rb;
   private Transform Tr;
 
+  //Dashing
   [SerializeField]
   private Transform dashTargetPos;
   [SerializeField]
+  private int maxDashes = 1;
+  [SerializeField]
+  private int curDashes = 0;
+  [SerializeField]
+  private float DashDistance = 5f;
+  [SerializeField]
+  private float secDashRegenTime = 1f;
+
+  private bool RegenDash = false;
+
+  //Turning
+  [SerializeField]
   private float TurnSpeed = 5f;
+
+  //Moving
   [SerializeField]
   private float maxSpeed = 25f;
   [SerializeField]
   private float Speed = 100f;
-  [SerializeField]
-  private float DashDistance = 5f;
+
+  private float regentime = 0f;
 
 	// Use this for initialization
 	void Start ()
   {
+    curDashes = maxDashes;
+
     Rb = gameObject.GetComponent<Rigidbody>();
     Tr = gameObject.GetComponent<Transform>();
 	}
 	
+  void Update ()
+  {
+    if(RegenDash == true)
+    {
+      regentime += Time.deltaTime;
+
+      if (regentime >= secDashRegenTime)
+      {
+        curDashes += 1;
+        //turn off regen
+        RegenDash = false;
+        //reset to 0
+        regentime = 0f;
+      }
+    }
+  }
+
 	// Update is called once per frame
 	void FixedUpdate ()
   {
@@ -60,7 +94,23 @@ public class PlayerControllerVer2 : MonoBehaviour {
 
     if(Input.GetKeyDown(KeyCode.X))
     {
-      Dash();
+      if(curDashes > 0)
+      {
+        curDashes -= 1;
+
+        Dash();
+
+        if (curDashes == 0)
+        {
+          RegenDash = true;
+        }
+      }
+
+      else
+      {
+        return;
+      }
+
     }
 
     if (Input.GetKey(KeyCode.UpArrow))
