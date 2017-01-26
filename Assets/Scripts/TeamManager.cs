@@ -27,7 +27,6 @@ public class TeamManager : MonoBehaviour
     public GameObject[] gTeam;
     public Spawnpoint[] sSpawnPoints;
     public Spawnpoint sPrioritySpawn;
-    //public int iDeaths;
     private bool bPrioritySpawn = true;
     // Use this for initialization
 
@@ -62,17 +61,6 @@ public class TeamManager : MonoBehaviour
         {
             cCamera.GetComponent<FollowCam>().Shake(0.5f);
             asNoiseMaker.PlayOneShot(acSpawnNoise);
-            //this code is relevant for our old wincon, now we have a new one so we'll have to reowrk it to fit.
-            /*if(iDeaths > 0)
-            {
-
-            }
-
-            if (iDeaths == gTeam.Length)
-            {
-                Victory(sOwner_);
-                Cursor.visible = true;
-            }*/
 
             bool bSpawned = false;
             int randNum = Random.Range(0, sSpawnPoints.Length);
@@ -83,7 +71,6 @@ public class TeamManager : MonoBehaviour
                 GameObject gRobot = Instantiate(gTeam[0], sPrioritySpawn.transform.position, gTeam[0].transform.rotation) as GameObject;
                 pOwner.TagRobot(gRobot);
 
-                //++iDeaths;
                 print(gTeam[0]);
                 bSpawned = true;
 
@@ -107,7 +94,6 @@ public class TeamManager : MonoBehaviour
                     {
                         GameObject gRobot = Instantiate(gTeam[0], sSpawnPoints[randNum].transform.position, gTeam[0].transform.rotation) as GameObject;
                         pOwner.TagRobot(gRobot);
-                        //++iDeaths;
                         bSpawned = true;
                         if (pOwner.tag == "Player1")
                         {
