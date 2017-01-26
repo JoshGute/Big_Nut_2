@@ -41,17 +41,16 @@ public class HUD : MonoBehaviour
 
     private int P1Kills;
     private int P2Kills;
+    public int MaxKills = 3;
 
     void OnEnable()
     {
         BodyScript.Die += UpdateBotsLeft;
-        TeamManager.Victory += UpdateWinner;
     }
 
     void OnDisable()
     {
         BodyScript.Die -= UpdateBotsLeft;
-        TeamManager.Victory -= UpdateWinner;
     }
     // Use this for initialization
     void Start ()
@@ -76,16 +75,22 @@ public class HUD : MonoBehaviour
     {
         if(inOwner == "Player1")
         {
-            //int newdeaths = PlayerOne.gTeam.Length - PlayerOne.iDeaths;
             ++P2Kills;
             P2robs.GetComponent<Text>().text = P2Kills.ToString();
+            if (P2Kills >= MaxKills)
+            {
+                UpdateWinner(inOwner);
+            }
         }
 
         else if (inOwner == "Player2")
         {
-            //int newdeaths2 = PlayerTwo.gTeam.Length - PlayerTwo.iDeaths;
             ++P1Kills;
             P1robs.GetComponent<Text>().text = P1Kills.ToString();
+            if (P1Kills >= MaxKills)
+            {
+                UpdateWinner(inOwner);
+            }
         }
     }
 
@@ -104,5 +109,6 @@ public class HUD : MonoBehaviour
         }
 
         RestartButton.gameObject.SetActive(true);
+        Cursor.visible = true;
     }
 }
