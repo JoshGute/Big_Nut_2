@@ -2619,13 +2619,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashTargetPos: {fileID: 553632940}
-  maxDashes: 1
+  maxDashes: 3
   curDashes: 0
-  DashDistance: 5
   secDashRegenTime: 2
-  TurnSpeed: 5
-  maxSpeed: 30
-  Speed: 200
+  DashSpeed: 2.2
+  TurnSpeed: 8
+  maxSpeed: 40
+  Speed: 500
 --- !u!54 &1407084417
 Rigidbody:
   m_ObjectHideFlags: 0
