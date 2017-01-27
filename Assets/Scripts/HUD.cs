@@ -73,23 +73,26 @@ public class HUD : MonoBehaviour
 
     void UpdateBotsLeft(string inOwner)
     {
-        if(inOwner == "Player1")
+        if (P1Kills < MaxKills && P2Kills < MaxKills)
         {
-            ++P2Kills;
-            P2robs.GetComponent<Text>().text = P2Kills.ToString();
-            if (P2Kills >= MaxKills)
+            if (inOwner == "Player1")
             {
-                UpdateWinner(inOwner);
+                ++P2Kills;
+                P2robs.GetComponent<Text>().text = P2Kills.ToString();
+                if (P2Kills >= MaxKills)
+                {
+                    UpdateWinner(inOwner);
+                }
             }
-        }
 
-        else if (inOwner == "Player2")
-        {
-            ++P1Kills;
-            P1robs.GetComponent<Text>().text = P1Kills.ToString();
-            if (P1Kills >= MaxKills)
+            else if (inOwner == "Player2")
             {
-                UpdateWinner(inOwner);
+                ++P1Kills;
+                P1robs.GetComponent<Text>().text = P1Kills.ToString();
+                if (P1Kills >= MaxKills)
+                {
+                    UpdateWinner(inOwner);
+                }
             }
         }
     }
