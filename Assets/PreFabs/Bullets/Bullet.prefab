@@ -16,14 +16,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000010221260414}
-  - 33: {fileID: 33000010097337616}
-  - 135: {fileID: 135000013529898942}
-  - 23: {fileID: 23000010107974630}
-  - 54: {fileID: 54000010929845886}
-  - 114: {fileID: 114000013363939026}
+  - component: {fileID: 4000010221260414}
+  - component: {fileID: 33000010097337616}
+  - component: {fileID: 135000013529898942}
+  - component: {fileID: 23000010107974630}
+  - component: {fileID: 54000010929845886}
+  - component: {fileID: 114000013363939026}
   m_Layer: 9
   m_Name: Bullet
   m_TagString: Bullet
@@ -39,11 +39,11 @@ Transform:
   m_GameObject: {fileID: 1000012219236424}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.79000026, y: 0.818, z: -2.7830002}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &23000010107974630
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -58,7 +58,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -66,7 +68,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -106,10 +108,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 25
+  MaxDistance: 1000
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
-  fSpeed: 125
+  fSpeed: 750
+  BlowUpWithTime: 0
+  TimeToBlowUp: 0
   fDamage: 3
 --- !u!135 &135000013529898942
 SphereCollider:

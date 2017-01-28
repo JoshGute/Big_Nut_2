@@ -62,6 +62,7 @@ public class BulletScript : MonoBehaviour
 
         if (Vector3.Distance(transform.position, StartPos) >= MaxDistance)
         {
+            print("Distance dead");
             Destroy(gameObject);
         }
 
@@ -70,6 +71,7 @@ public class BulletScript : MonoBehaviour
             TimeToBlowUp -= Time.deltaTime;
             if (TimeToBlowUp <= 0)
             {
+                print("Time Dead");
                 Destroy(gameObject);
             }
         }
@@ -79,7 +81,8 @@ public class BulletScript : MonoBehaviour
     {
         if (trigger.gameObject.tag != sOwner && trigger.gameObject.layer != 5)
         {
-            Destroy(gameObject);
+            print("trigger enter");
+            Destroy(gameObject); 
         }
     }
 
@@ -87,6 +90,7 @@ public class BulletScript : MonoBehaviour
     {
         if (col.gameObject.tag != sOwner && col.gameObject.layer != 0 && BlowUpWithTime)
         {
+            print("Col enter");
             Destroy(gameObject);
         }
     }

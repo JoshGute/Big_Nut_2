@@ -69,10 +69,12 @@ public class GunScript : MonoBehaviour
     {
         for (int i = 0; i < iNumberofTicks; i++)
         {
+            
             for (int j = 0; j < BulletsShotPerTick.Length; j++)
             {
                 GameObject newBullet;
-                newBullet = Instantiate(BulletsShotPerTick[j].gameObject, transform.position, transform.rotation) 
+                newBullet = Instantiate(BulletsShotPerTick[j].gameObject, PatternSpawn.transform.position, 
+                                                                            PatternSpawn.transform.rotation) 
                                                                                                     as GameObject;
                 newBullet.GetComponent<BulletScript>().sOwner = sOwner;
 

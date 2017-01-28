@@ -19,6 +19,7 @@ written consent of DigiPen Institute of Technology is prohibited.
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XInputDotNetPure;
 
 public class PlayerControllerVer2 : MonoBehaviour {
 
@@ -58,6 +59,24 @@ public class PlayerControllerVer2 : MonoBehaviour {
 
   private float regentime = 0f;
 
+  //public int PlayerNumber;
+
+  public PlayerIndex playerIndex;
+
+    private GamePadState state;
+    private GamePadState prevState;
+
+    private float KeyAxisH;
+    private float KeyAxisV;
+
+    private float rotateAxisH;
+    private float rotateAxisV;
+
+    private bool bController;
+    public bool bDisabled = false;
+
+    private GunScript ShootScript;
+
   ////Deprecated////
   //[SerializeField]
   //private float DashDistance = 5f;
@@ -70,53 +89,89 @@ public class PlayerControllerVer2 : MonoBehaviour {
 
     Rb = gameObject.GetComponent<Rigidbody>();
     Tr = gameObject.GetComponent<Transform>();
+    ShootScript = GetComponent<GunScript>();
 	}
 	
 
   //Update is called once per frame.
   void Update ()
   {
-
-    ////Dash logic////
-    if (Input.GetKeyDown(KeyCode.X))
-    {
-      if (curDashes > 0)
+      if (!bDisabled)
       {
-        curDashes -= 1;
-
-        Dash();
-
-        if (curDashes < maxDashes)
-        {
-          RegenDash = true;
-        }
+          GamePadState testState = GamePad.GetState(playerIndex);
+          if (testState.IsConnected)
+          {
+              bController = true;
+          }
+          else if (!testState.IsConnected)
+          {
+              bController = false;
+          }
       }
 
-      else
+      if (!bController)
       {
-        return;
+          ////Dash logic////
+          if (Input.GetKeyDown(KeyCode.X))
+          {
+              if (curDashes > 0)
+              {
+                  curDashes -= 1;
+
+                  Dash();
+
+                  if (curDashes < maxDashes)
+                  {
+                      RegenDash = true;
+                  }
+              }
+
+              else
+              {
+                  return;
+              }
+          }
       }
 
-    }
-
-    if (RegenDash == true)
-    {
-      regentime += Time.deltaTime;
-
-      if (regentime >= secDashRegenTime && curDashes < maxDashes)
+      /*else if(bController)
       {
-        regentime = 0f;
-        curDashes += 1;
-      }
+          prevState = state;
+          state = GamePad.GetState(playerIndex);
 
-      else if (regentime >= secDashRegenTime && curDashes == maxDashes)
+          if (prevState.Triggers.Left > 0.1f && state.Triggers.Left == 0)
+          {
+              curDashes -= 1;
+              Dash();
+
+              if (curDashes < maxDashes)
+              {
+                  RegenDash = true;
+              }
+          }
+          if (prevState.Triggers.Right > 0.1f && state.Triggers.Right == 0)
+          {
+              Shoot();
+          }
+      }*/
+
+      if (RegenDash == true)
       {
-        //turn off regen
-        RegenDash = false;
-        //reset to 0
-        regentime = 0f;
+          regentime += Time.deltaTime;
+
+          if (regentime >= secDashRegenTime && curDashes < maxDashes)
+          {
+              regentime = 0f;
+              curDashes += 1;
+          }
+
+          else if (regentime >= secDashRegenTime && curDashes == maxDashes)
+          {
+              //turn off regen
+              RegenDash = false;
+              //reset to 0
+              regentime = 0f;
+          }
       }
-    }
 
     if(isDashing == true)
     {
@@ -134,27 +189,77 @@ public class PlayerControllerVer2 : MonoBehaviour {
 	// Physics Update
 	void FixedUpdate ()
   {
-    Vector3 ShipDirection = new Vector3(0f, 1f, 0f);
+      if (!bController)
+      {
+          Vector3 ShipDirection = new Vector3(0f, 1f, 0f);
 
-    if(Input.GetKey(KeyCode.LeftArrow))
-    {
-      Tr.Rotate(new Vector3(0f, 0f, 1f), TurnSpeed);
-    }
+          if (Input.GetKey(KeyCode.LeftArrow))
+          {
+              Tr.Rotate(new Vector3(0f, 0f, 1f), TurnSpeed);
+          }
 
-    if(Input.GetKey(KeyCode.RightArrow))
-    {
-      Tr.Rotate(new Vector3(0f, 0f, 1f), -TurnSpeed);
-    }
+          if (Input.GetKey(KeyCode.RightArrow))
+          {
+              Tr.Rotate(new Vector3(0f, 0f, 1f), -TurnSpeed);
+          }
 
-    if (Input.GetKey(KeyCode.UpArrow))
-    {
-      Rb.AddRelativeForce(ShipDirection * Speed);
-    }
+          if (Input.GetKey(KeyCode.UpArrow))
+          {
+              Rb.AddRelativeForce(ShipDirection * Speed);
+          }
 
-    if (Rb.velocity.magnitude > maxSpeed)
-    {
-      Rb.velocity = Rb.velocity.normalized * maxSpeed;
-    }
+          if (Rb.velocity.magnitude > maxSpeed)
+          {
+              Rb.velocity = Rb.velocity.normalized * maxSpeed;
+          }
+      }
+
+      else if (bController)
+      {
+          prevState = state;
+          state = GamePad.GetState(playerIndex);
+          KeyAxisH = state.ThumbSticks.Left.X;
+          KeyAxisV = state.ThumbSticks.Left.Y;
+          rotateAxisH = state.ThumbSticks.Right.X;
+          rotateAxisV = state.ThumbSticks.Right.Y;
+
+          Vector3 ShipDirection = new Vector3(0f, 1f, 0f);
+
+          if (prevState.Triggers.Left > 0.1f && state.Triggers.Left == 0)
+          {
+              curDashes -= 1;
+              Dash();
+
+              if (curDashes < maxDashes)
+              {
+                  RegenDash = true;
+              }
+          }
+          if (prevState.Triggers.Right > 0.1f && state.Triggers.Right == 0)
+          {
+              FireTheLasers();
+          }
+
+          if (KeyAxisH < 0)
+          {
+              Tr.Rotate(new Vector3(0f, 0f, 1f), TurnSpeed);
+          }
+          else if (KeyAxisH > 0)
+          {
+             Tr.Rotate(new Vector3(0f, 0f, 1f), -TurnSpeed);
+          }
+
+          if (prevState.Buttons.A == ButtonState.Pressed)
+          {
+              Rb.AddRelativeForce(ShipDirection * Speed);
+          }
+
+          if (Rb.velocity.magnitude > maxSpeed)
+          {
+              Rb.velocity = Rb.velocity.normalized * maxSpeed;
+          }
+      }
+
   }
 
   /* Dash Function
@@ -182,5 +287,10 @@ public class PlayerControllerVer2 : MonoBehaviour {
     Tr.position = DashPos;
     */
     ////Deprecated////
+  }
+
+  public void FireTheLasers()
+  {
+      ShootScript.Shoot();
   }
 }
