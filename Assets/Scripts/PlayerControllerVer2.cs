@@ -26,6 +26,7 @@ public class PlayerControllerVer2 : MonoBehaviour {
   private Rigidbody Rb;
   private Transform Tr;
 
+  public string sOwner;
   //Dashing
   [SerializeField]
   private Transform dashTargetPos;
@@ -76,6 +77,8 @@ public class PlayerControllerVer2 : MonoBehaviour {
     public bool bDisabled = false;
 
     private GunScript ShootScript;
+
+    public int iHealth;
 
   ////Deprecated////
   //[SerializeField]
@@ -292,5 +295,47 @@ public class PlayerControllerVer2 : MonoBehaviour {
   public void FireTheLasers()
   {
       ShootScript.Shoot();
+  }
+
+  void OnCollisionEnter(Collision collision)
+  {
+      if (collision.gameObject.tag == "Bullet" && collision.gameObject.GetComponent<BulletScript>().sOwner != sOwner)
+      {
+          TakeDamage();
+      }
+  }
+
+  void OnTriggerEnter(Collider trigger)
+  {
+      //Being hit by Bullet
+      if (trigger.gameObject.tag == "Bullet" && trigger.gameObject.GetComponent<BulletScript>().sOwner != sOwner)
+      {
+          TakeDamage();
+      }
+
+    //Being hit by a Dash
+      //(trigger is the hitbox attached to sword in this case. the info is in the sword arm parent so that's why do getcomponentinparent)
+      else if (trigger.gameObject.name == "Dash" && trigger.gameObject.GetComponentInParent<DashScript>().sOwner != sOwner)
+      {
+          TakeDamage();
+          Rb.velocity = (trigger.transform.forward * trigger.gameObject.GetComponentInParent<DashScript>().fKnockback);
+      }
+  }
+
+  void TakeDamage()
+  {
+      //asNoiseMaker.PlayOneShot(acHitNoise);
+      if (iHealth > 1)
+      {
+          --iHealth;
+          print(iHealth);
+      }
+
+      else if (iHealth == 1)
+      {
+          --iHealth;
+          print("Dead");
+          //Explode();
+      }
   }
 }

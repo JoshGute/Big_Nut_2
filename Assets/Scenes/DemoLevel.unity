@@ -282,6 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65529a8e3190994b9d7592177152ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sOwner: PLAYER1
   dashTargetPos: {fileID: 1735325969}
   maxDashes: 3
   curDashes: 0
@@ -292,6 +293,7 @@ MonoBehaviour:
   Speed: 500
   playerIndex: 0
   bDisabled: 0
+  iHealth: 5
 --- !u!54 &286671168
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -348,8 +350,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.9631197, y: 3.409852, z: 1}
-  m_Center: {x: -0.11489459, y: -0.6481511, z: 0}
+  m_Size: {x: 4, y: 3.5, z: 5}
+  m_Center: {x: -0.114898674, y: -0.6481511, z: -1.9642792}
 --- !u!33 &286671171
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -385,7 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4113cc77979b9d24882535a7453f96fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sOwner: 
+  sOwner: PLAYER1
   PatternSpawn: {fileID: 343380260}
   fFireRate: 0.5
   BulletsShotPerTick:
@@ -1045,7 +1047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4113cc77979b9d24882535a7453f96fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sOwner: 
+  sOwner: PLAYER2
   PatternSpawn: {fileID: 291242288}
   fFireRate: 0.5
   BulletsShotPerTick:
@@ -1073,6 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65529a8e3190994b9d7592177152ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sOwner: PLAYER2
   dashTargetPos: {fileID: 323034311}
   maxDashes: 3
   curDashes: 0
@@ -1083,6 +1086,7 @@ MonoBehaviour:
   Speed: 500
   playerIndex: 1
   bDisabled: 0
+  iHealth: 5
 --- !u!54 &829834526
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1139,7 +1143,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.9631197, y: 3.409852, z: 1}
+  m_Size: {x: 4, y: 3.5, z: 5}
   m_Center: {x: -0.11489459, y: -0.6481511, z: 0}
 --- !u!33 &829834529
 MeshFilter:
