@@ -2,7 +2,7 @@
 Author: Linus Chan
 Contributors: --
 Course: GAM400
-Game:   Big Nut
+Game:   Bolt Blitz
 Date:   12/7/2016
 File:   AnimationController.cs
 

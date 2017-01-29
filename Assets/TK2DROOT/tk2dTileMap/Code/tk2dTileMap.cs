@@ -255,7 +255,6 @@ public class tk2dTileMap : MonoBehaviour, tk2dRuntime.ISpriteCollectionForceBuil
 
 	public void Build(BuildFlags buildFlags)
 	{
-#if UNITY_EDITOR
 		// Sanitize tilePrefabs input, to avoid branches later
 		if (data != null && spriteCollection != null)
 		{
@@ -336,7 +335,6 @@ public class tk2dTileMap : MonoBehaviour, tk2dRuntime.ISpriteCollectionForceBuil
 		// Update sprite collection key
 		if (SpriteCollectionInst)
 			spriteCollectionKey = SpriteCollectionInst.buildKey;
-#endif
 	}
 	
 	/// <summary>

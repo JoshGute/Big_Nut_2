@@ -1,6 +1,6 @@
 ﻿/*******************************  Ducks in a Row  *********************************
 Author: Linus 'Fills in the Blanks' Chan
-Contributors: 
+Contributors: Glen Aro
 Course: GAM450
 Game:   Bolt Blitz
 Date:   1/18/2017
@@ -60,6 +60,8 @@ public class PlayerControllerVer2 : MonoBehaviour {
 
   private float regentime = 0f;
 
+  public AnimationControllerVer2 aController;
+
   //public int PlayerNumber;
 
   public PlayerIndex playerIndex;
@@ -93,8 +95,9 @@ public class PlayerControllerVer2 : MonoBehaviour {
     Rb = gameObject.GetComponent<Rigidbody>();
     Tr = gameObject.GetComponent<Transform>();
     ShootScript = GetComponent<GunScript>();
+
+    aController = gameObject.GetComponent<AnimationControllerVer2>();
 	}
-	
 
   //Update is called once per frame.
   void Update ()
@@ -254,6 +257,8 @@ public class PlayerControllerVer2 : MonoBehaviour {
 
           if (prevState.Buttons.A == ButtonState.Pressed)
           {
+              aController.ChangeAnimation(1);
+
               Rb.AddRelativeForce(ShipDirection * Speed);
           }
 
