@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - name: Idle_Upright
+  - name: Idle_UpRight
     frames:
     - spriteCollection: {fileID: 114127764595275702, guid: 3e5a45734a5f6ca479b1d4933563bc92,
         type: 2}
@@ -76,7 +76,7 @@ MonoBehaviour:
     fps: 30
     loopStart: 0
     wrapMode: 6
-  - name: Rotate_toUpright
+  - name: Rotate_toUpRight
     frames:
     - spriteCollection: {fileID: 114127764595275702, guid: 3e5a45734a5f6ca479b1d4933563bc92,
         type: 2}

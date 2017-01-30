@@ -32,12 +32,10 @@ public class AnimationControllerVer2 : MonoBehaviour {
   [SerializeField]
   private tk2dSpriteAnimator RobotAnimator;
 
-  private enum RotateState { UpRight, Reverse}
-
   // Use this for initialization
   void Start ()
   {
-		
+
 	}
 	
 	// Update is called once per frame
@@ -45,6 +43,11 @@ public class AnimationControllerVer2 : MonoBehaviour {
   {
 		
 	}
+
+  void PreviousAnimDelegate(tk2dSpriteAnimator sprite, tk2dSpriteAnimationClip clip)
+  {
+
+  }
 
   public void ChangeAnimation(int iInput_)
   {
@@ -62,12 +65,18 @@ public class AnimationControllerVer2 : MonoBehaviour {
         }
       case 3:
         {
+          UpdateAnimState(CustomSpriteAnimationStates.AnimState.IdleReverse);
+          break;
+        }
+      case 4:
+        {
+          UpdateAnimState(CustomSpriteAnimationStates.AnimState.IdleUpRight);
           break;
         }
     }
   }
 
-  void PreviousAnimDelegate(tk2dSpriteAnimator sprite, tk2dSpriteAnimationClip clip)
+  void PreviousSpriteAnimDelegate(tk2dSpriteAnimator sprite, tk2dSpriteAnimationClip clip)
   {
     /*
     if (isMoving)
@@ -86,15 +95,23 @@ public class AnimationControllerVer2 : MonoBehaviour {
     switch (newAnimState)
     {
       case CustomSpriteAnimationStates.AnimState.RolltoReverse:
-        RobotAnimator.Play("Rotate_toReverse");
+          RobotAnimator.Play("Rotate_toReverse");
+          RobotAnimator.AnimationCompleted = PreviousSpriteAnimDelegate;
+        break;
+
+      case CustomSpriteAnimationStates.AnimState.RolltoUpRight:
+          RobotAnimator.Play("Rotate_toUpRight");
+          RobotAnimator.AnimationCompleted = PreviousSpriteAnimDelegate;
         break;
 
       case CustomSpriteAnimationStates.AnimState.IdleUpRight:
-        //RobotAnimator.Play();
+        RobotAnimator.Play("Idle_UpRight");
+        RobotAnimator.AnimationCompleted = PreviousSpriteAnimDelegate;
         break;
 
       case CustomSpriteAnimationStates.AnimState.IdleReverse:
-
+        RobotAnimator.Play("Idle_Reverse");
+        RobotAnimator.AnimationCompleted = PreviousSpriteAnimDelegate;
         break;
 
       /*

@@ -48,6 +48,11 @@ public class PlayerControllerVer2 : MonoBehaviour {
 
   private bool RegenDash = false;
 
+  private enum RotateState { UpRight, Reverse }
+
+  private RotateState curRotateState;
+  private RotateState prevRotateState;
+
   //Turning
   [SerializeField]
   private float TurnSpeed = 5f;
@@ -97,11 +102,22 @@ public class PlayerControllerVer2 : MonoBehaviour {
     ShootScript = GetComponent<GunScript>();
 
     aController = gameObject.GetComponent<AnimationControllerVer2>();
-	}
+  }
 
   //Update is called once per frame.
   void Update ()
   {
+
+    if(Tr.rotation.eulerAngles.z >= 0 && Tr.rotation.eulerAngles.z < 180)
+    {
+      curRotateState = RotateState.UpRight;
+    }
+
+    else if(Tr.rotation.eulerAngles.z >= 180 && Tr.rotation.eulerAngles.z < 359)
+    {
+      curRotateState = RotateState.Reverse;
+    }
+
       if (!bDisabled)
       {
           GamePadState testState = GamePad.GetState(playerIndex);
@@ -257,8 +273,22 @@ public class PlayerControllerVer2 : MonoBehaviour {
 
           if (prevState.Buttons.A == ButtonState.Pressed)
           {
-              aController.ChangeAnimation(1);
+              //Animation
+              if (curRotateState == RotateState.UpRight && prevRotateState != RotateState.UpRight)
+              {
+                //Rolling to Reverse
+                aController.ChangeAnimation(1);
+                prevRotateState = RotateState.UpRight;
+              }
 
+              else if(curRotateState == RotateState.Reverse && prevRotateState != RotateState.Reverse)
+              {
+                //Rolling back to UpRight
+                aController.ChangeAnimation(2);
+                prevRotateState = RotateState.Reverse;
+              }
+
+              //Function
               Rb.AddRelativeForce(ShipDirection * Speed);
           }
 

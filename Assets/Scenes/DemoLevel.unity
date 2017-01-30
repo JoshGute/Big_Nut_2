@@ -332,9 +332,9 @@ MonoBehaviour:
   maxDashes: 3
   curDashes: 0
   secDashRegenTime: 2
-  DashSpeed: 2.2
+  DashSpeed: 8
   TurnSpeed: 8
-  maxSpeed: 40
+  maxSpeed: 80
   Speed: 500
   aController: {fileID: 0}
   playerIndex: 0
@@ -413,7 +413,7 @@ Transform:
   m_GameObject: {fileID: 286671166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -336.8, y: -4.5, z: -57}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
   - {fileID: 1735325969}
   - {fileID: 216868921}
@@ -2039,7 +2039,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1735325968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 15, z: 0}
+  m_LocalPosition: {x: 0, y: 25, z: 0}
   m_LocalScale: {x: 25, y: 25, z: 1}
   m_Children: []
   m_Father: {fileID: 286671172}
