@@ -21,7 +21,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using XInputDotNetPure;
 
-public class PlayerControllerVer2 : MonoBehaviour {
+public class PlayerControllerVer2 : MonoBehaviour
+{
 
   private Rigidbody Rb;
   private Transform Tr;
@@ -53,6 +54,9 @@ public class PlayerControllerVer2 : MonoBehaviour {
   private RotateState curRotateState;
   private RotateState prevRotateState;
 
+  private bool lockBoost = false;
+  private bool lockShoot = false;
+
   //Turning
   [SerializeField]
   private float TurnSpeed = 5f;
@@ -67,139 +71,142 @@ public class PlayerControllerVer2 : MonoBehaviour {
 
   public AnimationControllerVer2 aController;
 
+  public GameObject Shield;
+
   //public int PlayerNumber;
 
   public PlayerIndex playerIndex;
 
-    private GamePadState state;
-    private GamePadState prevState;
+  private GamePadState state;
+  private GamePadState prevState;
 
-    private float KeyAxisH;
-    private float KeyAxisV;
+  private float KeyAxisH;
+  private float KeyAxisV;
 
-    private float rotateAxisH;
-    private float rotateAxisV;
+  private float rotateAxisH;
+  private float rotateAxisV;
 
-    private bool bController;
-    public bool bDisabled = false;
+  private bool bController;
+  public bool bDisabled = false;
 
-    private GunScript ShootScript;
+  private GunScript ShootScript;
 
-    public int iHealth;
+  public int iHealth;
 
+  private bool Shielding;
   ////Deprecated////
   //[SerializeField]
   //private float DashDistance = 5f;
   ////Deprecated////
 
   // Use this for initialization
-  void Start ()
+  void Start()
   {
     curDashes = maxDashes;
 
-    Rb = gameObject.GetComponent<Rigidbody>();
-    Tr = gameObject.GetComponent<Transform>();
+    Rb = GetComponent<Rigidbody>();
+    Tr = GetComponent<Transform>();
     ShootScript = GetComponent<GunScript>();
 
-    aController = gameObject.GetComponent<AnimationControllerVer2>();
+    aController = GetComponent<AnimationControllerVer2>();
   }
 
   //Update is called once per frame.
-  void Update ()
+  void Update()
   {
 
-    if(Tr.rotation.eulerAngles.z >= 0 && Tr.rotation.eulerAngles.z < 180)
+    if (Tr.rotation.eulerAngles.z >= 0 && Tr.rotation.eulerAngles.z < 180)
     {
       curRotateState = RotateState.UpRight;
     }
 
-    else if(Tr.rotation.eulerAngles.z >= 180 && Tr.rotation.eulerAngles.z < 359)
+    else if (Tr.rotation.eulerAngles.z >= 180 && Tr.rotation.eulerAngles.z < 359)
     {
       curRotateState = RotateState.Reverse;
     }
 
-      if (!bDisabled)
+    if (!bDisabled)
+    {
+      GamePadState testState = GamePad.GetState(playerIndex);
+      if (testState.IsConnected)
       {
-          GamePadState testState = GamePad.GetState(playerIndex);
-          if (testState.IsConnected)
+        bController = true;
+      }
+      else if (!testState.IsConnected)
+      {
+        bController = false;
+      }
+    }
+
+    if (!bController)
+    {
+      ////Dash logic////
+      if (Input.GetKeyDown(KeyCode.X))
+      {
+        if (curDashes > 0)
+        {
+          curDashes -= 1;
+
+          Dash();
+
+          if (curDashes < maxDashes)
           {
-              bController = true;
+            RegenDash = true;
           }
-          else if (!testState.IsConnected)
-          {
-              bController = false;
-          }
+        }
+
+        else
+        {
+          return;
+        }
+      }
+    }
+
+    /*else if(bController)
+    {
+        prevState = state;
+        state = GamePad.GetState(playerIndex);
+
+        if (prevState.Triggers.Left > 0.1f && state.Triggers.Left == 0)
+        {
+            curDashes -= 1;
+            Dash();
+
+            if (curDashes < maxDashes)
+            {
+                RegenDash = true;
+            }
+        }
+        if (prevState.Triggers.Right > 0.1f && state.Triggers.Right == 0)
+        {
+            Shoot();
+        }
+    }*/
+
+    if (RegenDash == true)
+    {
+      regentime += Time.deltaTime;
+
+      if (regentime >= secDashRegenTime && curDashes < maxDashes)
+      {
+        regentime = 0f;
+        curDashes += 1;
       }
 
-      if (!bController)
+      else if (regentime >= secDashRegenTime && curDashes == maxDashes)
       {
-          ////Dash logic////
-          if (Input.GetKeyDown(KeyCode.X))
-          {
-              if (curDashes > 0)
-              {
-                  curDashes -= 1;
-
-                  Dash();
-
-                  if (curDashes < maxDashes)
-                  {
-                      RegenDash = true;
-                  }
-              }
-
-              else
-              {
-                  return;
-              }
-          }
+        //turn off regen
+        RegenDash = false;
+        //reset to 0
+        regentime = 0f;
       }
+    }
 
-      /*else if(bController)
-      {
-          prevState = state;
-          state = GamePad.GetState(playerIndex);
-
-          if (prevState.Triggers.Left > 0.1f && state.Triggers.Left == 0)
-          {
-              curDashes -= 1;
-              Dash();
-
-              if (curDashes < maxDashes)
-              {
-                  RegenDash = true;
-              }
-          }
-          if (prevState.Triggers.Right > 0.1f && state.Triggers.Right == 0)
-          {
-              Shoot();
-          }
-      }*/
-
-      if (RegenDash == true)
-      {
-          regentime += Time.deltaTime;
-
-          if (regentime >= secDashRegenTime && curDashes < maxDashes)
-          {
-              regentime = 0f;
-              curDashes += 1;
-          }
-
-          else if (regentime >= secDashRegenTime && curDashes == maxDashes)
-          {
-              //turn off regen
-              RegenDash = false;
-              //reset to 0
-              regentime = 0f;
-          }
-      }
-
-    if(isDashing == true)
+    if (isDashing == true)
     {
       Tr.position = Vector3.MoveTowards(Tr.position, curDashTargetPos, DashSpeed);
 
-      if(Tr.position == curDashTargetPos)
+      if (Tr.position == curDashTargetPos)
       {
         isDashing = false;
         curDashTargetPos = Vector3.zero;
@@ -208,102 +215,140 @@ public class PlayerControllerVer2 : MonoBehaviour {
     }
   }
 
-	// Physics Update
-	void FixedUpdate ()
+  // Physics Update
+  void FixedUpdate()
   {
-      if (!bController)
+    if (!bController)
+    {
+      Vector3 ShipDirection = new Vector3(0f, 1f, 0f);
+
+      if (Input.GetKey(KeyCode.LeftArrow))
       {
-          Vector3 ShipDirection = new Vector3(0f, 1f, 0f);
-
-          if (Input.GetKey(KeyCode.LeftArrow))
-          {
-              Tr.Rotate(new Vector3(0f, 0f, 1f), TurnSpeed);
-          }
-
-          if (Input.GetKey(KeyCode.RightArrow))
-          {
-              Tr.Rotate(new Vector3(0f, 0f, 1f), -TurnSpeed);
-          }
-
-          if (Input.GetKey(KeyCode.UpArrow))
-          {
-              Rb.AddRelativeForce(ShipDirection * Speed);
-          }
-
-          if (Rb.velocity.magnitude > maxSpeed)
-          {
-              Rb.velocity = Rb.velocity.normalized * maxSpeed;
-          }
+        Tr.Rotate(new Vector3(0f, 0f, 1f), TurnSpeed);
       }
 
-      else if (bController)
+      if (Input.GetKey(KeyCode.RightArrow))
       {
-          prevState = state;
-          state = GamePad.GetState(playerIndex);
-          KeyAxisH = state.ThumbSticks.Left.X;
-          KeyAxisV = state.ThumbSticks.Left.Y;
-          rotateAxisH = state.ThumbSticks.Right.X;
-          rotateAxisV = state.ThumbSticks.Right.Y;
-
-          Vector3 ShipDirection = new Vector3(0f, 1f, 0f);
-
-          if (prevState.Triggers.Left > 0.1f && state.Triggers.Left == 0)
-          {
-              curDashes -= 1;
-              Dash();
-
-              if (curDashes < maxDashes)
-              {
-                  RegenDash = true;
-              }
-          }
-          if (prevState.Triggers.Right > 0.1f && state.Triggers.Right == 0)
-          {
-              FireTheLasers();
-          }
-
-          if (KeyAxisH < 0)
-          {
-              Tr.Rotate(new Vector3(0f, 0f, 1f), TurnSpeed);
-          }
-          else if (KeyAxisH > 0)
-          {
-             Tr.Rotate(new Vector3(0f, 0f, 1f), -TurnSpeed);
-          }
-
-          if (prevState.Buttons.A == ButtonState.Pressed)
-          {
-              //Animation
-              if (curRotateState == RotateState.UpRight && prevRotateState != RotateState.UpRight)
-              {
-                //Rolling to Reverse
-                aController.ChangeAnimation(1);
-                prevRotateState = RotateState.UpRight;
-              }
-
-              else if(curRotateState == RotateState.Reverse && prevRotateState != RotateState.Reverse)
-              {
-                //Rolling back to UpRight
-                aController.ChangeAnimation(2);
-                prevRotateState = RotateState.Reverse;
-              }
-
-              //Function
-              Rb.AddRelativeForce(ShipDirection * Speed);
-          }
-
-          if (Rb.velocity.magnitude > maxSpeed)
-          {
-              Rb.velocity = Rb.velocity.normalized * maxSpeed;
-          }
+        Tr.Rotate(new Vector3(0f, 0f, 1f), -TurnSpeed);
       }
+
+      if (Input.GetKey(KeyCode.UpArrow))
+      {
+        //Animation
+        if (curRotateState == RotateState.UpRight && prevRotateState != RotateState.UpRight)
+        {
+          //Rolling to Reverse
+          aController.ChangeAnimation(1);
+          prevRotateState = RotateState.UpRight;
+        }
+
+        else if (curRotateState == RotateState.Reverse && prevRotateState != RotateState.Reverse)
+        {
+          //Rolling back to UpRight
+          aController.ChangeAnimation(2);
+          prevRotateState = RotateState.Reverse;
+        }
+
+        Rb.AddRelativeForce(ShipDirection * Speed);
+      }
+
+      if (Rb.velocity.magnitude > maxSpeed)
+      {
+        Rb.velocity = Rb.velocity.normalized * maxSpeed;
+      }
+    }
+
+    else if (bController)
+    {
+      prevState = state;
+      state = GamePad.GetState(playerIndex);
+      KeyAxisH = state.ThumbSticks.Left.X;
+      KeyAxisV = state.ThumbSticks.Left.Y;
+      rotateAxisH = state.ThumbSticks.Right.X;
+      rotateAxisV = state.ThumbSticks.Right.Y;
+
+      Vector3 ShipDirection = new Vector3(0f, 1f, 0f);
+
+      //Dashing
+      if (prevState.Triggers.Left > 0.1f && state.Triggers.Left == 0)
+      {
+        curDashes -= 1;
+        Dash();
+
+        if (curDashes < maxDashes)
+        {
+          RegenDash = true;
+        }
+      }
+
+      //Shooting
+      if (prevState.Triggers.Right > 0.1f && state.Triggers.Right == 0)
+      {
+        FireTheLasers();
+      }
+
+      //Shielding
+      if (prevState.Buttons.RightShoulder == ButtonState.Pressed)
+      {
+        //lockBoost = true;
+
+        lockShoot = true;
+
+        Shield.GetComponent<ShieldScript>().TurnOnShield();
+      }
+
+      else if(prevState.Buttons.RightShoulder == ButtonState.Released)
+      {
+        //lockBoost = false;
+
+        lockShoot = false;
+
+        Shield.GetComponent<ShieldScript>().TurnOffShield();
+      }
+
+      if (KeyAxisH < 0)
+      {
+        Tr.Rotate(new Vector3(0f, 0f, 1f), TurnSpeed);
+      }
+      else if (KeyAxisH > 0)
+      {
+        Tr.Rotate(new Vector3(0f, 0f, 1f), -TurnSpeed);
+      }
+
+      //Boosting
+      if (prevState.Buttons.A == ButtonState.Pressed && lockBoost == false)
+      {
+        //Animation
+        if (curRotateState == RotateState.UpRight && prevRotateState != RotateState.UpRight)
+        {
+          //Rolling to Reverse
+          aController.ChangeAnimation(1);
+          prevRotateState = RotateState.UpRight;
+        }
+
+        else if (curRotateState == RotateState.Reverse && prevRotateState != RotateState.Reverse)
+        {
+          //Rolling back to UpRight
+          aController.ChangeAnimation(2);
+          prevRotateState = RotateState.Reverse;
+        }
+
+        //Function
+        Rb.AddRelativeForce(ShipDirection * Speed);
+      }
+
+      if (Rb.velocity.magnitude > maxSpeed)
+      {
+        Rb.velocity = Rb.velocity.normalized * maxSpeed;
+      }
+    }
 
   }
 
   /* Dash Function
    * Change the 'y' pos of the dash target's translation if you want to change the distance traveled.
   */
-  void Dash ()
+  void Dash()
   {
     //Instant Dash
     /*
@@ -329,48 +374,53 @@ public class PlayerControllerVer2 : MonoBehaviour {
 
   public void FireTheLasers()
   {
+    if(lockShoot == false)
+    {
       ShootScript.Shoot();
+    }
   }
 
   void OnCollisionEnter(Collision collision)
   {
-      if (collision.gameObject.tag == "Bullet" && collision.gameObject.GetComponent<BulletScript>().sOwner != sOwner)
-      {
-          TakeDamage();
-      }
+    if (collision.gameObject.tag == "Bullet" && collision.gameObject.GetComponent<BulletScript>().sOwner != sOwner 
+      && !lockShoot)
+    {
+      TakeDamage();
+    }
   }
 
   void OnTriggerEnter(Collider trigger)
   {
-      //Being hit by Bullet
-      if (trigger.gameObject.tag == "Bullet" && trigger.gameObject.GetComponent<BulletScript>().sOwner != sOwner)
-      {
-          TakeDamage();
-      }
+    //Being hit by Bullet
+    if (trigger.gameObject.tag == "Bullet" && trigger.gameObject.GetComponent<BulletScript>().sOwner != sOwner
+      && !lockShoot)
+    {
+      TakeDamage();
+    }
 
     //Being hit by a Dash
-      //(trigger is the hitbox attached to sword in this case. the info is in the sword arm parent so that's why do getcomponentinparent)
-      else if (trigger.gameObject.name == "Dash" && trigger.gameObject.GetComponentInParent<DashScript>().sOwner != sOwner)
-      {
-          TakeDamage();
-          Rb.velocity = (trigger.transform.forward * trigger.gameObject.GetComponentInParent<DashScript>().fKnockback);
-      }
+    //(trigger is the hitbox attached to sword in this case. the info is in the sword arm parent so that's why do getcomponentinparent)
+    else if (trigger.gameObject.name == "Dash" && trigger.gameObject.GetComponentInParent<DashScript>().sOwner != sOwner)
+    {
+      TakeDamage();
+      Rb.velocity = (trigger.transform.forward * trigger.gameObject.GetComponentInParent<DashScript>().fKnockback);
+    }
   }
 
   void TakeDamage()
   {
-      //asNoiseMaker.PlayOneShot(acHitNoise);
-      if (iHealth > 1)
-      {
-          --iHealth;
-          print(iHealth);
-      }
+    //asNoiseMaker.PlayOneShot(acHitNoise);
+    if (iHealth > 1)
+    {
+      --iHealth;
+      print("player hp" + iHealth);
+    }
 
-      else if (iHealth == 1)
-      {
-          --iHealth;
-          print("Dead");
-          //Explode();
-      }
+    else if (iHealth == 1)
+    {
+      --iHealth;
+      print("Dead");
+      //Explode();
+    }
   }
 }
