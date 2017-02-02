@@ -26,7 +26,7 @@ public class FollowCam : MonoBehaviour
     public Vector3 target;
     public GameObject gPlayer1;
     public GameObject gPlayer2;
-    public Vector3 offset = new Vector3(0f, 0f, -10f);
+    public Vector3 offset = new Vector3(0f, 0f, -110f);
     //screen shake variables
     public float ShakeAmount = 0.5f;
     private bool bShake;
@@ -70,6 +70,7 @@ public class FollowCam : MonoBehaviour
 
         if (bShake && Time.timeScale != 0)
         {
+            print("hello");
             transform.position = transform.position + Random.insideUnitSphere * ShakeAmount;
         }
     }
@@ -81,10 +82,11 @@ public class FollowCam : MonoBehaviour
 
     IEnumerator ScreenShaker(float fShakeAmount_)
     {
+        print("going");
         ShakeAmount = fShakeAmount_;
         bShake = true;
-        yield return new WaitForSeconds(0.25f);
-        ShakeAmount = 0.5f;
+        yield return new WaitForSeconds(0.5f);
         bShake = false;
+        print("done");
     }
 }
