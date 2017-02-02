@@ -59,8 +59,8 @@ public class TeamManager : MonoBehaviour
 
         if (sOwner_ == pOwner.tag)
         {
-            cCamera.GetComponent<FollowCam>().Shake(0.5f);
-            asNoiseMaker.PlayOneShot(acSpawnNoise);
+            //cCamera.GetComponent<FollowCam>().Shake(0.5f);
+            //asNoiseMaker.PlayOneShot(acSpawnNoise);
 
             bool bSpawned = false;
             int randNum = Random.Range(0, sSpawnPoints.Length);
