@@ -162,6 +162,7 @@ public class PlayerControllerVer2 : MonoBehaviour
       }
     }
 
+    /////DEPRECATED/////
     /*else if(bController)
     {
         prevState = state;
@@ -272,8 +273,11 @@ public class PlayerControllerVer2 : MonoBehaviour
       //Dashing
       if (prevState.Triggers.Left > 0.1f && state.Triggers.Left == 0)
       {
-        curDashes -= 1;
-        Dash();
+        if(curDashes > 0)
+        {
+          curDashes -= 1;
+          Dash();
+        }
 
         if (curDashes < maxDashes)
         {

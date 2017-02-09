@@ -29,12 +29,28 @@ public class ShieldScript : MonoBehaviour {
 
   //Health of shield
   [SerializeField]
-  private float MaxShieldHealth = 25;
+  public float MaxShieldHealth = 25;
 
-  private float curShieldHealth;
+  [SerializeField]
+  private float RegenValue = 1;
+
+  [SerializeField]
+  private float ShieldRegenPerXSec = 1;
+  float shieldregentimer;
+
+  [SerializeField]
+  private float DegradeValue = 1;
+
+  [SerializeField]
+  private float ShieldDegradePerXSec = 1;
+  float shielddegradetimer;
+
+  public float curShieldHealth;
 
   bool ShieldState = false;
   bool ShieldBroken = false;
+
+  bool ShieldDegrading = false;
 
   //How long shield stays broken for before recharging
   [SerializeField]
@@ -51,9 +67,14 @@ public class ShieldScript : MonoBehaviour {
   [SerializeField]
   private GameObject Player;
 
+  private ShieldAnimator shieldAnimator;
+
 	// Use this for initialization
 	void Start ()
   {
+    shieldAnimator = gameObject.GetComponent<ShieldAnimator>();
+    shielddegradetimer = 0;
+    shieldregentimer = 0;
     curShieldHealth = MaxShieldHealth;
 	}
 	
@@ -66,6 +87,18 @@ public class ShieldScript : MonoBehaviour {
 
       if(curShieldHeldTime >= ShieldHeldTime)
       {
+        ShieldDegrading = true;
+      }
+    }
+
+    //Handling shield degrading
+    if(ShieldDegrading == true)
+    {
+      shielddegradetimer += Time.deltaTime;
+
+      if(shielddegradetimer >= ShieldDegradePerXSec)
+      {
+        shielddegradetimer = 0;
         DegradeShield();
       }
     }
@@ -77,14 +110,21 @@ public class ShieldScript : MonoBehaviour {
 
       if (curShieldBrokenTime >= ShieldBrokenTime)
       {
+        curShieldBrokenTime = 0;
         ShieldBroken = false;
       }
     }
 
     //If player is not using shield and the period for punishment when shield is broken has passed...
-    if (ShieldState == false && ShieldBroken == false)
+    if (ShieldState == false)
     {
-      RegenShield();
+      curShieldHeldTime = 0;
+      ShieldDegrading = false;
+
+      if (ShieldBroken == false)
+      {
+        RegenShield();
+      }
     }
   }
 
@@ -93,12 +133,16 @@ public class ShieldScript : MonoBehaviour {
   {
     if (ShieldState == true)
     {
+      //print(curShieldHealth);
+
       gameObject.GetComponent<SphereCollider>().enabled = true;
       gameObject.GetComponent<MeshRenderer>().enabled = true;
     }
 
     else if (ShieldState == false)
     {
+      //print(curShieldHealth);
+
       gameObject.GetComponent<SphereCollider>().enabled = false;
       gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
@@ -107,13 +151,16 @@ public class ShieldScript : MonoBehaviour {
   /*Separate functions for turning on and off shield for further development.*/
   public void TurnOnShield()
   {
-    ShieldState = true;
+    if(ShieldBroken == false)
+    {
+      ShieldState = true;
 
-    //stopping collider first to avoid shield potentially registering player's hitbox.
-    //Player.GetComponent<Collider>().enabled = false;
+      //stopping collider first to avoid shield potentially registering player's hitbox.
+      //Player.GetComponent<Collider>().enabled = false;
 
-    //turn on shield now that player's collider is out of the picture.
-    UpdateShieldState();
+      //turn on shield now that player's collider is out of the picture.
+      UpdateShieldState();
+    }
   }
 
   public void TurnOffShield()
@@ -132,24 +179,28 @@ public class ShieldScript : MonoBehaviour {
   {
     if(curShieldHealth < MaxShieldHealth)
     {
-      print("Regen" + curShieldHealth);
+      shieldregentimer += Time.deltaTime;
 
-      curShieldHealth += 1;
+      //Reset timer to 0 and add health
+      if(shieldregentimer >= ShieldRegenPerXSec)
+      {
+        shieldAnimator.UpdateShieldVisualState(curShieldHealth);
+
+        shieldregentimer = 0;
+        curShieldHealth += 1;
+      }
 
       if(curShieldHealth > MaxShieldHealth)
       {
         curShieldHealth = MaxShieldHealth;
       }
     }
-
   }
 
   //Called if shield is held for too long, causes shield to take damage. 
   void DegradeShield()
   {
-    print("Degrading" + curShieldHealth);
-
-    curShieldHealth -= 1;
+    TakeDamage(1);
   }
 
   void OnTriggerEnter(Collider trigger)
@@ -166,7 +217,9 @@ public class ShieldScript : MonoBehaviour {
   {
     curShieldHealth -= damage;
 
-    if(curShieldHealth <= 0)
+    shieldAnimator.UpdateShieldVisualState(curShieldHealth);
+
+    if (curShieldHealth <= 0)
     {
       BreakShield();
       curShieldHealth = 0;
@@ -175,7 +228,6 @@ public class ShieldScript : MonoBehaviour {
 
   void BreakShield()
   {
-    print("B0rked");
     ShieldBroken = true;
   }
 }
