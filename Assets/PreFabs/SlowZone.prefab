@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23632959777475858}
   - component: {fileID: 114383574870632606}
   m_Layer: 0
-  m_Name: New Prefab
+  m_Name: SlowZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
