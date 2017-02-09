@@ -573,14 +573,8 @@ MonoBehaviour:
   TurnSpeed: 8
   maxSpeed: 80
   Speed: 500
-<<<<<<< HEAD
-  aController: {fileID: 0}
-  Shield: {fileID: 0}
-=======
   aController: {fileID: 114215026616284560}
   Shield: {fileID: 1515745877040758}
-  DashObject: {fileID: 1632291161431860}
->>>>>>> origin/master
   playerIndex: 0
   bDisabled: 0
   iHealth: 3
