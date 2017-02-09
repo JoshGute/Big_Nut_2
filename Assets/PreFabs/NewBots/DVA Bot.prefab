@@ -464,6 +464,7 @@ MonoBehaviour:
   maxSpeed: 80
   Speed: 500
   aController: {fileID: 0}
+  Shield: {fileID: 0}
   playerIndex: 0
   bDisabled: 0
   iHealth: 3
@@ -502,6 +503,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 304d2a703c6f80640bd5b170bd555195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxShieldHealth: 25
+  ShieldBrokenTime: 5
+  ShieldHeldTime: 2.5
   Player: {fileID: 1851812481687626}
 --- !u!135 &135463595072116982
 SphereCollider:
