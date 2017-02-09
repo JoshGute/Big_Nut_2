@@ -23,7 +23,6 @@ using XInputDotNetPure;
 
 public class PlayerControllerVer2 : MonoBehaviour
 {
-
   private Rigidbody Rb;
   private Transform Tr;
 
@@ -34,6 +33,8 @@ public class PlayerControllerVer2 : MonoBehaviour
 
   //Used to store an instance of the dash position to move towards
   private Vector3 curDashTargetPos;
+
+  public GameObject DashHitbox;
 
   [SerializeField]
   private int maxDashes = 1;
@@ -114,7 +115,6 @@ public class PlayerControllerVer2 : MonoBehaviour
   //Update is called once per frame.
   void Update()
   {
-
     if (Tr.rotation.eulerAngles.z >= 0 && Tr.rotation.eulerAngles.z < 180)
     {
       curRotateState = RotateState.UpRight;
@@ -205,11 +205,14 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     if (isDashing == true)
     {
+      DashHitbox.GetComponent<DashScript>().TurnOnDash();
+
       Tr.position = Vector3.MoveTowards(Tr.position, curDashTargetPos, DashSpeed);
 
       if (Tr.position == curDashTargetPos)
       {
         isDashing = false;
+        DashHitbox.GetComponent<DashScript>().TurnOffDash();
         curDashTargetPos = Vector3.zero;
       }
 
@@ -404,7 +407,7 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     //Being hit by a Dash
     //(trigger is the hitbox attached to sword in this case. the info is in the sword arm parent so that's why do getcomponentinparent)
-    else if (trigger.gameObject.name == "Dash" && trigger.gameObject.GetComponentInParent<DashScript>().sOwner != sOwner)
+    else if (trigger.gameObject.name == "DashHitBox" && trigger.gameObject.GetComponentInParent<DashScript>().sOwner != sOwner)
     {
       TakeDamage();
       Rb.velocity = (trigger.transform.forward * trigger.gameObject.GetComponentInParent<DashScript>().fKnockback);
