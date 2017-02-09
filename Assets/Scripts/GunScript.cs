@@ -73,10 +73,18 @@ public class GunScript : MonoBehaviour
             for (int j = 0; j < BulletsShotPerTick.Length; j++)
             {
                 GameObject newBullet;
+
                 newBullet = Instantiate(BulletsShotPerTick[j].gameObject, PatternSpawn.transform.position, 
-                                                                            PatternSpawn.transform.rotation) 
-                                                                                                    as GameObject;
-                newBullet.GetComponent<BulletScript>().sOwner = sOwner;
+                                                                          PatternSpawn.transform.rotation) as GameObject;
+                if (newBullet.GetComponent<BulletScript>())
+                {
+                    newBullet.GetComponent<BulletScript>().sOwner = sOwner;
+                }
+                else
+                {
+                    newBullet.GetComponent<FlakGunScript>().sOwner = sOwner;
+                }
+                
 
                 yield return new WaitForSeconds(fBulletSpacing);
             }

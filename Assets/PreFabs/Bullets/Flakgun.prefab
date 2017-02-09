@@ -9,47 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000012219236424}
+  m_RootGameObject: {fileID: 1419557387894578}
   m_IsPrefabParent: 1
---- !u!1 &1000012219236424
+--- !u!1 &1419557387894578
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4000010221260414}
-  - component: {fileID: 33000010097337616}
-  - component: {fileID: 135000013529898942}
-  - component: {fileID: 23000010107974630}
-  - component: {fileID: 54000010929845886}
-  - component: {fileID: 114000013363939026}
+  - component: {fileID: 4561314967017016}
+  - component: {fileID: 33489364747687624}
+  - component: {fileID: 135296199777536678}
+  - component: {fileID: 23324331624873988}
+  - component: {fileID: 54126367736121634}
+  - component: {fileID: 114850434184122974}
   m_Layer: 9
-  m_Name: Bullet
+  m_Name: Flakgun
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000010221260414
+--- !u!4 &4561314967017016
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012219236424}
+  m_GameObject: {fileID: 1419557387894578}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.79000026, y: 0.818, z: -2.7830002}
+  m_LocalPosition: {x: -255.55627, y: -62.802856, z: 1.4075203}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!23 &23000010107974630
+--- !u!23 &23324331624873988
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012219236424}
+  m_GameObject: {fileID: 1419557387894578}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -75,19 +75,19 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33000010097337616
+--- !u!33 &33489364747687624
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012219236424}
+  m_GameObject: {fileID: 1419557387894578}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54000010929845886
+--- !u!54 &54126367736121634
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012219236424}
+  m_GameObject: {fileID: 1419557387894578}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -97,30 +97,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114000013363939026
+--- !u!114 &114850434184122974
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012219236424}
+  m_GameObject: {fileID: 1419557387894578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 3765b7c7cc94f1d4ba621068c2292f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 400
+  MaxDistance: 100
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
   fSpeed: 250
-  BlowUpWithTime: 0
-  TimeToBlowUp: 0
+  BulletsToSpawn:
+  - {fileID: 1374202348690570, guid: 2da4e3332b9f33740a532eb8727a7b02, type: 2}
+  AnglePerBullet: 0
   fDamage: 1
---- !u!135 &135000013529898942
+--- !u!135 &135296199777536678
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012219236424}
+  m_GameObject: {fileID: 1419557387894578}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1

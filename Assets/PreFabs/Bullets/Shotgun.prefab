@@ -77,41 +77,41 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011731691576}
-  m_LocalRotation: {x: 0.2164396, y: 0, z: 0, w: 0.97629607}
-  m_LocalPosition: {x: 0, y: -1.21, z: 0.05}
+  m_LocalRotation: {x: 0, y: 0.2164396, z: 0, w: 0.97629607}
+  m_LocalPosition: {x: 1.2500011, y: -0.0000012610108, z: -0.0000020662944}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000012658802416}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 25, z: 0}
 --- !u!4 &4000010930957778
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013342167224}
-  m_LocalRotation: {x: -0.21643952, y: 0, z: 0, w: 0.97629607}
-  m_LocalPosition: {x: 0, y: 1.21, z: -0.07}
+  m_LocalRotation: {x: 0, y: -0.21643952, z: 0, w: 0.97629607}
+  m_LocalPosition: {x: -1.28, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000012658802416}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -25, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -25, z: 0}
 --- !u!4 &4000012658802416
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012153658314}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 16.655972, y: -19.743439, z: 68.75752}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 21.844147, y: 523.8458, z: 2.2118683}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4000010804597678}
   - {fileID: 4000010930957778}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &23000010486906038
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -282,13 +282,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 500
+  MaxDistance: 150
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
-  fSpeed: 600
+  fSpeed: 250
   BlowUpWithTime: 0
   TimeToBlowUp: 0
-  fDamage: 10
+  fDamage: 1
 --- !u!114 &114000010908349124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -300,13 +300,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 500
+  MaxDistance: 150
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
-  fSpeed: 600
+  fSpeed: 250
   BlowUpWithTime: 0
   TimeToBlowUp: 0
-  fDamage: 10
+  fDamage: 1
 --- !u!114 &114000013133602830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -318,13 +318,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 500
+  MaxDistance: 150
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
-  fSpeed: 600
+  fSpeed: 250
   BlowUpWithTime: 0
   TimeToBlowUp: 0
-  fDamage: 10
+  fDamage: 1
 --- !u!135 &135000010089563402
 SphereCollider:
   m_ObjectHideFlags: 1

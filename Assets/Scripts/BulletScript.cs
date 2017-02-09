@@ -58,7 +58,7 @@ public class BulletScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        rb.AddForce(Direction * fSpeed);
+        rb.velocity = Direction * fSpeed;
 
         if (Vector3.Distance(transform.position, StartPos) >= MaxDistance)
         {
