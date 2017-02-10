@@ -24,6 +24,7 @@ public class FollowCam : MonoBehaviour
     //follow camera variables
     public bool bFollow = false;
     public Vector3 target;
+    public float targetZoom;
     public GameObject gPlayer1;
     public GameObject gPlayer2;
     public Vector3 offset = new Vector3(0f, 0f, -110f);
@@ -58,9 +59,23 @@ public class FollowCam : MonoBehaviour
             if (gPlayer1 && gPlayer2)
             {
                 target = (gPlayer1.transform.position + gPlayer2.transform.position) * 0.5f;
-                transform.position = target + offset;
-            }
+                targetZoom = target.magnitude;
 
+                target = new Vector3(target.x, target.y, targetZoom);
+                target += offset;
+
+                if (target.z > -275)
+                {
+                    target = new Vector3(target.x, target.y, -275);
+                    transform.position = target;
+                }
+
+                else
+                {
+                    transform.position = target;       
+                }
+            }
+             
             else
             {
                 bFollow = false;

@@ -28,7 +28,7 @@ public class TeamManager : MonoBehaviour
     public Spawnpoint[] sSpawnPoints;
     public Spawnpoint sPrioritySpawn1;
     public Spawnpoint sPrioritySpawn2;
-    private bool bPrioritySpawn = true;
+    public bool bPrioritySpawn = false;
 
     public delegate void TeamWin(string sOwner);
     public static event TeamWin Victory;
