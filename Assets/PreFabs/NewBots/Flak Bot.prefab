@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 135745246061413408}
   - component: {fileID: 23392948029732140}
   - component: {fileID: 114570602076380370}
+  - component: {fileID: 114436619620087752}
   m_Layer: 10
   m_Name: Shield
   m_TagString: Untagged
@@ -156,7 +157,7 @@ Transform:
   m_GameObject: {fileID: 1531540229936308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 5}
+  m_LocalScale: {x: 10, y: 10, z: 5}
   m_Children: []
   m_Father: {fileID: 4462430320152708}
   m_RootOrder: 1
@@ -502,6 +503,17 @@ MonoBehaviour:
   library: {fileID: 114340994532993650, guid: e5ded19e2fd7c3848a4e3ce84952b3d0, type: 2}
   defaultClipId: 0
   playAutomatically: 0
+--- !u!114 &114436619620087752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1531540229936308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8cead872ad49048ac219c86e312427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114478136064740532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -527,10 +539,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxShieldHealth: 25
-  RegenValue: 1
+  RegenValue: 0.75
   ShieldRegenPerXSec: 1
   DegradeValue: 1
-  ShieldDegradePerXSec: 1
+  ShieldDegradePerXSec: 0.5
   curShieldHealth: 0
   ShieldBrokenTime: 5
   ShieldHeldTime: 2.5

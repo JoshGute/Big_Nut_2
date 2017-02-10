@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 135750180710663304}
   - component: {fileID: 23867389327849002}
   - component: {fileID: 114923898998196974}
+  - component: {fileID: 114663291106601384}
   m_Layer: 10
   m_Name: Shield
   m_TagString: Untagged
@@ -143,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 1613834187410458}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 5}
+  m_LocalScale: {x: 10, y: 10, z: 5}
   m_Children: []
   m_Father: {fileID: 4200887903172870}
   m_RootOrder: 1
@@ -557,6 +558,17 @@ MonoBehaviour:
   acHitNoise: {fileID: 8300000, guid: b069d49ba6e2c6c419d7c8f0b7e0acf6, type: 3}
   gDeathObject: {fileID: 1415296866567280, guid: 9de7e2c35ba528043bfecb38c3e4b14c,
     type: 2}
+--- !u!114 &114663291106601384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1613834187410458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8cead872ad49048ac219c86e312427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114711538894137746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -593,10 +605,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxShieldHealth: 25
-  RegenValue: 1
+  RegenValue: 0.75
   ShieldRegenPerXSec: 1
   DegradeValue: 1
-  ShieldDegradePerXSec: 1
+  ShieldDegradePerXSec: 0.5
   curShieldHealth: 0
   ShieldBrokenTime: 5
   ShieldHeldTime: 2.5
