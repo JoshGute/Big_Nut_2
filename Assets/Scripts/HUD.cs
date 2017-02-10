@@ -23,8 +23,8 @@ using UnityEngine.UI;
 public class HUD : MonoBehaviour
 {
 
-    public TeamManager PlayerOne;
-    public TeamManager PlayerTwo;
+    public PlayerControllerVer2 PlayerOne;
+    public PlayerControllerVer2 PlayerTwo;
 
     public GameObject P1robs;
     public GameObject P2robs;
@@ -45,16 +45,17 @@ public class HUD : MonoBehaviour
 
     void OnEnable()
     {
-        BodyScript.Die += UpdateBotsLeft;
+       PlayerControllerVer2.Die += UpdateBotsLeft;
     }
 
     void OnDisable()
     {
-        BodyScript.Die -= UpdateBotsLeft;
+        PlayerControllerVer2.Die -= UpdateBotsLeft;
     }
     // Use this for initialization
     void Start ()
     {
+        Cursor.visible = false;
         WinText.gameObject.SetActive(true);
         WinText.text = "";
         WinText.gameObject.SetActive(false);
@@ -67,33 +68,35 @@ public class HUD : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        P1hp.GetComponent<Text>().text = PlayerOne.pOwner.bBody.iHealth.ToString();
-        P2hp.GetComponent<Text>().text = PlayerTwo.pOwner.bBody.iHealth.ToString();
+        P1hp.GetComponent<Text>().text = PlayerOne.iHealth.ToString();
+        P2hp.GetComponent<Text>().text = PlayerTwo.iHealth.ToString();
     }
 
-    void UpdateBotsLeft(string inOwner)
+    void UpdateBotsLeft(string sOwner_)
     {
         if (P1Kills < MaxKills && P2Kills < MaxKills)
         {
-            if (inOwner == "Player1")
+            if (sOwner_ == "PLAYER1")
             {
                 ++P2Kills;
                 P2robs.GetComponent<Text>().text = P2Kills.ToString();
                 if (P2Kills >= MaxKills)
                 {
-                    UpdateWinner(inOwner);
+                    UpdateWinner(sOwner_);
                 }
             }
 
-            else if (inOwner == "Player2")
+            else if (sOwner_ == "PLAYER2")
             {
                 ++P1Kills;
                 P1robs.GetComponent<Text>().text = P1Kills.ToString();
                 if (P1Kills >= MaxKills)
                 {
-                    UpdateWinner(inOwner);
+                    UpdateWinner(sOwner_);
                 }
             }
+
+            print(P1Kills);
         }
     }
 
@@ -113,5 +116,18 @@ public class HUD : MonoBehaviour
 
         RestartButton.gameObject.SetActive(true);
         Cursor.visible = true;
+    }
+
+    public void GetPlayer(GameObject gPlayer_, int iPlayer_)
+    {
+        if (iPlayer_ == 1)
+        {
+            PlayerOne = gPlayer_.GetComponent<PlayerControllerVer2>();
+        }
+
+        else
+        {
+            PlayerTwo = gPlayer_.GetComponent<PlayerControllerVer2>();
+        }
     }
 }

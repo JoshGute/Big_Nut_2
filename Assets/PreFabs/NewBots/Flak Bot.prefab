@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4462492799991300}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GunPointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 135250115800931152}
   - component: {fileID: 23342061894828120}
   - component: {fileID: 114478136064740532}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DashHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 135745246061413408}
   - component: {fileID: 23392948029732140}
   - component: {fileID: 114570602076380370}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4151342046152906}
   - component: {fileID: 212473474898818912}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DashTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 114612253060389628}
   - component: {fileID: 82343087417755106}
   - component: {fileID: 114900817012096540}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Flak Bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 23454113262291078}
   - component: {fileID: 114136715064901194}
   - component: {fileID: 114373205219793028}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}

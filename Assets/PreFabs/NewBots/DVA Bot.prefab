@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 135463595072116982}
   - component: {fileID: 23200832249465420}
   - component: {fileID: 114240860724640370}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DashHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4953981593481862}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GunPointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 135750180710663304}
   - component: {fileID: 23867389327849002}
   - component: {fileID: 114923898998196974}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 23326185188727174}
   - component: {fileID: 114711538894137746}
   - component: {fileID: 114333289125435374}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 114281569510680858}
   - component: {fileID: 82229062837138418}
   - component: {fileID: 114111899545833076}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DVA Bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4248486792095264}
   - component: {fileID: 212923970783506572}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DashTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}

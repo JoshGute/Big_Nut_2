@@ -39,10 +39,6 @@ public class BodyScript : MonoBehaviour
     public AudioClip acExplodeNoise;
     public AudioSource asNoiseMaker;
    
-
-    public delegate void DeathAction(string sOwner_);
-    public static event DeathAction Die;
-
     void Start ()
     {
         //asNoiseMaker = GetComponent<AudioSource>();
@@ -79,7 +75,7 @@ public class BodyScript : MonoBehaviour
             }
 
             gSkin.transform.DetachChildren();
-            Die(sOwner);
+            //Die(sOwner);
             Destroy(gameObject);
         }
 
@@ -99,7 +95,7 @@ public class BodyScript : MonoBehaviour
             }
             transform.DetachChildren();
             rb.AddExplosionForce(5.0f, transform.position, 2.0f);
-            Die(sOwner);
+            //Die(sOwner);
             Destroy(gameObject);
         }
     }

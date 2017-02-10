@@ -1594,7 +1594,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sOwner: 
-  fDamage: 50
   fKnockback: 30
 --- !u!114 &114000013434269778
 MonoBehaviour:

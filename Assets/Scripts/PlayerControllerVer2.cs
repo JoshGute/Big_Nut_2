@@ -99,13 +99,16 @@ public class PlayerControllerVer2 : MonoBehaviour
     public GameObject gDeathObject;
 
   private bool Shielding;
-  ////Deprecated////
-  //[SerializeField]
-  //private float DashDistance = 5f;
-  ////Deprecated////
+    ////Deprecated////
+    //[SerializeField]
+    //private float DashDistance = 5f;
+    ////Deprecated////
 
-  // Use this for initialization
-  void Start()
+    public delegate void DeathAction(string sOwner_);
+    public static event DeathAction Die;
+
+    // Use this for initialization
+    void Start()
   {
     curDashes = maxDashes;
 
@@ -438,6 +441,7 @@ public class PlayerControllerVer2 : MonoBehaviour
     private void Explode()
     {
         Instantiate(gDeathObject, gameObject.transform.position, gameObject.transform.rotation);
+        Die(sOwner);
         Destroy(gameObject);
     }
 
@@ -449,5 +453,18 @@ public class PlayerControllerVer2 : MonoBehaviour
         Skin_.color = Color.black;
         yield return new WaitForSeconds(.05f);
         Skin_.color = startingColor;
+    }
+
+    public void TagRobot(string sOwner_)
+    {
+        sOwner = sOwner_;
+        if (sOwner == "PLAYER1")
+        {
+            playerIndex = PlayerIndex.One;
+        }
+        else
+        {
+            playerIndex = PlayerIndex.Two;
+        }
     }
 }
