@@ -10,7 +10,7 @@ public class DeathScript : MonoBehaviour
 	void Start ()
     {
         cCamera = GameObject.FindGameObjectWithTag("MainCamera");
-        cCamera.GetComponent<FollowCam>().Shake(1f);
+        cCamera.GetComponent<FollowCam>().Shake(3f);
         StartCoroutine(timedDestroy(2));
 	}
 

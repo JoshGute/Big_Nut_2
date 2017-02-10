@@ -70,7 +70,6 @@ public class FollowCam : MonoBehaviour
 
         if (bShake && Time.timeScale != 0)
         {
-            print("hello");
             transform.position = transform.position + Random.insideUnitSphere * ShakeAmount;
         }
     }
@@ -82,11 +81,9 @@ public class FollowCam : MonoBehaviour
 
     IEnumerator ScreenShaker(float fShakeAmount_)
     {
-        print("going");
         ShakeAmount = fShakeAmount_;
         bShake = true;
         yield return new WaitForSeconds(0.5f);
         bShake = false;
-        print("done");
     }
 }

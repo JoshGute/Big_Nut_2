@@ -93,6 +93,10 @@ public class PlayerControllerVer2 : MonoBehaviour
   private GunScript ShootScript;
 
   public int iHealth;
+    public AudioSource asNoiseMaker;
+    public AudioClip acHitNoise;
+
+    public GameObject gDeathObject;
 
   private bool Shielding;
   ////Deprecated////
@@ -416,18 +420,34 @@ public class PlayerControllerVer2 : MonoBehaviour
 
   void TakeDamage()
   {
-    //asNoiseMaker.PlayOneShot(acHitNoise);
     if (iHealth > 1)
     {
-      --iHealth;
+        asNoiseMaker.PlayOneShot(acHitNoise);
+        StartCoroutine(Flash(gameObject.GetComponentInChildren<tk2dSprite>()));
+        --iHealth;
       print("player hp" + iHealth);
     }
 
     else if (iHealth == 1)
-    {
+    {      
       --iHealth;
       print("Dead");
-      //Explode();
+      Explode();
     }
   }
+    private void Explode()
+    {
+        Instantiate(gDeathObject, gameObject.transform.position, gameObject.transform.rotation);
+        Destroy(gameObject);
+    }
+
+    private IEnumerator Flash(tk2dSprite Skin_)
+    {
+        Vector4 startingColor = new Vector4();
+        startingColor = Skin_.color;
+
+        Skin_.color = Color.black;
+        yield return new WaitForSeconds(.05f);
+        Skin_.color = startingColor;
+    }
 }
