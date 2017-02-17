@@ -245,22 +245,30 @@ public class PlayerControllerVer2 : MonoBehaviour
 
       if (Input.GetKey(KeyCode.UpArrow))
       {
+        //Thruster Animation
+        aController.ChangeThrusterAnimation(1);
+
         //Animation
         if (curRotateState == RotateState.UpRight && prevRotateState != RotateState.UpRight)
         {
           //Rolling to Reverse
-          aController.ChangeAnimation(1);
+          aController.ChangeBodyAnimation(1);
           prevRotateState = RotateState.UpRight;
         }
 
         else if (curRotateState == RotateState.Reverse && prevRotateState != RotateState.Reverse)
         {
           //Rolling back to UpRight
-          aController.ChangeAnimation(2);
+          aController.ChangeBodyAnimation(2);
           prevRotateState = RotateState.Reverse;
         }
 
         Rb.AddRelativeForce(ShipDirection * Speed);
+      }
+
+      else if (Input.GetKeyUp(KeyCode.UpArrow))
+      {
+        aController.ChangeThrusterAnimation(2);
       }
 
       if (Rb.velocity.magnitude > maxSpeed)
@@ -332,24 +340,34 @@ public class PlayerControllerVer2 : MonoBehaviour
       //Boosting
       if (prevState.Buttons.A == ButtonState.Pressed && lockBoost == false)
       {
-        //Animation
+        //Thruster Animation
+        aController.ChangeThrusterAnimation(1);
+
+        //Body Animation
         if (curRotateState == RotateState.UpRight && prevRotateState != RotateState.UpRight)
         {
           //Rolling to Reverse
-          aController.ChangeAnimation(1);
+          aController.ChangeBodyAnimation(1);
           prevRotateState = RotateState.UpRight;
         }
 
         else if (curRotateState == RotateState.Reverse && prevRotateState != RotateState.Reverse)
         {
           //Rolling back to UpRight
-          aController.ChangeAnimation(2);
+          aController.ChangeBodyAnimation(2);
           prevRotateState = RotateState.Reverse;
         }
 
         //Function
         Rb.AddRelativeForce(ShipDirection * Speed);
       }
+
+      /*
+      else if (prevState.Buttons.A == ButtonState.Released)
+      {
+        aController.ChangeThrusterAnimation(2);
+      }
+      */
 
       if (Rb.velocity.magnitude > maxSpeed)
       {

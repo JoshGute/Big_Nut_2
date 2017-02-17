@@ -41,6 +41,14 @@ MonoBehaviour:
     dataGUID: 
     managed: 0
     loadable: 0
+  - assetGUID: 87d25a9cbb71f6a49a2a89e460207378
+    dataGUID: 
+    managed: 0
+    loadable: 0
+  - assetGUID: 4ab3d0704e717e04db42b309642094a6
+    dataGUID: 
+    managed: 0
+    loadable: 0
   fontIndex:
   - assetGUID: 063b15d80dbb4604d890600a64c79cf8
     dataGUID: e7a6b09a73c6b2b4f8060096ddbd3b5e
@@ -2504,6 +2512,146 @@ MonoBehaviour:
     spriteTextureTimeStamps:
     - 1487270525.62966
     - 1487270783.96297
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Sightline
+    spriteCollectionGUID: 83a1129948b07954fab5e778f115bf68
+    spriteCollectionDataGUID: 588cb70f0c1320a47b86e257178bddfb
+    spriteNames:
+    - Sightline_Reverse/0
+    - Sightline_RotatetoReverse/0
+    - Sightline_RotatetoReverse/1
+    - Sightline_RotatetoReverse/2
+    - Sightline_RotatetoReverse/3
+    - Sightline_RotatetoReverse/4
+    - Sightline_RotatetoReverse/5
+    - Sightline_RotatetoReverse/6
+    - Sightline_RotatetoReverse/7
+    - Sightline_RotatetoReverse/8
+    - Sightline_RotatetoUpright/0
+    - Sightline_RotatetoUpright/1
+    - Sightline_RotatetoUpright/2
+    - Sightline_RotatetoUpright/3
+    - Sightline_RotatetoUpright/4
+    - Sightline_RotatetoUpright/5
+    - Sightline_RotatetoUpright/6
+    - Sightline_RotatetoUpright/7
+    - Sightline_RotatetoUpright/8
+    - Sightline_Upright/0
+    spriteTextureGUIDs:
+    - 4cb19d87528ed4143bc9a574b7351311
+    - aa81b891bfc0fd540892ef5519d78e92
+    - aa81b891bfc0fd540892ef5519d78e92
+    - aa81b891bfc0fd540892ef5519d78e92
+    - aa81b891bfc0fd540892ef5519d78e92
+    - aa81b891bfc0fd540892ef5519d78e92
+    - aa81b891bfc0fd540892ef5519d78e92
+    - aa81b891bfc0fd540892ef5519d78e92
+    - aa81b891bfc0fd540892ef5519d78e92
+    - aa81b891bfc0fd540892ef5519d78e92
+    - eabb682d53cdd204d8549180410301fc
+    - eabb682d53cdd204d8549180410301fc
+    - eabb682d53cdd204d8549180410301fc
+    - eabb682d53cdd204d8549180410301fc
+    - eabb682d53cdd204d8549180410301fc
+    - eabb682d53cdd204d8549180410301fc
+    - eabb682d53cdd204d8549180410301fc
+    - eabb682d53cdd204d8549180410301fc
+    - eabb682d53cdd204d8549180410301fc
+    - b932b21d4e0c2cf40927b8a451af71bb
+    spriteTextureTimeStamps:
+    - 1487271788.74726
+    - 1487270172.99437
+    - 1487270172.99437
+    - 1487270172.99437
+    - 1487270172.99437
+    - 1487270172.99437
+    - 1487270172.99437
+    - 1487270172.99437
+    - 1487270172.99437
+    - 1487270172.99437
+    - 1487270194.68047
+    - 1487270194.68047
+    - 1487270194.68047
+    - 1487270194.68047
+    - 1487270194.68047
+    - 1487270194.68047
+    - 1487270194.68047
+    - 1487270194.68047
+    - 1487270194.68047
+    - 1487271780.47982
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Oneshot
+    spriteCollectionGUID: f3d79618eae6cc74ba68721d7116544d
+    spriteCollectionDataGUID: 5bfd04066099b24488f1f1db35488544
+    spriteNames:
+    - Oneshot_Reverse/0
+    - Oneshot_RotatetoReverse/0
+    - Oneshot_RotatetoReverse/1
+    - Oneshot_RotatetoReverse/2
+    - Oneshot_RotatetoReverse/3
+    - Oneshot_RotatetoReverse/4
+    - Oneshot_RotatetoReverse/5
+    - Oneshot_RotatetoReverse/6
+    - Oneshot_RotatetoReverse/7
+    - Oneshot_RotatetoReverse/8
+    - Oneshot_RotatetoUpright/0
+    - Oneshot_RotatetoUpright/1
+    - Oneshot_RotatetoUpright/2
+    - Oneshot_RotatetoUpright/3
+    - Oneshot_RotatetoUpright/4
+    - Oneshot_RotatetoUpright/5
+    - Oneshot_RotatetoUpright/6
+    - Oneshot_RotatetoUpright/7
+    - Oneshot_RotatetoUpright/8
+    - Oneshot_Upright/0
+    spriteTextureGUIDs:
+    - 5509b2727364c1e48be58baaf8b43cff
+    - d0b18763fe8bcd5429f2171da875cd8a
+    - d0b18763fe8bcd5429f2171da875cd8a
+    - d0b18763fe8bcd5429f2171da875cd8a
+    - d0b18763fe8bcd5429f2171da875cd8a
+    - d0b18763fe8bcd5429f2171da875cd8a
+    - d0b18763fe8bcd5429f2171da875cd8a
+    - d0b18763fe8bcd5429f2171da875cd8a
+    - d0b18763fe8bcd5429f2171da875cd8a
+    - d0b18763fe8bcd5429f2171da875cd8a
+    - 330c7f4620fa80643a6ddbb8b6deb1f7
+    - 330c7f4620fa80643a6ddbb8b6deb1f7
+    - 330c7f4620fa80643a6ddbb8b6deb1f7
+    - 330c7f4620fa80643a6ddbb8b6deb1f7
+    - 330c7f4620fa80643a6ddbb8b6deb1f7
+    - 330c7f4620fa80643a6ddbb8b6deb1f7
+    - 330c7f4620fa80643a6ddbb8b6deb1f7
+    - 330c7f4620fa80643a6ddbb8b6deb1f7
+    - 330c7f4620fa80643a6ddbb8b6deb1f7
+    - fc930e07474716541a1a0ccfd8f8f24b
+    spriteTextureTimeStamps:
+    - 1487271818.62921
+    - 1487270364.12396
+    - 1487270364.12396
+    - 1487270364.12396
+    - 1487270364.12396
+    - 1487270364.12396
+    - 1487270364.12396
+    - 1487270364.12396
+    - 1487270364.12396
+    - 1487270364.12396
+    - 1487270377.72394
+    - 1487270377.72394
+    - 1487270377.72394
+    - 1487270377.72394
+    - 1487270377.72394
+    - 1487270377.72394
+    - 1487270377.72394
+    - 1487270377.72394
+    - 1487270377.72394
+    - 1487271810.55039
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

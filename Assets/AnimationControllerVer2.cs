@@ -21,16 +21,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //*State Machine Enums*//
-//Called 'custom' animation state because unity already has an animation state class. 
-public class CustomSpriteAnimationStates
+//Body animation states
+public class BodySpriteAnimationStates
 {
   public enum AnimState { IdleUpRight, IdleReverse, RolltoUpRight, RolltoReverse };
 }
 
+//Thruster animation states
+public class ThrusterSpriteAnimationStates
+{
+  public enum AnimState { Inactive, Boost, StopBoost };
+}
+
 public class AnimationControllerVer2 : MonoBehaviour {
 
+  //Main robot body animations
   [SerializeField]
   private tk2dSpriteAnimator RobotAnimator;
+
+  //Main thruster animations
+  [SerializeField]
+  private tk2dSpriteAnimator ThrusterAnimator;
 
   // Use this for initialization
   void Start ()
@@ -49,28 +60,45 @@ public class AnimationControllerVer2 : MonoBehaviour {
 
   }
 
-  public void ChangeAnimation(int iInput_)
+  public void ChangeThrusterAnimation(int iInput_)
   {
     switch (iInput_)
     {
       case 1:
         {
-          UpdateAnimState(CustomSpriteAnimationStates.AnimState.RolltoReverse);
+          UpdateThrusterAnimState(ThrusterSpriteAnimationStates.AnimState.Boost);
           break;
         }
       case 2:
         {
-          UpdateAnimState(CustomSpriteAnimationStates.AnimState.RolltoUpRight);
+          UpdateThrusterAnimState(ThrusterSpriteAnimationStates.AnimState.StopBoost);
+          break;
+        }
+    }
+  }
+
+  public void ChangeBodyAnimation(int iInput_)
+  {
+    switch (iInput_)
+    {
+      case 1:
+        {
+          UpdateBodyAnimState(BodySpriteAnimationStates.AnimState.RolltoReverse);
+          break;
+        }
+      case 2:
+        {
+          UpdateBodyAnimState(BodySpriteAnimationStates.AnimState.RolltoUpRight);
           break;
         }
       case 3:
         {
-          UpdateAnimState(CustomSpriteAnimationStates.AnimState.IdleReverse);
+          UpdateBodyAnimState(BodySpriteAnimationStates.AnimState.IdleReverse);
           break;
         }
       case 4:
         {
-          UpdateAnimState(CustomSpriteAnimationStates.AnimState.IdleUpRight);
+          UpdateBodyAnimState(BodySpriteAnimationStates.AnimState.IdleUpRight);
           break;
         }
     }
@@ -90,26 +118,45 @@ public class AnimationControllerVer2 : MonoBehaviour {
     */
   }
 
-  void UpdateAnimState(CustomSpriteAnimationStates.AnimState newAnimState)
+  void UpdateThrusterAnimState(ThrusterSpriteAnimationStates.AnimState newAnimState)
+  {
+    switch(newAnimState)
+    {
+      //Boost
+      case ThrusterSpriteAnimationStates.AnimState.Boost:
+      ThrusterAnimator.Play("Thruster_Boost");
+      break;
+
+      //StopBoost
+      case ThrusterSpriteAnimationStates.AnimState.StopBoost:
+      ThrusterAnimator.Play("Thruster_StopBoost");
+      break;
+
+      default:
+      break;
+    }
+  }
+
+  void UpdateBodyAnimState(BodySpriteAnimationStates.AnimState newAnimState)
   {
     switch (newAnimState)
     {
-      case CustomSpriteAnimationStates.AnimState.RolltoReverse:
+      case BodySpriteAnimationStates.AnimState.RolltoReverse:
           RobotAnimator.Play("Rotate_toReverse");
           RobotAnimator.AnimationCompleted = PreviousSpriteAnimDelegate;
         break;
 
-      case CustomSpriteAnimationStates.AnimState.RolltoUpRight:
+      case BodySpriteAnimationStates.AnimState.RolltoUpRight:
           RobotAnimator.Play("Rotate_toUpRight");
           RobotAnimator.AnimationCompleted = PreviousSpriteAnimDelegate;
         break;
 
-      case CustomSpriteAnimationStates.AnimState.IdleUpRight:
+      case BodySpriteAnimationStates.AnimState.IdleUpRight:
         RobotAnimator.Play("Idle_UpRight");
         RobotAnimator.AnimationCompleted = PreviousSpriteAnimDelegate;
         break;
 
-      case CustomSpriteAnimationStates.AnimState.IdleReverse:
+      case BodySpriteAnimationStates.AnimState.IdleReverse:
         RobotAnimator.Play("Idle_Reverse");
         RobotAnimator.AnimationCompleted = PreviousSpriteAnimDelegate;
         break;

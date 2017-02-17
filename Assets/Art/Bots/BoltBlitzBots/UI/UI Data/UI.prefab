@@ -71,10 +71,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.015632812, y: 0.015632812}
-    - {x: 0.5937422, y: 0.015632812}
-    - {x: 0.015632812, y: 0.6796797}
-    - {x: 0.5937422, y: 0.6796797}
+    - {x: 0.0000078125, y: 0.0000078125}
+    - {x: 0.5781172, y: 0.0000078125}
+    - {x: 0.0000078125, y: 0.6640547}
+    - {x: 0.5781172, y: 0.6640547}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -118,10 +118,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.015632812, y: 0.7109453}
-    - {x: 0.2656172, y: 0.7109453}
-    - {x: 0.015632812, y: 0.9609297}
-    - {x: 0.2656172, y: 0.9609297}
+    - {x: 0.0000078125, y: 0.6640703}
+    - {x: 0.24999219, y: 0.6640703}
+    - {x: 0.0000078125, y: 0.9140547}
+    - {x: 0.24999219, y: 0.9140547}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -157,7 +157,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: e51ca516b53914646a15e64bfaa43db3, type: 3}
   pngTextures: []
   materialPngTextureId: 00000000
-  textureFilterMode: 1
+  textureFilterMode: 0
   textureMipMaps: 0
   allowMultipleAtlases: 0
   spriteCollectionGUID: 16782ac32d766af43a8d37a293b0ab9a
@@ -166,7 +166,7 @@ MonoBehaviour:
   loadable: 0
   invOrthoSize: 2
   halfTargetHeight: 50
-  buildKey: 1151674578
+  buildKey: 1049922626
   dataGuid: f53c742b503af054e8fd7bb78ebe5407
   managedSpriteCollection: 0
   hasPlatformData: 0
