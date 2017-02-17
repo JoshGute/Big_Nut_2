@@ -27,7 +27,7 @@ public class FollowCam : MonoBehaviour
     public float targetZoom;
     public GameObject gPlayer1;
     public GameObject gPlayer2;
-    public Vector3 offset = new Vector3(0f, 0f, -110f);
+    public Vector3 offset = new Vector3(0f, 0f, -400);
     //screen shake variables
     public float ShakeAmount = 0.5f;
     private bool bShake;
@@ -64,9 +64,9 @@ public class FollowCam : MonoBehaviour
                 target = new Vector3(target.x, target.y, targetZoom);
                 target += offset;
 
-                if (target.z > -275)
+                if (target.z > -300)
                 {
-                    target = new Vector3(target.x, target.y, -275);
+                    target = new Vector3(target.x, target.y, -300);
                     transform.position = target;
                 }
 

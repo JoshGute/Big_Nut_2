@@ -219,6 +219,10 @@ Prefab:
       propertyPath: m_Name
       value: SlowZone (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1213910177690064, guid: b2e526ad136dc844187c2dab974a0395, type: 2}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2e526ad136dc844187c2dab974a0395, type: 2}
   m_IsPrefabParent: 0
@@ -370,22 +374,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4120108272086388, guid: b2e526ad136dc844187c2dab974a0395, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 33.738243
-      objectReference: {fileID: 0}
-    - target: {fileID: 4120108272086388, guid: b2e526ad136dc844187c2dab974a0395, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 125
-      objectReference: {fileID: 0}
-    - target: {fileID: 4120108272086388, guid: b2e526ad136dc844187c2dab974a0395, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114383574870632606, guid: b2e526ad136dc844187c2dab974a0395,
-        type: 2}
-      propertyPath: fSpeedModifier
-      value: 0.82
+    - target: {fileID: 1213910177690064, guid: b2e526ad136dc844187c2dab974a0395, type: 2}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2e526ad136dc844187c2dab974a0395, type: 2}
@@ -543,6 +534,10 @@ Prefab:
     - target: {fileID: 1000010491476928, guid: ddd18f6640e355f48a7af940ccb02f45, type: 2}
       propertyPath: m_Name
       value: SpawnPointLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010491476928, guid: ddd18f6640e355f48a7af940ccb02f45, type: 2}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ddd18f6640e355f48a7af940ccb02f45, type: 2}
@@ -725,23 +720,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 4120108272086388, guid: b2e526ad136dc844187c2dab974a0395, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 33.738243
-      objectReference: {fileID: 0}
-    - target: {fileID: 4120108272086388, guid: b2e526ad136dc844187c2dab974a0395, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 125
-      objectReference: {fileID: 0}
-    - target: {fileID: 4120108272086388, guid: b2e526ad136dc844187c2dab974a0395, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114383574870632606, guid: b2e526ad136dc844187c2dab974a0395,
-        type: 2}
-      propertyPath: fSpeedModifier
-      value: 0.82
-      objectReference: {fileID: 0}
     - target: {fileID: 1213910177690064, guid: b2e526ad136dc844187c2dab974a0395, type: 2}
       propertyPath: m_Name
       value: SlowZone (1)
@@ -873,6 +851,10 @@ Prefab:
       propertyPath: m_Name
       value: SpawnpointRight
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010491476928, guid: ddd18f6640e355f48a7af940ccb02f45, type: 2}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ddd18f6640e355f48a7af940ccb02f45, type: 2}
   m_IsPrefabParent: 0
@@ -941,6 +923,10 @@ Prefab:
     - target: {fileID: 1213910177690064, guid: b2e526ad136dc844187c2dab974a0395, type: 2}
       propertyPath: m_Name
       value: SlowZone (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213910177690064, guid: b2e526ad136dc844187c2dab974a0395, type: 2}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2e526ad136dc844187c2dab974a0395, type: 2}
@@ -1479,6 +1465,10 @@ Prefab:
     - target: {fileID: 1000010491476928, guid: ddd18f6640e355f48a7af940ccb02f45, type: 2}
       propertyPath: m_Name
       value: SpawnPointTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010491476928, guid: ddd18f6640e355f48a7af940ccb02f45, type: 2}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ddd18f6640e355f48a7af940ccb02f45, type: 2}

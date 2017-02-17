@@ -1,6 +1,6 @@
 ﻿/*******************************  Ducks in a Row  *********************************
 Author: Linus 'Fills in the Blanks' Chan
-Contributors: Glen Aro
+Contributors: Glen Aro, Josh Gutenberg
 Course: GAM450
 Game:   Bolt Blitz
 Date:   1/18/2017
@@ -328,14 +328,11 @@ public class PlayerControllerVer2 : MonoBehaviour
         Shield.GetComponent<ShieldScript>().TurnOffShield();
       }
 
-      if (KeyAxisH < 0)
+      if (KeyAxisH != 0 || KeyAxisV != 0)
       {
-        Tr.Rotate(new Vector3(0f, 0f, 1f), TurnSpeed);
-      }
-      else if (KeyAxisH > 0)
-      {
-        Tr.Rotate(new Vector3(0f, 0f, 1f), -TurnSpeed);
-      }
+                float LookDirection = Mathf.Atan2(KeyAxisH, KeyAxisV);
+                Tr.rotation = Quaternion.Euler(0f, 0f, -LookDirection * Mathf.Rad2Deg);
+    }
 
       //Boosting
       if (state.Buttons.A == ButtonState.Pressed && lockBoost == false)
