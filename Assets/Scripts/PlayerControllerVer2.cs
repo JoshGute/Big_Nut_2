@@ -338,7 +338,7 @@ public class PlayerControllerVer2 : MonoBehaviour
       }
 
       //Boosting
-      if (prevState.Buttons.A == ButtonState.Pressed && lockBoost == false)
+      if (state.Buttons.A == ButtonState.Pressed && lockBoost == false)
       {
         //Thruster Animation
         aController.ChangeThrusterAnimation(1);
@@ -362,12 +362,12 @@ public class PlayerControllerVer2 : MonoBehaviour
         Rb.AddRelativeForce(ShipDirection * Speed);
       }
 
-      /*
-      else if (prevState.Buttons.A == ButtonState.Released)
+      
+      else if (prevState.Buttons.A == ButtonState.Pressed && state.Buttons.A == ButtonState.Released)
       {
         aController.ChangeThrusterAnimation(2);
       }
-      */
+      
 
       if (Rb.velocity.magnitude > maxSpeed)
       {
