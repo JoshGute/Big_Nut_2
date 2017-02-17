@@ -37,6 +37,10 @@ MonoBehaviour:
     dataGUID: 
     managed: 0
     loadable: 0
+  - assetGUID: ee2cf934fd5c4874b937aef5f5618d4f
+    dataGUID: 
+    managed: 0
+    loadable: 0
   fontIndex:
   - assetGUID: 063b15d80dbb4604d890600a64c79cf8
     dataGUID: e7a6b09a73c6b2b4f8060096ddbd3b5e
@@ -2390,6 +2394,116 @@ MonoBehaviour:
     - 1484758076.66017
     - 1484758076.66017
     - 1484758076.66067
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: SpecialEffects
+    spriteCollectionGUID: 87f963301f6bf094790854bfc860809d
+    spriteCollectionDataGUID: 9654b4894c4161943885205bd4de5c90
+    spriteNames:
+    - Thruster_Constant/0
+    - Thruster_Constant/1
+    - Thruster_Constant/2
+    - Thruster_Constant/3
+    - Thruster_Stop_fix/0
+    - Thruster_Stop_fix/1
+    - Thruster_Stop_fix/2
+    - Thruster_Stop_fix/3
+    - Thruster_Stop_fix/4
+    - Thruster_Stop_fix/5
+    - Thruster_Stop_fix/6
+    - Thruster_Stop_fix/7
+    - Shockwave_Start_fix/0
+    - Shockwave_Start_fix/1
+    - Shockwave_Start_fix/2
+    - Shockwave_Start_fix/3
+    - Smoke_Particle_fix/0
+    - Smoke_Particle_fix/1
+    - Smoke_Particle_fix/2
+    - Smoke_Particle_fix/3
+    - Smoke_Particle_fix/4
+    - Smoke_Particle_fix/5
+    - Smoke_Particle_fix/6
+    - Smoke_Particle_fix/7
+    - Smoke_Particle_fix/8
+    - Shockwave_Start_fix/4
+    - Smoke_Particle_fix/9
+    - Thruster_Stop_fix/8
+    spriteTextureGUIDs:
+    - 3d962caf8eb01cf459f2a63953b8b180
+    - 3d962caf8eb01cf459f2a63953b8b180
+    - 3d962caf8eb01cf459f2a63953b8b180
+    - 3d962caf8eb01cf459f2a63953b8b180
+    - 7d7b749cfa47a6041bbe2affa2fd6ccd
+    - 7d7b749cfa47a6041bbe2affa2fd6ccd
+    - 7d7b749cfa47a6041bbe2affa2fd6ccd
+    - 7d7b749cfa47a6041bbe2affa2fd6ccd
+    - 7d7b749cfa47a6041bbe2affa2fd6ccd
+    - 7d7b749cfa47a6041bbe2affa2fd6ccd
+    - 7d7b749cfa47a6041bbe2affa2fd6ccd
+    - 7d7b749cfa47a6041bbe2affa2fd6ccd
+    - e650b07eed2d76149af1ba098cfd8a42
+    - e650b07eed2d76149af1ba098cfd8a42
+    - e650b07eed2d76149af1ba098cfd8a42
+    - e650b07eed2d76149af1ba098cfd8a42
+    - 7404f05f447bd16458bb4b178333e5d8
+    - 7404f05f447bd16458bb4b178333e5d8
+    - 7404f05f447bd16458bb4b178333e5d8
+    - 7404f05f447bd16458bb4b178333e5d8
+    - 7404f05f447bd16458bb4b178333e5d8
+    - 7404f05f447bd16458bb4b178333e5d8
+    - 7404f05f447bd16458bb4b178333e5d8
+    - 7404f05f447bd16458bb4b178333e5d8
+    - 7404f05f447bd16458bb4b178333e5d8
+    - e650b07eed2d76149af1ba098cfd8a42
+    - 7404f05f447bd16458bb4b178333e5d8
+    - 7d7b749cfa47a6041bbe2affa2fd6ccd
+    spriteTextureTimeStamps:
+    - 1485033357.92877
+    - 1485033357.92877
+    - 1485033357.92877
+    - 1485033357.92877
+    - 1487270948.5189
+    - 1487270948.5189
+    - 1487270948.5189
+    - 1487270948.5189
+    - 1487270948.5189
+    - 1487270948.5189
+    - 1487270948.5189
+    - 1487270948.5189
+    - 1487270876.86938
+    - 1487270876.86938
+    - 1487270876.86938
+    - 1487270876.86938
+    - 1487270913.01962
+    - 1487270913.01962
+    - 1487270913.01962
+    - 1487270913.01962
+    - 1487270913.01962
+    - 1487270913.01962
+    - 1487270913.01962
+    - 1487270913.01962
+    - 1487270913.01962
+    - 1487270876.86938
+    - 1487270913.01962
+    - 1487270948.5189
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: UI
+    spriteCollectionGUID: 16782ac32d766af43a8d37a293b0ab9a
+    spriteCollectionDataGUID: f53c742b503af054e8fd7bb78ebe5407
+    spriteNames:
+    - AimRing/0
+    - Reticle_01/0
+    spriteTextureGUIDs:
+    - d3bc9acbb049d4b4891e424a1404fc1f
+    - 296a7b31cf477f54b8069a804703ce9a
+    spriteTextureTimeStamps:
+    - 1487270525.62966
+    - 1487270783.96297
     managedSpriteCollection: 0
     loadable: 0
     assetName: 
