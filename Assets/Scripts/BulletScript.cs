@@ -53,6 +53,11 @@ public class BulletScript : MonoBehaviour
             Direction = transform.forward;
         }
         StartPos = transform.position;
+
+        foreach (BulletScript kiddbullet in GetComponentsInChildren<BulletScript>())
+        {
+            kiddbullet.sOwner = sOwner;
+        }
     }
 	
 	// Update is called once per frame
@@ -63,7 +68,7 @@ public class BulletScript : MonoBehaviour
         if (Vector3.Distance(transform.position, StartPos) >= MaxDistance)
         {
             //print("Distance dead");
-            Destroy(gameObject);
+            KillBullet();
         }
 
         if (BlowUpWithTime)
@@ -72,7 +77,7 @@ public class BulletScript : MonoBehaviour
             if (TimeToBlowUp <= 0)
             {
                 //print("Time Dead");
-                Destroy(gameObject);
+                KillBullet();
             }
         }
     }
@@ -81,7 +86,7 @@ public class BulletScript : MonoBehaviour
     {
         if (trigger.gameObject.name != sOwner && trigger.gameObject.layer != 5)
         {
-            Destroy(gameObject); 
+            KillBullet();
         }
     }
 
@@ -90,7 +95,13 @@ public class BulletScript : MonoBehaviour
         if (col.gameObject.tag != sOwner && col.gameObject.layer != 0 && BlowUpWithTime)
         {
             //print("Col enter");
-            Destroy(gameObject);
+            KillBullet();
         }
+    }
+
+    void KillBullet()
+    {
+        transform.DetachChildren();
+        Destroy(gameObject); 
     }
 }

@@ -104,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012153658314}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 21.844147, y: 523.8458, z: 2.2118683}
+  m_LocalPosition: {x: -171.69672, y: 390.7273, z: -26.599447}
   m_LocalScale: {x: 7, y: 7, z: 7}
   m_Children:
   - {fileID: 4000010804597678}
@@ -285,7 +285,7 @@ MonoBehaviour:
   MaxDistance: 150
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
-  fSpeed: 250
+  fSpeed: 450
   BlowUpWithTime: 0
   TimeToBlowUp: 0
   fDamage: 1
@@ -303,7 +303,7 @@ MonoBehaviour:
   MaxDistance: 150
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
-  fSpeed: 250
+  fSpeed: 450
   BlowUpWithTime: 0
   TimeToBlowUp: 0
   fDamage: 1
@@ -321,7 +321,7 @@ MonoBehaviour:
   MaxDistance: 150
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
-  fSpeed: 250
+  fSpeed: 450
   BlowUpWithTime: 0
   TimeToBlowUp: 0
   fDamage: 1

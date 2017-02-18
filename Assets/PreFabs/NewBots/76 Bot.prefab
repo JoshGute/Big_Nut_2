@@ -208,7 +208,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1781974129287176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -90.68257, y: 119.6683, z: 28.5}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
   - {fileID: 4112560594991888}
@@ -741,7 +741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sOwner: PLAYER1
   PatternSpawn: {fileID: 1937844651457814}
-  fFireRate: 1
+  fFireRate: 0.85
   BulletsShotPerTick:
   - {fileID: 1000012219236424, guid: aa70a5a0b49cdc147a603dbbdb6b8ec9, type: 2}
   - {fileID: 1000012219236424, guid: aa70a5a0b49cdc147a603dbbdb6b8ec9, type: 2}
@@ -804,7 +804,7 @@ MonoBehaviour:
   sOwner: PLAYER1
   dashTargetPos: {fileID: 4946826263582024}
   DashHitbox: {fileID: 1632291161431860}
-  maxDashes: 2
+  maxDashes: 3
   curDashes: 0
   secDashRegenTime: 2
   DashSpeed: 8

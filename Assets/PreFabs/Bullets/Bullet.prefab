@@ -111,7 +111,7 @@ MonoBehaviour:
   MaxDistance: 400
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
-  fSpeed: 250
+  fSpeed: 400
   BlowUpWithTime: 0
   TimeToBlowUp: 0
   fDamage: 1
