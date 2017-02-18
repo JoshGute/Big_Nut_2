@@ -98,6 +98,8 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     public GameObject gDeathObject;
 
+    public tk2dSprite robotSkin;
+
   private bool Shielding;
     ////Deprecated////
     //[SerializeField]
@@ -330,9 +332,11 @@ public class PlayerControllerVer2 : MonoBehaviour
 
       if (KeyAxisH != 0 || KeyAxisV != 0)
       {
-                float LookDirection = Mathf.Atan2(KeyAxisH, KeyAxisV);
+        float LookDirection = Mathf.Atan2(KeyAxisH, KeyAxisV);
                 Tr.rotation = Quaternion.Euler(0f, 0f, -LookDirection * Mathf.Rad2Deg);
-    }
+                /*Tr.rotation = Quaternion.LookRotation(Tr.right, Tr.up);
+                Tr.LookAt(new Vector3(0f, 0f, LookDirection * Mathf.Rad2Deg));*/
+      }
 
       //Boosting
       if (state.Buttons.A == ButtonState.Pressed && lockBoost == false)
@@ -441,7 +445,7 @@ public class PlayerControllerVer2 : MonoBehaviour
     if (iHealth > 1)
     {
         asNoiseMaker.PlayOneShot(acHitNoise);
-        StartCoroutine(Flash(gameObject.GetComponentInChildren<tk2dSprite>()));
+        StartCoroutine(Flash(robotSkin));
         --iHealth;
       print("player hp" + iHealth);
     }
@@ -456,8 +460,8 @@ public class PlayerControllerVer2 : MonoBehaviour
     private void Explode()
     {
         Instantiate(gDeathObject, gameObject.transform.position, gameObject.transform.rotation);
-        Die(sOwner);
-        Destroy(gameObject);
+        robotSkin.color = Color.black;
+        StartCoroutine(Death());
     }
 
     private IEnumerator Flash(tk2dSprite Skin_)
@@ -468,6 +472,15 @@ public class PlayerControllerVer2 : MonoBehaviour
         Skin_.color = Color.black;
         yield return new WaitForSeconds(.05f);
         Skin_.color = startingColor;
+    }
+
+    private IEnumerator Death()
+    {
+        bDisabled = true;
+        
+        yield return new WaitForSeconds(1.5f);
+        Die(sOwner);
+        Destroy(gameObject);
     }
 
     public void TagRobot(string sOwner_)

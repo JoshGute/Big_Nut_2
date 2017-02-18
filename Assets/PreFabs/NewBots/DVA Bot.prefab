@@ -740,6 +740,7 @@ MonoBehaviour:
   acHitNoise: {fileID: 8300000, guid: b069d49ba6e2c6c419d7c8f0b7e0acf6, type: 3}
   gDeathObject: {fileID: 1415296866567280, guid: 9de7e2c35ba528043bfecb38c3e4b14c,
     type: 2}
+  robotSkin: {fileID: 114711538894137746}
 --- !u!114 &114450921633006048
 MonoBehaviour:
   m_ObjectHideFlags: 1

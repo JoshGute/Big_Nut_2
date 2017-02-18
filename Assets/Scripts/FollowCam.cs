@@ -67,12 +67,12 @@ public class FollowCam : MonoBehaviour
                 if (target.z > -300)
                 {
                     target = new Vector3(target.x, target.y, -300);
-                    transform.position = target;
+                    transform.position = Vector3.Lerp(transform.position, target, 100f);
                 }
 
                 else
                 {
-                    transform.position = target;       
+                    transform.position = Vector3.Lerp(transform.position, target, 100f);
                 }
             }
              
