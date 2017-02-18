@@ -230,7 +230,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1374202348690570}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -877.10925, y: 289.1731, z: -226.30568}
+  m_LocalPosition: {x: -124.89784, y: -151.30185, z: -226.30568}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4068177746355156}
@@ -717,7 +717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 50
+  MaxDistance: 45
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
   fSpeed: 250
@@ -735,7 +735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 50
+  MaxDistance: 45
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
   fSpeed: 250
@@ -753,7 +753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 50
+  MaxDistance: 45
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
   fSpeed: 250
@@ -771,7 +771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 50
+  MaxDistance: 45
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
   fSpeed: 250
@@ -789,7 +789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 50
+  MaxDistance: 45
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
   fSpeed: 250
@@ -807,10 +807,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 25
+  MaxDistance: 100
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
-  fSpeed: 250
+  fSpeed: 400
   BlowUpWithTime: 0
   TimeToBlowUp: 0
   fDamage: 1
@@ -825,7 +825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 50
+  MaxDistance: 45
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
   fSpeed: 250
@@ -843,7 +843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 50
+  MaxDistance: 45
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
   fSpeed: 250

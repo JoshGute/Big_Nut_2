@@ -81,7 +81,6 @@ public class BulletScript : MonoBehaviour
     {
         if (trigger.gameObject.name != sOwner && trigger.gameObject.layer != 5)
         {
-            //print("trigger enter");
             Destroy(gameObject); 
         }
     }
