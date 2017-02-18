@@ -315,7 +315,17 @@ public class PlayerControllerVer2 : MonoBehaviour
       {
           if (rotateAxisH != 0 || rotateAxisV != 0)
           {
-              Dash(rotateAxisH, rotateAxisV);
+              if (curDashes > 0)
+              {
+                  curDashes -= 1;
+                  Dash(rotateAxisH, rotateAxisV);
+              }
+
+              if (curDashes < maxDashes)
+              {
+                  RegenDash = true;
+              }
+              
           }
       }
 
