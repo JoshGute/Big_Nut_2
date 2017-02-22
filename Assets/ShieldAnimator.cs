@@ -1,4 +1,23 @@
-﻿using System.Collections;
+﻿/******************************* Ducks in a Row *********************************
+Author: Linus 'what am i even doing' Chan
+Contributors: --
+Course: GAM450
+Game:   Bolt Blitz
+Date:   02/17/2017
+File:   ShieldAnimator.cs
+
+Description:
+
+This shield animator script updates the look of the shield. 
+
+Current Problems:
+
+Copyright (C) 2017 DigiPen Institute of Technology.
+Reproduction or disclosure of this file or its contents without the prior
+written consent of DigiPen Institute of Technology is prohibited.
+******************************************************************************/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,24 +34,23 @@ public class ShieldAnimator : MonoBehaviour {
     shield = gameObject.GetComponent<ShieldScript>();
 	}
 	
-  //Effects/change size for taking damage 
+  //Effects for taking damage 
   void TakeDamageAnim()
   {
   }
 
-  //Effects/change size for degrading shield
+  //Effects for degrading shield
   void DegradeShieldAnim()
   {
 
   }
 
-  //Effects/change size for regenerating shield
+  //Effects for regenerating shield
   void RegenShieldAnim()
   {
 
   }
 
-  //
   public void UpdateShieldVisualState(float curShieldHealth)
   {
     float shieldhealthpercentage = curShieldHealth / shield.MaxShieldHealth;

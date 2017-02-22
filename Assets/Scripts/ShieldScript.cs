@@ -12,10 +12,6 @@ This shield script will allows players to create a shield around themselves.
 
 Current Problems:
 
-- Regen of shield after broken needed
-- Degrade shield after holding for too long needed
-- Break shield if HP lower than 0 
-
 Copyright (C) 2017 DigiPen Institute of Technology.
 Reproduction or disclosure of this file or its contents without the prior
 written consent of DigiPen Institute of Technology is prohibited.
