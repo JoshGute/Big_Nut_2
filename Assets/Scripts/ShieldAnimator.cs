@@ -55,24 +55,63 @@ public class ShieldAnimator : MonoBehaviour {
   {
     float shieldhealthpercentage = curShieldHealth / shield.MaxShieldHealth;
 
-    transform.localScale = new Vector3(shieldhealthpercentage * 10, shieldhealthpercentage * 10, 5);
+    //transform.localScale = new Vector3(shieldhealthpercentage * 10, shieldhealthpercentage * 10, 5);
 
-    /*may or may not be used
-    if(shieldhealthpercentage >= 0.66)
+    //Full Shield
+    if(shieldhealthpercentage >= 1)
     {
 
     }
-
-    else if(shieldhealthpercentage >= 0.33 && shieldhealthpercentage < 0.66)
+    //90% and higher
+    else if(shieldhealthpercentage <= 0.99 && shieldhealthpercentage >= 0.9)
     {
 
     }
-
-    else if(shieldhealthpercentage >= 0 && shieldhealthpercentage < 0.33)
+    //80% and higher
+    else if(shieldhealthpercentage <= 0.89 && shieldhealthpercentage >= 0.8)
     {
 
     }
-    */
+    //70% and higher
+    else if (shieldhealthpercentage <= 0.79 && shieldhealthpercentage >= 0.7)
+    {
+
+    }
+    //60% and higher
+    else if (shieldhealthpercentage <= 0.69 && shieldhealthpercentage >= 0.6)
+    {
+
+    }
+    //50% and higher
+    else if (shieldhealthpercentage <= 0.59 && shieldhealthpercentage >= 0.5)
+    {
+
+    }
+    //40% and higher
+    else if (shieldhealthpercentage <= 0.49 && shieldhealthpercentage >= 0.4)
+    {
+
+    }
+    //30% and higher
+    else if (shieldhealthpercentage <= 0.39 && shieldhealthpercentage >= 0.3)
+    {
+
+    }
+    //20% and higher
+    else if (shieldhealthpercentage <= 0.29 && shieldhealthpercentage >= 0.2)
+    {
+
+    }
+    //10% and higher
+    else if (shieldhealthpercentage <= 0.19 && shieldhealthpercentage >= 0.1)
+    {
+
+    }
+    //0% and higher
+    else if (shieldhealthpercentage <= 0.09 && shieldhealthpercentage >= 0.01)
+    {
+
+    }
   }
 
 	// Update is called once per frame

@@ -43,15 +43,7 @@ public class FlakGunScript : MonoBehaviour {
 
         if (Vector3.Distance(transform.position, StartPos) >= MaxDistance)
         {
-            for (int j = 0; j < BulletsToSpawn.Length; j++)
-            {
-                GameObject newBullet;
-
-                newBullet = Instantiate(BulletsToSpawn[j].gameObject, transform.position, transform.rotation) as GameObject;
-
-                newBullet.GetComponent<BulletScript>().sOwner = sOwner;
-            }
-            Destroy(gameObject);
+            ExplodeTheFlak();
         }
     }
 
@@ -59,8 +51,21 @@ public class FlakGunScript : MonoBehaviour {
     {
         if (trigger.gameObject.name != sOwner && trigger.gameObject.layer != 5)
         {
-            Destroy(gameObject);
+            ExplodeTheFlak();
         }
+    }
+
+    void ExplodeTheFlak()
+    {
+        for (int j = 0; j < BulletsToSpawn.Length; j++)
+        {
+            GameObject newBullet;
+
+            newBullet = Instantiate(BulletsToSpawn[j].gameObject, transform.position, transform.rotation) as GameObject;
+
+            newBullet.GetComponent<BulletScript>().sOwner = sOwner;
+        }
+        Destroy(gameObject);
     }
 }
 

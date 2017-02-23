@@ -49,6 +49,10 @@ MonoBehaviour:
     dataGUID: 
     managed: 0
     loadable: 0
+  - assetGUID: 4cfedf2d4dd5f7140b1522de65268afb
+    dataGUID: 
+    managed: 0
+    loadable: 0
   fontIndex:
   - assetGUID: 063b15d80dbb4604d890600a64c79cf8
     dataGUID: e7a6b09a73c6b2b4f8060096ddbd3b5e
@@ -2652,6 +2656,331 @@ MonoBehaviour:
     - 1487270377.72394
     - 1487270377.72394
     - 1487271810.55039
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Shield
+    spriteCollectionGUID: f3b6131421713d7469a3d76df8ee4519
+    spriteCollectionDataGUID: eb867170f48a6c14fa8008bb279767d2
+    spriteNames:
+    - Shield_GetHit_Pt1_1/0
+    - Shield_GetHit_Pt1_1/1
+    - Shield_GetHit_Pt1_2/0
+    - Shield_GetHit_Pt1_2/1
+    - Shield_GetHit_Pt1_3/0
+    - Shield_GetHit_Pt1_3/1
+    - Shield_GetHit_Pt1_4/0
+    - Shield_GetHit_Pt1_4/1
+    - Shield_GetHit_Pt1_5/0
+    - Shield_GetHit_Pt1_5/1
+    - Shield_GetHit_Pt1_6/0
+    - Shield_GetHit_Pt1_6/1
+    - Shield_GetHit_Pt1_7/0
+    - Shield_GetHit_Pt1_7/1
+    - Shield_GetHit_Pt1_8/0
+    - Shield_GetHit_Pt1_8/1
+    - Shield_GetHit_Pt1_9/0
+    - Shield_GetHit_Pt1_9/1
+    - Shield_GetHit_Pt1_10/0
+    - Shield_GetHit_Pt1_10/1
+    - Shield_GetHit_Pt2_2/0
+    - Shield_GetHit_Pt2_2/1
+    - Shield_GetHit_Pt2_3/0
+    - Shield_GetHit_Pt2_3/1
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - Shield_GetHit_Pt2_4/0
+    - Shield_GetHit_Pt2_4/1
+    - Shield_GetHit_Pt2_5/0
+    - Shield_GetHit_Pt2_5/1
+    - Shield_GetHit_Pt2_6/0
+    - Shield_GetHit_Pt2_6/1
+    - Shield_GetHit_Pt2_7/0
+    - Shield_GetHit_Pt2_7/1
+    - Shield_TurnOn_Pt2_8/0
+    - Shield_TurnOn_Pt2_8/1
+    - Shield_TurnOn_Pt2_8/2
+    - Shield_GetHit_Pt2_8/0
+    - Shield_GetHit_Pt2_8/1
+    - Shield_GetHit_Pt2_9/0
+    - Shield_GetHit_Pt2_9/1
+    - Shield_TurnOn_Pt1/0
+    - Shield_TurnOn_Pt1/1
+    - Shield_TurnOn_Pt2_1/0
+    - Shield_TurnOn_Pt2_1/1
+    - Shield_TurnOn_Pt2_1/2
+    - Shield_TurnOn_Pt2_2/0
+    - Shield_TurnOn_Pt2_2/1
+    - Shield_TurnOn_Pt2_2/2
+    - Shield_TurnOn_Pt2_3/0
+    - Shield_TurnOn_Pt2_3/1
+    - Shield_TurnOn_Pt2_3/2
+    - Shield_TurnOn_Pt2_4/0
+    - Shield_TurnOn_Pt2_4/1
+    - Shield_TurnOn_Pt2_4/2
+    - Shield_TurnOn_Pt2_5/0
+    - Shield_TurnOn_Pt2_5/1
+    - Shield_TurnOn_Pt2_5/2
+    - Shield_TurnOn_Pt2_6/0
+    - Shield_TurnOn_Pt2_6/1
+    - Shield_TurnOn_Pt2_6/2
+    - Shield_TurnOn_Pt2_7/0
+    - Shield_TurnOn_Pt2_7/1
+    - Shield_TurnOn_Pt2_7/2
+    - Shield_TurnOn_Pt2_9/0
+    - Shield_TurnOn_Pt2_9/1
+    - Shield_TurnOn_Pt2_9/2
+    - Shield_TurnOn_Pt2_10/0
+    - Shield_TurnOn_Pt2_10/1
+    - Shield_TurnOn_Pt2_10/2
+    - ShieldBreak/0
+    - ShieldBreak/1
+    - ShieldBreak/2
+    - ShieldBreak/3
+    - ShieldBreak/4
+    - ShieldBreak/5
+    - ShieldBreak/6
+    spriteTextureGUIDs:
+    - 726b0fc483105be4691f785819cb6f47
+    - 726b0fc483105be4691f785819cb6f47
+    - 714dd46bff20db349b558b7c59a43d99
+    - 714dd46bff20db349b558b7c59a43d99
+    - 1ec541ad42ed08b4d98da5db0e7888a6
+    - 1ec541ad42ed08b4d98da5db0e7888a6
+    - edbfa972492e9ca45ba9ca897e0c339d
+    - edbfa972492e9ca45ba9ca897e0c339d
+    - c020c0ea84d74b942ab558ea4d88ac4a
+    - c020c0ea84d74b942ab558ea4d88ac4a
+    - 18189c5d55c8cb74e861524cf139c8c6
+    - 18189c5d55c8cb74e861524cf139c8c6
+    - cc881d7aa4be4154bbd1eedd9d74d01f
+    - cc881d7aa4be4154bbd1eedd9d74d01f
+    - 0fdb118abf4ac684e9134fad0d01c8a9
+    - 0fdb118abf4ac684e9134fad0d01c8a9
+    - 939fe995fa5a7e7408426a6024170f5c
+    - 939fe995fa5a7e7408426a6024170f5c
+    - a39e6d5cd26b7ec4aa8686f33b81f6cc
+    - a39e6d5cd26b7ec4aa8686f33b81f6cc
+    - 4a4b55acec35f4c4bbcbfd4bd8cff00c
+    - 4a4b55acec35f4c4bbcbfd4bd8cff00c
+    - 2ff7a2c98798db94c9b49bc216a714d8
+    - 2ff7a2c98798db94c9b49bc216a714d8
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 3af475ce8cca0c2459d4229e71c0a3d5
+    - 3af475ce8cca0c2459d4229e71c0a3d5
+    - 19ad56c9063c2ca47bc54a6d6699e0e6
+    - 19ad56c9063c2ca47bc54a6d6699e0e6
+    - bd05b073de350484ba8eed58dc78d2ad
+    - bd05b073de350484ba8eed58dc78d2ad
+    - 8a4d272700c545e4eae82419308c742d
+    - 8a4d272700c545e4eae82419308c742d
+    - 4da9be450faa92c48aae2cdad2616e99
+    - 4da9be450faa92c48aae2cdad2616e99
+    - 4da9be450faa92c48aae2cdad2616e99
+    - 6d89f0e584006e24e9ee2b8d42850c5b
+    - 6d89f0e584006e24e9ee2b8d42850c5b
+    - d4f498dcb4137a8489b1e03a2ea4dee4
+    - d4f498dcb4137a8489b1e03a2ea4dee4
+    - 05769f934d684cb488953ccec860ccf1
+    - 05769f934d684cb488953ccec860ccf1
+    - 886b456e34768494cacbb967eb4de650
+    - 886b456e34768494cacbb967eb4de650
+    - 886b456e34768494cacbb967eb4de650
+    - 088091ba1d15be542a7460fc30cff664
+    - 088091ba1d15be542a7460fc30cff664
+    - 088091ba1d15be542a7460fc30cff664
+    - f33bf887bced6584c85c4f7bae98827d
+    - f33bf887bced6584c85c4f7bae98827d
+    - f33bf887bced6584c85c4f7bae98827d
+    - 0e944e3a35d667541a179ac2f3ba38bc
+    - 0e944e3a35d667541a179ac2f3ba38bc
+    - 0e944e3a35d667541a179ac2f3ba38bc
+    - 8bad74b5264805442999274bae1e361a
+    - 8bad74b5264805442999274bae1e361a
+    - 8bad74b5264805442999274bae1e361a
+    - 821f83ecf9023044db330117ee8e31b8
+    - 821f83ecf9023044db330117ee8e31b8
+    - 821f83ecf9023044db330117ee8e31b8
+    - 94ff23266e2faa740b8c0962b323fe05
+    - 94ff23266e2faa740b8c0962b323fe05
+    - 94ff23266e2faa740b8c0962b323fe05
+    - 50e6a2f16c677064895da7058a838f64
+    - 50e6a2f16c677064895da7058a838f64
+    - 50e6a2f16c677064895da7058a838f64
+    - c38b0127d76acdd43b6aad8b72f63124
+    - c38b0127d76acdd43b6aad8b72f63124
+    - c38b0127d76acdd43b6aad8b72f63124
+    - 9ae49b221bca8b9468b021601c447e2e
+    - 9ae49b221bca8b9468b021601c447e2e
+    - 9ae49b221bca8b9468b021601c447e2e
+    - 9ae49b221bca8b9468b021601c447e2e
+    - 9ae49b221bca8b9468b021601c447e2e
+    - 9ae49b221bca8b9468b021601c447e2e
+    - 9ae49b221bca8b9468b021601c447e2e
+    spriteTextureTimeStamps:
+    - 1487806916.37487
+    - 1487806916.37487
+    - 1487806888.79231
+    - 1487806888.79231
+    - 1487806864.59646
+    - 1487806864.59646
+    - 1487806828.78045
+    - 1487806828.78045
+    - 1487806808.34662
+    - 1487806808.34662
+    - 1487806786.43349
+    - 1487806786.43349
+    - 1487806764.26061
+    - 1487806764.26061
+    - 1487806744.34292
+    - 1487806744.34292
+    - 1487806722.85206
+    - 1487806722.85206
+    - 1487806696.39367
+    - 1487806696.39367
+    - 1487807562.21624
+    - 1487807562.21624
+    - 1487807542.22802
+    - 1487807542.22802
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 1487807523.89499
+    - 1487807523.89499
+    - 1487807506.67097
+    - 1487807506.67097
+    - 1487807488.64983
+    - 1487807488.64983
+    - 1487807473.09583
+    - 1487807473.09583
+    - 1487805660.72585
+    - 1487805660.72585
+    - 1487805660.72585
+    - 1487807458.03137
+    - 1487807458.03137
+    - 1487807431.85013
+    - 1487807431.85013
+    - 1487805510.41468
+    - 1487805510.41468
+    - 1487805794.37882
+    - 1487805794.37882
+    - 1487805794.37882
+    - 1487805781.37434
+    - 1487805781.37434
+    - 1487805781.37434
+    - 1487805763.98388
+    - 1487805763.98388
+    - 1487805763.98388
+    - 1487805746.46575
+    - 1487805746.46575
+    - 1487805746.46575
+    - 1487805731.85973
+    - 1487805731.85973
+    - 1487805731.85973
+    - 1487805716.11842
+    - 1487805716.11842
+    - 1487805716.11842
+    - 1487805682.72771
+    - 1487805682.72771
+    - 1487805682.72771
+    - 1487805639.15303
+    - 1487805639.15303
+    - 1487805639.15303
+    - 1487805621.29319
+    - 1487805621.29319
+    - 1487805621.29319
+    - 1487808434.71655
+    - 1487808434.71655
+    - 1487808434.71655
+    - 1487808434.71655
+    - 1487808434.71655
+    - 1487808434.71655
+    - 1487808434.71655
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

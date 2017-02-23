@@ -1,10 +1,10 @@
 ﻿/*******************************  Ducks in a Row  *********************************
 Author: Linus 'Fills in the Blanks' Chan
-Contributors: Glen Aro
+Contributors: Glen Aro, Josh Gutenberg
 Course: GAM450
 Game:   Bolt Blitz
 Date:   1/18/2017
-File:   ImprovedDashScript.cs
+File:   PlayerControllerVer2.cs
 
 Description:
 
@@ -33,6 +33,9 @@ public class PlayerControllerVer2 : MonoBehaviour
 
   //Used to store an instance of the dash position to move towards
   private Vector3 curDashTargetPos;
+
+  //Stores The distance between us and the target
+  private float DashDistance;
 
   public GameObject DashHitbox;
 
@@ -98,6 +101,8 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     public GameObject gDeathObject;
 
+    public tk2dSprite robotSkin;
+
   private bool Shielding;
     ////Deprecated////
     //[SerializeField]
@@ -117,6 +122,8 @@ public class PlayerControllerVer2 : MonoBehaviour
     ShootScript = GetComponent<GunScript>();
 
     aController = GetComponent<AnimationControllerVer2>();
+
+    DashDistance = Vector3.Distance(Tr.position, dashTargetPos.position);
   }
 
   //Update is called once per frame.
@@ -154,7 +161,7 @@ public class PlayerControllerVer2 : MonoBehaviour
         {
           curDashes -= 1;
 
-          Dash();
+          //Dash();
 
           if (curDashes < maxDashes)
           {
@@ -289,7 +296,7 @@ public class PlayerControllerVer2 : MonoBehaviour
       Vector3 ShipDirection = new Vector3(0f, 1f, 0f);
 
       //Dashing
-      if (prevState.Triggers.Left > 0.1f && state.Triggers.Left == 0)
+      /*if (prevState.Triggers.Left > 0.1f && state.Triggers.Left == 0)
       {
         if(curDashes > 0)
         {
@@ -301,6 +308,25 @@ public class PlayerControllerVer2 : MonoBehaviour
         {
           RegenDash = true;
         }
+      }*/
+
+      //NewDash
+      if (prevState.ThumbSticks.Right.X == 0 && prevState.ThumbSticks.Right.Y == 0)
+      {
+          if (rotateAxisH != 0 || rotateAxisV != 0)
+          {
+              if (curDashes > 0)
+              {
+                  curDashes -= 1;
+                  Dash(rotateAxisH, rotateAxisV);
+              }
+
+              if (curDashes < maxDashes)
+              {
+                  RegenDash = true;
+              }
+              
+          }
       }
 
       //Shooting
@@ -328,46 +354,48 @@ public class PlayerControllerVer2 : MonoBehaviour
         Shield.GetComponent<ShieldScript>().TurnOffShield();
       }
 
-      if (KeyAxisH < 0)
+      if (KeyAxisH != 0 || KeyAxisV != 0)
       {
-        Tr.Rotate(new Vector3(0f, 0f, 1f), TurnSpeed);
-      }
-      else if (KeyAxisH > 0)
-      {
-        Tr.Rotate(new Vector3(0f, 0f, 1f), -TurnSpeed);
+        float LookDirection = Mathf.Atan2(KeyAxisH, KeyAxisV);
+                Tr.rotation = Quaternion.Euler(0f, 0f, -LookDirection * Mathf.Rad2Deg);
+                /*Tr.rotation = Quaternion.LookRotation(Tr.right, Tr.up);
+                Tr.LookAt(new Vector3(0f, 0f, LookDirection * Mathf.Rad2Deg));*/
       }
 
       //Boosting
-      if (prevState.Buttons.A == ButtonState.Pressed && lockBoost == false)
+     // if (state.Buttons.A == ButtonState.Pressed && lockBoost == false)
+      if (state.Triggers.Left > 0.1f && lockBoost == false)
       {
-        //Thruster Animation
-        aController.ChangeThrusterAnimation(1);
+          //Thruster Animation
+          aController.ChangeThrusterAnimation(1);
 
-        //Body Animation
-        if (curRotateState == RotateState.UpRight && prevRotateState != RotateState.UpRight)
-        {
-          //Rolling to Reverse
-          aController.ChangeBodyAnimation(1);
-          prevRotateState = RotateState.UpRight;
-        }
+          //Body Animation
+          if (curRotateState == RotateState.UpRight && prevRotateState != RotateState.UpRight)
+          {
+              //Rolling to Reverse
+              aController.ChangeBodyAnimation(1);
+              prevRotateState = RotateState.UpRight;
+          }
 
-        else if (curRotateState == RotateState.Reverse && prevRotateState != RotateState.Reverse)
-        {
-          //Rolling back to UpRight
-          aController.ChangeBodyAnimation(2);
-          prevRotateState = RotateState.Reverse;
-        }
+          else if (curRotateState == RotateState.Reverse && prevRotateState != RotateState.Reverse)
+          {
+              //Rolling back to UpRight
+              aController.ChangeBodyAnimation(2);
+              prevRotateState = RotateState.Reverse;
+          }
 
-        //Function
-        Rb.AddRelativeForce(ShipDirection * Speed);
+          //Function
+          Rb.AddRelativeForce(ShipDirection * Speed);
       }
 
-      /*
-      else if (prevState.Buttons.A == ButtonState.Released)
+
+
+      //else if (prevState.Buttons.A == ButtonState.Pressed && state.Buttons.A == ButtonState.Released)
+      else if (prevState.Triggers.Left > 0.1 && state.Triggers.Left <= 0.1)
       {
         aController.ChangeThrusterAnimation(2);
       }
-      */
+      
 
       if (Rb.velocity.magnitude > maxSpeed)
       {
@@ -380,7 +408,9 @@ public class PlayerControllerVer2 : MonoBehaviour
   /* Dash Function
    * Change the 'y' pos of the dash target's translation if you want to change the distance traveled.
   */
-  void Dash()
+
+  //void Dash()
+  void Dash(float INfAxisH, float INfAxisV)
   {
     //Instant Dash
     /*
@@ -388,9 +418,14 @@ public class PlayerControllerVer2 : MonoBehaviour
     */
 
     //Updating the position to dash towards;
-    curDashTargetPos = dashTargetPos.position;
 
-    isDashing = true;
+    //////////////////////////////////////////////
+    //OLD LINUS DASH LOGIC
+    //KEPT FOR POSTERITY
+    /*curDashTargetPos = dashTargetPos.position;
+
+    isDashing = true;*/
+    ///////////////////////////////////////////////////
 
     ////Deprecated////
     //Imperfect, but ultimately not needed because I realized I could just parent a target object the desired
@@ -402,6 +437,28 @@ public class PlayerControllerVer2 : MonoBehaviour
     Tr.position = DashPos;
     */
     ////Deprecated////
+
+      //NEW DASH LOGIC
+      Vector3 NormalizedAngle = Vector3.Normalize(new Vector3(rotateAxisH, rotateAxisV, 0));
+
+      RaycastHit SmackIt;
+      //print("H " + INfAxisH + " V " + INfAxisV);
+
+      if (Physics.Raycast(transform.position, NormalizedAngle, out SmackIt, DashDistance))
+      {
+          curDashTargetPos = SmackIt.point;
+          isDashing = true;
+      }
+      else
+      {
+          //Physics.Raycast(transform.position, new Vector3(INfAxisH, INfAxisV, 0), 45);
+          Vector3 FinalDestination = new Vector3(Tr.position.x + (NormalizedAngle.x * (DashDistance)),
+                                             Tr.position.y + (NormalizedAngle.y * (DashDistance)), 0);
+          //print(FinalDestination);
+          curDashTargetPos = FinalDestination;
+          isDashing = true;
+      }
+      ////
   }
 
   public void FireTheLasers()
@@ -444,7 +501,7 @@ public class PlayerControllerVer2 : MonoBehaviour
     if (iHealth > 1)
     {
         asNoiseMaker.PlayOneShot(acHitNoise);
-        StartCoroutine(Flash(gameObject.GetComponentInChildren<tk2dSprite>()));
+        StartCoroutine(Flash(robotSkin));
         --iHealth;
       print("player hp" + iHealth);
     }
@@ -459,8 +516,8 @@ public class PlayerControllerVer2 : MonoBehaviour
     private void Explode()
     {
         Instantiate(gDeathObject, gameObject.transform.position, gameObject.transform.rotation);
-        Die(sOwner);
-        Destroy(gameObject);
+        robotSkin.color = Color.black;
+        StartCoroutine(Death());
     }
 
     private IEnumerator Flash(tk2dSprite Skin_)
@@ -471,6 +528,15 @@ public class PlayerControllerVer2 : MonoBehaviour
         Skin_.color = Color.black;
         yield return new WaitForSeconds(.05f);
         Skin_.color = startingColor;
+    }
+
+    private IEnumerator Death()
+    {
+        bDisabled = true;
+        
+        yield return new WaitForSeconds(1.5f);
+        Die(sOwner);
+        Destroy(gameObject);
     }
 
     public void TagRobot(string sOwner_)
