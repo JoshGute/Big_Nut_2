@@ -723,14 +723,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sOwner: PLAYER1
   dashTargetPos: {fileID: 4248486792095264}
+  DashDistance: 80
   DashHitbox: {fileID: 1170359216635112}
   maxDashes: 4
   curDashes: 0
   secDashRegenTime: 2
-  DashSpeed: 8
+  DashSpeed: 16
   TurnSpeed: 8
-  maxSpeed: 160
-  Speed: 1000
+  maxSpeed: 420
+  Speed: 1500
   aController: {fileID: 114111899545833076}
   Shield: {fileID: 1613834187410458}
   playerIndex: 0

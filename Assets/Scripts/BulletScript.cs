@@ -84,9 +84,17 @@ public class BulletScript : MonoBehaviour
 
     void OnTriggerEnter(Collider trigger)
     {
-        if (trigger.gameObject.name != sOwner && trigger.gameObject.layer != 5)
+        if (trigger.gameObject.layer != 5)
         {
-            KillBullet();
+            if(trigger.gameObject.layer == 10 && trigger.gameObject.GetComponent<PlayerControllerVer2>().sOwner == sOwner)
+            {
+                return;
+            }
+
+            else
+            {
+                KillBullet();
+            }
         }
     }
 

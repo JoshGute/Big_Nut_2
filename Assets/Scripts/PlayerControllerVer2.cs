@@ -35,7 +35,7 @@ public class PlayerControllerVer2 : MonoBehaviour
   private Vector3 curDashTargetPos;
 
   //Stores The distance between us and the target
-  private float DashDistance;
+  public float DashDistance = 200;
 
   public GameObject DashHitbox;
 
@@ -123,7 +123,7 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     aController = GetComponent<AnimationControllerVer2>();
 
-    DashDistance = Vector3.Distance(Tr.position, dashTargetPos.position);
+    //DashDistance = Vector3.Distance(Tr.position, dashTargetPos.position);
   }
 
   //Update is called once per frame.

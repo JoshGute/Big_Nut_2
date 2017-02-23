@@ -56,7 +56,7 @@ public class TeamManager : MonoBehaviour
 
         bool bSpawned = false;
         int randNum = Random.Range(0, sSpawnPoints.Length);
-        int botRandNum = Random.Range(0, gTeam.Length);
+        int botRandNum = 0;/*Random.Range(0, gTeam.Length);*/
 
         if (bPrioritySpawn)
         {
