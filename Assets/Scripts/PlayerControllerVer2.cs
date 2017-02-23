@@ -35,7 +35,7 @@ public class PlayerControllerVer2 : MonoBehaviour
   private Vector3 curDashTargetPos;
 
   //Stores The distance between us and the target
-  private float DashDistance;
+  public float DashDistance = 200;
 
   public GameObject DashHitbox;
 
@@ -123,7 +123,7 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     aController = GetComponent<AnimationControllerVer2>();
 
-    DashDistance = Vector3.Distance(Tr.position, dashTargetPos.position);
+    //DashDistance = Vector3.Distance(Tr.position, dashTargetPos.position);
   }
 
   //Update is called once per frame.
@@ -384,14 +384,14 @@ public class PlayerControllerVer2 : MonoBehaviour
               prevRotateState = RotateState.Reverse;
           }
 
-          //Function
-          Rb.AddRelativeForce(ShipDirection * Speed);
+                //Function
+          Rb.AddRelativeForce(ShipDirection * Speed * state.Triggers.Left);
       }
 
 
 
       //else if (prevState.Buttons.A == ButtonState.Pressed && state.Buttons.A == ButtonState.Released)
-      else if (prevState.Triggers.Left > 0.1 && state.Triggers.Left <= 0.1)
+      else if (prevState.Triggers.Left > 0.1 && state.Triggers.Left < 0.1)
       {
         aController.ChangeThrusterAnimation(2);
       }
@@ -412,33 +412,34 @@ public class PlayerControllerVer2 : MonoBehaviour
   //void Dash()
   void Dash(float INfAxisH, float INfAxisV)
   {
-    //Instant Dash
-    /*
-    Tr.position = dashTargetPos.position;
-    */
+        //Instant Dash
+        /*
+        Tr.position = dashTargetPos.position;
+        */
 
-    //Updating the position to dash towards;
+        //Updating the position to dash towards;
 
-    //////////////////////////////////////////////
-    //OLD LINUS DASH LOGIC
-    //KEPT FOR POSTERITY
-    /*curDashTargetPos = dashTargetPos.position;
+        //////////////////////////////////////////////
+        //OLD LINUS DASH LOGIC
+        //KEPT FOR POSTERITY
+        /*curDashTargetPos = dashTargetPos.position;
 
-    isDashing = true;*/
-    ///////////////////////////////////////////////////
+        isDashing = true;*/
+        ///////////////////////////////////////////////////
 
-    ////Deprecated////
-    //Imperfect, but ultimately not needed because I realized I could just parent a target object the desired
-    // dashdistance away and use that as the target pos to dash to.
-    /*
-    Vector3 DashPos = new Vector3(Mathf.Pow(((Tr.position.x + DashDistance) - Tr.position.x),2), Mathf.Pow(((Tr.position.y + DashDistance) - Tr.position.y),2), 
-      Tr.position.z);
+        ////Deprecated////
+        //Imperfect, but ultimately not needed because I realized I could just parent a target object the desired
+        // dashdistance away and use that as the target pos to dash to.
+        /*
+        Vector3 DashPos = new Vector3(Mathf.Pow(((Tr.position.x + DashDistance) - Tr.position.x),2), Mathf.Pow(((Tr.position.y + DashDistance) - Tr.position.y),2), 
+          Tr.position.z);
 
-    Tr.position = DashPos;
-    */
-    ////Deprecated////
+        Tr.position = DashPos;
+        */
+        ////Deprecated////
 
-      //NEW DASH LOGIC
+        //NEW DASH LOGIC
+        Rb.velocity = Vector3.zero;
       Vector3 NormalizedAngle = Vector3.Normalize(new Vector3(rotateAxisH, rotateAxisV, 0));
 
       RaycastHit SmackIt;
@@ -545,10 +546,14 @@ public class PlayerControllerVer2 : MonoBehaviour
         if (sOwner == "PLAYER1")
         {
             playerIndex = PlayerIndex.One;
+            GetComponent<GunScript>().sOwner = "PLAYER1";
+            GetComponentInChildren<DashScript>().sOwner = "PLAYER1";
         }
         else
         {
             playerIndex = PlayerIndex.Two;
+            GetComponent<GunScript>().sOwner = "PLAYER2";
+            GetComponentInChildren<DashScript>().sOwner = "PLAYER2";
         }
     }
 }
