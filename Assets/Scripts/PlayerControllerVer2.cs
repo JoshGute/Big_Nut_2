@@ -546,10 +546,14 @@ public class PlayerControllerVer2 : MonoBehaviour
         if (sOwner == "PLAYER1")
         {
             playerIndex = PlayerIndex.One;
+            GetComponent<GunScript>().sOwner = "PLAYER1";
+            GetComponentInChildren<DashScript>().sOwner = "PLAYER1";
         }
         else
         {
             playerIndex = PlayerIndex.Two;
+            GetComponent<GunScript>().sOwner = "PLAYER2";
+            GetComponentInChildren<DashScript>().sOwner = "PLAYER2";
         }
     }
 }

@@ -870,7 +870,7 @@ MonoBehaviour:
   secDashRegenTime: 2
   DashSpeed: 16
   TurnSpeed: 8
-  maxSpeed: 420
+  maxSpeed: 300
   Speed: 1500
   aController: {fileID: 114900817012096540}
   Shield: {fileID: 1531540229936308}
