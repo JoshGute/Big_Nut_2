@@ -21,6 +21,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using XInputDotNetPure;
+using UnityEngine.SceneManagement;
 
 
 public class RobotSelectLogic : MonoBehaviour
@@ -61,6 +62,11 @@ public class RobotSelectLogic : MonoBehaviour
     public Sprite HunkBot;
     public Sprite S76Bot;
 
+    public GameObject Me;
+    public GameObject RobotHolder;
+
+    public GameObject StartText;
+
 
     
 
@@ -69,9 +75,10 @@ public class RobotSelectLogic : MonoBehaviour
     {
         SelectorTransform = GetComponent<RectTransform>();
         CanMove = true;
-        MoveTimer = 20;
+        MoveTimer = 15;
 
         spriteRen = GetComponent<SpriteRenderer>();
+        
     }
 
     // Update is called once per frame
@@ -105,7 +112,7 @@ public class RobotSelectLogic : MonoBehaviour
             --MoveTimer;
             if(MoveTimer <= 0)
             {
-                MoveTimer = 20;
+                MoveTimer = 15;
                 CanMove = true;
             }
         }
@@ -114,29 +121,139 @@ public class RobotSelectLogic : MonoBehaviour
         Debug.DrawRay(transform.position, backRay, Color.black);
         RaycastHit hit;
 
+        if(RobotHolder.GetComponent<PlayerHolder>().Player1Robot != 0 && RobotHolder.GetComponent<PlayerHolder>().Player2Robot != 0)
+        {
+            StartText.GetComponent<Text>().enabled = true;
+            if(State.Buttons.Start == ButtonState.Pressed && PrevState.Buttons.Start == ButtonState.Released)
+            {
+                SceneManager.LoadScene(1);
+            }
+        }
+
         if (Physics.Raycast(transform.position, backRay, out hit))
         {
             if (hit.collider.gameObject.name == "DVaBot")
             {
-                //Debug.Log("DVa logging on");
-                //SelectedRobot.GetComponent<SpriteRenderer>().color = Color.red;
                 SelectedRobot.GetComponent<SpriteRenderer>().sprite = DVaBot;
                 SelectedRobot.GetComponent<Transform>().localScale = new Vector3(100, 100, 0);
+                //Note: make this functionality in a seperate script that checks for on trigger enter that only the bots have on them --matty
+               // Robot1.GetComponent<Animator>().enabled = true;
+                //Robot2.GetComponent<Animator>().enabled = false;
+                //Robot3.GetComponent<Animator>().enabled = false;
+                if(State.Buttons.A == ButtonState.Pressed && PrevState.Buttons.A == ButtonState.Released)
+                {
+                    bDisabled = true;
+                    if(PlayerNumber == 1)
+                    {
+                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 1;
+                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
+                    }
+                    if (PlayerNumber == 2)
+                    {
+                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 1;
+                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
+                    }
+
+
+                }
+                else if (State.Buttons.B == ButtonState.Pressed && PrevState.Buttons.B == ButtonState.Released)
+                {
+                    bDisabled = false;
+                    if (PlayerNumber == 1)
+                    {
+                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 0;
+                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
+                    }
+                    if (PlayerNumber == 2)
+                    {
+                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 0;
+                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
+                    }
+
+                }
+            }
+
+            if (hit.collider.gameObject.name == "HunkBot")
+            {
+                SelectedRobot.GetComponent<SpriteRenderer>().sprite = HunkBot;
+                SelectedRobot.GetComponent<Transform>().localScale = new Vector3(100, 100, 0);
+               // Robot1.GetComponent<Animator>().enabled = false;
+               // Robot2.GetComponent<Animator>().enabled = true;
+               // Robot3.GetComponent<Animator>().enabled = false;
+
+                if (State.Buttons.A == ButtonState.Pressed && PrevState.Buttons.A == ButtonState.Released)
+                {
+                    bDisabled = true;
+                    if (PlayerNumber == 1)
+                    {
+                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 2;
+                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
+                    }
+                    if (PlayerNumber == 2)
+                    {
+                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 2;
+                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
+                    }
+
+
+                }
+                else if (State.Buttons.B == ButtonState.Pressed && PrevState.Buttons.B == ButtonState.Released)
+                {
+                    bDisabled = false;
+                    if (PlayerNumber == 1)
+                    {
+                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 0;
+                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
+                    }
+                    if (PlayerNumber == 2)
+                    {
+                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 0;
+                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
+                    }
+
+                }
             }
             if (hit.collider.gameObject.name == "S76Bot")
             {
-                //Debug.Log("We're all soldiers now");
-                //SelectedRobot.GetComponent<SpriteRenderer>().color = Color.blue;
                 SelectedRobot.GetComponent<SpriteRenderer>().sprite = S76Bot;
                 SelectedRobot.GetComponent<Transform>().localScale = new Vector3(100, 100, 0);
+               // Robot1.GetComponent<Animator>().enabled = false;
+               // Robot2.GetComponent<Animator>().enabled = false;
+              //  Robot3.GetComponent<Animator>().enabled = true;
+
+                if (State.Buttons.A == ButtonState.Pressed && PrevState.Buttons.A == ButtonState.Released)
+                {
+                    bDisabled = true;
+                    if (PlayerNumber == 1)
+                    {
+                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 3;
+                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
+                    }
+                    if (PlayerNumber == 2)
+                    {
+                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 3;
+                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
+                    }
+
+
+                }
+                else if (State.Buttons.B == ButtonState.Pressed && PrevState.Buttons.B == ButtonState.Released)
+                {
+                    bDisabled = false;
+                    if (PlayerNumber == 1)
+                    {
+                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 0;
+                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
+                    }
+                    if (PlayerNumber == 2)
+                    {
+                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 0;
+                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
+                    }
+
+                }
             }
-            if (hit.collider.gameObject.name == "HunkBot")
-            {
-                //Debug.Log("sup");
-                //SelectedRobot.GetComponent<SpriteRenderer>().color = Color.yellow;
-                SelectedRobot.GetComponent<SpriteRenderer>().sprite = HunkBot;
-                SelectedRobot.GetComponent<Transform>().localScale = new Vector3(100, 100, 0);
-            }
+            
         }
     }
 }
