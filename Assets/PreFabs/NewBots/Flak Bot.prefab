@@ -709,6 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8cead872ad49048ac219c86e312427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShieldAnimator: {fileID: 0}
 --- !u!114 &114478136064740532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -762,7 +763,6 @@ MonoBehaviour:
   ShieldRegenPerXSec: 1
   DegradeValue: 1
   ShieldDegradePerXSec: 0.5
-  curShieldHealth: 0
   ShieldBrokenTime: 5
   ShieldHeldTime: 2.5
   Player: {fileID: 1605760969047222}

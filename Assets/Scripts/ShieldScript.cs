@@ -41,7 +41,8 @@ public class ShieldScript : MonoBehaviour {
   private float ShieldDegradePerXSec = 1;
   float shielddegradetimer;
 
-  public float curShieldHealth;
+  private float prevShieldHealth;
+  private float curShieldHealth;
 
   bool ShieldState = false;
   bool ShieldBroken = false;
@@ -63,16 +64,17 @@ public class ShieldScript : MonoBehaviour {
   [SerializeField]
   private GameObject Player;
 
-  private ShieldAnimator shieldAnimator;
+  private ShieldController shieldController;
 
 	// Use this for initialization
 	void Start ()
   {
-    shieldAnimator = gameObject.GetComponent<ShieldAnimator>();
+    shieldController = gameObject.GetComponent<ShieldController>();
     shielddegradetimer = 0;
     shieldregentimer = 0;
     curShieldHealth = MaxShieldHealth;
-	}
+    prevShieldHealth = curShieldHealth;
+  }
 	
 	// Update is called once per frame
 	void Update ()
@@ -180,7 +182,7 @@ public class ShieldScript : MonoBehaviour {
       //Reset timer to 0 and add health
       if(shieldregentimer >= ShieldRegenPerXSec)
       {
-        shieldAnimator.UpdateShieldVisualState(curShieldHealth);
+        shieldController.UpdateShieldVisuals("Regen", prevShieldHealth, curShieldHealth);
 
         shieldregentimer = 0;
         curShieldHealth += 1;
@@ -211,9 +213,12 @@ public class ShieldScript : MonoBehaviour {
   //Damage the shield
   void TakeDamage(int damage)
   {
+    //Updating info for animation purposes.
+    prevShieldHealth = curShieldHealth;
+
     curShieldHealth -= damage;
 
-    shieldAnimator.UpdateShieldVisualState(curShieldHealth);
+    shieldController.UpdateShieldVisuals("TakeDamage",prevShieldHealth, curShieldHealth);
 
     if (curShieldHealth <= 0)
     {

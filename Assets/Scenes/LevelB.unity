@@ -753,7 +753,18 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23867389327849002, guid: a65b1341bd892114983996afa00f5475,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8e6adfb78d26a344288b49987ef6fd51, type: 2}
+    - target: {fileID: 23867389327849002, guid: a65b1341bd892114983996afa00f5475,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114663291106601384, guid: a65b1341bd892114983996afa00f5475, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a65b1341bd892114983996afa00f5475, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &581363250 stripped
@@ -772,8 +783,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5e54113e5604435b8ae87c7754f2725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  library: {fileID: 11400000, guid: 18a39674a9b14f54b97497254e83b349, type: 2}
-  defaultClipId: 0
+  library: {fileID: 114493117572797826, guid: 4cfedf2d4dd5f7140b1522de65268afb, type: 2}
+  defaultClipId: 1
   playAutomatically: 0
 --- !u!114 &581363252
 MonoBehaviour:
@@ -786,10 +797,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fac570381f34f647b768dc5a5aa1364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collection: {fileID: 0}
+  collection: {fileID: 114802642085629786, guid: eb867170f48a6c14fa8008bb279767d2,
+    type: 2}
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
-  _spriteId: 0
+  _spriteId: 18
   boxCollider2D: {fileID: 0}
   polygonCollider2D: []
   edgeCollider2D: []
