@@ -208,6 +208,10 @@ public class ShieldScript : MonoBehaviour {
       Destroy(trigger.gameObject);
       TakeDamage(1);
     }
+        if (trigger.tag == "Dash")
+        {
+            BreakShield();
+        }
   }
 
   //Damage the shield
@@ -230,5 +234,6 @@ public class ShieldScript : MonoBehaviour {
   void BreakShield()
   {
     ShieldBroken = true;
+        TurnOffShield();
   }
 }
