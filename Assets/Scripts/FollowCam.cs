@@ -30,6 +30,7 @@ public class FollowCam : MonoBehaviour
     public Vector3 offset = new Vector3(0f, 0f, -400);
     //screen shake variables
     public float ShakeAmount = 0.5f;
+    public GameObject ShortBorder;
     private bool bShake;
 
     void Start()
@@ -59,7 +60,19 @@ public class FollowCam : MonoBehaviour
             if (gPlayer1 && gPlayer2)
             {
                 target = (gPlayer1.transform.position + gPlayer2.transform.position) * 0.5f;
-                targetZoom = target.magnitude;
+                target.z = offset.z;
+
+                transform.position = Vector3.Lerp(transform.position, target, 100f);
+
+                Vector3 NoZTarget = new Vector3(target.x, target.y, 0);
+
+                print(Vector3.Normalize(NoZTarget));
+
+                //ShortBorder.transform.position += Vector3.Normalize(NoZTarget) * 2;
+
+                ShortBorder.transform.position = Vector3.Lerp(transform.position, NoZTarget, 100f);
+                
+                /*targetZoom = target.magnitude;
 
                 target = new Vector3(target.x, target.y, targetZoom);
                 target += offset;
@@ -73,7 +86,14 @@ public class FollowCam : MonoBehaviour
                 else
                 {
                     transform.position = Vector3.Lerp(transform.position, target, 100f);
-                }
+
+                    //Vector3 billy = new Vector3(transform.position.x);
+
+                    Vector3 NoZPosition = new Vector3(transform.position.x, transform.position.y, 0);
+                    Vector3 NoZTarget = new Vector3(target.x, target.y, 0);
+
+                    ShortBorder.transform.position += Vector3.Normalize(NoZTarget);
+                }*/
             }
              
             else
