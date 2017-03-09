@@ -311,7 +311,7 @@ public class PlayerControllerVer2 : MonoBehaviour
       }*/
 
       //NewDash
-      if (prevState.ThumbSticks.Right.X == 0 && prevState.ThumbSticks.Right.Y == 0)
+      if (prevState.ThumbSticks.Right.X == 0 && prevState.ThumbSticks.Right.Y == 0 && !Shielding)
       {
           if (rotateAxisH != 0 || rotateAxisV != 0)
           {
@@ -338,8 +338,8 @@ public class PlayerControllerVer2 : MonoBehaviour
       //Shielding
       if (prevState.Buttons.RightShoulder == ButtonState.Pressed)
       {
-        //lockBoost = true;
-
+                //lockBoost = true;
+                Shielding = true;
         lockShoot = true;
 
         Shield.GetComponent<ShieldScript>().TurnOnShield();
@@ -347,8 +347,8 @@ public class PlayerControllerVer2 : MonoBehaviour
 
       else if(prevState.Buttons.RightShoulder == ButtonState.Released)
       {
-        //lockBoost = false;
-
+                //lockBoost = false;
+                Shielding = false;
         lockShoot = false;
 
         Shield.GetComponent<ShieldScript>().TurnOffShield();

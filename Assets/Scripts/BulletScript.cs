@@ -86,9 +86,12 @@ public class BulletScript : MonoBehaviour
     {
         if (trigger.gameObject.layer != 5)
         {
-            if(trigger.gameObject.layer == 10 && trigger.gameObject.GetComponent<PlayerControllerVer2>().sOwner == sOwner)
+            if(trigger.gameObject.layer == 10 && trigger.gameObject.GetComponent<PlayerControllerVer2>())
             {
-                return;
+                if (trigger.gameObject.GetComponent<PlayerControllerVer2>().sOwner == sOwner)
+                {
+                    return;
+                }
             }
 
             else
