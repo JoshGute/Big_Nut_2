@@ -284,7 +284,7 @@ public class PlayerControllerVer2 : MonoBehaviour
       }
     }
 
-    else if (bController)
+    else if (bController && !bDisabled)
     {
       prevState = state;
       state = GamePad.GetState(playerIndex);
@@ -534,8 +534,9 @@ public class PlayerControllerVer2 : MonoBehaviour
     private IEnumerator Death()
     {
         bDisabled = true;
-        
-        yield return new WaitForSeconds(1.5f);
+        Time.timeScale = 0.5f;
+        yield return new WaitForSeconds(1f);
+        Time.timeScale = 1f;
         Die(sOwner);
         Destroy(gameObject);
     }
