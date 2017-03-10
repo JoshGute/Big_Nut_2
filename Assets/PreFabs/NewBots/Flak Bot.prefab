@@ -789,6 +789,7 @@ MonoBehaviour:
   ReloadNoise: {fileID: 8300000, guid: 5e6e6d26b356f9d47900c2540475a1ac, type: 3}
   MissNoise: {fileID: 0}
   RobotAudioSource: {fileID: 82343087417755106}
+  Reticle: {fileID: 114840328425875314}
 --- !u!114 &114839523892313396
 MonoBehaviour:
   m_ObjectHideFlags: 1

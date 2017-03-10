@@ -366,6 +366,7 @@ public class PlayerControllerVer2 : MonoBehaviour
      // if (state.Buttons.A == ButtonState.Pressed && lockBoost == false)
       if (state.Triggers.Left > 0.1f && lockBoost == false)
       {
+                GamePad.SetVibration(playerIndex, 0.1f, 0.1f);
           //Thruster Animation
           aController.ChangeThrusterAnimation(1);
 
@@ -394,7 +395,8 @@ public class PlayerControllerVer2 : MonoBehaviour
       else if (prevState.Triggers.Left > 0.1 && state.Triggers.Left < 0.1)
       {
         aController.ChangeThrusterAnimation(2);
-      }
+                GamePad.SetVibration(playerIndex, 0 , 0);
+            }
       
 
       if (Rb.velocity.magnitude > maxSpeed)
@@ -467,6 +469,7 @@ public class PlayerControllerVer2 : MonoBehaviour
     if(lockShoot == false)
     {
       ShootScript.Shoot();
+            StartCoroutine(Vibrate(0.2f, 0.3f));
     }
   }
 
@@ -502,37 +505,46 @@ public class PlayerControllerVer2 : MonoBehaviour
     if (iHealth > 1)
     {
         asNoiseMaker.PlayOneShot(acHitNoise);
-        StartCoroutine(Flash(robotSkin));
+        StartCoroutine(Flash(robotSkin, Color.gray));
+            StartCoroutine(Vibrate(0.5f, 0.5f));
         --iHealth;
-      print("player hp" + iHealth);
+      //print("player hp" + iHealth);
     }
 
     else if (iHealth == 1)
     {      
       --iHealth;
-      print("Dead");
+      //print("Dead");
       Explode();
     }
   }
     private void Explode()
     {
         Instantiate(gDeathObject, gameObject.transform.position, gameObject.transform.rotation);
-        robotSkin.color = Color.black;
+        StartCoroutine(Vibrate(1, 1));
         StartCoroutine(Death());
     }
 
-    private IEnumerator Flash(tk2dSprite Skin_)
+    private IEnumerator Flash(tk2dSprite Skin_, Vector4 Color_)
     {
         Vector4 startingColor = new Vector4();
         startingColor = Skin_.color;
 
-        Skin_.color = Color.black;
-        yield return new WaitForSeconds(.05f);
+        Skin_.color = Color_;
+        yield return new WaitForSeconds(0.1f);
         Skin_.color = startingColor;
+    }
+
+    private IEnumerator Vibrate(float Intensity_, float Time_)
+    {
+        GamePad.SetVibration(playerIndex, Intensity_, Intensity_);
+        yield return new WaitForSeconds(Time_);
+        GamePad.SetVibration(playerIndex, 0, 0);
     }
 
     private IEnumerator Death()
     {
+        robotSkin.color = Color.black;
         bDisabled = true;
         Time.timeScale = 0.5f;
         yield return new WaitForSeconds(1f);

@@ -41,6 +41,8 @@ public class GunScript : MonoBehaviour
 
     public AudioSource RobotAudioSource;
 
+    public tk2dSprite Reticle;
+
     void Update()
     {
         if (bShot)
@@ -51,6 +53,7 @@ public class GunScript : MonoBehaviour
             {
                 bShot = false;
                 RobotAudioSource.PlayOneShot(ReloadNoise);
+                Reticle.color = Color.white;
                 fTimeSinceLastShot = 0;
             }
         }
@@ -62,6 +65,7 @@ public class GunScript : MonoBehaviour
         {
             StartCoroutine(ShootingGun());
             bShot = true;
+            Reticle.color = Color.clear;
         }
     }
 
