@@ -18,6 +18,7 @@ written consent of DigiPen Institute of Technology is prohibited.
 ******************************************************************************/
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GunScript : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class GunScript : MonoBehaviour
     public AudioSource RobotAudioSource;
 
     public tk2dSprite Reticle;
+    public RectTransform GunBar;
 
     void Update()
     {
@@ -53,10 +55,12 @@ public class GunScript : MonoBehaviour
             {
                 bShot = false;
                 RobotAudioSource.PlayOneShot(ReloadNoise);
-                Reticle.color = Color.white;
+                //Reticle.color = Color.white;
                 fTimeSinceLastShot = 0;
             }
         }
+        Reticle.color = new Vector4(1, 1, 1, (fTimeSinceLastShot / fFireRate));
+        print(fTimeSinceLastShot / fFireRate);
     }
 
     public virtual void Shoot()
@@ -65,7 +69,7 @@ public class GunScript : MonoBehaviour
         {
             StartCoroutine(ShootingGun());
             bShot = true;
-            Reticle.color = Color.clear;
+            //Reticle.color = Color.clear;
         }
     }
 
