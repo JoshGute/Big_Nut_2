@@ -49,6 +49,8 @@ public class ShieldScript : MonoBehaviour {
 
   bool ShieldDegrading = false;
 
+  bool ShieldHeld = false;
+
   //How long shield stays broken for before recharging
   [SerializeField]
   private float ShieldBrokenTime = 5;
@@ -158,12 +160,21 @@ public class ShieldScript : MonoBehaviour {
 
       //turn on shield now that player's collider is out of the picture.
       UpdateShieldState();
+
+      //Shield graphics code
+      if (ShieldHeld == false)
+      {
+        shieldController.UpdateShieldVisuals("TurnOn", prevShieldHealth, curShieldHealth);
+        ShieldHeld = true;
+      }
     }
   }
 
   public void TurnOffShield()
   {
     ShieldState = false;
+
+    ShieldHeld = false;
 
     //turn off shield first
     UpdateShieldState();
@@ -182,7 +193,7 @@ public class ShieldScript : MonoBehaviour {
       //Reset timer to 0 and add health
       if(shieldregentimer >= ShieldRegenPerXSec)
       {
-        shieldController.UpdateShieldVisuals("Regen", prevShieldHealth, curShieldHealth);
+        shieldController.UpdateShieldVisuals("StayOn", prevShieldHealth, curShieldHealth);
 
         shieldregentimer = 0;
         curShieldHealth += 1;

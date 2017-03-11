@@ -53,6 +53,10 @@ MonoBehaviour:
     dataGUID: 
     managed: 0
     loadable: 0
+  - assetGUID: aa6f488add07bc847a48cbbbb9b74c4f
+    dataGUID: 
+    managed: 0
+    loadable: 0
   fontIndex:
   - assetGUID: 063b15d80dbb4604d890600a64c79cf8
     dataGUID: e7a6b09a73c6b2b4f8060096ddbd3b5e
@@ -2694,21 +2698,21 @@ MonoBehaviour:
     - Shield_Idle_4HP/0
     - Shield_Idle_5HP/0
     - Shield_Idle_6HP/0
-    - Shield_Idle_6HP/1
-    - Shield_Idle_6HP/2
-    - Shield_Idle_6HP/3
-    - Shield_Idle_6HP/4
-    - Shield_Idle_6HP/5
-    - Shield_Idle_6HP/6
-    - Shield_Idle_6HP/7
-    - Shield_Idle_6HP/8
-    - Shield_Idle_6HP/9
-    - Shield_Idle_6HP/10
-    - Shield_Idle_6HP/11
-    - Shield_Idle_6HP/12
-    - Shield_Idle_6HP/13
-    - Shield_Idle_6HP/14
-    - Shield_Idle_6HP/15
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     - Shield_Idle_7HP/0
     - Shield_Idle_8HP/0
     - Shield_Idle_9HP/0
@@ -2800,21 +2804,21 @@ MonoBehaviour:
     - a0cb7e8cb846de84dbcf4a72254e4d11
     - 261def910fcb60d4f8af852fdab4e035
     - 2536f7863105b9740aeac3a2cb7b5c8d
-    - 2536f7863105b9740aeac3a2cb7b5c8d
-    - 2536f7863105b9740aeac3a2cb7b5c8d
-    - 2536f7863105b9740aeac3a2cb7b5c8d
-    - 2536f7863105b9740aeac3a2cb7b5c8d
-    - 2536f7863105b9740aeac3a2cb7b5c8d
-    - 2536f7863105b9740aeac3a2cb7b5c8d
-    - 2536f7863105b9740aeac3a2cb7b5c8d
-    - 2536f7863105b9740aeac3a2cb7b5c8d
-    - 2536f7863105b9740aeac3a2cb7b5c8d
-    - 2536f7863105b9740aeac3a2cb7b5c8d
-    - 2536f7863105b9740aeac3a2cb7b5c8d
-    - 2536f7863105b9740aeac3a2cb7b5c8d
-    - 2536f7863105b9740aeac3a2cb7b5c8d
-    - 2536f7863105b9740aeac3a2cb7b5c8d
-    - 2536f7863105b9740aeac3a2cb7b5c8d
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     - b1827115a428ce5459cca47b8aa1cd92
     - 36de8c8e38dcbc2439bb5c20b6723f5c
     - d82c41b67f287ff409e07307f7e435fa
@@ -2905,22 +2909,22 @@ MonoBehaviour:
     - 1487950906.10025
     - 1487950885.29084
     - 1487950866.70804
-    - 1487950840.84811
-    - 1487950840.84811
-    - 1487950840.84811
-    - 1487950840.84811
-    - 1487950840.84811
-    - 1487950840.84811
-    - 1487950840.84811
-    - 1487950840.84811
-    - 1487950840.84811
-    - 1487950840.84811
-    - 1487950840.84811
-    - 1487950840.84811
-    - 1487950840.84811
-    - 1487950840.84811
-    - 1487950840.84811
-    - 1487950840.84811
+    - 1489176076.09555
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 1487950820.5782
     - 1487950798.46582
     - 1487950774.17579
@@ -2981,6 +2985,40 @@ MonoBehaviour:
     - 1487808434.71655
     - 1487808434.71655
     - 1487808434.71655
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Bullets
+    spriteCollectionGUID: 20c4830453b867e41ac15a5ea80418f1
+    spriteCollectionDataGUID: bfb06f5bf5d8161409a45156322a73cd
+    spriteNames:
+    - Bullet_V1/0
+    - Bullet_V2/0
+    - Bullet_V3/0
+    - Bullet_V4/0
+    - Bullet_V5/0
+    - Bullet_V6/0
+    - Bullet_V7/0
+    - Bullet_V8/0
+    spriteTextureGUIDs:
+    - 518d729b1ef666d499c7b9cc19817ecf
+    - d1237dd17a0f222409c570f4ad6f11f0
+    - 38f2fe3cbf6fc91418c1591b8a88ac67
+    - 72f74b02285d5134f8281e2933aa8064
+    - 74be81d7fa2d7244ebf311b6038047af
+    - 2a86ad3f1e37f4048a5e4f2286122c75
+    - 05517391fd911d54aa664786ff4e0ac7
+    - 5d3b413d7d1a82d4caf038525c1ed900
+    spriteTextureTimeStamps:
+    - 1489151593.80457
+    - 1489151610.52091
+    - 1489151627.60815
+    - 1489151643.82394
+    - 1489151668.67022
+    - 1489151686.51927
+    - 1489151702.71681
+    - 1489151719.10647
     managedSpriteCollection: 0
     loadable: 0
     assetName: 
