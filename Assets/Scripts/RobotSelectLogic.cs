@@ -67,7 +67,16 @@ public class RobotSelectLogic : MonoBehaviour
 
     public GameObject StartText;
 
+    private IEnumerator coroutine;
+    private IEnumerator coroutineB;
 
+    private IEnumerable vibrationCoroutine;
+
+    private bool IsHovered;
+
+    public AudioSource SFX;
+    public AudioSource Select;
+    public AudioSource Deselect;
     
 
     // Use this for initialization
@@ -78,7 +87,13 @@ public class RobotSelectLogic : MonoBehaviour
         MoveTimer = 15;
 
         spriteRen = GetComponent<SpriteRenderer>();
-        
+
+        coroutine = StopVibration(1.0f);
+        coroutineB = StopBVibration(1.0f);
+
+        vibrationCoroutine = Vibration(1.0f);
+
+        IsHovered = false;
     }
 
     // Update is called once per frame
@@ -98,10 +113,12 @@ public class RobotSelectLogic : MonoBehaviour
                 CanMove = false;
                 if (KeyAxisH > 0 && SelectorTransform.localPosition.x < 140)
                 {
+                    SFX.Play();
                     SelectorTransform.localPosition += new Vector3(70, 0, 0);
                 }
                 if (KeyAxisH < 0 && SelectorTransform.localPosition.x > 0)
                 {
+                    SFX.Play();
                     SelectorTransform.localPosition += new Vector3(-70, 0, 0);
                 }
             }
@@ -136,22 +153,30 @@ public class RobotSelectLogic : MonoBehaviour
             {
                 SelectedRobot.GetComponent<SpriteRenderer>().sprite = DVaBot;
                 SelectedRobot.GetComponent<Transform>().localScale = new Vector3(100, 100, 0);
-                //Note: make this functionality in a seperate script that checks for on trigger enter that only the bots have on them --matty
-               // Robot1.GetComponent<Animator>().enabled = true;
-                //Robot2.GetComponent<Animator>().enabled = false;
-                //Robot3.GetComponent<Animator>().enabled = false;
+                
+                
+
                 if(State.Buttons.A == ButtonState.Pressed && PrevState.Buttons.A == ButtonState.Released)
                 {
                     bDisabled = true;
                     if(PlayerNumber == 1)
                     {
-                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 1;
-                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
+                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 0;
+
+                        Robot1.GetComponent<Animator>().enabled = true;
+
+                        //  GamePad.SetVibration(playerIndex, 0.5f, 0.5f);
+                        // StartCoroutine(coroutine);
+                        //  StartCoroutine(vibrationCoroutine);
                     }
                     if (PlayerNumber == 2)
                     {
-                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 1;
-                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
+                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 0;
+
+                        Robot1.GetComponent<MenuAnimations>().PlayAnimaion();
+
+                        //  GamePad.SetVibration(playerIndex, 0.5f, 0.5f);
+                        // StartCoroutine(coroutine);
                     }
 
 
@@ -161,13 +186,21 @@ public class RobotSelectLogic : MonoBehaviour
                     bDisabled = false;
                     if (PlayerNumber == 1)
                     {
-                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 0;
-                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
+                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = -1;
+
+                        Robot1.GetComponent<MenuAnimations>().StopAnimation();
+                        // GamePad.SetVibration(playerIndex, 0.1f, 0.1f);
+                        //  StartCoroutine(coroutineB);
+
+
                     }
                     if (PlayerNumber == 2)
                     {
-                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 0;
-                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
+                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = -1;
+
+                        Robot1.GetComponent<MenuAnimations>().StopAnimation();
+                        // GamePad.SetVibration(playerIndex, 0.2f, 0.2f);
+                        //StartCoroutine(coroutineB);
                     }
 
                 }
@@ -177,22 +210,23 @@ public class RobotSelectLogic : MonoBehaviour
             {
                 SelectedRobot.GetComponent<SpriteRenderer>().sprite = HunkBot;
                 SelectedRobot.GetComponent<Transform>().localScale = new Vector3(100, 100, 0);
-               // Robot1.GetComponent<Animator>().enabled = false;
-               // Robot2.GetComponent<Animator>().enabled = true;
-               // Robot3.GetComponent<Animator>().enabled = false;
 
                 if (State.Buttons.A == ButtonState.Pressed && PrevState.Buttons.A == ButtonState.Released)
                 {
                     bDisabled = true;
                     if (PlayerNumber == 1)
                     {
-                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 2;
-                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
+                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 1;
+
+                        Robot2.GetComponent<MenuAnimations>().PlayAnimaion();
+                        // Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
                     }
                     if (PlayerNumber == 2)
                     {
-                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 2;
-                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
+                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 1;
+
+                        Robot2.GetComponent<MenuAnimations>().PlayAnimaion();
+                        // Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
                     }
 
 
@@ -202,13 +236,17 @@ public class RobotSelectLogic : MonoBehaviour
                     bDisabled = false;
                     if (PlayerNumber == 1)
                     {
-                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 0;
-                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
+                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = -1;
+
+                        Robot2.GetComponent<MenuAnimations>().StopAnimation();
+                        //  Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
                     }
                     if (PlayerNumber == 2)
                     {
-                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 0;
-                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
+                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = -1;
+
+                        Robot2.GetComponent<MenuAnimations>().StopAnimation();
+                        //  Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
                     }
 
                 }
@@ -217,22 +255,24 @@ public class RobotSelectLogic : MonoBehaviour
             {
                 SelectedRobot.GetComponent<SpriteRenderer>().sprite = S76Bot;
                 SelectedRobot.GetComponent<Transform>().localScale = new Vector3(100, 100, 0);
-               // Robot1.GetComponent<Animator>().enabled = false;
-               // Robot2.GetComponent<Animator>().enabled = false;
-              //  Robot3.GetComponent<Animator>().enabled = true;
+                
 
                 if (State.Buttons.A == ButtonState.Pressed && PrevState.Buttons.A == ButtonState.Released)
                 {
                     bDisabled = true;
                     if (PlayerNumber == 1)
                     {
-                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 3;
-                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
+                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 2;
+
+                        Robot3.GetComponent<MenuAnimations>().PlayAnimaion();
+                        // Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
                     }
                     if (PlayerNumber == 2)
                     {
-                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 3;
-                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
+                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 2;
+
+                        Robot3.GetComponent<MenuAnimations>().PlayAnimaion();
+                        // Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
                     }
 
 
@@ -242,18 +282,49 @@ public class RobotSelectLogic : MonoBehaviour
                     bDisabled = false;
                     if (PlayerNumber == 1)
                     {
-                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 0;
-                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
+                        RobotHolder.GetComponent<PlayerHolder>().Player1Robot = -1;
+
+                        Robot3.GetComponent<MenuAnimations>().StopAnimation();
+                        //  Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
                     }
                     if (PlayerNumber == 2)
                     {
-                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 0;
-                        Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
+                        RobotHolder.GetComponent<PlayerHolder>().Player2Robot = -1;
+
+                        Robot3.GetComponent<MenuAnimations>().StopAnimation();
+                        //   Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
                     }
 
                 }
             }
             
         }
+    }
+
+    private IEnumerator StopVibration(float waitTime)
+    {
+        for (float t = 0; t < 1; t += Time.deltaTime)
+        {
+            yield return new WaitForSeconds(0.2f);
+            GamePad.SetVibration(playerIndex, 0f, 0f);
+        }
+        
+    }
+
+    private IEnumerator StopBVibration(float time)
+    {
+        
+        for (float t = 0; t < 1; t += Time.deltaTime)
+        {
+            yield return new WaitForSeconds(0.3f);
+            GamePad.SetVibration(playerIndex, 0f, 0f);
+        }
+    }
+
+    private IEnumerable Vibration(float stopTime)
+    {
+        //enumerable.GetEnumerator()
+        yield return new WaitForSeconds(0.2f);
+        GamePad.SetVibration(playerIndex, 0f, 0f);
     }
 }
