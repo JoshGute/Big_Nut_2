@@ -42,6 +42,8 @@ GameObject:
   - component: {fileID: 23711794735344762}
   - component: {fileID: 114233420889263412}
   - component: {fileID: 114126422006906126}
+  - component: {fileID: 114113209006414446}
+  - component: {fileID: 114624481870262142}
   m_Layer: 10
   m_Name: Shield
   m_TagString: Untagged
@@ -82,7 +84,7 @@ GameObject:
   - component: {fileID: 114478121308090700}
   m_Layer: 10
   m_Name: DashHitBox
-  m_TagString: Untagged
+  m_TagString: Dash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -441,7 +443,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e6bdd47982de88f479c056cb9f3a0867, type: 2}
+  - {fileID: 2100000, guid: 8e6adfb78d26a344288b49987ef6fd51, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -503,7 +505,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1515745877040758}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!33 &33184126078637680
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -660,6 +662,20 @@ MonoBehaviour:
   library: {fileID: 114646993250706376, guid: ee2cf934fd5c4874b937aef5f5618d4f, type: 2}
   defaultClipId: 0
   playAutomatically: 0
+--- !u!114 &114113209006414446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1515745877040758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e54113e5604435b8ae87c7754f2725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  library: {fileID: 114493117572797826, guid: 4cfedf2d4dd5f7140b1522de65268afb, type: 2}
+  defaultClipId: 1
+  playAutomatically: 0
 --- !u!114 &114126422006906126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -753,6 +769,7 @@ MonoBehaviour:
   ReloadNoise: {fileID: 8300000, guid: 5e6e6d26b356f9d47900c2540475a1ac, type: 3}
   MissNoise: {fileID: 0}
   RobotAudioSource: {fileID: 82226324160008860}
+  Reticle: {fileID: 114924092723338248}
 --- !u!114 &114478121308090700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -836,6 +853,30 @@ MonoBehaviour:
   library: {fileID: 114798619121003584, guid: 4ab3d0704e717e04db42b309642094a6, type: 2}
   defaultClipId: 3
   playAutomatically: 0
+--- !u!114 &114624481870262142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1515745877040758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fac570381f34f647b768dc5a5aa1364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collection: {fileID: 114802642085629786, guid: eb867170f48a6c14fa8008bb279767d2,
+    type: 2}
+  _color: {r: 1, g: 1, b: 1, a: 1}
+  _scale: {x: 1, y: 1, z: 1}
+  _spriteId: 18
+  boxCollider2D: {fileID: 0}
+  polygonCollider2D: []
+  edgeCollider2D: []
+  boxCollider: {fileID: 0}
+  meshCollider: {fileID: 0}
+  meshColliderPositions: []
+  meshColliderMesh: {fileID: 0}
+  renderLayer: 0
 --- !u!114 &114924092723338248
 MonoBehaviour:
   m_ObjectHideFlags: 1
