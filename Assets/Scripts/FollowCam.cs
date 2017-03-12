@@ -31,11 +31,13 @@ public class FollowCam : MonoBehaviour
     //screen shake variables
     public float ShakeAmount = 0.5f;
     public GameObject ShortBorder;
+    public float OldTargetDistance;
     private bool bShake;
 
     void Start()
     {
         bShake = false;
+        transform.position = offset;
     }
 
     public void GetTarget(GameObject gPlayer_, int iPlayer_)
@@ -59,19 +61,33 @@ public class FollowCam : MonoBehaviour
         {
             if (gPlayer1 && gPlayer2)
             {
-                target = (gPlayer1.transform.position + gPlayer2.transform.position) * 0.5f;
-                target.z = offset.z;
+                float NewTargetDistance = Vector3.Distance(gPlayer1.transform.position,
+                                                           gPlayer2.transform.position);
 
-                transform.position = Vector3.Lerp(transform.position, target, 100f);
+                target = (gPlayer1.transform.position + gPlayer2.transform.position) * 0.5f;
+                target.z = transform.position.z;
 
                 Vector3 NoZTarget = new Vector3(target.x, target.y, 0);
 
-                print(Vector3.Normalize(NoZTarget));
+                print("New " + NewTargetDistance + " Old " + OldTargetDistance);
 
-                //ShortBorder.transform.position += Vector3.Normalize(NoZTarget) * 2;
+                if(NewTargetDistance > (OldTargetDistance + 1) && transform.position.z < (offset.z - 150))
+                {
+                    print("Bigger");
+                    target.z -= 5;
+
+                }
+                else if(NewTargetDistance < (OldTargetDistance - 1) && transform.position.z < (offset.z + 400))
+                {
+                    print("Smaller");
+                    target.z += 5;
+                }
+
+                transform.position = Vector3.Lerp(transform.position, target, 100f);
 
                 ShortBorder.transform.position = Vector3.Lerp(transform.position, NoZTarget, 100f);
-                
+
+                OldTargetDistance = NewTargetDistance;
                 /*targetZoom = target.magnitude;
 
                 target = new Vector3(target.x, target.y, targetZoom);
