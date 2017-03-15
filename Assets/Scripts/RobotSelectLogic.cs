@@ -67,11 +67,6 @@ public class RobotSelectLogic : MonoBehaviour
 
     public GameObject StartText;
 
-    private IEnumerator coroutine;
-    private IEnumerator coroutineB;
-
-    private IEnumerable vibrationCoroutine;
-
     private bool IsHovered;
 
     public AudioSource SFX;
@@ -87,11 +82,6 @@ public class RobotSelectLogic : MonoBehaviour
         MoveTimer = 15;
 
         spriteRen = GetComponent<SpriteRenderer>();
-
-        coroutine = StopVibration(1.0f);
-        coroutineB = StopBVibration(1.0f);
-
-        vibrationCoroutine = Vibration(1.0f);
 
         IsHovered = false;
     }
@@ -165,9 +155,7 @@ public class RobotSelectLogic : MonoBehaviour
 
                         Robot1.GetComponent<Animator>().enabled = true;
 
-                        //  GamePad.SetVibration(playerIndex, 0.5f, 0.5f);
-                        // StartCoroutine(coroutine);
-                        //  StartCoroutine(vibrationCoroutine);
+                        StartCoroutine(Vibrate(0.2f, 0.5f));
                     }
                     if (PlayerNumber == 2)
                     {
@@ -175,8 +163,7 @@ public class RobotSelectLogic : MonoBehaviour
 
                         Robot1.GetComponent<MenuAnimations>().PlayAnimaion();
 
-                        //  GamePad.SetVibration(playerIndex, 0.5f, 0.5f);
-                        // StartCoroutine(coroutine);
+                        StartCoroutine(Vibrate(0.2f, 0.5f));
                     }
 
 
@@ -189,8 +176,7 @@ public class RobotSelectLogic : MonoBehaviour
                         RobotHolder.GetComponent<PlayerHolder>().Player1Robot = -1;
 
                         Robot1.GetComponent<MenuAnimations>().StopAnimation();
-                        // GamePad.SetVibration(playerIndex, 0.1f, 0.1f);
-                        //  StartCoroutine(coroutineB);
+                        StartCoroutine(Vibrate(0.1f, 0.5f));
 
 
                     }
@@ -199,8 +185,7 @@ public class RobotSelectLogic : MonoBehaviour
                         RobotHolder.GetComponent<PlayerHolder>().Player2Robot = -1;
 
                         Robot1.GetComponent<MenuAnimations>().StopAnimation();
-                        // GamePad.SetVibration(playerIndex, 0.2f, 0.2f);
-                        //StartCoroutine(coroutineB);
+                        StartCoroutine(Vibrate(0.1f, 0.5f));
                     }
 
                 }
@@ -219,6 +204,9 @@ public class RobotSelectLogic : MonoBehaviour
                         RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 1;
 
                         Robot2.GetComponent<MenuAnimations>().PlayAnimaion();
+
+                        StartCoroutine(Vibrate(0.2f, 0.5f));
+
                         // Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
                     }
                     if (PlayerNumber == 2)
@@ -226,6 +214,9 @@ public class RobotSelectLogic : MonoBehaviour
                         RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 1;
 
                         Robot2.GetComponent<MenuAnimations>().PlayAnimaion();
+
+                        StartCoroutine(Vibrate(0.2f, 0.5f));
+
                         // Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
                     }
 
@@ -239,6 +230,9 @@ public class RobotSelectLogic : MonoBehaviour
                         RobotHolder.GetComponent<PlayerHolder>().Player1Robot = -1;
 
                         Robot2.GetComponent<MenuAnimations>().StopAnimation();
+
+                        StartCoroutine(Vibrate(0.1f, 0.5f));
+
                         //  Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
                     }
                     if (PlayerNumber == 2)
@@ -246,6 +240,9 @@ public class RobotSelectLogic : MonoBehaviour
                         RobotHolder.GetComponent<PlayerHolder>().Player2Robot = -1;
 
                         Robot2.GetComponent<MenuAnimations>().StopAnimation();
+
+                        StartCoroutine(Vibrate(0.1f, 0.5f));
+
                         //  Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
                     }
 
@@ -265,6 +262,9 @@ public class RobotSelectLogic : MonoBehaviour
                         RobotHolder.GetComponent<PlayerHolder>().Player1Robot = 2;
 
                         Robot3.GetComponent<MenuAnimations>().PlayAnimaion();
+
+                        StartCoroutine(Vibrate(0.2f, 0.5f));
+
                         // Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
                     }
                     if (PlayerNumber == 2)
@@ -272,6 +272,9 @@ public class RobotSelectLogic : MonoBehaviour
                         RobotHolder.GetComponent<PlayerHolder>().Player2Robot = 2;
 
                         Robot3.GetComponent<MenuAnimations>().PlayAnimaion();
+
+                        StartCoroutine(Vibrate(0.2f, 0.5f));
+
                         // Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
                     }
 
@@ -285,6 +288,9 @@ public class RobotSelectLogic : MonoBehaviour
                         RobotHolder.GetComponent<PlayerHolder>().Player1Robot = -1;
 
                         Robot3.GetComponent<MenuAnimations>().StopAnimation();
+
+                        StartCoroutine(Vibrate(0.1f, 0.5f));
+
                         //  Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player1Robot);
                     }
                     if (PlayerNumber == 2)
@@ -292,6 +298,9 @@ public class RobotSelectLogic : MonoBehaviour
                         RobotHolder.GetComponent<PlayerHolder>().Player2Robot = -1;
 
                         Robot3.GetComponent<MenuAnimations>().StopAnimation();
+
+                        StartCoroutine(Vibrate(0.1f, 0.5f));
+
                         //   Debug.Log(RobotHolder.GetComponent<PlayerHolder>().Player2Robot);
                     }
 
@@ -301,30 +310,10 @@ public class RobotSelectLogic : MonoBehaviour
         }
     }
 
-    private IEnumerator StopVibration(float waitTime)
+    private IEnumerator Vibrate(float Intensity_, float Time_)
     {
-        for (float t = 0; t < 1; t += Time.deltaTime)
-        {
-            yield return new WaitForSeconds(0.2f);
-            GamePad.SetVibration(playerIndex, 0f, 0f);
-        }
-        
-    }
-
-    private IEnumerator StopBVibration(float time)
-    {
-        
-        for (float t = 0; t < 1; t += Time.deltaTime)
-        {
-            yield return new WaitForSeconds(0.3f);
-            GamePad.SetVibration(playerIndex, 0f, 0f);
-        }
-    }
-
-    private IEnumerable Vibration(float stopTime)
-    {
-        //enumerable.GetEnumerator()
-        yield return new WaitForSeconds(0.2f);
-        GamePad.SetVibration(playerIndex, 0f, 0f);
+        GamePad.SetVibration(playerIndex, Intensity_, Intensity_);
+        yield return new WaitForSeconds(Time_);
+        GamePad.SetVibration(playerIndex, 0, 0);
     }
 }
