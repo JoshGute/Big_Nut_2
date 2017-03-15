@@ -42,8 +42,10 @@ public class ShieldController : MonoBehaviour {
   private tk2dSpriteAnimationClip TurnOnPt2;
   private tk2dSpriteAnimationClip StayOn;
 
-  private bool AmTakingDamage = false;
-  private bool HaveTurnedOn = false;
+  private bool AmTakingDamagePt1 = false;
+  private bool AmTakingDamagePt2 = false;
+  private bool HaveTurnedOnPt1 = false;
+  private bool HaveTurnedOnPt2 = false;
   private bool AmStayingOn = false;
 
   // Use this for initialization
@@ -52,12 +54,6 @@ public class ShieldController : MonoBehaviour {
     curShieldSize = transform.localScale;
     shield = gameObject.GetComponent<ShieldScript>();
 	}
-
-  // Update is called once per frame
-  void Update()
-  {
-
-  }
 
   //Action is what is happening to the shield, State is whether we want pt1 or pt2 of animation, shieldHPstate is the health
   tk2dSpriteAnimationClip FindAnimClip(string Action, string State, float shieldHPstate)
@@ -298,16 +294,33 @@ public class ShieldController : MonoBehaviour {
       }
     }
 
-    else
-    {
-      return null;
-    }
-
     return animclip;
+  }
+
+  // Update is called once per frame
+  void Update()
+  {
   }
 
   void AnimCompleteDelegate(tk2dSpriteAnimator animator, tk2dSpriteAnimationClip animclip)
   {
+    if(AmTakingDamagePt1 == true)
+    {
+      AmTakingDamagePt1 = false;
+
+      ShieldAnimator.Play(TakeDamagePt2);
+
+      AmTakingDamagePt2 = true;
+    }
+
+    if(AmTakingDamagePt2 == true)
+    {
+      AmTakingDamagePt2 = false;
+
+      ShieldAnimator.Play(StayOn);
+
+      AmStayingOn = true;
+    }
   }
 
   //Effects for taking damage 
@@ -326,35 +339,38 @@ public class ShieldController : MonoBehaviour {
   {
     if(Action == "TakeDamage")
     {
+      AmTakingDamagePt1 = true;
+
       ShieldAnimator.Play(FindAnimClip("TakeDamage", "Pt1", prevShieldHealth));
+      //ShieldAnimator.Play(FindAnimClip("TakeDamage", "Pt2", curShieldHealth));
 
-      AnimCompleteDelegate(ShieldAnimator, FindAnimClip("TakeDamage", "Pt2", curShieldHealth));
-
-      ShieldAnimator.AnimationCompleted = AnimCompleteDelegate;
-
-      AmTakingDamage = true;
+      //AnimCompleteDelegate(ShieldAnimator, FindAnimClip("TakeDamage", "Pt2", curShieldHealth));
+      //ShieldAnimator.AnimationCompleted = AnimCompleteDelegate;
     }
 
     else if(Action == "TurnOn")
     {
-      ShieldAnimator.Play(FindAnimClip("TurnOn", "Pt1", prevShieldHealth));
+      HaveTurnedOnPt1 = true;
 
+      ShieldAnimator.Play(FindAnimClip("TurnOn", "Pt1", prevShieldHealth));
+      ShieldAnimator.Play(FindAnimClip("TurnOn", "Pt2", curShieldHealth));
+
+      /*
       AnimCompleteDelegate(ShieldAnimator, FindAnimClip("TurnOn", "Pt2", curShieldHealth));
 
       ShieldAnimator.AnimationCompleted = AnimCompleteDelegate;
-
-      HaveTurnedOn = true;
+      */
     }
 
     else if(Action == "StayOn")
     {
       ShieldAnimator.Play(FindAnimClip("StayOn", "Pt1", prevShieldHealth));
 
+      /*
       AnimCompleteDelegate(ShieldAnimator, FindAnimClip("StayOn", "Pt2", curShieldHealth));
 
       ShieldAnimator.AnimationCompleted = AnimCompleteDelegate;
-
-      AmStayingOn = true;
+      */
     }
   }
 

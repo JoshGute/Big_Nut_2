@@ -256,8 +256,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1515745877040758}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 24, y: 24, z: 5}
   m_Children: []
   m_Father: {fileID: 4180538277546522}
   m_RootOrder: 2
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8cead872ad49048ac219c86e312427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShieldAnimator: {fileID: 0}
+  ShieldAnimator: {fileID: 114113209006414446}
 --- !u!114 &114215026616284560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -770,6 +770,7 @@ MonoBehaviour:
   MissNoise: {fileID: 0}
   RobotAudioSource: {fileID: 82226324160008860}
   Reticle: {fileID: 114924092723338248}
+  GunBar: {fileID: 0}
 --- !u!114 &114478121308090700
 MonoBehaviour:
   m_ObjectHideFlags: 1

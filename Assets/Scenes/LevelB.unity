@@ -500,6 +500,7 @@ MonoBehaviour:
   gPlayer2: {fileID: 0}
   offset: {x: 0, y: 0, z: -400}
   ShakeAmount: 0.5
+  ShortBorder: {fileID: 0}
 --- !u!1001 &303792706
 Prefab:
   m_ObjectHideFlags: 0
@@ -1108,7 +1109,9 @@ MonoBehaviour:
   cCamera: {fileID: 165626829}
   hHUD: {fileID: 1288968746}
   gTeam:
-  - {fileID: 1327912576161012, guid: f12c13d15403b604e8a797cfdb3283af, type: 2}
+  - {fileID: 1851812481687626, guid: a65b1341bd892114983996afa00f5475, type: 2}
+  - {fileID: 1781974129287176, guid: 4112796f4cf90a041979235ca220e79b, type: 2}
+  - {fileID: 1605760969047222, guid: 7e9de8d6570b3134db7c25af93e9a394, type: 2}
   sSpawnPoints:
   - {fileID: 1741414560}
   - {fileID: 303792707}
