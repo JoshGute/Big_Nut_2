@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlakGunScript : MonoBehaviour {
+public class FlakGunScript : BulletScript {
 
-    public float MaxDistance;
+    //public float MaxDistance;
     //Change the y value only. 1.0 = 90 degress facing top of screen.
-    public Vector3 Direction = new Vector3(0, 0, 0);
-    private Vector3 StartPos;
+    //public Vector3 Direction = new Vector3(0, 0, 0);
+    private Vector3 StartPos2;
 
-    public string sOwner;
-    public float fSpeed = 10.0f;
-    private Rigidbody rb;
+    //public string sOwner;
+    //public float fSpeed = 10.0f;
+    private Rigidbody rb2;
 
     public GameObject[] BulletsToSpawn;
     public float AnglePerBullet;
 
+    /*
     [SerializeField]
     private float fDamage;
 
@@ -26,22 +27,22 @@ public class FlakGunScript : MonoBehaviour {
             return fDamage;
         }
     }
-
+    */
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb2 = GetComponent<Rigidbody>();
         if (Direction.y == 0)
         {
             Direction = transform.forward;
         }
-        StartPos = transform.position;
+        StartPos2 = transform.position;
     }
 
     void Update()
     {
-        rb.velocity = Direction * fSpeed;
+        rb2.velocity = Direction * fSpeed;
 
-        if (Vector3.Distance(transform.position, StartPos) >= MaxDistance)
+        if (Vector3.Distance(transform.position, StartPos2) >= MaxDistance)
         {
             ExplodeTheFlak();
         }
@@ -49,9 +50,20 @@ public class FlakGunScript : MonoBehaviour {
 
     void OnTriggerEnter(Collider trigger)
     {
-        if (trigger.gameObject.name != sOwner && trigger.gameObject.layer != 5)
+        if (trigger.gameObject.layer != 5)
         {
-            ExplodeTheFlak();
+            if (trigger.gameObject.layer == 10 && trigger.gameObject.GetComponent<PlayerControllerVer2>())
+            {
+                if (trigger.gameObject.GetComponent<PlayerControllerVer2>().sOwner == sOwner)
+                {
+                    return;
+                }
+            }
+
+            else
+            {
+                ExplodeTheFlak();
+            }
         }
     }
 
@@ -65,6 +77,7 @@ public class FlakGunScript : MonoBehaviour {
 
             newBullet.GetComponent<BulletScript>().sOwner = sOwner;
         }
+        //transform.DetachChildren();
         Destroy(gameObject);
     }
 }

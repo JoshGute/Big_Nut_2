@@ -22,7 +22,9 @@ using System.Collections;
 public class FollowCam : MonoBehaviour
 {
     //follow camera variables
+    
     public bool bFollow = false;
+    public bool bZoom = false;
     public Vector3 target;
     public float targetZoom;
     public GameObject gPlayer1;
@@ -33,6 +35,8 @@ public class FollowCam : MonoBehaviour
     public GameObject ShortBorder;
     public float OldTargetDistance;
     private bool bShake;
+
+    public GameObject BackGroundImage;
 
     void Start()
     {
@@ -69,23 +73,28 @@ public class FollowCam : MonoBehaviour
 
                 Vector3 NoZTarget = new Vector3(target.x, target.y, 0);
 
-                print("New " + NewTargetDistance + " Old " + OldTargetDistance);
+                //print(NewTargetDistance);
 
-                if(NewTargetDistance > (OldTargetDistance + 1) && transform.position.z < (offset.z - 150))
+                if(NewTargetDistance > (OldTargetDistance + 1) && transform.position.z > (offset.z - 100))
                 {
-                    print("Bigger");
-                    target.z -= 5;
+                    //print("Bigger");
+                    target.z -= 7;
+                    BackGroundImage.transform.position = new Vector3(BackGroundImage.transform.position.x, BackGroundImage.transform.position.y, BackGroundImage.transform.position.z - 7);
 
                 }
-                else if(NewTargetDistance < (OldTargetDistance - 1) && transform.position.z < (offset.z + 400))
+                else if(NewTargetDistance < (OldTargetDistance - 1) && transform.position.z < (offset.z + 350))
                 {
-                    print("Smaller");
-                    target.z += 5;
+                    //print("Smaller");
+                    target.z += 4;
+                    BackGroundImage.transform.position = new Vector3(BackGroundImage.transform.position.x, BackGroundImage.transform.position.y, BackGroundImage.transform.position.z + 4);
                 }
 
                 transform.position = Vector3.Lerp(transform.position, target, 100f);
 
                 ShortBorder.transform.position = Vector3.Lerp(transform.position, NoZTarget, 100f);
+
+                //BackGroundImage.transform.position = Vector3.Lerp(BackGroundImage.transform.position, new Vector3(BackGroundImage.transform.position.x,
+                                                                                                                  //BackGroundImage.transform.position.y, target.z), 100f);
 
                 OldTargetDistance = NewTargetDistance;
                 /*targetZoom = target.magnitude;
