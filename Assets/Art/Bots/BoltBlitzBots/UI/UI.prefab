@@ -63,8 +63,8 @@ MonoBehaviour:
     scale: {x: 1, y: 1, z: 1}
     additive: 0
     active: 1
-    tileWidth: 85
-    tileHeight: 85
+    tileWidth: 96
+    tileHeight: 96
     tileMarginX: 0
     tileMarginY: 0
     tileSpacingX: 0
@@ -144,8 +144,8 @@ MonoBehaviour:
     extractRegion: 1
     regionX: 0
     regionY: 0
-    regionW: 85
-    regionH: 85
+    regionW: 96
+    regionH: 96
     regionId: 0
     colliderType: 0
     colliderData: []

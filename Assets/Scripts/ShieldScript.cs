@@ -164,7 +164,11 @@ public class ShieldScript : MonoBehaviour {
       //Shield graphics code
       if (ShieldHeld == false)
       {
-        shieldController.UpdateShieldVisuals("TurnOn", prevShieldHealth, curShieldHealth);
+        //Deprecated Sprite Animation
+        //shieldController.UpdateShieldVisuals("TurnOn", prevShieldHealth, curShieldHealth);
+
+        shieldController.UpdateShieldVisualState(curShieldHealth);
+
         ShieldHeld = true;
       }
     }
@@ -193,7 +197,10 @@ public class ShieldScript : MonoBehaviour {
       //Reset timer to 0 and add health
       if(shieldregentimer >= ShieldRegenPerXSec)
       {
-        shieldController.UpdateShieldVisuals("StayOn", prevShieldHealth, curShieldHealth);
+        //Deprecated Sprite Animation
+        //shieldController.UpdateShieldVisuals("StayOn", prevShieldHealth, curShieldHealth);
+
+        shieldController.UpdateShieldVisualState(curShieldHealth);
 
         shieldregentimer = 0;
         curShieldHealth += 1;
@@ -233,7 +240,10 @@ public class ShieldScript : MonoBehaviour {
 
     curShieldHealth -= damage;
 
-    shieldController.UpdateShieldVisuals("TakeDamage",prevShieldHealth, curShieldHealth);
+    //Deprecated Sprite Animation
+    //shieldController.UpdateShieldVisuals("TakeDamage",prevShieldHealth, curShieldHealth);
+
+    shieldController.UpdateShieldVisualState(curShieldHealth);
 
     if (curShieldHealth <= 0)
     {

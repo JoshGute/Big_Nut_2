@@ -1,6 +1,6 @@
 ﻿/*******************************  SpaceTube  *********************************
 Author: Glen Aro
-Contributors: Josh 'Avoids Contact' Gutenberg
+Contributors: Josh 'Avoids Contact' Gutenberg, Linus 'Uh' Chan
 Course: GAM400
 Game:   Big Nut
 Date:   12/7/2016
@@ -34,6 +34,9 @@ public class BulletScript : MonoBehaviour
     public float TimeToBlowUp;
 
     [SerializeField]
+    private tk2dSpriteAnimator BulletAnimator;
+
+    [SerializeField]
     private float fDamage;
 
     public float Damage
@@ -47,6 +50,8 @@ public class BulletScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        BulletAnimator = gameObject.GetComponentInChildren<tk2dSpriteAnimator>();
+
         rb = GetComponent<Rigidbody>();
         if(Direction.y == 0)
         {
@@ -112,6 +117,7 @@ public class BulletScript : MonoBehaviour
 
     void KillBullet()
     {
+        BulletAnimator.Play("Bullet_Die");
         transform.DetachChildren();
         Destroy(gameObject); 
     }

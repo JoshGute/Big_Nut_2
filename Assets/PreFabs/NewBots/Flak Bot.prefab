@@ -77,8 +77,6 @@ GameObject:
   - component: {fileID: 23392948029732140}
   - component: {fileID: 114570602076380370}
   - component: {fileID: 114436619620087752}
-  - component: {fileID: 114638390214860936}
-  - component: {fileID: 114570736443693066}
   m_Layer: 10
   m_Name: Shield
   m_TagString: Untagged
@@ -185,7 +183,7 @@ Transform:
   m_GameObject: {fileID: 1574957268714460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 17, z: 0}
-  m_LocalScale: {x: 25, y: 25, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4462430320152708}
   m_RootOrder: 0
@@ -236,7 +234,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1605760969047222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 201.22954, y: 423.40796, z: -727.3694}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
   - {fileID: 4151342046152906}
@@ -270,7 +268,7 @@ Transform:
   m_GameObject: {fileID: 1574243192341712}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 24, y: 24, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4462430320152708}
   m_RootOrder: 5
@@ -381,7 +379,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8e6adfb78d26a344288b49987ef6fd51, type: 2}
+  - {fileID: 2100000, guid: e6bdd47982de88f479c056cb9f3a0867, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -398,7 +396,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
 --- !u!23 &23454113262291078
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -429,7 +427,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
 --- !u!23 &23756856866893324
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -533,7 +531,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1531540229936308}
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33932441270432978
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -671,7 +669,7 @@ MonoBehaviour:
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
-  renderLayer: 0
+  renderLayer: 2
 --- !u!114 &114156253211464506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -711,7 +709,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8cead872ad49048ac219c86e312427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShieldAnimator: {fileID: 114638390214860936}
 --- !u!114 &114478136064740532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -739,7 +736,7 @@ MonoBehaviour:
   collection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
     type: 2}
   _color: {r: 1, g: 1, b: 1, a: 0.49019608}
-  _scale: {x: 1, y: 1, z: 1}
+  _scale: {x: 24, y: 24, z: 1}
   _spriteId: 0
   boxCollider2D: {fileID: 0}
   polygonCollider2D: []
@@ -768,30 +765,6 @@ MonoBehaviour:
   ShieldBrokenTime: 5
   ShieldHeldTime: 2.5
   Player: {fileID: 1605760969047222}
---- !u!114 &114570736443693066
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1531540229936308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fac570381f34f647b768dc5a5aa1364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collection: {fileID: 114802642085629786, guid: eb867170f48a6c14fa8008bb279767d2,
-    type: 2}
-  _color: {r: 1, g: 1, b: 1, a: 1}
-  _scale: {x: 1, y: 1, z: 1}
-  _spriteId: 48
-  boxCollider2D: {fileID: 0}
-  polygonCollider2D: []
-  edgeCollider2D: []
-  boxCollider: {fileID: 0}
-  meshCollider: {fileID: 0}
-  meshColliderPositions: []
-  meshColliderMesh: {fileID: 0}
-  renderLayer: 0
 --- !u!114 &114612253060389628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -817,20 +790,6 @@ MonoBehaviour:
   RobotAudioSource: {fileID: 82343087417755106}
   Reticle: {fileID: 114840328425875314}
   GunBar: {fileID: 0}
---- !u!114 &114638390214860936
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1531540229936308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5e54113e5604435b8ae87c7754f2725, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  library: {fileID: 114493117572797826, guid: 4cfedf2d4dd5f7140b1522de65268afb, type: 2}
-  defaultClipId: 32
-  playAutomatically: 0
 --- !u!114 &114839523892313396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -869,7 +828,7 @@ MonoBehaviour:
   collection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
     type: 2}
   _color: {r: 1, g: 1, b: 1, a: 1}
-  _scale: {x: 1, y: 1, z: 1}
+  _scale: {x: 24, y: 24, z: 1}
   _spriteId: 1
   boxCollider2D: {fileID: 0}
   polygonCollider2D: []

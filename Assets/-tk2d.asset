@@ -2518,7 +2518,7 @@ MonoBehaviour:
     - d3bc9acbb049d4b4891e424a1404fc1f
     - 296a7b31cf477f54b8069a804703ce9a
     spriteTextureTimeStamps:
-    - 1487270525.62966
+    - 1489765458.9567
     - 1487270783.96297
     managedSpriteCollection: 0
     loadable: 0
@@ -3001,6 +3001,7 @@ MonoBehaviour:
     - Bullet_V6/0
     - Bullet_V7/0
     - Bullet_V8/0
+    - Bullet_Dead/0
     spriteTextureGUIDs:
     - 518d729b1ef666d499c7b9cc19817ecf
     - d1237dd17a0f222409c570f4ad6f11f0
@@ -3010,15 +3011,17 @@ MonoBehaviour:
     - 2a86ad3f1e37f4048a5e4f2286122c75
     - 05517391fd911d54aa664786ff4e0ac7
     - 5d3b413d7d1a82d4caf038525c1ed900
+    - 5fe6ad1c6706f9541bbfa75e55871a10
     spriteTextureTimeStamps:
-    - 1489151593.80457
-    - 1489151610.52091
-    - 1489151627.60815
-    - 1489151643.82394
+    - 1489766894.63542
+    - 1489766892.75259
+    - 1489766890.59402
+    - 1489766888.42475
     - 1489151668.67022
     - 1489151686.51927
     - 1489151702.71681
     - 1489151719.10647
+    - 1489767582.97953
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

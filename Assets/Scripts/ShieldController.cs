@@ -28,7 +28,6 @@ public class ShieldController : MonoBehaviour {
   private Vector3 curShieldSize;
 
   //Main robot body animations
-  [SerializeField]
   private tk2dSpriteAnimator ShieldAnimator;
 
   private Dictionary<string, tk2dSpriteAnimationClip> ShieldAnimClips = new Dictionary<string, tk2dSpriteAnimationClip>();
@@ -53,9 +52,13 @@ public class ShieldController : MonoBehaviour {
   {
     curShieldSize = transform.localScale;
     shield = gameObject.GetComponent<ShieldScript>();
+
+    ShieldAnimator = gameObject.GetComponent<tk2dSpriteAnimator>();
 	}
 
+  //Deprecated to Hell
   //Action is what is happening to the shield, State is whether we want pt1 or pt2 of animation, shieldHPstate is the health
+  /*
   tk2dSpriteAnimationClip FindAnimClip(string Action, string State, float shieldHPstate)
   {
     //percentage of health
@@ -140,10 +143,6 @@ public class ShieldController : MonoBehaviour {
       else if (State == "Pt2")
       {
         animclip = TakeDamagePt2;
-      }
-      else
-      {
-        return null;
       }
     }
 
@@ -296,6 +295,7 @@ public class ShieldController : MonoBehaviour {
 
     return animclip;
   }
+  */
 
   // Update is called once per frame
   void Update()
@@ -304,23 +304,6 @@ public class ShieldController : MonoBehaviour {
 
   void AnimCompleteDelegate(tk2dSpriteAnimator animator, tk2dSpriteAnimationClip animclip)
   {
-    if(AmTakingDamagePt1 == true)
-    {
-      AmTakingDamagePt1 = false;
-
-      ShieldAnimator.Play(TakeDamagePt2);
-
-      AmTakingDamagePt2 = true;
-    }
-
-    if(AmTakingDamagePt2 == true)
-    {
-      AmTakingDamagePt2 = false;
-
-      ShieldAnimator.Play(StayOn);
-
-      AmStayingOn = true;
-    }
   }
 
   //Effects for taking damage 
@@ -334,7 +317,9 @@ public class ShieldController : MonoBehaviour {
   {
   }
 
+
   //prevshieldhealth is for pt1, curShieldHealth is for pt2
+  /*
   public void UpdateShieldVisuals(string Action, float prevShieldHealth, float curShieldHealth)
   {
     if(Action == "TakeDamage")
@@ -342,10 +327,6 @@ public class ShieldController : MonoBehaviour {
       AmTakingDamagePt1 = true;
 
       ShieldAnimator.Play(FindAnimClip("TakeDamage", "Pt1", prevShieldHealth));
-      //ShieldAnimator.Play(FindAnimClip("TakeDamage", "Pt2", curShieldHealth));
-
-      //AnimCompleteDelegate(ShieldAnimator, FindAnimClip("TakeDamage", "Pt2", curShieldHealth));
-      //ShieldAnimator.AnimationCompleted = AnimCompleteDelegate;
     }
 
     else if(Action == "TurnOn")
@@ -355,141 +336,161 @@ public class ShieldController : MonoBehaviour {
       ShieldAnimator.Play(FindAnimClip("TurnOn", "Pt1", prevShieldHealth));
       ShieldAnimator.Play(FindAnimClip("TurnOn", "Pt2", curShieldHealth));
 
-      /*
-      AnimCompleteDelegate(ShieldAnimator, FindAnimClip("TurnOn", "Pt2", curShieldHealth));
+      
+      //AnimCompleteDelegate(ShieldAnimator, FindAnimClip("TurnOn", "Pt2", curShieldHealth));
 
-      ShieldAnimator.AnimationCompleted = AnimCompleteDelegate;
-      */
+      //ShieldAnimator.AnimationCompleted = AnimCompleteDelegate;
     }
 
     else if(Action == "StayOn")
     {
       ShieldAnimator.Play(FindAnimClip("StayOn", "Pt1", prevShieldHealth));
 
-      /*
-      AnimCompleteDelegate(ShieldAnimator, FindAnimClip("StayOn", "Pt2", curShieldHealth));
+      //AnimCompleteDelegate(ShieldAnimator, FindAnimClip("StayOn", "Pt2", curShieldHealth));
 
-      ShieldAnimator.AnimationCompleted = AnimCompleteDelegate;
-      */
+      //ShieldAnimator.AnimationCompleted = AnimCompleteDelegate;
     }
   }
+  */
 
-  //Deprecated
-  /*
+  //lol nvm
   public void UpdateShieldVisualState(float curShieldHealth)
   {
     float shieldhealthpercentage = curShieldHealth / shield.MaxShieldHealth;
 
-    //transform.localScale = new Vector3(shieldhealthpercentage * 10, shieldhealthpercentage * 10, 5);
+    transform.localScale = new Vector3(shieldhealthpercentage * 16, shieldhealthpercentage * 16, 5);
 
     //Full Shield
     //Might be unnecessary or at least merge with the 90% and higher...
     if(shieldhealthpercentage >= 1)
     {
+      /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_10");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_9");
 
       TurnOnPt2 = ShieldAnimator.GetClipByName("Shield_TurnOn_Pt2_10");
       StayOn = ShieldAnimator.GetClipByName("Shield_Idle_10HP");
+      */
     }
     //90% and higher
     else if(shieldhealthpercentage <= 0.99 && shieldhealthpercentage >= 0.9)
     {
+      /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_10");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_9");
 
       TurnOnPt2 = ShieldAnimator.GetClipByName("Shield_TurnOn_Pt2_10");
       StayOn = ShieldAnimator.GetClipByName("Shield_Idle_10HP");
+      */
     }
     //80% and higher
     else if(shieldhealthpercentage <= 0.89 && shieldhealthpercentage >= 0.8)
     {
+      /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_9");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_8");
 
       TurnOnPt2 = ShieldAnimator.GetClipByName("Shield_TurnOn_Pt2_9");
       StayOn = ShieldAnimator.GetClipByName("Shield_Idle_9HP");
+      */
     }
     //70% and higher
     else if (shieldhealthpercentage <= 0.79 && shieldhealthpercentage >= 0.7)
     {
+      /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_8");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_7");
 
       TurnOnPt2 = ShieldAnimator.GetClipByName("Shield_TurnOn_Pt2_8");
       StayOn = ShieldAnimator.GetClipByName("Shield_Idle_8HP");
+      */
     }
     //60% and higher
     else if (shieldhealthpercentage <= 0.69 && shieldhealthpercentage >= 0.6)
     {
+      /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_7");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_6");
 
       TurnOnPt2 = ShieldAnimator.GetClipByName("Shield_TurnOn_Pt2_7");
       StayOn = ShieldAnimator.GetClipByName("Shield_Idle_7HP");
+      */
     }
     //50% and higher
     else if (shieldhealthpercentage <= 0.59 && shieldhealthpercentage >= 0.5)
     {
+      /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_6");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_5");
 
       TurnOnPt2 = ShieldAnimator.GetClipByName("Shield_TurnOn_Pt2_6");
       StayOn = ShieldAnimator.GetClipByName("Shield_Idle_6HP");
+      */
     }
     //40% and higher
     else if (shieldhealthpercentage <= 0.49 && shieldhealthpercentage >= 0.4)
     {
+      /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_5");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_4");
 
       TurnOnPt2 = ShieldAnimator.GetClipByName("Shield_TurnOn_Pt2_5");
       StayOn = ShieldAnimator.GetClipByName("Shield_Idle_5HP");
+      */
     }
     //30% and higher
     else if (shieldhealthpercentage <= 0.39 && shieldhealthpercentage >= 0.3)
     {
+      /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_4");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_3");
 
       TurnOnPt2 = ShieldAnimator.GetClipByName("Shield_TurnOn_Pt2_4");
       StayOn = ShieldAnimator.GetClipByName("Shield_Idle_4HP");
+      */
     }
     //20% and higher
     else if (shieldhealthpercentage <= 0.29 && shieldhealthpercentage >= 0.2)
     {
+      /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_3");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_2");
 
       TurnOnPt2 = ShieldAnimator.GetClipByName("Shield_TurnOn_Pt2_3");
       StayOn = ShieldAnimator.GetClipByName("Shield_Idle_3HP");
+      */
     }
     //10% and higher
     else if (shieldhealthpercentage <= 0.19 && shieldhealthpercentage >= 0.1)
     {
+      /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_2");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_1");
 
       TurnOnPt2 = ShieldAnimator.GetClipByName("Shield_TurnOn_Pt2_2");
       StayOn = ShieldAnimator.GetClipByName("Shield_Idle_2HP");
+      */
     }
     //0% and higher
     else if (shieldhealthpercentage <= 0.09 && shieldhealthpercentage >= 0.01)
     {
+      /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_1");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_1");
 
       TurnOnPt2 = ShieldAnimator.GetClipByName("Shield_TurnOn_Pt2_1");
       StayOn = ShieldAnimator.GetClipByName("Shield_Idle_1HP");
+      */
     }
     else if (shieldhealthpercentage <= 0)
     {
+      /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_1");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("ShieldBreak");
 
       TurnOnPt2 = null;
       StayOn = null;
+      */
     }
   }
-  */
 }
