@@ -358,12 +358,12 @@ public class ShieldController : MonoBehaviour {
   {
     float shieldhealthpercentage = curShieldHealth / shield.MaxShieldHealth;
 
-    transform.localScale = new Vector3(shieldhealthpercentage * 16, shieldhealthpercentage * 16, 5);
-
     //Full Shield
     //Might be unnecessary or at least merge with the 90% and higher...
     if(shieldhealthpercentage >= 1)
     {
+      transform.localScale = new Vector3(shieldhealthpercentage * 12f, shieldhealthpercentage * 12f, 5);
+
       /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_10");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_9");
@@ -375,6 +375,8 @@ public class ShieldController : MonoBehaviour {
     //90% and higher
     else if(shieldhealthpercentage <= 0.99 && shieldhealthpercentage >= 0.9)
     {
+      transform.localScale = new Vector3(shieldhealthpercentage * 10f, shieldhealthpercentage * 10f, 5);
+
       /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_10");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_9");
@@ -386,6 +388,8 @@ public class ShieldController : MonoBehaviour {
     //80% and higher
     else if(shieldhealthpercentage <= 0.89 && shieldhealthpercentage >= 0.8)
     {
+      transform.localScale = new Vector3(shieldhealthpercentage * 10f, shieldhealthpercentage * 10f, 5);
+
       /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_9");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_8");
@@ -397,6 +401,8 @@ public class ShieldController : MonoBehaviour {
     //70% and higher
     else if (shieldhealthpercentage <= 0.79 && shieldhealthpercentage >= 0.7)
     {
+      transform.localScale = new Vector3(shieldhealthpercentage * 8f, shieldhealthpercentage * 8f, 5);
+
       /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_8");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_7");
@@ -408,6 +414,7 @@ public class ShieldController : MonoBehaviour {
     //60% and higher
     else if (shieldhealthpercentage <= 0.69 && shieldhealthpercentage >= 0.6)
     {
+      transform.localScale = new Vector3(shieldhealthpercentage * 8f, shieldhealthpercentage * 8f, 5);
       /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_7");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_6");
@@ -419,6 +426,7 @@ public class ShieldController : MonoBehaviour {
     //50% and higher
     else if (shieldhealthpercentage <= 0.59 && shieldhealthpercentage >= 0.5)
     {
+      transform.localScale = new Vector3(shieldhealthpercentage * 6f, shieldhealthpercentage * 6f, 5);
       /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_6");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_5");
@@ -430,6 +438,7 @@ public class ShieldController : MonoBehaviour {
     //40% and higher
     else if (shieldhealthpercentage <= 0.49 && shieldhealthpercentage >= 0.4)
     {
+      transform.localScale = new Vector3(shieldhealthpercentage * 6f, shieldhealthpercentage * 6f, 5);
       /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_5");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_4");
@@ -441,6 +450,7 @@ public class ShieldController : MonoBehaviour {
     //30% and higher
     else if (shieldhealthpercentage <= 0.39 && shieldhealthpercentage >= 0.3)
     {
+      transform.localScale = new Vector3(shieldhealthpercentage * 4f, shieldhealthpercentage * 4f, 5);
       /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_4");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_3");
@@ -452,6 +462,7 @@ public class ShieldController : MonoBehaviour {
     //20% and higher
     else if (shieldhealthpercentage <= 0.29 && shieldhealthpercentage >= 0.2)
     {
+      transform.localScale = new Vector3(shieldhealthpercentage * 4f, shieldhealthpercentage * 4f, 5);
       /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_3");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_2");
@@ -463,6 +474,7 @@ public class ShieldController : MonoBehaviour {
     //10% and higher
     else if (shieldhealthpercentage <= 0.19 && shieldhealthpercentage >= 0.1)
     {
+      transform.localScale = new Vector3(shieldhealthpercentage * 2f, shieldhealthpercentage * 2f, 5);
       /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_2");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_1");
@@ -474,6 +486,7 @@ public class ShieldController : MonoBehaviour {
     //0% and higher
     else if (shieldhealthpercentage <= 0.09 && shieldhealthpercentage >= 0.01)
     {
+      transform.localScale = new Vector3(shieldhealthpercentage * 2f, shieldhealthpercentage * 2f, 5);
       /*
       TakeDamagePt1 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt1_1");
       TakeDamagePt2 = ShieldAnimator.GetClipByName("Shield_GetHit_Pt2_1");

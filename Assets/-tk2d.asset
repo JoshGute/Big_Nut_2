@@ -2446,6 +2446,17 @@ MonoBehaviour:
     - Shockwave_Start_fix/4
     - Smoke_Particle_fix/9
     - Thruster_Stop_fix/8
+    - Thruster_Dash/0
+    - Thruster_Dash/1
+    - Thruster_Dash/2
+    - Thruster_Dash/3
+    - Thruster_Dash/4
+    - Shockwave_Start_fix2/0
+    - Shockwave_Start_fix2/1
+    - Shockwave_Start_fix2/2
+    - Shockwave_Start_fix2/3
+    - Shockwave_Start_fix2/4
+    - Shockwave_Start_fix2/5
     spriteTextureGUIDs:
     - 3d962caf8eb01cf459f2a63953b8b180
     - 3d962caf8eb01cf459f2a63953b8b180
@@ -2475,6 +2486,17 @@ MonoBehaviour:
     - e650b07eed2d76149af1ba098cfd8a42
     - 7404f05f447bd16458bb4b178333e5d8
     - 7d7b749cfa47a6041bbe2affa2fd6ccd
+    - 4bb07eba1f0b55345b218505ae593765
+    - 4bb07eba1f0b55345b218505ae593765
+    - 4bb07eba1f0b55345b218505ae593765
+    - 4bb07eba1f0b55345b218505ae593765
+    - 4bb07eba1f0b55345b218505ae593765
+    - fc8efff7562c3bc4db56793e1264e013
+    - fc8efff7562c3bc4db56793e1264e013
+    - fc8efff7562c3bc4db56793e1264e013
+    - fc8efff7562c3bc4db56793e1264e013
+    - fc8efff7562c3bc4db56793e1264e013
+    - fc8efff7562c3bc4db56793e1264e013
     spriteTextureTimeStamps:
     - 1485033357.92877
     - 1485033357.92877
@@ -2504,6 +2526,17 @@ MonoBehaviour:
     - 1487270876.86938
     - 1487270913.01962
     - 1487270948.5189
+    - 1489789215.51566
+    - 1489789215.51566
+    - 1489789215.51566
+    - 1489789215.51566
+    - 1489789215.51566
+    - 1489790790.82655
+    - 1489790790.82655
+    - 1489790790.82655
+    - 1489790790.82655
+    - 1489790790.82655
+    - 1489790790.82655
     managedSpriteCollection: 0
     loadable: 0
     assetName: 
@@ -2514,12 +2547,21 @@ MonoBehaviour:
     spriteNames:
     - AimRing/0
     - Reticle_01/0
+    - Heart/0
+    - Heart_Var/0
+    - Dash/0
     spriteTextureGUIDs:
     - d3bc9acbb049d4b4891e424a1404fc1f
     - 296a7b31cf477f54b8069a804703ce9a
+    - 0149974a93d9f0d4eb101c520aabd9fa
+    - 99a8409e26069a948b49c219c093a344
+    - a7c20f613da520b40972570bd7afc4f4
     spriteTextureTimeStamps:
     - 1489765458.9567
     - 1487270783.96297
+    - 1489789794.80361
+    - 1489789810.81733
+    - 1489789732.76063
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

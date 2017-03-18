@@ -477,7 +477,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 165626825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -496, y: -318, z: -400}
+  m_LocalPosition: {x: -20, y: 15, z: -400}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -495,6 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bFollow: 0
+  bZoom: 0
   target: {x: 0, y: 0, z: 0}
   targetZoom: 0
   gPlayer1: {fileID: 0}
@@ -503,6 +504,7 @@ MonoBehaviour:
   ShakeAmount: 0.5
   ShortBorder: {fileID: 0}
   OldTargetDistance: 0
+  BackGroundImage: {fileID: 0}
 --- !u!114 &165626832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,7 +548,7 @@ MonoBehaviour:
   _unityCamera: {fileID: 165626829}
   viewportClippingEnabled: 0
   viewportRegion: {x: 0, y: 0, z: 100, w: 100}
-  zoomFactor: 1
+  zoomFactor: 1.25
   forceResolutionInEditor: 0
   forceResolution: {x: 960, y: 640}
 --- !u!1001 &303792706
@@ -1157,7 +1159,9 @@ MonoBehaviour:
   cCamera: {fileID: 165626829}
   hHUD: {fileID: 1288968746}
   gTeam:
+  - {fileID: 1851812481687626, guid: a65b1341bd892114983996afa00f5475, type: 2}
   - {fileID: 1781974129287176, guid: 4112796f4cf90a041979235ca220e79b, type: 2}
+  - {fileID: 1605760969047222, guid: 7e9de8d6570b3134db7c25af93e9a394, type: 2}
   sSpawnPoints:
   - {fileID: 1741414560}
   - {fileID: 303792707}

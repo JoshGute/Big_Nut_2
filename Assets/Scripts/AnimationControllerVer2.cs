@@ -43,6 +43,9 @@ public class AnimationControllerVer2 : MonoBehaviour {
   [SerializeField]
   private tk2dSpriteAnimator ThrusterAnimator;
 
+  [SerializeField]
+  private GameObject ShockwaveObject;
+
   // Use this for initialization
   void Start ()
   {
@@ -58,6 +61,11 @@ public class AnimationControllerVer2 : MonoBehaviour {
   void PreviousAnimDelegate(tk2dSpriteAnimator sprite, tk2dSpriteAnimationClip clip)
   {
 
+  }
+
+  public void PlayShockwaveAnimation()
+  {
+    ShockwaveObject.GetComponent<PlayAnimOnce>().PlayAnim();
   }
 
   public void ChangeThrusterAnimation(int iInput_)

@@ -228,39 +228,86 @@ MonoBehaviour:
     fps: 30
     loopStart: 0
     wrapMode: 2
-  - name: Shockwave
+  - name: Shockwave_Start
     frames:
     - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
         type: 2}
-      spriteId: 12
+      spriteId: 33
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
       eventFloat: 0
     - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
         type: 2}
-      spriteId: 13
+      spriteId: 34
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
       eventFloat: 0
     - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
         type: 2}
-      spriteId: 14
+      spriteId: 35
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
       eventFloat: 0
     - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
         type: 2}
-      spriteId: 15
+      spriteId: 36
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
       eventFloat: 0
     - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
         type: 2}
-      spriteId: 25
+      spriteId: 37
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
+        type: 2}
+      spriteId: 38
+      triggerEvent: 1
+      eventInfo: Completed
+      eventInt: 0
+      eventFloat: 0
+    fps: 30
+    loopStart: 0
+    wrapMode: 2
+  - name: Thruster_Dash
+    frames:
+    - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
+        type: 2}
+      spriteId: 28
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
+        type: 2}
+      spriteId: 29
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
+        type: 2}
+      spriteId: 30
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
+        type: 2}
+      spriteId: 31
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
+        type: 2}
+      spriteId: 32
       triggerEvent: 0
       eventInfo: 
       eventInt: 0

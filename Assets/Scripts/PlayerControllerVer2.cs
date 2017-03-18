@@ -103,6 +103,8 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     public tk2dSprite robotSkin;
 
+  private bool Boosting;
+
   private bool Shielding;
     ////Deprecated////
     //[SerializeField]
@@ -333,6 +335,21 @@ public class PlayerControllerVer2 : MonoBehaviour
       if (prevState.Triggers.Right > 0.1f && state.Triggers.Right == 0)
       {
         FireTheLasers();
+      }
+
+      //Shockwave Animation purposes
+      if (prevState.Triggers.Left > 0.1f)
+      {
+        if(Boosting == false)
+        {
+          Boosting = true;
+          aController.PlayShockwaveAnimation();
+        }
+      }
+
+      else if (prevState.Triggers.Left == 0)
+      {
+        Boosting = false;
       }
 
       //Shielding

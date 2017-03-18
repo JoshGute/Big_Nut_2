@@ -155,6 +155,8 @@ public class ShieldScript : MonoBehaviour {
     {
       ShieldState = true;
 
+      
+
       //stopping collider first to avoid shield potentially registering player's hitbox.
       //Player.GetComponent<Collider>().enabled = false;
 
