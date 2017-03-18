@@ -32,6 +32,10 @@ public class FollowCam : MonoBehaviour
     public Vector3 offset = new Vector3(0f, 0f, -400);
     //screen shake variables
     public float ShakeAmount = 0.5f;
+    public int MaxZoomIn = 100;
+    public int MinZoomOut = 350;
+    public float ZoomInRate;
+    public float ZoomOutRate;
     public GameObject ShortBorder;
     public float OldTargetDistance;
     private bool bShake;
@@ -75,14 +79,14 @@ public class FollowCam : MonoBehaviour
 
                 //print(NewTargetDistance);
 
-                if(NewTargetDistance > (OldTargetDistance + 1) && transform.position.z > (offset.z - 100))
+                if (NewTargetDistance > (OldTargetDistance + 1) && transform.position.z > (offset.z - MaxZoomIn))
                 {
                     //print("Bigger");
                     target.z -= 7;
                     BackGroundImage.transform.position = new Vector3(BackGroundImage.transform.position.x, BackGroundImage.transform.position.y, BackGroundImage.transform.position.z - 7);
 
                 }
-                else if(NewTargetDistance < (OldTargetDistance - 1) && transform.position.z < (offset.z + 350))
+                else if (NewTargetDistance < (OldTargetDistance - 1) && transform.position.z < (offset.z + MinZoomOut))
                 {
                     //print("Smaller");
                     target.z += 4;
