@@ -789,7 +789,7 @@ MonoBehaviour:
   MissNoise: {fileID: 0}
   RobotAudioSource: {fileID: 82343087417755106}
   Reticle: {fileID: 114840328425875314}
-  GunBar: {fileID: 0}
+  GunShot: {fileID: 1945534561638118, guid: cb10ed3381764df4fa1eef8d4a3f961a, type: 2}
 --- !u!114 &114839523892313396
 MonoBehaviour:
   m_ObjectHideFlags: 1

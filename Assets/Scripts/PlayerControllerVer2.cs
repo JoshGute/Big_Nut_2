@@ -446,7 +446,7 @@ public class PlayerControllerVer2 : MonoBehaviour
 
       RaycastHit SmackIt;
       //print("H " + INfAxisH + " V " + INfAxisV);
-
+      StartCoroutine(Vibrate(0.2f, 0.3f));
       if (Physics.Raycast(transform.position, NormalizedAngle, out SmackIt, DashDistance))
       {
           curDashTargetPos = SmackIt.point;

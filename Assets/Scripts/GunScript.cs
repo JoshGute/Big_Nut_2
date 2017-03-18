@@ -43,7 +43,7 @@ public class GunScript : MonoBehaviour
     public AudioSource RobotAudioSource;
 
     public tk2dSprite Reticle;
-    public RectTransform GunBar;
+    public GameObject GunShot;
 
     void Update()
     {
@@ -92,8 +92,8 @@ public class GunScript : MonoBehaviour
                 {
                     newBullet.GetComponent<FlakGunScript>().sOwner = sOwner;
                 }
-                
 
+                Instantiate(GunShot, PatternSpawn.transform.position, PatternSpawn.transform.rotation);
                 yield return new WaitForSeconds(fBulletSpacing);
             }
 
