@@ -71,10 +71,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.43751562, y: 0.3593828}
-    - {x: 0.6562344, y: 0.3593828}
-    - {x: 0.43751562, y: 0.4531172}
-    - {x: 0.6562344, y: 0.4531172}
+    - {x: 0.5000156, y: 0.6875078}
+    - {x: 0.7187344, y: 0.6875078}
+    - {x: 0.5000156, y: 0.7812422}
+    - {x: 0.7187344, y: 0.7812422}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -118,10 +118,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.21876563, y: 0.3750078}
-    - {x: 0.43748438, y: 0.3750078}
-    - {x: 0.21876563, y: 0.4687422}
-    - {x: 0.43748438, y: 0.4687422}
+    - {x: 0.5000156, y: 0.7812578}
+    - {x: 0.7187344, y: 0.7812578}
+    - {x: 0.5000156, y: 0.8749922}
+    - {x: 0.7187344, y: 0.8749922}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -165,10 +165,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.000015625, y: 0.4765703}
-    - {x: 0.18748437, y: 0.4765703}
-    - {x: 0.000015625, y: 0.5703047}
-    - {x: 0.18748437, y: 0.5703047}
+    - {x: 0.20314063, y: 0.3750078}
+    - {x: 0.39060938, y: 0.3750078}
+    - {x: 0.20314063, y: 0.4687422}
+    - {x: 0.39060938, y: 0.4687422}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -212,14 +212,14 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.21876563, y: 0.4687578}
-    - {x: 0.42185938, y: 0.4687578}
-    - {x: 0.21876563, y: 0.5624922}
-    - {x: 0.42185938, y: 0.5624922}
+    - {x: 0.20314063, y: 0.4687578}
+    - {x: 0.20314063, y: 0.5703047}
+    - {x: 0.39060938, y: 0.4687578}
+    - {x: 0.39060938, y: 0.5703047}
     normalizedUvs:
     - {x: 0, y: 0}
-    - {x: 1, y: 0}
     - {x: 0, y: 1}
+    - {x: 1, y: 0}
     - {x: 1, y: 1}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 7cfffc90d9eba754fab4cf045a10ce53, type: 2}
@@ -230,7 +230,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 14
     regionH: 14
-    flipped: 0
+    flipped: 1
     complexGeometry: 0
     physicsEngine: 0
     colliderType: 0
@@ -259,10 +259,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.43751562, y: 0.3593828}
-    - {x: 0.6562344, y: 0.3593828}
-    - {x: 0.43751562, y: 0.4531172}
-    - {x: 0.6562344, y: 0.4531172}
+    - {x: 0.5000156, y: 0.6875078}
+    - {x: 0.7187344, y: 0.6875078}
+    - {x: 0.5000156, y: 0.7812422}
+    - {x: 0.7187344, y: 0.7812422}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -306,14 +306,14 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.43751562, y: 0.4531328}
-    - {x: 0.6562344, y: 0.4531328}
-    - {x: 0.43751562, y: 0.5468672}
-    - {x: 0.6562344, y: 0.5468672}
+    - {x: 0.5000156, y: 0.8750078}
+    - {x: 0.5000156, y: 0.9843672}
+    - {x: 0.6874844, y: 0.8750078}
+    - {x: 0.6874844, y: 0.9843672}
     normalizedUvs:
     - {x: 0, y: 0}
-    - {x: 1, y: 0}
     - {x: 0, y: 1}
+    - {x: 1, y: 0}
     - {x: 1, y: 1}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 7cfffc90d9eba754fab4cf045a10ce53, type: 2}
@@ -324,7 +324,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 14
     regionH: 14
-    flipped: 0
+    flipped: 1
     complexGeometry: 0
     physicsEngine: 0
     colliderType: 0
@@ -353,10 +353,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.42189062, y: 0.5468828}
-    - {x: 0.42189062, y: 0.6328047}
-    - {x: 0.6093594, y: 0.5468828}
-    - {x: 0.6093594, y: 0.6328047}
+    - {x: 0.000015625, y: 0.9140703}
+    - {x: 0.000015625, y: 0.9999922}
+    - {x: 0.18748437, y: 0.9140703}
+    - {x: 0.18748437, y: 0.9999922}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 0, y: 1}
@@ -400,14 +400,14 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.18751563, y: 0.5625078}
-    - {x: 0.18751563, y: 0.6249922}
-    - {x: 0.37498438, y: 0.5625078}
-    - {x: 0.37498438, y: 0.6249922}
+    - {x: 0.8437656, y: 0.8281328}
+    - {x: 0.9687344, y: 0.8281328}
+    - {x: 0.8437656, y: 0.9218672}
+    - {x: 0.9687344, y: 0.9218672}
     normalizedUvs:
     - {x: 0, y: 0}
-    - {x: 0, y: 1}
     - {x: 1, y: 0}
+    - {x: 0, y: 1}
     - {x: 1, y: 1}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 7cfffc90d9eba754fab4cf045a10ce53, type: 2}
@@ -418,7 +418,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 14
     regionH: 14
-    flipped: 1
+    flipped: 0
     complexGeometry: 0
     physicsEngine: 0
     colliderType: 0
@@ -447,10 +447,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.8750156, y: 0.3437578}
-    - {x: 0.9374844, y: 0.3437578}
-    - {x: 0.8750156, y: 0.3749922}
-    - {x: 0.9374844, y: 0.3749922}
+    - {x: 0.43751562, y: 0.9140703}
+    - {x: 0.49998438, y: 0.9140703}
+    - {x: 0.43751562, y: 0.9453047}
+    - {x: 0.49998438, y: 0.9453047}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -494,10 +494,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.43751562, y: 0.2656328}
-    - {x: 0.48435938, y: 0.2656328}
-    - {x: 0.43751562, y: 0.2968672}
-    - {x: 0.48435938, y: 0.2968672}
+    - {x: 0.20314063, y: 0.2578203}
+    - {x: 0.24998437, y: 0.2578203}
+    - {x: 0.20314063, y: 0.2890547}
+    - {x: 0.24998437, y: 0.2890547}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -635,14 +635,14 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.6093906, y: 0.5468828}
-    - {x: 0.6874844, y: 0.5468828}
-    - {x: 0.6093906, y: 0.6718672}
-    - {x: 0.6874844, y: 0.6718672}
+    - {x: 0.18751563, y: 0.9140703}
+    - {x: 0.18751563, y: 0.9531172}
+    - {x: 0.43748438, y: 0.9140703}
+    - {x: 0.43748438, y: 0.9531172}
     normalizedUvs:
     - {x: 0, y: 0}
-    - {x: 1, y: 0}
     - {x: 0, y: 1}
+    - {x: 1, y: 0}
     - {x: 1, y: 1}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 7cfffc90d9eba754fab4cf045a10ce53, type: 2}
@@ -653,7 +653,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 32
     regionH: 32
-    flipped: 0
+    flipped: 1
     complexGeometry: 0
     physicsEngine: 0
     colliderType: 0
@@ -682,10 +682,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.7968906, y: 0.3437578}
-    - {x: 0.8749844, y: 0.3437578}
-    - {x: 0.7968906, y: 0.5937422}
-    - {x: 0.8749844, y: 0.5937422}
+    - {x: 0.9218906, y: 0.2500078}
+    - {x: 0.9999844, y: 0.2500078}
+    - {x: 0.9218906, y: 0.4999922}
+    - {x: 0.9999844, y: 0.4999922}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -729,10 +729,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.8750156, y: 0.4921953}
-    - {x: 0.9531094, y: 0.4921953}
-    - {x: 0.8750156, y: 0.7421797}
-    - {x: 0.9531094, y: 0.7421797}
+    - {x: 0.8750156, y: 0.5000078}
+    - {x: 0.9531094, y: 0.5000078}
+    - {x: 0.8750156, y: 0.7499922}
+    - {x: 0.9531094, y: 0.7499922}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -776,10 +776,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.7031406, y: 0.3437578}
-    - {x: 0.7968594, y: 0.3437578}
-    - {x: 0.7031406, y: 0.5781172}
-    - {x: 0.7968594, y: 0.5781172}
+    - {x: 0.109390624, y: 0.2578203}
+    - {x: 0.20310937, y: 0.2578203}
+    - {x: 0.109390624, y: 0.4921797}
+    - {x: 0.20310937, y: 0.4921797}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -823,10 +823,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.000015625, y: 0.2578203}
-    - {x: 0.21873437, y: 0.2578203}
-    - {x: 0.000015625, y: 0.3671797}
-    - {x: 0.21873437, y: 0.3671797}
+    - {x: 0.48439062, y: 0.2500078}
+    - {x: 0.7031094, y: 0.2500078}
+    - {x: 0.48439062, y: 0.3593672}
+    - {x: 0.7031094, y: 0.3593672}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -870,10 +870,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.48439062, y: 0.2500078}
-    - {x: 0.7031094, y: 0.2500078}
-    - {x: 0.48439062, y: 0.3593672}
-    - {x: 0.7031094, y: 0.3593672}
+    - {x: 0.25001562, y: 0.2656328}
+    - {x: 0.46873438, y: 0.2656328}
+    - {x: 0.25001562, y: 0.3749922}
+    - {x: 0.46873438, y: 0.3749922}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -917,10 +917,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.21876563, y: 0.2656328}
-    - {x: 0.43748438, y: 0.2656328}
-    - {x: 0.21876563, y: 0.3749922}
-    - {x: 0.43748438, y: 0.3749922}
+    - {x: 0.7031406, y: 0.2500078}
+    - {x: 0.9218594, y: 0.2500078}
+    - {x: 0.7031406, y: 0.3593672}
+    - {x: 0.9218594, y: 0.3593672}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -964,10 +964,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.000015625, y: 0.3671953}
-    - {x: 0.21873437, y: 0.3671953}
-    - {x: 0.000015625, y: 0.4765547}
-    - {x: 0.21873437, y: 0.4765547}
+    - {x: 0.46876562, y: 0.3593828}
+    - {x: 0.6874844, y: 0.3593828}
+    - {x: 0.46876562, y: 0.4687422}
+    - {x: 0.6874844, y: 0.4687422}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -1199,10 +1199,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.7031406, y: 0.2500078}
-    - {x: 0.7031406, y: 0.3437422}
-    - {x: 0.9374844, y: 0.2500078}
-    - {x: 0.9374844, y: 0.3437422}
+    - {x: 0.6875156, y: 0.3593828}
+    - {x: 0.6875156, y: 0.4531172}
+    - {x: 0.9218594, y: 0.3593828}
+    - {x: 0.9218594, y: 0.4531172}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 0, y: 1}
@@ -1387,10 +1387,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.6875156, y: 0.5937578}
-    - {x: 0.8437344, y: 0.5937578}
-    - {x: 0.6875156, y: 0.6718672}
-    - {x: 0.8437344, y: 0.6718672}
+    - {x: 0.8437656, y: 0.7500078}
+    - {x: 0.9999844, y: 0.7500078}
+    - {x: 0.8437656, y: 0.8281172}
+    - {x: 0.9999844, y: 0.8281172}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -1528,10 +1528,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.9375156, y: 0.2500078}
-    - {x: 0.9375156, y: 0.4921797}
-    - {x: 0.9999844, y: 0.2500078}
-    - {x: 0.9999844, y: 0.4921797}
+    - {x: 0.7812656, y: 0.6718828}
+    - {x: 0.7812656, y: 0.9140547}
+    - {x: 0.8437344, y: 0.6718828}
+    - {x: 0.8437344, y: 0.9140547}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 0, y: 1}
@@ -1669,14 +1669,14 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.6093906, y: 0.5468828}
-    - {x: 0.6874844, y: 0.5468828}
-    - {x: 0.6093906, y: 0.6718672}
-    - {x: 0.6874844, y: 0.6718672}
+    - {x: 0.18751563, y: 0.9140703}
+    - {x: 0.18751563, y: 0.9531172}
+    - {x: 0.43748438, y: 0.9140703}
+    - {x: 0.43748438, y: 0.9531172}
     normalizedUvs:
     - {x: 0, y: 0}
-    - {x: 1, y: 0}
     - {x: 0, y: 1}
+    - {x: 1, y: 0}
     - {x: 1, y: 1}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 7cfffc90d9eba754fab4cf045a10ce53, type: 2}
@@ -1687,7 +1687,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 32
     regionH: 32
-    flipped: 0
+    flipped: 1
     complexGeometry: 0
     physicsEngine: 0
     colliderType: 0
@@ -1716,10 +1716,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.7968906, y: 0.3437578}
-    - {x: 0.8749844, y: 0.3437578}
-    - {x: 0.7968906, y: 0.5937422}
-    - {x: 0.8749844, y: 0.5937422}
+    - {x: 0.9218906, y: 0.2500078}
+    - {x: 0.9999844, y: 0.2500078}
+    - {x: 0.9218906, y: 0.4999922}
+    - {x: 0.9999844, y: 0.4999922}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -1763,10 +1763,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.8750156, y: 0.4921953}
-    - {x: 0.9531094, y: 0.4921953}
-    - {x: 0.8750156, y: 0.7421797}
-    - {x: 0.9531094, y: 0.7421797}
+    - {x: 0.8750156, y: 0.5000078}
+    - {x: 0.9531094, y: 0.5000078}
+    - {x: 0.8750156, y: 0.7499922}
+    - {x: 0.9531094, y: 0.7499922}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -1810,10 +1810,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.7031406, y: 0.3437578}
-    - {x: 0.7968594, y: 0.3437578}
-    - {x: 0.7031406, y: 0.5781172}
-    - {x: 0.7968594, y: 0.5781172}
+    - {x: 0.109390624, y: 0.2578203}
+    - {x: 0.20310937, y: 0.2578203}
+    - {x: 0.109390624, y: 0.4921797}
+    - {x: 0.20310937, y: 0.4921797}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -1888,6 +1888,335 @@ MonoBehaviour:
     polygonCollider2D: []
     edgeCollider2D: []
     attachPoints: []
+  - name: Shockwave_Start_fix3/0
+    boundsData:
+    - {x: 0.005, y: 0.005, z: 0}
+    - {x: 0.01, y: 0.01, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.32, y: 0.32, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.01, y: 0, z: 0}
+    - {x: 0, y: 0.01, z: 0}
+    - {x: 0.01, y: 0.01, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9843906, y: 0.046882812}
+    - {x: 0.9999844, y: 0.046882812}
+    - {x: 0.9843906, y: 0.054679688}
+    - {x: 0.9999844, y: 0.054679688}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 7cfffc90d9eba754fab4cf045a10ce53, type: 2}
+    materialId: 0
+    sourceTextureGUID: 5aec5cfcbe706e24db13d16260b33a59
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 32
+    regionH: 32
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: Shockwave_Start_fix3/1
+    boundsData:
+    - {x: 0.13499999, y: 0, z: 0}
+    - {x: 0.049999997, y: 0.16, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.32, y: 0.32, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: 0.11, y: -0.08, z: 0}
+    - {x: 0.16, y: -0.08, z: 0}
+    - {x: 0.11, y: 0.08, z: 0}
+    - {x: 0.16, y: 0.08, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.18751563, y: 0.9140703}
+    - {x: 0.18751563, y: 0.9531172}
+    - {x: 0.43748438, y: 0.9140703}
+    - {x: 0.43748438, y: 0.9531172}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 0}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 7cfffc90d9eba754fab4cf045a10ce53, type: 2}
+    materialId: 0
+    sourceTextureGUID: 5aec5cfcbe706e24db13d16260b33a59
+    extractRegion: 1
+    regionX: 33
+    regionY: 0
+    regionW: 32
+    regionH: 32
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: Shockwave_Start_fix3/2
+    boundsData:
+    - {x: 0.074999996, y: 0, z: 0}
+    - {x: 0.049999997, y: 0.32, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.32, y: 0.32, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: 0.049999997, y: -0.16, z: 0}
+    - {x: 0.099999994, y: -0.16, z: 0}
+    - {x: 0.049999997, y: 0.16, z: 0}
+    - {x: 0.099999994, y: 0.16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9218906, y: 0.2500078}
+    - {x: 0.9999844, y: 0.2500078}
+    - {x: 0.9218906, y: 0.4999922}
+    - {x: 0.9999844, y: 0.4999922}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 7cfffc90d9eba754fab4cf045a10ce53, type: 2}
+    materialId: 0
+    sourceTextureGUID: 5aec5cfcbe706e24db13d16260b33a59
+    extractRegion: 1
+    regionX: 66
+    regionY: 0
+    regionW: 32
+    regionH: 32
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: Shockwave_Start_fix3/3
+    boundsData:
+    - {x: 0.035, y: 0, z: 0}
+    - {x: 0.07, y: 0.32, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.32, y: 0.32, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: 0, y: -0.16, z: 0}
+    - {x: 0.07, y: -0.16, z: 0}
+    - {x: 0, y: 0.16, z: 0}
+    - {x: 0.07, y: 0.16, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.000015625, y: 0.2578203}
+    - {x: 0.109359376, y: 0.2578203}
+    - {x: 0.000015625, y: 0.5078047}
+    - {x: 0.109359376, y: 0.5078047}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 7cfffc90d9eba754fab4cf045a10ce53, type: 2}
+    materialId: 0
+    sourceTextureGUID: 5aec5cfcbe706e24db13d16260b33a59
+    extractRegion: 1
+    regionX: 99
+    regionY: 0
+    regionW: 32
+    regionH: 32
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: Shockwave_Start_fix3/4
+    boundsData:
+    - {x: 0.01, y: 0, z: 0}
+    - {x: 0.06, y: 0.29999998, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.32, y: 0.32, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: -0.02, y: -0.14999999, z: 0}
+    - {x: 0.04, y: -0.14999999, z: 0}
+    - {x: -0.02, y: 0.14999999, z: 0}
+    - {x: 0.04, y: 0.14999999, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.6875156, y: 0.4531328}
+    - {x: 0.7812344, y: 0.4531328}
+    - {x: 0.6875156, y: 0.6874922}
+    - {x: 0.7812344, y: 0.6874922}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 7cfffc90d9eba754fab4cf045a10ce53, type: 2}
+    materialId: 0
+    sourceTextureGUID: 5aec5cfcbe706e24db13d16260b33a59
+    extractRegion: 1
+    regionX: 132
+    regionY: 0
+    regionW: 32
+    regionH: 32
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: Shockwave_Start_fix3/5
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.06, y: 0.28, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.32, y: 0.32, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: -0.03, y: -0.14, z: 0}
+    - {x: 0.03, y: -0.14, z: 0}
+    - {x: -0.03, y: 0.14, z: 0}
+    - {x: 0.03, y: 0.14, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.7812656, y: 0.4531328}
+    - {x: 0.8749844, y: 0.4531328}
+    - {x: 0.7812656, y: 0.6718672}
+    - {x: 0.8749844, y: 0.6718672}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 7cfffc90d9eba754fab4cf045a10ce53, type: 2}
+    materialId: 0
+    sourceTextureGUID: 5aec5cfcbe706e24db13d16260b33a59
+    extractRegion: 1
+    regionX: 165
+    regionY: 0
+    regionW: 32
+    regionH: 32
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: Shockwave_Start_fix3/6
+    boundsData:
+    - {x: 0.005, y: 0.005, z: 0}
+    - {x: 0.01, y: 0.01, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.32, y: 0.32, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.01, y: 0, z: 0}
+    - {x: 0, y: 0.01, z: 0}
+    - {x: 0.01, y: 0.01, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9843906, y: 0.046882812}
+    - {x: 0.9999844, y: 0.046882812}
+    - {x: 0.9843906, y: 0.054679688}
+    - {x: 0.9999844, y: 0.054679688}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 7cfffc90d9eba754fab4cf045a10ce53, type: 2}
+    materialId: 0
+    sourceTextureGUID: 5aec5cfcbe706e24db13d16260b33a59
+    extractRegion: 1
+    regionX: 198
+    regionY: 0
+    regionW: 32
+    regionH: 32
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
   premultipliedAlpha: 0
   material: {fileID: 0}
   materials:
@@ -1905,7 +2234,7 @@ MonoBehaviour:
   loadable: 0
   invOrthoSize: 2
   halfTargetHeight: 50
-  buildKey: 1646200129
+  buildKey: 139942141
   dataGuid: 9654b4894c4161943885205bd4de5c90
   managedSpriteCollection: 0
   hasPlatformData: 0

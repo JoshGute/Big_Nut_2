@@ -232,42 +232,49 @@ MonoBehaviour:
     frames:
     - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
         type: 2}
-      spriteId: 33
+      spriteId: 39
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
       eventFloat: 0
     - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
         type: 2}
-      spriteId: 34
+      spriteId: 40
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
       eventFloat: 0
     - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
         type: 2}
-      spriteId: 35
+      spriteId: 41
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
       eventFloat: 0
     - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
         type: 2}
-      spriteId: 36
+      spriteId: 42
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
       eventFloat: 0
     - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
         type: 2}
-      spriteId: 37
+      spriteId: 43
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
       eventFloat: 0
     - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
         type: 2}
-      spriteId: 38
+      spriteId: 44
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
+        type: 2}
+      spriteId: 45
       triggerEvent: 1
       eventInfo: Completed
       eventInt: 0

@@ -2457,6 +2457,13 @@ MonoBehaviour:
     - Shockwave_Start_fix2/3
     - Shockwave_Start_fix2/4
     - Shockwave_Start_fix2/5
+    - Shockwave_Start_fix3/0
+    - Shockwave_Start_fix3/1
+    - Shockwave_Start_fix3/2
+    - Shockwave_Start_fix3/3
+    - Shockwave_Start_fix3/4
+    - Shockwave_Start_fix3/5
+    - Shockwave_Start_fix3/6
     spriteTextureGUIDs:
     - 3d962caf8eb01cf459f2a63953b8b180
     - 3d962caf8eb01cf459f2a63953b8b180
@@ -2497,6 +2504,13 @@ MonoBehaviour:
     - fc8efff7562c3bc4db56793e1264e013
     - fc8efff7562c3bc4db56793e1264e013
     - fc8efff7562c3bc4db56793e1264e013
+    - 5aec5cfcbe706e24db13d16260b33a59
+    - 5aec5cfcbe706e24db13d16260b33a59
+    - 5aec5cfcbe706e24db13d16260b33a59
+    - 5aec5cfcbe706e24db13d16260b33a59
+    - 5aec5cfcbe706e24db13d16260b33a59
+    - 5aec5cfcbe706e24db13d16260b33a59
+    - 5aec5cfcbe706e24db13d16260b33a59
     spriteTextureTimeStamps:
     - 1485033357.92877
     - 1485033357.92877
@@ -2537,6 +2551,13 @@ MonoBehaviour:
     - 1489790790.82655
     - 1489790790.82655
     - 1489790790.82655
+    - 1490202274.97858
+    - 1490202274.97858
+    - 1490202274.97858
+    - 1490202274.97858
+    - 1490202274.97858
+    - 1490202274.97858
+    - 1490202274.97858
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

@@ -459,11 +459,15 @@ public class PlayerControllerVer2 : MonoBehaviour
 
         //NEW DASH LOGIC
         Rb.velocity = Vector3.zero;
+
       Vector3 NormalizedAngle = Vector3.Normalize(new Vector3(rotateAxisH, rotateAxisV, 0));
 
       RaycastHit SmackIt;
       //print("H " + INfAxisH + " V " + INfAxisV);
       StartCoroutine(Vibrate(0.2f, 0.3f));
+      
+      aController.PlayDashAnimation(NormalizedAngle);
+
       if (Physics.Raycast(transform.position, NormalizedAngle, out SmackIt, DashDistance))
       {
           curDashTargetPos = SmackIt.point;

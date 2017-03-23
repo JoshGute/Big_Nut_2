@@ -46,6 +46,9 @@ public class AnimationControllerVer2 : MonoBehaviour {
   [SerializeField]
   private GameObject ShockwaveObject;
 
+  [SerializeField]
+  private GameObject DashObject;
+
   // Use this for initialization
   void Start ()
   {
@@ -66,6 +69,12 @@ public class AnimationControllerVer2 : MonoBehaviour {
   public void PlayShockwaveAnimation()
   {
     ShockwaveObject.GetComponent<PlayAnimOnce>().PlayAnim();
+  }
+
+  public void PlayDashAnimation(Vector3 DashPos)
+  {
+    DashObject.transform.LookAt(DashObject.transform.position + DashPos, Vector3.forward);
+    DashObject.GetComponentInChildren<PlayAnimOnce>().PlayAnim();
   }
 
   public void ChangeThrusterAnimation(int iInput_)
