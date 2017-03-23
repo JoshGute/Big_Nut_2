@@ -60,7 +60,6 @@ public class GunScript : MonoBehaviour
             }
         }
         Reticle.color = new Vector4(1, 1, 1, (fTimeSinceLastShot / fFireRate));
-        print(fTimeSinceLastShot / fFireRate);
     }
 
     public virtual void Shoot()

@@ -363,12 +363,13 @@ MonoBehaviour:
   gPlayer2: {fileID: 0}
   offset: {x: 0, y: 0, z: -600}
   ShakeAmount: 0.5
-  MaxZoomIn: 100
-  MinZoomOut: 350
-  ZoomInRate: 0
-  ZoomOutRate: 0
+  MaxZoomIn: 150
+  MinZoomOut: 150
+  ZoomInRate: 4
+  ZoomOutRate: 8
   ShortBorder: {fileID: 482515550}
-  OldTargetDistance: 0
+  XCap: 1325
+  YCap: 490
   BackGroundImage: {fileID: 448762670}
 --- !u!81 &189141029
 AudioListener:
@@ -1202,7 +1203,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 676131157}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 167, y: -970, z: 0}
+  m_LocalPosition: {x: 167, y: -851, z: 0}
   m_LocalScale: {x: 231.3023, y: 4807.905, z: 20.421463}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1463,7 +1464,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 803216893}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1828, y: -139, z: 0}
+  m_LocalPosition: {x: -2016, y: -139, z: 0}
   m_LocalScale: {x: 231.30212, y: 3663.5212, z: 20.421463}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1986,6 +1987,22 @@ Prefab:
     - target: {fileID: 4098905952377338, guid: c0b778b01d916a244ba2d01377486619, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050891317678622, guid: c0b778b01d916a244ba2d01377486619, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.203
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668250238914598, guid: c0b778b01d916a244ba2d01377486619, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460097276623520, guid: c0b778b01d916a244ba2d01377486619, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -6.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247825416213160, guid: c0b778b01d916a244ba2d01377486619, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.202
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0b778b01d916a244ba2d01377486619, type: 2}
