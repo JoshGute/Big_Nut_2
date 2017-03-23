@@ -77,6 +77,8 @@ public class PlayerControllerVer2 : MonoBehaviour
 
   public GameObject Shield;
 
+    public GameObject onHit;
+
   //public int PlayerNumber;
 
   public PlayerIndex playerIndex;
@@ -523,8 +525,10 @@ public class PlayerControllerVer2 : MonoBehaviour
 
   void TakeDamage()
   {
+    
     if (iHealth > 1)
     {
+        Instantiate(onHit, transform.position, transform.rotation);
         asNoiseMaker.PlayOneShot(acHitNoise);
         StartCoroutine(Flash(robotSkin, Color.gray));
             StartCoroutine(Vibrate(0.5f, 0.5f));

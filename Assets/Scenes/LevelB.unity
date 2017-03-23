@@ -502,8 +502,13 @@ MonoBehaviour:
   gPlayer2: {fileID: 0}
   offset: {x: 0, y: 0, z: -400}
   ShakeAmount: 0.5
+  MaxZoomIn: 150
+  MinZoomOut: 150
+  ZoomInRate: 0
+  ZoomOutRate: 0
   ShortBorder: {fileID: 0}
-  OldTargetDistance: 0
+  XCap: 0
+  YCap: 0
   BackGroundImage: {fileID: 0}
 --- !u!114 &165626832
 MonoBehaviour:
@@ -1170,6 +1175,7 @@ MonoBehaviour:
   sPrioritySpawn1: {fileID: 303792707}
   sPrioritySpawn2: {fileID: 903725199}
   bPrioritySpawn: 1
+  SpawnBurst: {fileID: 0}
 --- !u!4 &1436778929
 Transform:
   m_ObjectHideFlags: 0

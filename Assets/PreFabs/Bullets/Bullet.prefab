@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012219236424}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.79000026, y: 0.818, z: -2.7830002}
+  m_LocalPosition: {x: 1037.8195, y: -1335.822, z: -2.7830002}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4804208254279002}
@@ -138,7 +138,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
 --- !u!33 &33000010097337616
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -179,13 +179,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfa6acb95fa48a44ad1d13edacf88ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 400
+  MaxDistance: 700
   Direction: {x: 0, y: 0, z: 0}
   sOwner: 
-  fSpeed: 400
+  fSpeed: 900
   BlowUpWithTime: 0
   TimeToBlowUp: 0
-  BulletAnimator: {fileID: 0}
+  BulletAnimator: {fileID: 114267058899187390}
   fDamage: 1
 --- !u!114 &114115691043471896
 MonoBehaviour:
@@ -210,7 +210,7 @@ MonoBehaviour:
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
-  renderLayer: 0
+  renderLayer: 2
 --- !u!114 &114267058899187390
 MonoBehaviour:
   m_ObjectHideFlags: 1

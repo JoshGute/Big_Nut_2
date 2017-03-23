@@ -30,6 +30,8 @@ public class TeamManager : MonoBehaviour
     public Spawnpoint sPrioritySpawn2;
     public bool bPrioritySpawn = false;
 
+    public GameObject SpawnBurst;
+
     public delegate void TeamWin(string sOwner);
     public static event TeamWin Victory;
 
@@ -70,6 +72,7 @@ public class TeamManager : MonoBehaviour
 
                 cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 1);
                 hHUD.GetPlayer(gRobot, 1);
+                Instantiate(SpawnBurst, sPrioritySpawn1.transform.position, sPrioritySpawn1.transform.rotation);
             }
 
             else
@@ -82,6 +85,7 @@ public class TeamManager : MonoBehaviour
 
                 cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 2);
                 hHUD.GetPlayer(gRobot, 2);
+                Instantiate(SpawnBurst, sPrioritySpawn2.transform.position, sPrioritySpawn2.transform.rotation);
             }
         }
 
@@ -95,6 +99,7 @@ public class TeamManager : MonoBehaviour
                     GameObject gRobot = Instantiate(gTeam[botRandNum], sSpawnPoints[randNum].transform.position, gTeam[botRandNum].transform.rotation) as GameObject;
                     gRobot.GetComponent<PlayerControllerVer2>().TagRobot(sOwner_);
                     bSpawned = true;
+                    Instantiate(SpawnBurst, sSpawnPoints[randNum].transform.position, sSpawnPoints[randNum].transform.rotation);
 
                     if (sOwner_ == "PLAYER1")
                     {

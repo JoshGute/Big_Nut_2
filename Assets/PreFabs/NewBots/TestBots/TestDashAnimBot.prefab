@@ -1080,6 +1080,7 @@ MonoBehaviour:
   Speed: 1500
   aController: {fileID: 114215026616284560}
   Shield: {fileID: 1515745877040758}
+  onHit: {fileID: 0}
   playerIndex: 0
   bDisabled: 0
   iHealth: 3

@@ -32,13 +32,20 @@ public class FollowCam : MonoBehaviour
     public Vector3 offset = new Vector3(0f, 0f, -400);
     //screen shake variables
     public float ShakeAmount = 0.5f;
-    public int MaxZoomIn = 100;
-    public int MinZoomOut = 350;
+    public int MaxZoomIn = 150;
+    public int MinZoomOut = 150;
     public float ZoomInRate;
     public float ZoomOutRate;
     public GameObject ShortBorder;
-    public float OldTargetDistance;
+    private float OldTargetDistance;
     private bool bShake;
+    public float XCap;
+    public float YCap;
+
+    private float ZOOMINCAP;
+    private float ZOOMOUTCAP;
+
+    private bool CanZoomIn = true;
 
     public GameObject BackGroundImage;
 
@@ -46,6 +53,7 @@ public class FollowCam : MonoBehaviour
     {
         bShake = false;
         transform.position = offset;
+        ChangeCameraOffest(offset.z);
     }
 
     public void GetTarget(GameObject gPlayer_, int iPlayer_)
@@ -69,60 +77,69 @@ public class FollowCam : MonoBehaviour
         {
             if (gPlayer1 && gPlayer2)
             {
+                //determines how far apart the players are.
                 float NewTargetDistance = Vector3.Distance(gPlayer1.transform.position,
                                                            gPlayer2.transform.position);
 
+                //Sets the target point between the players
                 target = (gPlayer1.transform.position + gPlayer2.transform.position) * 0.5f;
+
+                //makes sure our Z doesn't change normally.
                 target.z = transform.position.z;
 
+                //Check our declared boundaries. 
+                if (target.x >= XCap || target.x <= -XCap)
+                {
+                    if (target.x >= XCap)
+                    {
+                        target.x = XCap;
+                    }
+                    else
+                    {
+                        target.x = -XCap;
+                    }
+                    CanZoomIn = false;
+                }
+
+                //Check our declared boundaries. 
+                if (target.y >= YCap || target.y <= -YCap)
+                {
+                    if (target.y >= YCap)
+                    {
+                        target.y = YCap;
+                    }
+                    else
+                    {
+                        target.y = -YCap;
+                    }
+                    CanZoomIn = false;
+                }
+
+                //Sets the position to move the ShortBorder to.
                 Vector3 NoZTarget = new Vector3(target.x, target.y, 0);
 
-                //print(NewTargetDistance);
-
-                if (NewTargetDistance > (OldTargetDistance + 1) && transform.position.z > (offset.z - MaxZoomIn))
+                //Checks if our distance has expanded and if we are too zoomed out.
+                if (NewTargetDistance > (OldTargetDistance + 1) && transform.position.z > ZOOMOUTCAP)
                 {
-                    //print("Bigger");
-                    target.z -= 7;
-                    BackGroundImage.transform.position = new Vector3(BackGroundImage.transform.position.x, BackGroundImage.transform.position.y, BackGroundImage.transform.position.z - 7);
+                    target.z -= ZoomOutRate;
+                    BackGroundImage.transform.position = new Vector3(BackGroundImage.transform.position.x, BackGroundImage.transform.position.y, BackGroundImage.transform.position.z - ZoomOutRate);
 
                 }
-                else if (NewTargetDistance < (OldTargetDistance - 1) && transform.position.z < (offset.z + MinZoomOut))
+
+                //Checks if our distance decreased and if we are too zoomed out.
+                else if (CanZoomIn && NewTargetDistance < (OldTargetDistance - 1) && transform.position.z < ZOOMINCAP)
                 {
-                    //print("Smaller");
-                    target.z += 4;
-                    BackGroundImage.transform.position = new Vector3(BackGroundImage.transform.position.x, BackGroundImage.transform.position.y, BackGroundImage.transform.position.z + 4);
+                    target.z += ZoomInRate;
+                    BackGroundImage.transform.position = new Vector3(BackGroundImage.transform.position.x, BackGroundImage.transform.position.y, BackGroundImage.transform.position.z + ZoomInRate);
                 }
 
                 transform.position = Vector3.Lerp(transform.position, target, 100f);
 
                 ShortBorder.transform.position = Vector3.Lerp(transform.position, NoZTarget, 100f);
 
-                //BackGroundImage.transform.position = Vector3.Lerp(BackGroundImage.transform.position, new Vector3(BackGroundImage.transform.position.x,
-                                                                                                                  //BackGroundImage.transform.position.y, target.z), 100f);
-
                 OldTargetDistance = NewTargetDistance;
-                /*targetZoom = target.magnitude;
 
-                target = new Vector3(target.x, target.y, targetZoom);
-                target += offset;
-
-                if (target.z > -300)
-                {
-                    target = new Vector3(target.x, target.y, -300);
-                    transform.position = Vector3.Lerp(transform.position, target, 100f);
-                }
-
-                else
-                {
-                    transform.position = Vector3.Lerp(transform.position, target, 100f);
-
-                    //Vector3 billy = new Vector3(transform.position.x);
-
-                    Vector3 NoZPosition = new Vector3(transform.position.x, transform.position.y, 0);
-                    Vector3 NoZTarget = new Vector3(target.x, target.y, 0);
-
-                    ShortBorder.transform.position += Vector3.Normalize(NoZTarget);
-                }*/
+                CanZoomIn = true;
             }
              
             else
@@ -141,6 +158,14 @@ public class FollowCam : MonoBehaviour
     public void Shake(float fShakeAmount_)
     {
         StartCoroutine(ScreenShaker(fShakeAmount_));
+    }
+
+    //Used to change the offset for the camera and the zoom maximum
+    public void ChangeCameraOffest(float INfNewOffset)
+    {
+        offset.z = INfNewOffset;
+        ZOOMINCAP = offset.z + MaxZoomIn;
+        ZOOMOUTCAP = offset.z - MinZoomOut;
     }
 
     IEnumerator ScreenShaker(float fShakeAmount_)
