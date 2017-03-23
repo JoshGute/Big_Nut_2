@@ -2243,8 +2243,6 @@ MonoBehaviour:
   cCamera: {fileID: 189141027}
   hHUD: {fileID: 2110777811}
   gTeam:
-  - {fileID: 1605760969047222, guid: 7e9de8d6570b3134db7c25af93e9a394, type: 2}
-  - {fileID: 1851812481687626, guid: a65b1341bd892114983996afa00f5475, type: 2}
   - {fileID: 1781974129287176, guid: 4112796f4cf90a041979235ca220e79b, type: 2}
   sSpawnPoints:
   - {fileID: 1272045893}
