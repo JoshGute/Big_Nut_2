@@ -96,7 +96,7 @@ MonoBehaviour:
   collection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
     type: 2}
   _color: {r: 0.49264705, g: 0.49264705, b: 0.49264705, a: 1}
-  _scale: {x: 100, y: 100, z: 1}
+  _scale: {x: 200, y: 200, z: 1}
   _spriteId: 16
   boxCollider2D: {fileID: 0}
   polygonCollider2D: []

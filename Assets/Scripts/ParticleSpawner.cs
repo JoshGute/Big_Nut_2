@@ -50,12 +50,12 @@ public class ParticleSpawner : MonoBehaviour {
     }
 	}
 	
-  void SpawnParticles()
+  public void SpawnParticles()
   {
     SpawnParticle = true;
   }
 
-  void StopSpawningParticles()
+  public void StopSpawningParticles()
   {
     SpawnParticle = false;
   }
@@ -70,7 +70,7 @@ public class ParticleSpawner : MonoBehaviour {
       //Spawn the particle
       if (Spawntimer > SpawnEveryXSeconds)
       {
-        Instantiate(Particle, gameObject.transform);
+        Instantiate(Particle, gameObject.transform.position, gameObject.transform.rotation);
 
         Spawntimer = 0;
       }
