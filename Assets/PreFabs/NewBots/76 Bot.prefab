@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sOwner: PLAYER1
   dashTargetPos: {fileID: 4946826263582024}
-  DashDistance: 200
+  DashDistance: 250
   DashHitbox: {fileID: 1632291161431860}
   maxDashes: 3
   curDashes: 0
@@ -1055,6 +1055,8 @@ MonoBehaviour:
   aController: {fileID: 114215026616284560}
   Shield: {fileID: 1515745877040758}
   onHit: {fileID: 0}
+  Smoke: {fileID: 0}
+  SmokeLoop: {fileID: 0}
   playerIndex: 0
   bDisabled: 0
   iHealth: 3

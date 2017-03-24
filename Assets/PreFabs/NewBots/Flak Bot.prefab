@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sOwner: PLAYER1
   PatternSpawn: {fileID: 1402480454657018}
-  fFireRate: 1.25
+  fFireRate: 0.75
   BulletsShotPerTick:
   - {fileID: 1419557387894578, guid: 12aa699235f9e4143b3046250f43e1da, type: 2}
   iNumberofTicks: 1
@@ -1143,7 +1143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sOwner: PLAYER1
   dashTargetPos: {fileID: 4151342046152906}
-  DashDistance: 200
+  DashDistance: 300
   DashHitbox: {fileID: 1498657893626466}
   maxDashes: 2
   curDashes: 0
@@ -1155,6 +1155,8 @@ MonoBehaviour:
   aController: {fileID: 114900817012096540}
   Shield: {fileID: 1531540229936308}
   onHit: {fileID: 0}
+  Smoke: {fileID: 0}
+  SmokeLoop: {fileID: 0}
   playerIndex: 0
   bDisabled: 0
   iHealth: 3

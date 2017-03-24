@@ -878,6 +878,7 @@ MonoBehaviour:
   BulletsShotPerTick:
   - {fileID: 1000012153658314, guid: d14426bab323b70409436b580e33081c, type: 2}
   - {fileID: 1000012153658314, guid: d14426bab323b70409436b580e33081c, type: 2}
+  - {fileID: 1000012153658314, guid: d14426bab323b70409436b580e33081c, type: 2}
   iNumberofTicks: 1
   fLengthOfTick: 0.3
   fBulletSpacing: 0.1
@@ -938,7 +939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sOwner: PLAYER1
   dashTargetPos: {fileID: 4248486792095264}
-  DashDistance: 80
+  DashDistance: 200
   DashHitbox: {fileID: 1170359216635112}
   maxDashes: 4
   curDashes: 0
@@ -950,6 +951,8 @@ MonoBehaviour:
   aController: {fileID: 114111899545833076}
   Shield: {fileID: 1613834187410458}
   onHit: {fileID: 0}
+  Smoke: {fileID: 0}
+  SmokeLoop: {fileID: 0}
   playerIndex: 0
   bDisabled: 0
   iHealth: 3
