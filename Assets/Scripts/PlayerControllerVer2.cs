@@ -77,7 +77,9 @@ public class PlayerControllerVer2 : MonoBehaviour
 
   public GameObject Shield;
 
-    public GameObject onHit;
+  public GameObject onHit;
+    public GameObject Smoke;
+    public GameObject SmokeLoop;
 
   //public int PlayerNumber;
 
@@ -115,6 +117,8 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     public delegate void DeathAction(string sOwner_);
     public static event DeathAction Die;
+    public delegate void HitAction (string sOwner_);
+    public static event HitAction Hit;
 
     // Use this for initialization
     void Start()
@@ -126,7 +130,7 @@ public class PlayerControllerVer2 : MonoBehaviour
     ShootScript = GetComponent<GunScript>();
 
     aController = GetComponent<AnimationControllerVer2>();
-
+        Hit(sOwner);
     //DashDistance = Vector3.Distance(Tr.position, dashTargetPos.position);
   }
 
@@ -422,6 +426,7 @@ public class PlayerControllerVer2 : MonoBehaviour
       {
         Rb.velocity = Rb.velocity.normalized * maxSpeed;
       }
+
     }
 
   }
@@ -467,8 +472,9 @@ public class PlayerControllerVer2 : MonoBehaviour
       RaycastHit SmackIt;
       //print("H " + INfAxisH + " V " + INfAxisV);
       StartCoroutine(Vibrate(0.2f, 0.3f));
-      
-      aController.PlayDashAnimation(NormalizedAngle);
+        StartCoroutine(Flash(robotSkin, Color.red));
+
+        aController.PlayDashAnimation(NormalizedAngle);
 
       if (Physics.Raycast(transform.position, NormalizedAngle, out SmackIt, DashDistance))
       {
@@ -531,14 +537,16 @@ public class PlayerControllerVer2 : MonoBehaviour
         Instantiate(onHit, transform.position, transform.rotation);
         asNoiseMaker.PlayOneShot(acHitNoise);
         StartCoroutine(Flash(robotSkin, Color.gray));
-            StartCoroutine(Vibrate(0.5f, 0.5f));
+        StartCoroutine(Vibrate(0.5f, 0.5f));
         --iHealth;
+        Hit(sOwner);
       //print("player hp" + iHealth);
     }
 
     else if (iHealth == 1)
     {      
       --iHealth;
+      Hit(sOwner);
       //print("Dead");
       Explode();
     }

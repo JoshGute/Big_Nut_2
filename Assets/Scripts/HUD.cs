@@ -43,14 +43,18 @@ public class HUD : MonoBehaviour
     private int P2Kills;
     public int MaxKills = 3;
 
+    public FollowCam fCam;
+
     void OnEnable()
     {
        PlayerControllerVer2.Die += UpdateBotsLeft;
+       PlayerControllerVer2.Hit += UpdateHealth;
     }
 
     void OnDisable()
     {
         PlayerControllerVer2.Die -= UpdateBotsLeft;
+        PlayerControllerVer2.Hit -= UpdateHealth;
     }
     // Use this for initialization
     void Start ()
@@ -63,17 +67,30 @@ public class HUD : MonoBehaviour
         P2Kills = 0;
         P1robs.GetComponent<Text>().text = P1Kills.ToString();
         P2robs.GetComponent<Text>().text = P2Kills.ToString();
+        P1hp.GetComponent<Text>().text = PlayerOne.iHealth.ToString();
+        P1hp.GetComponent<Text>().text = PlayerOne.iHealth.ToString();
     }
 	
 	// Update is called once per frame
-	void Update ()
+
+    void UpdateHealth(string sOwner_)
     {
-        P1hp.GetComponent<Text>().text = PlayerOne.iHealth.ToString();
-        P2hp.GetComponent<Text>().text = PlayerTwo.iHealth.ToString();
+        fCam.Shake(20.0f);
+
+        if (sOwner_ == "PLAYER1")
+        {
+            P1hp.GetComponent<Text>().text = PlayerOne.iHealth.ToString();
+        }
+
+        else if (sOwner_ == "PLAYER2")
+        {
+            P2hp.GetComponent<Text>().text = PlayerTwo.iHealth.ToString();
+        }
     }
 
     void UpdateBotsLeft(string sOwner_)
     {
+        fCam.Shake(40.0f);
         if (P1Kills < MaxKills && P2Kills < MaxKills)
         {
             if (sOwner_ == "PLAYER1")
@@ -96,7 +113,6 @@ public class HUD : MonoBehaviour
                 }
             }
 
-            print(P1Kills);
         }
     }
 
