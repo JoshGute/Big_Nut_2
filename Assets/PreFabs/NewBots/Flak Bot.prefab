@@ -1155,8 +1155,6 @@ MonoBehaviour:
   aController: {fileID: 114900817012096540}
   Shield: {fileID: 1531540229936308}
   onHit: {fileID: 0}
-  Smoke: {fileID: 0}
-  SmokeLoop: {fileID: 0}
   playerIndex: 0
   bDisabled: 0
   iHealth: 3
@@ -1164,6 +1162,7 @@ MonoBehaviour:
   acHitNoise: {fileID: 8300000, guid: b069d49ba6e2c6c419d7c8f0b7e0acf6, type: 3}
   gDeathObject: {fileID: 1415296866567280, guid: 9de7e2c35ba528043bfecb38c3e4b14c,
     type: 2}
+  particleSpawner: {fileID: 0}
   robotSkin: {fileID: 114136715064901194}
 --- !u!135 &135250115800931152
 SphereCollider:
