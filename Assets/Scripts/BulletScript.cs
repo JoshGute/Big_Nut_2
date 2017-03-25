@@ -116,9 +116,15 @@ public class BulletScript : MonoBehaviour
     }
 
     void KillBullet()
+    {      
+        StartCoroutine(PoofBullet());
+    }
+
+    private IEnumerator PoofBullet()
     {
         BulletAnimator.Play("Bullet_Die");
+        yield return new WaitForSeconds(BulletAnimator.ClipTimeSeconds);
         transform.DetachChildren();
-        Destroy(gameObject); 
+        Destroy(gameObject);
     }
 }
