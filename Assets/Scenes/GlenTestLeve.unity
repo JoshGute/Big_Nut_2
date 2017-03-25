@@ -2243,7 +2243,7 @@ MonoBehaviour:
   cCamera: {fileID: 189141027}
   hHUD: {fileID: 2110777811}
   gTeam:
-  - {fileID: 1781974129287176, guid: 4112796f4cf90a041979235ca220e79b, type: 2}
+  - {fileID: 1096368976574824, guid: 912107294dc59594e9888e523c3a32c7, type: 2}
   sSpawnPoints:
   - {fileID: 1272045893}
   - {fileID: 1515872635}
@@ -2252,6 +2252,7 @@ MonoBehaviour:
   sPrioritySpawn1: {fileID: 1515872635}
   sPrioritySpawn2: {fileID: 565397717}
   bPrioritySpawn: 1
+  SpawnBurst: {fileID: 1376560982256854, guid: 4eaf1e64dfe17994b9d243be17fc718e, type: 2}
 --- !u!4 &1331233614
 Transform:
   m_ObjectHideFlags: 0
@@ -3344,6 +3345,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: LevelB
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013753539094, guid: 332134ab5684e394492f093235ddd913,
+        type: 2}
+      propertyPath: fCam
+      value: 
+      objectReference: {fileID: 189141028}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 332134ab5684e394492f093235ddd913, type: 2}
   m_IsPrefabParent: 0

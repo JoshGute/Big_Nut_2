@@ -42,7 +42,7 @@ public class GunScript : MonoBehaviour
 
     public AudioSource RobotAudioSource;
 
-    public tk2dSprite Reticle;
+    public Image Reticle;
     public GameObject GunShot;
 
     void Update()
@@ -55,11 +55,10 @@ public class GunScript : MonoBehaviour
             {
                 bShot = false;
                 RobotAudioSource.PlayOneShot(ReloadNoise);
-                //Reticle.color = Color.white;
                 fTimeSinceLastShot = 0;
             }
         }
-        Reticle.color = new Vector4(1, 1, 1, (fTimeSinceLastShot / fFireRate));
+        Reticle.fillAmount = 1 - fTimeSinceLastShot / fFireRate;
     }
 
     public virtual void Shoot()
@@ -68,7 +67,6 @@ public class GunScript : MonoBehaviour
         {
             StartCoroutine(ShootingGun());
             bShot = true;
-            //Reticle.color = Color.clear;
         }
     }
 

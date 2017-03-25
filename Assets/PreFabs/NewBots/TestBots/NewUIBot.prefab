@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114038517357209274}
   - component: {fileID: 82486160590729744}
   - component: {fileID: 114781069793936688}
+  - component: {fileID: 114311192185535158}
   m_Layer: 10
   m_Name: NewUIBot
   m_TagString: Player1
@@ -369,7 +370,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1096368976574824}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 120.4, y: 145.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
   - {fileID: 4452281984231110}
@@ -1041,7 +1042,7 @@ MonoBehaviour:
   ReloadNoise: {fileID: 8300000, guid: 5e6e6d26b356f9d47900c2540475a1ac, type: 3}
   MissNoise: {fileID: 0}
   RobotAudioSource: {fileID: 82486160590729744}
-  Reticle: {fileID: 0}
+  Reticle: {fileID: 114017118623542804}
   GunShot: {fileID: 1945534561638118, guid: cb10ed3381764df4fa1eef8d4a3f961a, type: 2}
 --- !u!114 &114041969686484138
 MonoBehaviour:
@@ -1219,6 +1220,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114311192185535158
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1096368976574824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee02213455a879e4cbd9a5b29ba48558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particle: {fileID: 1666334753467982, guid: d2b8d324f57ed3b47870ebc5e9b06cce, type: 2}
+  SpawnEveryXSeconds: 0.25
+  SpawnParticleAutomatically: 0
 --- !u!114 &114319362873045932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1394,7 +1409,7 @@ MonoBehaviour:
   Speed: 1500
   aController: {fileID: 114781069793936688}
   Shield: {fileID: 1112951389214632}
-  onHit: {fileID: 0}
+  onHit: {fileID: 1945534561638118, guid: cb10ed3381764df4fa1eef8d4a3f961a, type: 2}
   playerIndex: 0
   bDisabled: 0
   iHealth: 3
