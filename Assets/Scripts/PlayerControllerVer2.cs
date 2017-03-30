@@ -78,8 +78,6 @@ public class PlayerControllerVer2 : MonoBehaviour
   public GameObject Shield;
 
   public GameObject onHit;
-    public GameObject Smoke;
-    public GameObject SmokeLoop;
 
   //public int PlayerNumber;
 
@@ -104,6 +102,7 @@ public class PlayerControllerVer2 : MonoBehaviour
     public AudioClip acHitNoise;
 
     public GameObject gDeathObject;
+    public ParticleSpawner particleSpawner;
 
     public tk2dSprite robotSkin;
 
@@ -540,6 +539,10 @@ public class PlayerControllerVer2 : MonoBehaviour
         StartCoroutine(Vibrate(0.5f, 0.5f));
         --iHealth;
         Hit(sOwner);
+            if (iHealth == 1)
+            {
+                particleSpawner.SpawnParticles();
+            }
       //print("player hp" + iHealth);
     }
 

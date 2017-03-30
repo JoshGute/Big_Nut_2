@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sOwner: PLAYER1
   dashTargetPos: {fileID: 4946826263582024}
-  DashDistance: 200
+  DashDistance: 250
   DashHitbox: {fileID: 1632291161431860}
   maxDashes: 3
   curDashes: 0
@@ -1064,6 +1064,7 @@ MonoBehaviour:
   acHitNoise: {fileID: 8300000, guid: b069d49ba6e2c6c419d7c8f0b7e0acf6, type: 3}
   gDeathObject: {fileID: 1415296866567280, guid: 9de7e2c35ba528043bfecb38c3e4b14c,
     type: 2}
+  particleSpawner: {fileID: 0}
   robotSkin: {fileID: 114515487669763682}
 --- !u!114 &114598741029131318
 MonoBehaviour:

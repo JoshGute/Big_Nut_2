@@ -878,6 +878,7 @@ MonoBehaviour:
   BulletsShotPerTick:
   - {fileID: 1000012153658314, guid: d14426bab323b70409436b580e33081c, type: 2}
   - {fileID: 1000012153658314, guid: d14426bab323b70409436b580e33081c, type: 2}
+  - {fileID: 1000012153658314, guid: d14426bab323b70409436b580e33081c, type: 2}
   iNumberofTicks: 1
   fLengthOfTick: 0.3
   fBulletSpacing: 0.1
@@ -938,7 +939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sOwner: PLAYER1
   dashTargetPos: {fileID: 4248486792095264}
-  DashDistance: 80
+  DashDistance: 200
   DashHitbox: {fileID: 1170359216635112}
   maxDashes: 4
   curDashes: 0
@@ -959,6 +960,7 @@ MonoBehaviour:
   acHitNoise: {fileID: 8300000, guid: b069d49ba6e2c6c419d7c8f0b7e0acf6, type: 3}
   gDeathObject: {fileID: 1415296866567280, guid: 9de7e2c35ba528043bfecb38c3e4b14c,
     type: 2}
+  particleSpawner: {fileID: 0}
   robotSkin: {fileID: 114711538894137746}
 --- !u!114 &114450921633006048
 MonoBehaviour:

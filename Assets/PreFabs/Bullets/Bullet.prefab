@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4000010221260414}
   - component: {fileID: 33000010097337616}
-  - component: {fileID: 135000013529898942}
   - component: {fileID: 23000010107974630}
   - component: {fileID: 54000010929845886}
   - component: {fileID: 114000013363939026}
+  - component: {fileID: 65670430601592810}
   m_Layer: 9
   m_Name: Bullet
   m_TagString: Bullet
@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012219236424}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1037.8195, y: -1335.822, z: -2.7830002}
+  m_LocalPosition: {x: 167.3471, y: -487.04004, z: -3455.3906}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4804208254279002}
@@ -168,6 +168,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &65670430601592810
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012219236424}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3865418, y: 1, z: 1.6655731}
+  m_Center: {x: -0.0064697154, y: 0, z: -0.077623}
 --- !u!114 &114000013363939026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -225,15 +237,3 @@ MonoBehaviour:
   library: {fileID: 114737840657459894, guid: aa6f488add07bc847a48cbbbb9b74c4f, type: 2}
   defaultClipId: 0
   playAutomatically: 0
---- !u!135 &135000013529898942
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012219236424}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
