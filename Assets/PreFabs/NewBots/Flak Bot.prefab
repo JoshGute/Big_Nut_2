@@ -1155,6 +1155,8 @@ MonoBehaviour:
   aController: {fileID: 114900817012096540}
   Shield: {fileID: 1531540229936308}
   onHit: {fileID: 0}
+  Smoke: {fileID: 0}
+  SmokeLoop: {fileID: 0}
   playerIndex: 0
   bDisabled: 0
   iHealth: 3
