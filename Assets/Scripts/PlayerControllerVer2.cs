@@ -467,6 +467,7 @@ public class PlayerControllerVer2 : MonoBehaviour
         Rb.velocity = Vector3.zero;
 
       Vector3 NormalizedAngle = Vector3.Normalize(new Vector3(rotateAxisH, rotateAxisV, 0));
+      Vector3 InverseNorm = -NormalizedAngle;
 
       RaycastHit SmackIt;
       //print("H " + INfAxisH + " V " + INfAxisV);
@@ -477,7 +478,7 @@ public class PlayerControllerVer2 : MonoBehaviour
 
       if (Physics.Raycast(transform.position, NormalizedAngle, out SmackIt, DashDistance))
       {
-          curDashTargetPos = SmackIt.point;
+          curDashTargetPos = SmackIt.point + (InverseNorm * 2);
           isDashing = true;
       }
       else

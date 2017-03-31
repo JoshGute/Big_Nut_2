@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 23871505505870260}
   - component: {fileID: 114115691043471896}
   - component: {fileID: 114267058899187390}
+  - component: {fileID: 114890568718231432}
   m_Layer: 0
   m_Name: BulletSprite
   m_TagString: Untagged
@@ -57,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012219236424}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 167.3471, y: -487.04004, z: -3455.3906}
+  m_LocalPosition: {x: -239.20367, y: 1174.2826, z: -3400.8684}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4804208254279002}
@@ -237,3 +238,14 @@ MonoBehaviour:
   library: {fileID: 114737840657459894, guid: aa6f488add07bc847a48cbbbb9b74c4f, type: 2}
   defaultClipId: 0
   playAutomatically: 0
+--- !u!114 &114890568718231432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1165316389186746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36bc2f43201c7d04bad7c7555b198e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

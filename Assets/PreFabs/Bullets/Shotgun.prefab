@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 23855445620546916}
   - component: {fileID: 114797821800606200}
   - component: {fileID: 114847619421496410}
+  - component: {fileID: 114830489148598866}
   m_Layer: 0
   m_Name: BulletSprite
   m_TagString: Untagged
@@ -99,6 +100,7 @@ GameObject:
   - component: {fileID: 23787098696061074}
   - component: {fileID: 114079124997428948}
   - component: {fileID: 114796409348496076}
+  - component: {fileID: 114365456230635312}
   m_Layer: 0
   m_Name: BulletSprite
   m_TagString: Untagged
@@ -118,6 +120,7 @@ GameObject:
   - component: {fileID: 23157985897868832}
   - component: {fileID: 114278928974396682}
   - component: {fileID: 114218216099826958}
+  - component: {fileID: 114902125172419570}
   m_Layer: 0
   m_Name: BulletSprite
   m_TagString: Untagged
@@ -160,7 +163,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012153658314}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 250.26608, y: -553.486, z: -3326.2441}
+  m_LocalPosition: {x: -254.28342, y: 1287.6013, z: -3713.021}
   m_LocalScale: {x: 7, y: 7, z: 7}
   m_Children:
   - {fileID: 4796815260303880}
@@ -543,6 +546,17 @@ MonoBehaviour:
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
   renderLayer: 2
+--- !u!114 &114365456230635312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1792599738999552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36bc2f43201c7d04bad7c7555b198e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114796409348496076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -581,6 +595,17 @@ MonoBehaviour:
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
   renderLayer: 2
+--- !u!114 &114830489148598866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1076283110923462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36bc2f43201c7d04bad7c7555b198e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114847619421496410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -595,3 +620,14 @@ MonoBehaviour:
   library: {fileID: 114737840657459894, guid: aa6f488add07bc847a48cbbbb9b74c4f, type: 2}
   defaultClipId: 0
   playAutomatically: 0
+--- !u!114 &114902125172419570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1868270253072994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36bc2f43201c7d04bad7c7555b198e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
