@@ -582,11 +582,9 @@ public class PlayerControllerVer2 : MonoBehaviour
     {
         robotSkin.color = Color.clear;
         bDisabled = true;
-        Time.timeScale = 0.5f;
-        yield return new WaitForSeconds(1f);
-        Time.timeScale = 1f;
         Die(sOwner);
         Destroy(gameObject);
+        return(null);
     }
 
     public void TagRobot(string sOwner_)
