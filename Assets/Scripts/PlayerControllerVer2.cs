@@ -79,6 +79,8 @@ public class PlayerControllerVer2 : MonoBehaviour
 
   public GameObject onHit;
 
+  public GameObject AimRing;
+
   //public int PlayerNumber;
 
   public PlayerIndex playerIndex;
@@ -533,6 +535,8 @@ public class PlayerControllerVer2 : MonoBehaviour
     
     if (iHealth > 1)
     {
+        AimRing.GetComponent<AimRingAnimationController>().PlayHealthDamageAnim();
+
         Instantiate(onHit, transform.position, transform.rotation);
         asNoiseMaker.PlayOneShot(acHitNoise);
         StartCoroutine(Flash(robotSkin, Color.gray));

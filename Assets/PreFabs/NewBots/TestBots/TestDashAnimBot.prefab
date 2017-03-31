@@ -993,7 +993,7 @@ MonoBehaviour:
   ReloadNoise: {fileID: 8300000, guid: 5e6e6d26b356f9d47900c2540475a1ac, type: 3}
   MissNoise: {fileID: 0}
   RobotAudioSource: {fileID: 82226324160008860}
-  Reticle: {fileID: 114924092723338248}
+  Reticle: {fileID: 0}
   GunShot: {fileID: 1945534561638118, guid: cb10ed3381764df4fa1eef8d4a3f961a, type: 2}
 --- !u!114 &114411299270742470
 MonoBehaviour:
@@ -1088,6 +1088,7 @@ MonoBehaviour:
   acHitNoise: {fileID: 8300000, guid: b069d49ba6e2c6c419d7c8f0b7e0acf6, type: 3}
   gDeathObject: {fileID: 1415296866567280, guid: 9de7e2c35ba528043bfecb38c3e4b14c,
     type: 2}
+  particleSpawner: {fileID: 0}
   robotSkin: {fileID: 114515487669763682}
 --- !u!114 &114598741029131318
 MonoBehaviour:

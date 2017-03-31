@@ -886,7 +886,7 @@ MonoBehaviour:
   ReloadNoise: {fileID: 8300000, guid: 5e6e6d26b356f9d47900c2540475a1ac, type: 3}
   MissNoise: {fileID: 0}
   RobotAudioSource: {fileID: 82229062837138418}
-  Reticle: {fileID: 114560950223025212}
+  Reticle: {fileID: 0}
   GunShot: {fileID: 1945534561638118, guid: cb10ed3381764df4fa1eef8d4a3f961a, type: 2}
 --- !u!114 &114315344015758098
 MonoBehaviour:
@@ -951,8 +951,7 @@ MonoBehaviour:
   aController: {fileID: 114111899545833076}
   Shield: {fileID: 1613834187410458}
   onHit: {fileID: 0}
-  Smoke: {fileID: 0}
-  SmokeLoop: {fileID: 0}
+  AimRing: {fileID: 0}
   playerIndex: 0
   bDisabled: 0
   iHealth: 3

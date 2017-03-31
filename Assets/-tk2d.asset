@@ -57,6 +57,10 @@ MonoBehaviour:
     dataGUID: 
     managed: 0
     loadable: 0
+  - assetGUID: 0a059367d15841f4fa5e274570dca5ed
+    dataGUID: 
+    managed: 0
+    loadable: 0
   fontIndex:
   - assetGUID: 063b15d80dbb4604d890600a64c79cf8
     dataGUID: e7a6b09a73c6b2b4f8060096ddbd3b5e
@@ -2651,7 +2655,22 @@ MonoBehaviour:
     - Dash/0
     - PlayerNumber_1/0
     - PlayerNumber_2/0
-    - 
+    - AimRing_0Health/0
+    - AimRing_1Health/0
+    - AimRing_2Health/0
+    - AimRing_3Health/0
+    - AimRing_TakeDamageto0Health/0
+    - AimRing_TakeDamageto0Health/1
+    - AimRing_TakeDamageto0Health/2
+    - AimRing_TakeDamageto0Health/3
+    - AimRing_TakeDamageto1Health/0
+    - AimRing_TakeDamageto1Health/1
+    - AimRing_TakeDamageto1Health/2
+    - AimRing_TakeDamageto1Health/3
+    - AimRing_TakeDamageto2Health/0
+    - AimRing_TakeDamageto2Health/1
+    - AimRing_TakeDamageto2Health/2
+    - AimRing_TakeDamageto2Health/3
     spriteTextureGUIDs:
     - d3bc9acbb049d4b4891e424a1404fc1f
     - 296a7b31cf477f54b8069a804703ce9a
@@ -2660,16 +2679,46 @@ MonoBehaviour:
     - a7c20f613da520b40972570bd7afc4f4
     - b10641414a8599646bd25c161aff9c5c
     - 715b0c318db33d34bbfeefd29126ef3d
-    - 
+    - f11b0950ce01392408a5d6048845b6c0
+    - d2764d3b754b5aa40820880dc01e0262
+    - da0ec61dde1f3f843b9d92300ff0328a
+    - 3db2b82ce034f7e40957dff49fb1dee3
+    - 3de696e895736424fa24bd2aae6e988b
+    - 3de696e895736424fa24bd2aae6e988b
+    - 3de696e895736424fa24bd2aae6e988b
+    - 3de696e895736424fa24bd2aae6e988b
+    - 93c01d7a46f0f784bb70818364698032
+    - 93c01d7a46f0f784bb70818364698032
+    - 93c01d7a46f0f784bb70818364698032
+    - 93c01d7a46f0f784bb70818364698032
+    - b35da758f3b4bfc44b588e53a0f5d6ba
+    - b35da758f3b4bfc44b588e53a0f5d6ba
+    - b35da758f3b4bfc44b588e53a0f5d6ba
+    - b35da758f3b4bfc44b588e53a0f5d6ba
     spriteTextureTimeStamps:
     - 1489765458.9567
-    - 1487270783.96297
+    - 1490813713.08444
     - 1489789794.80361
     - 1489789810.81733
     - 1489789732.76063
     - 1490368804.89155
     - 1490368811.03671
-    - 0
+    - 1490890333.95193
+    - 1490890331.84025
+    - 1490890329.47042
+    - 1490890327.64606
+    - 1490891033.05551
+    - 1490891033.05551
+    - 1490891033.05551
+    - 1490891033.05551
+    - 1490891007.58271
+    - 1490891007.58271
+    - 1490891007.58271
+    - 1490891007.58271
+    - 1490890877.46783
+    - 1490890877.46783
+    - 1490890877.46783
+    - 1490890877.46783
     managedSpriteCollection: 0
     loadable: 0
     assetName: 
