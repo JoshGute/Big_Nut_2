@@ -469,6 +469,7 @@ public class PlayerControllerVer2 : MonoBehaviour
         Rb.velocity = Vector3.zero;
 
       Vector3 NormalizedAngle = Vector3.Normalize(new Vector3(rotateAxisH, rotateAxisV, 0));
+      Vector3 InverseNorm = -NormalizedAngle;
 
       RaycastHit SmackIt;
       //print("H " + INfAxisH + " V " + INfAxisV);
@@ -479,7 +480,7 @@ public class PlayerControllerVer2 : MonoBehaviour
 
       if (Physics.Raycast(transform.position, NormalizedAngle, out SmackIt, DashDistance))
       {
-          curDashTargetPos = SmackIt.point;
+          curDashTargetPos = SmackIt.point + (InverseNorm * 2);
           isDashing = true;
       }
       else
@@ -539,7 +540,7 @@ public class PlayerControllerVer2 : MonoBehaviour
 
         Instantiate(onHit, transform.position, transform.rotation);
         asNoiseMaker.PlayOneShot(acHitNoise);
-        StartCoroutine(Flash(robotSkin, Color.gray));
+        //StartCoroutine(Flash(robotSkin, Color.gray));
         StartCoroutine(Vibrate(0.5f, 0.5f));
         --iHealth;
         Hit(sOwner);
@@ -584,13 +585,11 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     private IEnumerator Death()
     {
-        robotSkin.color = Color.black;
+        robotSkin.color = Color.clear;
         bDisabled = true;
-        Time.timeScale = 0.5f;
-        yield return new WaitForSeconds(1f);
-        Time.timeScale = 1f;
         Die(sOwner);
         Destroy(gameObject);
+        return(null);
     }
 
     public void TagRobot(string sOwner_)

@@ -1,6 +1,6 @@
 ﻿/*******************************  SpaceTube  *********************************
 Author: Josh Gutenberg
-Contributors: --
+Contributors: Glen Aro
 Course: GAM400
 Game:   Big Nut
 Date:   12/7/2016
@@ -48,6 +48,16 @@ public class FollowCam : MonoBehaviour
     private bool CanZoomIn = true;
 
     public GameObject BackGroundImage;
+
+    void OnEnable()
+    {
+        PlayerControllerVer2.Die += DeadZoom;
+    }
+
+    void OnDisable()
+    {
+        PlayerControllerVer2.Die -= DeadZoom;
+    }
 
     void Start()
     {
@@ -166,6 +176,30 @@ public class FollowCam : MonoBehaviour
         offset.z = INfNewOffset;
         ZOOMINCAP = offset.z + MaxZoomIn;
         ZOOMOUTCAP = offset.z - MinZoomOut;
+    }
+
+    private void DeadZoom(string sOwner_)
+    {
+        if (sOwner_ == "PLAYER1")
+        {
+            StartCoroutine(ZoomingIn(gPlayer1.transform.position));
+
+        }
+
+        else
+        {
+            StartCoroutine(ZoomingIn(gPlayer2.transform.position));
+        }
+        bFollow = false;
+    }
+    IEnumerator ZoomingIn(Vector3 vTarget)
+    {
+        bFollow = false;
+        transform.position = new Vector3(vTarget.x, vTarget.y, -150);
+        Time.timeScale = 0.5f;
+        yield return new WaitForSeconds(1f);
+        Time.timeScale = 1f;
+        bFollow = true;
     }
 
     IEnumerator ScreenShaker(float fShakeAmount_)
