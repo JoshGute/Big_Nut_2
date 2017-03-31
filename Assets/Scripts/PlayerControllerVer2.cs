@@ -535,7 +535,7 @@ public class PlayerControllerVer2 : MonoBehaviour
     {
         Instantiate(onHit, transform.position, transform.rotation);
         asNoiseMaker.PlayOneShot(acHitNoise);
-        StartCoroutine(Flash(robotSkin, Color.gray));
+        //StartCoroutine(Flash(robotSkin, Color.gray));
         StartCoroutine(Vibrate(0.5f, 0.5f));
         --iHealth;
         Hit(sOwner);
@@ -580,7 +580,7 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     private IEnumerator Death()
     {
-        robotSkin.color = Color.black;
+        robotSkin.color = Color.clear;
         bDisabled = true;
         Time.timeScale = 0.5f;
         yield return new WaitForSeconds(1f);

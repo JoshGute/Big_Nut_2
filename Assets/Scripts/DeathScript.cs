@@ -12,6 +12,15 @@ public class DeathScript : MonoBehaviour
         cCamera = GameObject.FindGameObjectWithTag("MainCamera");
         cCamera.GetComponent<FollowCam>().Shake(3f);
         StartCoroutine(timedDestroy(2));
+
+        foreach (Transform child in transform)
+        {
+            if (child.GetComponent<Rigidbody>())
+            {
+                child.GetComponent<Rigidbody>().AddExplosionForce(2000, child.transform.position, 20.0f);
+                child.SetParent(null);
+            }
+        }
 	}
 
     private IEnumerator timedDestroy(int iWaitTime)

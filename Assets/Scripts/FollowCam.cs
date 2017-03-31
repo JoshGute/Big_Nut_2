@@ -49,6 +49,16 @@ public class FollowCam : MonoBehaviour
 
     public GameObject BackGroundImage;
 
+    void OnEnable()
+    {
+        PlayerControllerVer2.Die += DeadZoom;
+    }
+
+    void OnDisable()
+    {
+        PlayerControllerVer2.Die -= DeadZoom;
+    }
+
     void Start()
     {
         bShake = false;
@@ -174,5 +184,18 @@ public class FollowCam : MonoBehaviour
         bShake = true;
         yield return new WaitForSeconds(0.5f);
         bShake = false;
+    }
+
+    private void DeadZoom(string sOwner_)
+    {
+        if (sOwner_ == "PLAYER1")
+        {
+            target = gPlayer1.transform.position;
+        }
+
+        else
+        {
+            target = gPlayer2.transform.position;
+        }
     }
 }
