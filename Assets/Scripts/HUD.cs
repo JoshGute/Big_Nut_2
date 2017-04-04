@@ -90,7 +90,6 @@ public class HUD : MonoBehaviour
 
     void UpdateBotsLeft(string sOwner_)
     {
-        fCam.Shake(40.0f);
         if (P1Kills < MaxKills && P2Kills < MaxKills)
         {
             if (sOwner_ == "PLAYER1")

@@ -1,5 +1,5 @@
 ﻿/*******************************  SpaceTube  *********************************
-Author: Josh Gutenberg
+Author: Josh 'why am I so tired' Gutenberg
 Contributors: Glen Aro
 Course: GAM400
 Game:   Big Nut
@@ -190,16 +190,18 @@ public class FollowCam : MonoBehaviour
         {
             StartCoroutine(ZoomingIn(gPlayer2.transform.position));
         }
-        bFollow = false;
     }
     IEnumerator ZoomingIn(Vector3 vTarget)
     {
         bFollow = false;
+        CanZoomIn = true;
         transform.position = new Vector3(vTarget.x, vTarget.y, -150);
+        Shake(40.0f);
         Time.timeScale = 0.5f;
         yield return new WaitForSeconds(1f);
         Time.timeScale = 1f;
         bFollow = true;
+        CanZoomIn = false;
     }
 
     IEnumerator ScreenShaker(float fShakeAmount_)

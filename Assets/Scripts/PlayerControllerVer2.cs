@@ -585,7 +585,7 @@ public class PlayerControllerVer2 : MonoBehaviour
         bDisabled = true;
         Die(sOwner);
         Destroy(gameObject);
-        return(null);
+        yield return new WaitForSeconds(0);
     }
 
     public void TagRobot(string sOwner_)
