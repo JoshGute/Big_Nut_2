@@ -15,11 +15,22 @@ public class ResultsController : MonoBehaviour
     public Scene MainLevel;
     public Scene RobotSelect;
 
+    public GameObject WinningBot;
+    public GameObject LosingBot;
+
+    public GameObject SelectedRobots;
+    public GameObject GameResults;
+
+    public Sprite DVaBot;
+    public Sprite S76Bot;
+    public Sprite FlackBot;
 
 	// Use this for initialization
 	void Start ()
     {
         Debug.Log("im actually running");
+        SelectedRobots = GameObject.Find("RobotHolder");
+        GameResults = GameObject.Find("Results");
 	}
 	
 	// Update is called once per frame
@@ -28,19 +39,60 @@ public class ResultsController : MonoBehaviour
         PrevState = State;
         State = GamePad.GetState(playerIndex);
         Debug.Log(State.Buttons.Start);
-            if(State.Buttons.Start == ButtonState.Pressed && PrevState.Buttons.Start == ButtonState.Released)
-            {
-                SceneManager.LoadScene(0);
-                Debug.Log("Start was pressed");
-            }
-            if (State.Buttons.A == ButtonState.Pressed && PrevState.Buttons.A == ButtonState.Released)
-            {
-                SceneManager.LoadScene(1);
-                Debug.Log("A was pressed");
-            }
-            if (State.Buttons.B == ButtonState.Pressed && PrevState.Buttons.B == ButtonState.Released)
-            {
-                Application.Quit();
-            }
-	}
+        if(State.Buttons.Start == ButtonState.Pressed && PrevState.Buttons.Start == ButtonState.Released)
+        {
+            SceneManager.LoadScene(0);
+            Debug.Log("Start was pressed");
+        }
+        if (State.Buttons.A == ButtonState.Pressed && PrevState.Buttons.A == ButtonState.Released)
+        {
+            SceneManager.LoadScene(1);
+            Debug.Log("A was pressed");
+        }
+        if (State.Buttons.B == ButtonState.Pressed && PrevState.Buttons.B == ButtonState.Released)
+        {
+            Application.Quit();
+        }
+
+        if(GameResults.GetComponent<GameResults>().Results == 1)
+        {
+            P1Wins();
+        }
+        if (GameResults.GetComponent<GameResults>().Results == 2)
+        {
+            P2Wins();
+        }
+    }
+
+    public void P1Wins()
+    {
+        if(SelectedRobots.GetComponent<PlayerHolder>().Player1Robot == 0)
+        {
+            WinningBot.GetComponent<Image>().sprite = DVaBot;
+        }
+        if (SelectedRobots.GetComponent<PlayerHolder>().Player1Robot == 1)
+        {
+            WinningBot.GetComponent<Image>().sprite = FlackBot;
+        }
+        if (SelectedRobots.GetComponent<PlayerHolder>().Player1Robot == 2)
+        {
+            WinningBot.GetComponent<Image>().sprite = S76Bot;
+        }
+    }
+
+    public void P2Wins()
+    {
+        if (SelectedRobots.GetComponent<PlayerHolder>().Player2Robot == 0)
+        {
+            WinningBot.GetComponent<Image>().sprite = DVaBot;
+        }
+        if (SelectedRobots.GetComponent<PlayerHolder>().Player2Robot == 1)
+        {
+            WinningBot.GetComponent<Image>().sprite = FlackBot;
+        }
+        if (SelectedRobots.GetComponent<PlayerHolder>().Player2Robot == 2)
+        {
+            WinningBot.GetComponent<Image>().sprite = S76Bot;
+        }
+    }
 }
