@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 82893321784986198}
   - component: {fileID: 114422343232673306}
   - component: {fileID: 114969668316601498}
+  - component: {fileID: 114059671182751854}
   m_Layer: 10
   m_Name: 76 Bot
   m_TagString: Player1
@@ -488,7 +489,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1078152592453778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -124.2, y: 0, z: 0}
+  m_LocalPosition: {x: -88.90532, y: 516.56476, z: -2631.7065}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
   - {fileID: 4790048704535454}
@@ -995,8 +996,11 @@ MonoBehaviour:
   playerIndex: 0
   bDisabled: 0
   iHealth: 3
+  SoundPlayer: {fileID: 0}
   asNoiseMaker: {fileID: 82893321784986198}
   acHitNoise: {fileID: 8300000, guid: b069d49ba6e2c6c419d7c8f0b7e0acf6, type: 3}
+  acShootNoise: {fileID: 8300000, guid: 4ed0d646606840342be44469e5d965d3, type: 3}
+  acDashNoise: {fileID: 8300000, guid: 3e0f808964793a54fa741e578a30b75d, type: 3}
   gDeathObject: {fileID: 1382753324070256, guid: 718d9365a14d4ea439ca50fd0113b31d,
     type: 2}
   particleSpawner: {fileID: 114969668316601498}
@@ -1012,6 +1016,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 440395597a8b3a248bbed2576d23739b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114059671182751854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1078152592453778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cff42813c1bbcc4cbaad360548c8a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RobotAudioSource: {fileID: 82893321784986198}
+  PlayingSFX: 0
 --- !u!114 &114117126350032330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1126,10 +1143,8 @@ MonoBehaviour:
   iNumberofTicks: 1
   fLengthOfTick: 0.3
   fBulletSpacing: 0.1
-  ShootingNoise: {fileID: 8300000, guid: 155ce38328889644e9a9ca7834ffae58, type: 3}
   ReloadNoise: {fileID: 8300000, guid: 5e6e6d26b356f9d47900c2540475a1ac, type: 3}
-  MissNoise: {fileID: 0}
-  RobotAudioSource: {fileID: 82893321784986198}
+  RobotAudioSource: {fileID: 0}
   Reticle: {fileID: 114337076774624332}
   GunShot: {fileID: 1945534561638118, guid: cb10ed3381764df4fa1eef8d4a3f961a, type: 2}
 --- !u!114 &114217413528066918
