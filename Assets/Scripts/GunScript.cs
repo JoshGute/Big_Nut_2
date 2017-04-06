@@ -59,7 +59,7 @@ public class GunScript : MonoBehaviour
             if (fTimeSinceLastShot >= fFireRate)
             {
                 bShot = false;
-                RobotAudioSource.PlaySFX(ReloadNoise, 1, 128, 0.3f);
+                RobotAudioSource.PlaySFX(ReloadNoise, 1, true, 128, 0.3f);
                 fTimeSinceLastShot = 0;
             }
         }

@@ -1631,14 +1631,15 @@ MonoBehaviour:
   aController: {fileID: 114900817012096540}
   Shield: {fileID: 1531540229936308}
   onHit: {fileID: 1945534561638118, guid: cb10ed3381764df4fa1eef8d4a3f961a, type: 2}
+  AimRing: {fileID: 1665069590746842}
   playerIndex: 0
   bDisabled: 0
   iHealth: 3
-  SoundPlayer: {fileID: 0}
-  asNoiseMaker: {fileID: 82343087417755106}
   acHitNoise: {fileID: 8300000, guid: b069d49ba6e2c6c419d7c8f0b7e0acf6, type: 3}
+  acShieldNoise: {fileID: 8300000, guid: 50714a94174923d42a7b31cdd432bc6c, type: 3}
   acShootNoise: {fileID: 8300000, guid: 8b53cc22ee859ff479af2aa0c5804c1f, type: 3}
   acDashNoise: {fileID: 8300000, guid: 3e0f808964793a54fa741e578a30b75d, type: 3}
+  acEngineNoise: {fileID: 8300000, guid: eb7152a8455603548a16f2beb66a82cd, type: 3}
   gDeathObject: {fileID: 1075299018474024, guid: 8b84e56e156789d49b6ff74094bce2ca,
     type: 2}
   particleSpawner: {fileID: 114714656997507916}

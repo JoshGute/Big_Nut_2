@@ -100,8 +100,13 @@ public class PlayerControllerVer2 : MonoBehaviour
   private GunScript ShootScript;
 
   public int iHealth;
-    public AudioSource asNoiseMaker;
+    //public AudioSource asNoiseMaker;
+  private SoundEffectDecisionMaker NoiseMaker;
     public AudioClip acHitNoise;
+    public AudioClip acShieldNoise;
+    public AudioClip acShootNoise;
+    public AudioClip acDashNoise;
+    public AudioClip acEngineNoise;
 
     public GameObject gDeathObject;
     public ParticleSpawner particleSpawner;
@@ -132,6 +137,8 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     aController = GetComponent<AnimationControllerVer2>();
         Hit(sOwner);
+
+        NoiseMaker = GetComponent<SoundEffectDecisionMaker>();
     //DashDistance = Vector3.Distance(Tr.position, dashTargetPos.position);
   }
 
@@ -365,6 +372,7 @@ public class PlayerControllerVer2 : MonoBehaviour
                 //lockBoost = true;
                 Shielding = true;
         lockShoot = true;
+        NoiseMaker.PlaySFX(acShieldNoise, 2, false);
 
         Shield.GetComponent<ShieldScript>().TurnOnShield();
       }
@@ -411,6 +419,7 @@ public class PlayerControllerVer2 : MonoBehaviour
 
                 //Function
           Rb.AddRelativeForce(ShipDirection * Speed * state.Triggers.Left);
+          NoiseMaker.PlaySFX(acEngineNoise, 1, false, 150, 0.25f);
       }
 
 
@@ -466,6 +475,7 @@ public class PlayerControllerVer2 : MonoBehaviour
         ////Deprecated////
 
         //NEW DASH LOGIC
+      NoiseMaker.PlaySFX(acDashNoise, 2, true, 75, 0.75f);
         Rb.velocity = Vector3.zero;
 
       Vector3 NormalizedAngle = Vector3.Normalize(new Vector3(rotateAxisH, rotateAxisV, 0));
@@ -500,6 +510,7 @@ public class PlayerControllerVer2 : MonoBehaviour
     if(lockShoot == false)
     {
       ShootScript.Shoot();
+      NoiseMaker.PlaySFX(acShootNoise, 2);
             StartCoroutine(Vibrate(0.2f, 0.3f));
     }
   }
@@ -543,7 +554,8 @@ public class PlayerControllerVer2 : MonoBehaviour
     if (iHealth > 1)
     {
         Instantiate(onHit, transform.position, transform.rotation);
-        asNoiseMaker.PlayOneShot(acHitNoise);
+        //asNoiseMaker.PlayOneShot(acHitNoise);
+        NoiseMaker.PlaySFX(acHitNoise, 3);
         //StartCoroutine(Flash(robotSkin, Color.gray));
         StartCoroutine(Vibrate(0.5f, 0.5f));
         --iHealth;
