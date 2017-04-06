@@ -45,6 +45,8 @@ public class HUD : MonoBehaviour
 
     public FollowCam fCam;
 
+    public GameObject ResultsTracker;
+
     void OnEnable()
     {
        PlayerControllerVer2.Die += UpdateBotsLeft;
@@ -121,12 +123,14 @@ public class HUD : MonoBehaviour
         {
             WinText.gameObject.SetActive(true);
             WinText.text = "Player 1 Wins!";
+            ResultsTracker.GetComponent<GameResults>().Results = 1;
         }
 
         else if (inWinner == "Player2")
         {
             WinText.gameObject.SetActive(true);
             WinText.text = "Player 2 Wins!";
+            ResultsTracker.GetComponent<GameResults>().Results = 2;
         }
 
         RestartButton.gameObject.SetActive(true);
