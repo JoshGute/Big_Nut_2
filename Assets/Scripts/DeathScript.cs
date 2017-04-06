@@ -17,7 +17,7 @@ public class DeathScript : MonoBehaviour
         {
             if (child.GetComponent<Rigidbody>())
             {
-                child.GetComponent<Rigidbody>().AddExplosionForce(2000, child.transform.position, 20.0f);
+                child.GetComponent<Rigidbody>().AddExplosionForce(4000, child.transform.position, 20.0f);
                 child.SetParent(null);
             }
         }

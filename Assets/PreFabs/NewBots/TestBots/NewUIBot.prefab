@@ -1415,7 +1415,7 @@ MonoBehaviour:
   iHealth: 3
   asNoiseMaker: {fileID: 82486160590729744}
   acHitNoise: {fileID: 8300000, guid: b069d49ba6e2c6c419d7c8f0b7e0acf6, type: 3}
-  gDeathObject: {fileID: 1415296866567280, guid: 9de7e2c35ba528043bfecb38c3e4b14c,
+  gDeathObject: {fileID: 1382753324070256, guid: 718d9365a14d4ea439ca50fd0113b31d,
     type: 2}
   particleSpawner: {fileID: 114311192185535158}
   robotSkin: {fileID: 114590124848243104}
