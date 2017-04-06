@@ -424,7 +424,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -659,7 +659,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1403,7 +1403,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1626,7 +1626,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1869,8 +1869,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a28580b5ec4b1414dba42580000c9d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1Robot: 0
-  Player2Robot: 0
+  Player1Robot: -1
+  Player2Robot: -1
 --- !u!4 &1512693665
 Transform:
   m_ObjectHideFlags: 0
@@ -2059,7 +2059,7 @@ MonoBehaviour:
   S76Bot: {fileID: 21300000, guid: 10923d5fd273728429937d5eebb75393, type: 3}
   Me: {fileID: 1677592008}
   RobotHolder: {fileID: 1512693663}
-  StartText: {fileID: 0}
+  StartText: {fileID: 711746679}
   SFX: {fileID: 1190191956}
   Select: {fileID: 681732178}
   Deselect: {fileID: 1379943332}
