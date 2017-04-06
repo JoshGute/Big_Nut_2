@@ -166,7 +166,7 @@ MonoBehaviour:
     fps: 30
     loopStart: 0
     wrapMode: 2
-  - name: Aimring_1to0
+  - name: AimRing_1to0
     frames:
     - spriteCollection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
         type: 2}
