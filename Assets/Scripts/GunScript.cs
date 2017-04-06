@@ -36,14 +36,19 @@ public class GunScript : MonoBehaviour
     public float fLengthOfTick;
     public float fBulletSpacing;
 
-    public AudioClip ShootingNoise;
+    //public AudioClip ShootingNoise;
     public AudioClip ReloadNoise;
-    public AudioClip MissNoise;
+    //public AudioClip MissNoise;
 
-    public AudioSource RobotAudioSource;
+    public SoundEffectDecisionMaker RobotAudioSource;
 
     public Image Reticle;
     public GameObject GunShot;
+
+    void Start()
+    {
+        RobotAudioSource = GetComponent<SoundEffectDecisionMaker>();
+    }
 
     void Update()
     {
@@ -54,7 +59,7 @@ public class GunScript : MonoBehaviour
             if (fTimeSinceLastShot >= fFireRate)
             {
                 bShot = false;
-                RobotAudioSource.PlayOneShot(ReloadNoise);
+                RobotAudioSource.PlaySFX(ReloadNoise, 1, 128, 0.3f);
                 fTimeSinceLastShot = 0;
             }
         }

@@ -51,7 +51,7 @@ public class BitFade : MonoBehaviour
     {
         if (tSprite != null)
         {
-            tSprite.color = Color.Lerp(Color.white, Color.clear, fScale += 0.003f);
+            tSprite.color = Color.Lerp(Color.white, Color.clear, fScale += 0.002f);
             if (tSprite.color == Color.clear)
             {
                 Destroy(gameObject);
@@ -60,7 +60,7 @@ public class BitFade : MonoBehaviour
 
         else if (rRenderer != null)
         {
-            rRenderer.material.color = Color.Lerp(Color.white, Color.clear, fScale += 0.003f);
+            rRenderer.material.color = Color.Lerp(Color.white, Color.clear, fScale += 0.002f);
             if (rRenderer.material.color == Color.clear)
             {
                 Destroy(gameObject);

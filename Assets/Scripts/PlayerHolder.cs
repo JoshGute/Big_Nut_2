@@ -10,8 +10,8 @@ public class PlayerHolder : MonoBehaviour
 
     private void Start()
     {
-        Player1Robot = 0;
-        Player2Robot = 0;
+        Player1Robot = -1;
+        Player2Robot = -1;
     }
 
     private void Awake()

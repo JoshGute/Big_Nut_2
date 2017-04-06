@@ -64,6 +64,7 @@ public class FollowCam : MonoBehaviour
         bShake = false;
         transform.position = offset;
         ChangeCameraOffest(offset.z);
+        bFollow = true;
     }
 
     public void GetTarget(GameObject gPlayer_, int iPlayer_)
@@ -77,8 +78,6 @@ public class FollowCam : MonoBehaviour
         {
             gPlayer2 = gPlayer_;
         }
-
-        bFollow = true;
     }
 
     private void LateUpdate()
@@ -180,6 +179,9 @@ public class FollowCam : MonoBehaviour
 
     private void DeadZoom(string sOwner_)
     {
+        bFollow = false;
+        bShake = false;
+
         if (sOwner_ == "PLAYER1")
         {
             StartCoroutine(ZoomingIn(gPlayer1.transform.position));
@@ -193,15 +195,12 @@ public class FollowCam : MonoBehaviour
     }
     IEnumerator ZoomingIn(Vector3 vTarget)
     {
-        bFollow = false;
-        CanZoomIn = true;
         transform.position = new Vector3(vTarget.x, vTarget.y, -150);
-        Shake(40.0f);
+        //BackGroundImage.transform.position = new Vector3(BackGroundImage.transform.position.x, BackGroundImage.transform.position.y, BackGroundImage.transform.position.z -150);
         Time.timeScale = 0.5f;
         yield return new WaitForSeconds(1f);
         Time.timeScale = 1f;
         bFollow = true;
-        CanZoomIn = false;
     }
 
     IEnumerator ScreenShaker(float fShakeAmount_)

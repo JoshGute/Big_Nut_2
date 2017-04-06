@@ -1,6 +1,6 @@
 ﻿/*******************************  SpaceTube  *********************************
 Author: Matty Lanouette
-Contributors: --
+Contributors: Josh 'when does the screaming stop' Gutenberg
 Course: GAM400
 Game:   Bolt Blitz
 Date:   12/7/2016
@@ -128,7 +128,7 @@ public class RobotSelectLogic : MonoBehaviour
         Debug.DrawRay(transform.position, backRay, Color.black);
         RaycastHit hit;
 
-        if(RobotHolder.GetComponent<PlayerHolder>().Player1Robot != 0 && RobotHolder.GetComponent<PlayerHolder>().Player2Robot != 0)
+        if(RobotHolder.GetComponent<PlayerHolder>().Player1Robot > -1 && RobotHolder.GetComponent<PlayerHolder>().Player2Robot > -1)
         {
             StartText.GetComponent<Text>().enabled = true;
             if(State.Buttons.Start == ButtonState.Pressed && PrevState.Buttons.Start == ButtonState.Released)
