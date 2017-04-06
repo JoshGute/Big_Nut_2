@@ -531,13 +531,17 @@ public class PlayerControllerVer2 : MonoBehaviour
     }
   }
 
+  void PlayDamageAnimation()
+  {
+    AimRing.GetComponent<AimRingAnimationController>().PlayHealthDamageAnim(iHealth);
+  }
+
   void TakeDamage()
   {
-    
+    PlayDamageAnimation();
+
     if (iHealth > 1)
     {
-        AimRing.GetComponent<AimRingAnimationController>().PlayHealthDamageAnim();
-
         Instantiate(onHit, transform.position, transform.rotation);
         asNoiseMaker.PlayOneShot(acHitNoise);
         //StartCoroutine(Flash(robotSkin, Color.gray));
@@ -552,14 +556,15 @@ public class PlayerControllerVer2 : MonoBehaviour
     }
 
     else if (iHealth == 1)
-    {      
+    {
       --iHealth;
       Hit(sOwner);
       //print("Dead");
       Explode();
     }
+
   }
-    private void Explode()
+  private void Explode()
     {
         Instantiate(gDeathObject, gameObject.transform.position, gameObject.transform.rotation);
         StartCoroutine(Vibrate(1, 1));

@@ -19,32 +19,20 @@ public class AimRingAnimationController : MonoBehaviour {
 
   void OnAnimComplete(tk2dSpriteAnimator Animator, tk2dSpriteAnimationClip clip, int frameNo)
   {
-    CheckHealth();
+    //CheckHealth();
   }
 
-  void CheckHealth()
+  public void PlayHealthDamageAnim(int curBoltHealth)
   {
-    if(Bolt.GetComponent<PlayerControllerVer2>().iHealth == 2)
-    {
-      UpdateState(2);
-    }
-    else if(Bolt.GetComponent<PlayerControllerVer2>().iHealth == 1)
-    {
-      UpdateState(1);
-    }
-  }
-
-  public void PlayHealthDamageAnim()
-  {
-    if (Bolt.GetComponent<PlayerControllerVer2>().iHealth == 3)
+    if (curBoltHealth == 3)
     {
       SpriteAnimator.Play("AimRing_3to2");
     }
-    else if (Bolt.GetComponent<PlayerControllerVer2>().iHealth == 2)
+    else if (curBoltHealth == 2)
     {
       SpriteAnimator.Play("AimRing_2to1");
     }
-    else if (Bolt.GetComponent<PlayerControllerVer2>().iHealth == 1)
+    else if (curBoltHealth == 1)
     {
       SpriteAnimator.Play("AimRing_1to0");
     }
@@ -57,6 +45,10 @@ public class AimRingAnimationController : MonoBehaviour {
       SpriteAnimator.Play("AimRing_2");
     }
     else if(health == 1)
+    {
+      SpriteAnimator.Play("AimRing_1");
+    }
+    else if (health == 0)
     {
       SpriteAnimator.Play("AimRing_0");
     }

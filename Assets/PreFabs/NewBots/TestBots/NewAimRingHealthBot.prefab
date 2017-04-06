@@ -966,7 +966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpriteAnimator: {fileID: 114051537129236582}
-  Bolt: {fileID: 1781974129287176, guid: 4112796f4cf90a041979235ca220e79b, type: 2}
+  Bolt: {fileID: 1078152592453778, guid: 08e8c342c40a83744a258878e522c23c, type: 2}
 --- !u!114 &114390678604579442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -994,7 +994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
     type: 2}
-  _color: {r: 1, g: 1, b: 1, a: 0.49019608}
+  _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 24, y: 24, z: 1}
   _spriteId: 10
   boxCollider2D: {fileID: 0}
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   Speed: 1500
   aController: {fileID: 114924225627748474}
   Shield: {fileID: 1015783373335830}
-  onHit: {fileID: 0}
+  onHit: {fileID: 1945534561638118, guid: cb10ed3381764df4fa1eef8d4a3f961a, type: 2}
   AimRing: {fileID: 1991205447436458}
   playerIndex: 0
   bDisabled: 0
