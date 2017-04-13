@@ -553,10 +553,10 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     if (iHealth > 1)
     {
-        Instantiate(onHit, transform.position, transform.rotation);
+            GetComponentInChildren<GibScript>().SpawnGibs(iHealth);
+            Instantiate(onHit, transform.position, transform.rotation);
         //asNoiseMaker.PlayOneShot(acHitNoise);
         NoiseMaker.PlaySFX(acHitNoise, 3);
-        //StartCoroutine(Flash(robotSkin, Color.gray));
         StartCoroutine(Vibrate(0.5f, 0.5f));
         --iHealth;
         Hit(sOwner);

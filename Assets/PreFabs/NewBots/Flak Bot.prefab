@@ -310,6 +310,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1826134932569680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4967027010422634}
+  - component: {fileID: 114002237683649594}
+  m_Layer: 0
+  m_Name: GibSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1878782733448064
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,7 +481,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1605760969047222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -110.9, y: 0, z: 0}
   m_LocalScale: {x: 5.5, y: 5.5, z: 1}
   m_Children:
   - {fileID: 4190474345538020}
@@ -478,6 +494,7 @@ Transform:
   - {fileID: 224168365567099610}
   - {fileID: 224200961923233650}
   - {fileID: 4004672028947176}
+  - {fileID: 4967027010422634}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -507,6 +524,19 @@ Transform:
   - {fileID: 224806603343350352}
   m_Father: {fileID: 224200961923233650}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4967027010422634
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1826134932569680}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.9636354, y: 0, z: 0}
+  m_LocalScale: {x: 0.18181817, y: 0.18181817, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4462430320152708}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4999065144354630
 Transform:
@@ -970,6 +1000,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114002237683649594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1826134932569680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa993b8e116cb0540b9b74afe3ef8507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gibs:
+  - {fileID: 1305226682734284, guid: 857b8d54e0f24194187cff9a2f2a239f, type: 2}
+  - {fileID: 1306781588971118, guid: c3f8d260c2f6998419d640449103bd7b, type: 2}
+  - {fileID: 1638044477029632, guid: 94b7bada89b32bf46995d3b572535ef9, type: 2}
+  - {fileID: 1895432443006774, guid: f56f03b6e1446ec4da99792bbd25df3e, type: 2}
+  - {fileID: 1727346842355502, guid: fc6d009b917f9064d8e90fc3fa914280, type: 2}
 --- !u!114 &114056034220226058
 MonoBehaviour:
   m_ObjectHideFlags: 1
