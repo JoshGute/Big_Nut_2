@@ -2514,12 +2514,6 @@ MonoBehaviour:
     - Explosion_Small/4
     - Explosion_Small/5
     - Explosion_Small/6
-    - Bullet_SurfaceHit/0
-    - Bullet_SurfaceHit/1
-    - Bullet_SurfaceHit/2
-    - Bullet_SurfaceHit/3
-    - Bullet_SurfaceHit/4
-    - Bullet_SurfaceHit/5
     spriteTextureGUIDs:
     - 3d962caf8eb01cf459f2a63953b8b180
     - 3d962caf8eb01cf459f2a63953b8b180
@@ -2613,12 +2607,6 @@ MonoBehaviour:
     - d36bc67904cd9f74cb35612fe42d1288
     - d36bc67904cd9f74cb35612fe42d1288
     - d36bc67904cd9f74cb35612fe42d1288
-    - 1ba30a959d42bb943a60ecc6070574f8
-    - 1ba30a959d42bb943a60ecc6070574f8
-    - 1ba30a959d42bb943a60ecc6070574f8
-    - 1ba30a959d42bb943a60ecc6070574f8
-    - 1ba30a959d42bb943a60ecc6070574f8
-    - 1ba30a959d42bb943a60ecc6070574f8
     spriteTextureTimeStamps:
     - 1485033357.92877
     - 1485033357.92877
@@ -2712,12 +2700,6 @@ MonoBehaviour:
     - 1492029534.74825
     - 1492029534.74825
     - 1492029534.74825
-    - 1492029515.15396
-    - 1492029515.15396
-    - 1492029515.15396
-    - 1492029515.15396
-    - 1492029515.15396
-    - 1492029515.15396
     managedSpriteCollection: 0
     loadable: 0
     assetName: 
@@ -3327,6 +3309,12 @@ MonoBehaviour:
     - Bullet_V7/0
     - Bullet_V8/0
     - Bullet_Dead/0
+    - Bullet_SurfaceHit/0
+    - Bullet_SurfaceHit/1
+    - Bullet_SurfaceHit/2
+    - Bullet_SurfaceHit/3
+    - Bullet_SurfaceHit/4
+    - Bullet_SurfaceHit/5
     spriteTextureGUIDs:
     - 518d729b1ef666d499c7b9cc19817ecf
     - d1237dd17a0f222409c570f4ad6f11f0
@@ -3337,6 +3325,12 @@ MonoBehaviour:
     - 05517391fd911d54aa664786ff4e0ac7
     - 5d3b413d7d1a82d4caf038525c1ed900
     - 5fe6ad1c6706f9541bbfa75e55871a10
+    - 1ba30a959d42bb943a60ecc6070574f8
+    - 1ba30a959d42bb943a60ecc6070574f8
+    - 1ba30a959d42bb943a60ecc6070574f8
+    - 1ba30a959d42bb943a60ecc6070574f8
+    - 1ba30a959d42bb943a60ecc6070574f8
+    - 1ba30a959d42bb943a60ecc6070574f8
     spriteTextureTimeStamps:
     - 1489766894.63542
     - 1489766892.75259
@@ -3347,6 +3341,12 @@ MonoBehaviour:
     - 1489151702.71681
     - 1489151719.10647
     - 1489767582.97953
+    - 1492029515.15396
+    - 1492029515.15396
+    - 1492029515.15396
+    - 1492029515.15396
+    - 1492029515.15396
+    - 1492029515.15396
     managedSpriteCollection: 0
     loadable: 0
     assetName: 
