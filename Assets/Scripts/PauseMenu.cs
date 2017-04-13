@@ -1,5 +1,5 @@
 ﻿/*******************************  Ducks in a Row  ******************************
-Author: Josh Gutenberg
+Author: Josh 'God I hate video games' Gutenberg
 Contributors:
 Course: GAM350
 Game:   Bolt Blitz
@@ -70,8 +70,8 @@ public class PauseMenu : MonoBehaviour
                 aSource.UnPause();
             }
 
-            PlayerController[] pControllers = FindObjectsOfType<PlayerController>();
-            foreach (PlayerController pController in pControllers)
+            PlayerControllerVer2[] pControllers = FindObjectsOfType<PlayerControllerVer2>();
+            foreach (PlayerControllerVer2 pController in pControllers)
             {
                 pController.bDisabled = false;
             }
@@ -99,8 +99,8 @@ public class PauseMenu : MonoBehaviour
                 aSource.Pause();
             }
 
-            PlayerController[] pControllers = FindObjectsOfType<PlayerController>();
-            foreach (PlayerController pController in pControllers)
+            PlayerControllerVer2[] pControllers = FindObjectsOfType<PlayerControllerVer2>();
+            foreach (PlayerControllerVer2 pController in pControllers)
             {
                 pController.bDisabled = true;
             }
@@ -122,8 +122,8 @@ public class PauseMenu : MonoBehaviour
             aSource.UnPause();
         }
 
-        PlayerController[] pControllers = FindObjectsOfType<PlayerController>();
-        foreach (PlayerController pController in pControllers)
+        PlayerControllerVer2[] pControllers = FindObjectsOfType<PlayerControllerVer2>();
+        foreach (PlayerControllerVer2 pController in pControllers)
         {
             pController.bDisabled = false;
         }

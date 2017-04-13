@@ -27,24 +27,31 @@ public class SoundEffectDecisionMaker : MonoBehaviour
         }
 	}
 
-    public void PlaySFX(AudioClip INacSFXtoPlay, int INiSystemPriority = 1, int INfAudioPriority = 128, float INfAudioVolume = 0.5f)
+    public void PlaySFX(AudioClip INacSFXtoPlay, int INiSystemPriority = 1, bool OverRide = true, int INfAudioPriority = 128, float INfAudioVolume = 0.5f)
     {
         if (INiSystemPriority >= CurrentEffectPriority)
         {
-            if (INfAudioPriority != 128)
+            if (PlayingSFX == false || OverRide)
             {
-                RobotAudioSource.priority = INfAudioPriority;
-            }
+                if (INfAudioPriority != 128)
+                {
+                    RobotAudioSource.priority = INfAudioPriority;
+                }
 
-            if (INfAudioVolume != 0.5)
+                if (INfAudioVolume != 0.5)
+                {
+                    RobotAudioSource.volume = INfAudioVolume;
+                }
+
+                RobotAudioSource.PlayOneShot(INacSFXtoPlay);
+                CurrentAudioClip = INacSFXtoPlay;
+                CurrentEffectPriority = INiSystemPriority;
+                PlayingSFX = true;
+            }
+            else
             {
-                RobotAudioSource.volume = INfAudioVolume;
+                print("can't override");
             }
-
-            RobotAudioSource.PlayOneShot(INacSFXtoPlay);
-            CurrentAudioClip = INacSFXtoPlay;
-            CurrentEffectPriority = INiSystemPriority;
-            PlayingSFX = true;
         }
 
         else
