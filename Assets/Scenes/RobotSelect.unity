@@ -142,7 +142,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 007e81c78101e9740a79ae044e37e99d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc930e07474716541a1a0ccfd8f8f24b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1523,7 +1523,7 @@ MonoBehaviour:
   Robot2: {fileID: 173300410}
   Robot3: {fileID: 331707279}
   DVaBot: {fileID: 21300000, guid: 9327aaa0203a4c444abaf4fc7f13167a, type: 3}
-  HunkBot: {fileID: 21300000, guid: 007e81c78101e9740a79ae044e37e99d, type: 3}
+  HunkBot: {fileID: 21300000, guid: fc930e07474716541a1a0ccfd8f8f24b, type: 3}
   S76Bot: {fileID: 21300000, guid: 10923d5fd273728429937d5eebb75393, type: 3}
   Me: {fileID: 1207649809}
   RobotHolder: {fileID: 1512693663}
@@ -2055,7 +2055,7 @@ MonoBehaviour:
   Robot2: {fileID: 173300410}
   Robot3: {fileID: 331707279}
   DVaBot: {fileID: 21300000, guid: 9327aaa0203a4c444abaf4fc7f13167a, type: 3}
-  HunkBot: {fileID: 21300000, guid: 007e81c78101e9740a79ae044e37e99d, type: 3}
+  HunkBot: {fileID: 21300000, guid: fc930e07474716541a1a0ccfd8f8f24b, type: 3}
   S76Bot: {fileID: 21300000, guid: 10923d5fd273728429937d5eebb75393, type: 3}
   Me: {fileID: 1677592008}
   RobotHolder: {fileID: 1512693663}
