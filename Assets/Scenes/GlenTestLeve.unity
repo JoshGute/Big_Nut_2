@@ -1805,7 +1805,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 7
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -2217,7 +2217,7 @@ MonoBehaviour:
   - {fileID: 103154118}
   sPrioritySpawn1: {fileID: 1515872635}
   sPrioritySpawn2: {fileID: 565397717}
-  bPrioritySpawn: 1
+  bPrioritySpawn: 0
   SpawnBurst: {fileID: 1376560982256854, guid: 4eaf1e64dfe17994b9d243be17fc718e, type: 2}
 --- !u!4 &1331233614
 Transform:
