@@ -49,6 +49,9 @@ public class AnimationControllerVer2 : MonoBehaviour {
   [SerializeField]
   private GameObject DashObject;
 
+  [SerializeField]
+  private GameObject ShootObject;
+
   // Use this for initialization
   void Start ()
   {
@@ -64,6 +67,11 @@ public class AnimationControllerVer2 : MonoBehaviour {
   void PreviousAnimDelegate(tk2dSpriteAnimator sprite, tk2dSpriteAnimationClip clip)
   {
 
+  }
+
+  public void PlayShootAnimation()
+  {
+    ShootObject.GetComponent<PlayAnimOnce>().PlayAnim();
   }
 
   public void PlayShockwaveAnimation()

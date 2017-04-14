@@ -40,9 +40,9 @@ public class PlayerControllerVer2 : MonoBehaviour
   public GameObject DashHitbox;
 
   [SerializeField]
-  private int maxDashes = 1;
+  public int maxDashes = 1;
   [SerializeField]
-  private int curDashes = 0;
+  public int curDashes = 0;
   [SerializeField]
   private float secDashRegenTime = 1f;
 
@@ -80,6 +80,8 @@ public class PlayerControllerVer2 : MonoBehaviour
   public GameObject onHit;
 
   public GameObject AimRing;
+
+  public GameObject DashUI;
 
   //public int PlayerNumber;
 
@@ -220,6 +222,7 @@ public class PlayerControllerVer2 : MonoBehaviour
 
       if (regentime >= secDashRegenTime && curDashes < maxDashes)
       {
+        DashUI.GetComponent<DashUIAnimManager>().PlayFullAnim(curDashes);
         regentime = 0f;
         curDashes += 1;
       }
@@ -333,6 +336,8 @@ public class PlayerControllerVer2 : MonoBehaviour
           {
               if (curDashes > 0)
               {
+                  DashUI.GetComponent<DashUIAnimManager>().PlayEmptyAnim(curDashes);
+
                   curDashes -= 1;
                   Dash(rotateAxisH, rotateAxisV);
               }
@@ -509,6 +514,7 @@ public class PlayerControllerVer2 : MonoBehaviour
   {
     if(lockShoot == false)
     {
+      aController.PlayShootAnimation();
       ShootScript.Shoot();
       NoiseMaker.PlaySFX(acShootNoise, 2);
             StartCoroutine(Vibrate(0.2f, 0.3f));

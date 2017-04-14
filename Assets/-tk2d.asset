@@ -2747,6 +2747,18 @@ MonoBehaviour:
     - AimRingv2_1to0/2
     - AimRingv2_1to0/3
     - AimRingv2_0Health/0
+    - DashArrow_Empty/0
+    - DashArrow_Full/0
+    - DashArrow_EmptytoFull/0
+    - DashArrow_EmptytoFull/1
+    - DashArrow_EmptytoFull/2
+    - DashArrow_EmptytoFull/3
+    - DashArrow_EmptytoFull/4
+    - DashArrow_FulltoEmpty/0
+    - DashArrow_FulltoEmpty/1
+    - DashArrow_FulltoEmpty/2
+    - DashArrow_FulltoEmpty/3
+    - DashArrow_FulltoEmpty/4
     spriteTextureGUIDs:
     - d3bc9acbb049d4b4891e424a1404fc1f
     - 296a7b31cf477f54b8069a804703ce9a
@@ -2787,6 +2799,18 @@ MonoBehaviour:
     - 81ab13518c5af33499e438ccf2887b27
     - 81ab13518c5af33499e438ccf2887b27
     - bb90dd0e27c5ff14da33ef5db1cc86a4
+    - e251cf2c1d7941e47b21d81ba014029b
+    - 0f0bdf293e537f147aaad41a26581b88
+    - d9495e812b712524f90a3fc374cdb3a7
+    - d9495e812b712524f90a3fc374cdb3a7
+    - d9495e812b712524f90a3fc374cdb3a7
+    - d9495e812b712524f90a3fc374cdb3a7
+    - d9495e812b712524f90a3fc374cdb3a7
+    - 1e62a5a10324d3d4d94d1a816f72c63a
+    - 1e62a5a10324d3d4d94d1a816f72c63a
+    - 1e62a5a10324d3d4d94d1a816f72c63a
+    - 1e62a5a10324d3d4d94d1a816f72c63a
+    - 1e62a5a10324d3d4d94d1a816f72c63a
     spriteTextureTimeStamps:
     - 1489765458.9567
     - 1490813713.08444
@@ -2827,6 +2851,18 @@ MonoBehaviour:
     - 1492036798.11272
     - 1492036798.11272
     - 1492036837.03003
+    - 1492116367.15242
+    - 1492116348.16056
+    - 1492116437.53081
+    - 1492116437.53081
+    - 1492116437.53081
+    - 1492116437.53081
+    - 1492116437.53081
+    - 1492116416.48259
+    - 1492116416.48259
+    - 1492116416.48259
+    - 1492116416.48259
+    - 1492116416.48259
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

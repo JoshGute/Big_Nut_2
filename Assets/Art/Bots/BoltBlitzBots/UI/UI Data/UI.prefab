@@ -165,10 +165,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.06250195, y: 0.8945332}
-    - {x: 0.06250195, y: 0.92187303}
-    - {x: 0.0820293, y: 0.8945332}
-    - {x: 0.0820293, y: 0.92187303}
+    - {x: 0.07031445, y: 0.9492207}
+    - {x: 0.07031445, y: 0.97656053}
+    - {x: 0.0898418, y: 0.9492207}
+    - {x: 0.0898418, y: 0.97656053}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 0, y: 1}
@@ -259,14 +259,14 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.06250195, y: 0.92187697}
-    - {x: 0.08007617, y: 0.92187697}
-    - {x: 0.06250195, y: 0.9492168}
-    - {x: 0.08007617, y: 0.9492168}
+    - {x: 0.07031445, y: 0.97656447}
+    - {x: 0.07031445, y: 0.99413866}
+    - {x: 0.0976543, y: 0.97656447}
+    - {x: 0.0976543, y: 0.99413866}
     normalizedUvs:
     - {x: 0, y: 0}
-    - {x: 1, y: 0}
     - {x: 0, y: 1}
+    - {x: 1, y: 0}
     - {x: 1, y: 1}
     indices: 000000000300000001000000020000000300000000000000
     material: {fileID: 2100000, guid: 645957121d72b73449f42243a345d4bb, type: 2}
@@ -277,7 +277,7 @@ MonoBehaviour:
     regionY: 0
     regionW: 16
     regionH: 16
-    flipped: 0
+    flipped: 1
     complexGeometry: 0
     physicsEngine: 0
     colliderType: 0
@@ -306,10 +306,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.027345704, y: 0.9570332}
-    - {x: 0.050779298, y: 0.9570332}
-    - {x: 0.027345704, y: 0.98437303}
-    - {x: 0.050779298, y: 0.98437303}
+    - {x: 0.06250195, y: 0.8945332}
+    - {x: 0.08593555, y: 0.8945332}
+    - {x: 0.06250195, y: 0.92187303}
+    - {x: 0.08593555, y: 0.92187303}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -353,10 +353,10 @@ MonoBehaviour:
     normals: []
     tangents: []
     uvs:
-    - {x: 0.050783202, y: 0.9570332}
-    - {x: 0.0742168, y: 0.9570332}
-    - {x: 0.050783202, y: 0.98437303}
-    - {x: 0.0742168, y: 0.98437303}
+    - {x: 0.06250195, y: 0.92187697}
+    - {x: 0.08593555, y: 0.92187697}
+    - {x: 0.06250195, y: 0.9492168}
+    - {x: 0.08593555, y: 0.9492168}
     normalizedUvs:
     - {x: 0, y: 0}
     - {x: 1, y: 0}
@@ -1888,6 +1888,570 @@ MonoBehaviour:
     polygonCollider2D: []
     edgeCollider2D: []
     attachPoints: []
+  - name: DashArrow_Empty/0
+    boundsData:
+    - {x: 0.0050000027, y: 0, z: 0}
+    - {x: 0.089999996, y: 0.14, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.17999999, y: 0.17999999, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: -0.039999995, y: -0.07, z: 0}
+    - {x: 0.05, y: -0.07, z: 0}
+    - {x: -0.039999995, y: 0.07, z: 0}
+    - {x: 0.05, y: 0.07, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.08593945, y: 0.8945332}
+    - {x: 0.10351367, y: 0.8945332}
+    - {x: 0.08593945, y: 0.92187303}
+    - {x: 0.10351367, y: 0.92187303}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 645957121d72b73449f42243a345d4bb, type: 2}
+    materialId: 0
+    sourceTextureGUID: e251cf2c1d7941e47b21d81ba014029b
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 18
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: DashArrow_Full/0
+    boundsData:
+    - {x: 0.0050000027, y: 0, z: 0}
+    - {x: 0.089999996, y: 0.14, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.17999999, y: 0.17999999, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: -0.039999995, y: -0.07, z: 0}
+    - {x: 0.05, y: -0.07, z: 0}
+    - {x: -0.039999995, y: 0.07, z: 0}
+    - {x: 0.05, y: 0.07, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.08593945, y: 0.92187697}
+    - {x: 0.10351367, y: 0.92187697}
+    - {x: 0.08593945, y: 0.9492168}
+    - {x: 0.10351367, y: 0.9492168}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 645957121d72b73449f42243a345d4bb, type: 2}
+    materialId: 0
+    sourceTextureGUID: 0f0bdf293e537f147aaad41a26581b88
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 18
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: DashArrow_EmptytoFull/0
+    boundsData:
+    - {x: 0.0050000027, y: 0, z: 0}
+    - {x: 0.089999996, y: 0.14, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.17999999, y: 0.17999999, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: -0.039999995, y: -0.07, z: 0}
+    - {x: 0.05, y: -0.07, z: 0}
+    - {x: -0.039999995, y: 0.07, z: 0}
+    - {x: 0.05, y: 0.07, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.08593945, y: 0.8945332}
+    - {x: 0.10351367, y: 0.8945332}
+    - {x: 0.08593945, y: 0.92187303}
+    - {x: 0.10351367, y: 0.92187303}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 645957121d72b73449f42243a345d4bb, type: 2}
+    materialId: 0
+    sourceTextureGUID: d9495e812b712524f90a3fc374cdb3a7
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 18
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: DashArrow_EmptytoFull/1
+    boundsData:
+    - {x: 0.0050000027, y: 0, z: 0}
+    - {x: 0.089999996, y: 0.14, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.17999999, y: 0.17999999, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: -0.039999995, y: -0.07, z: 0}
+    - {x: 0.05, y: -0.07, z: 0}
+    - {x: -0.039999995, y: 0.07, z: 0}
+    - {x: 0.05, y: 0.07, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0898457, y: 0.9492207}
+    - {x: 0.10741992, y: 0.9492207}
+    - {x: 0.0898457, y: 0.97656053}
+    - {x: 0.10741992, y: 0.97656053}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 645957121d72b73449f42243a345d4bb, type: 2}
+    materialId: 0
+    sourceTextureGUID: d9495e812b712524f90a3fc374cdb3a7
+    extractRegion: 1
+    regionX: 19
+    regionY: 0
+    regionW: 18
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: DashArrow_EmptytoFull/2
+    boundsData:
+    - {x: 0.0050000027, y: 0, z: 0}
+    - {x: 0.089999996, y: 0.14, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.17999999, y: 0.17999999, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: -0.039999995, y: -0.07, z: 0}
+    - {x: 0.05, y: -0.07, z: 0}
+    - {x: -0.039999995, y: 0.07, z: 0}
+    - {x: 0.05, y: 0.07, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0976582, y: 0.97656447}
+    - {x: 0.0976582, y: 0.99413866}
+    - {x: 0.12499805, y: 0.97656447}
+    - {x: 0.12499805, y: 0.99413866}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 0}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 645957121d72b73449f42243a345d4bb, type: 2}
+    materialId: 0
+    sourceTextureGUID: d9495e812b712524f90a3fc374cdb3a7
+    extractRegion: 1
+    regionX: 38
+    regionY: 0
+    regionW: 18
+    regionH: 18
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: DashArrow_EmptytoFull/3
+    boundsData:
+    - {x: 0.004999999, y: -0.0000000037252903, z: 0}
+    - {x: 0.10999999, y: 0.16, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.17999999, y: 0.17999999, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: -0.049999997, y: -0.08, z: 0}
+    - {x: 0.059999995, y: -0.08, z: 0}
+    - {x: -0.049999997, y: 0.07999999, z: 0}
+    - {x: 0.059999995, y: 0.07999999, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.027345704, y: 0.9570332}
+    - {x: 0.048826173, y: 0.9570332}
+    - {x: 0.027345704, y: 0.9882793}
+    - {x: 0.048826173, y: 0.9882793}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 645957121d72b73449f42243a345d4bb, type: 2}
+    materialId: 0
+    sourceTextureGUID: d9495e812b712524f90a3fc374cdb3a7
+    extractRegion: 1
+    regionX: 57
+    regionY: 0
+    regionW: 18
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: DashArrow_EmptytoFull/4
+    boundsData:
+    - {x: 0.0050000027, y: 0, z: 0}
+    - {x: 0.089999996, y: 0.14, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.17999999, y: 0.17999999, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: -0.039999995, y: -0.07, z: 0}
+    - {x: 0.05, y: -0.07, z: 0}
+    - {x: -0.039999995, y: 0.07, z: 0}
+    - {x: 0.05, y: 0.07, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.08593945, y: 0.92187697}
+    - {x: 0.10351367, y: 0.92187697}
+    - {x: 0.08593945, y: 0.9492168}
+    - {x: 0.10351367, y: 0.9492168}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 645957121d72b73449f42243a345d4bb, type: 2}
+    materialId: 0
+    sourceTextureGUID: d9495e812b712524f90a3fc374cdb3a7
+    extractRegion: 1
+    regionX: 76
+    regionY: 0
+    regionW: 18
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: DashArrow_FulltoEmpty/0
+    boundsData:
+    - {x: 0.0050000027, y: 0, z: 0}
+    - {x: 0.089999996, y: 0.14, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.17999999, y: 0.17999999, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: -0.039999995, y: -0.07, z: 0}
+    - {x: 0.05, y: -0.07, z: 0}
+    - {x: -0.039999995, y: 0.07, z: 0}
+    - {x: 0.05, y: 0.07, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.08593945, y: 0.92187697}
+    - {x: 0.10351367, y: 0.92187697}
+    - {x: 0.08593945, y: 0.9492168}
+    - {x: 0.10351367, y: 0.9492168}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 645957121d72b73449f42243a345d4bb, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1e62a5a10324d3d4d94d1a816f72c63a
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 18
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: DashArrow_FulltoEmpty/1
+    boundsData:
+    - {x: 0.004999999, y: -0.0000000037252903, z: 0}
+    - {x: 0.10999999, y: 0.16, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.17999999, y: 0.17999999, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: -0.049999997, y: -0.08, z: 0}
+    - {x: 0.059999995, y: -0.08, z: 0}
+    - {x: -0.049999997, y: 0.07999999, z: 0}
+    - {x: 0.059999995, y: 0.07999999, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.048830077, y: 0.9570332}
+    - {x: 0.07031055, y: 0.9570332}
+    - {x: 0.048830077, y: 0.9882793}
+    - {x: 0.07031055, y: 0.9882793}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 645957121d72b73449f42243a345d4bb, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1e62a5a10324d3d4d94d1a816f72c63a
+    extractRegion: 1
+    regionX: 19
+    regionY: 0
+    regionW: 18
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: DashArrow_FulltoEmpty/2
+    boundsData:
+    - {x: 0.004999999, y: -0.0000000037252903, z: 0}
+    - {x: 0.10999999, y: 0.16, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.17999999, y: 0.17999999, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: -0.049999997, y: -0.08, z: 0}
+    - {x: 0.059999995, y: -0.08, z: 0}
+    - {x: -0.049999997, y: 0.07999999, z: 0}
+    - {x: 0.059999995, y: 0.07999999, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.027345704, y: 0.9570332}
+    - {x: 0.048826173, y: 0.9570332}
+    - {x: 0.027345704, y: 0.9882793}
+    - {x: 0.048826173, y: 0.9882793}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 645957121d72b73449f42243a345d4bb, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1e62a5a10324d3d4d94d1a816f72c63a
+    extractRegion: 1
+    regionX: 38
+    regionY: 0
+    regionW: 18
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: DashArrow_FulltoEmpty/3
+    boundsData:
+    - {x: 0.004999999, y: -0.0000000037252903, z: 0}
+    - {x: 0.10999999, y: 0.16, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.17999999, y: 0.17999999, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: -0.049999997, y: -0.08, z: 0}
+    - {x: 0.059999995, y: -0.08, z: 0}
+    - {x: -0.049999997, y: 0.07999999, z: 0}
+    - {x: 0.059999995, y: 0.07999999, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.048830077, y: 0.9570332}
+    - {x: 0.07031055, y: 0.9570332}
+    - {x: 0.048830077, y: 0.9882793}
+    - {x: 0.07031055, y: 0.9882793}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 645957121d72b73449f42243a345d4bb, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1e62a5a10324d3d4d94d1a816f72c63a
+    extractRegion: 1
+    regionX: 57
+    regionY: 0
+    regionW: 18
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: DashArrow_FulltoEmpty/4
+    boundsData:
+    - {x: 0.0050000027, y: 0, z: 0}
+    - {x: 0.089999996, y: 0.14, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.17999999, y: 0.17999999, z: 0}
+    texelSize: {x: 0.01, y: 0.01}
+    positions:
+    - {x: -0.039999995, y: -0.07, z: 0}
+    - {x: 0.05, y: -0.07, z: 0}
+    - {x: -0.039999995, y: 0.07, z: 0}
+    - {x: 0.05, y: 0.07, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.08593945, y: 0.8945332}
+    - {x: 0.10351367, y: 0.8945332}
+    - {x: 0.08593945, y: 0.92187303}
+    - {x: 0.10351367, y: 0.92187303}
+    normalizedUvs:
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 645957121d72b73449f42243a345d4bb, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1e62a5a10324d3d4d94d1a816f72c63a
+    extractRegion: 1
+    regionX: 76
+    regionY: 0
+    regionW: 18
+    regionH: 18
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
   premultipliedAlpha: 0
   material: {fileID: 0}
   materials:
@@ -1905,7 +2469,7 @@ MonoBehaviour:
   loadable: 0
   invOrthoSize: 2
   halfTargetHeight: 50
-  buildKey: 860389125
+  buildKey: 849701221
   dataGuid: f53c742b503af054e8fd7bb78ebe5407
   managedSpriteCollection: 0
   hasPlatformData: 0
