@@ -18,6 +18,8 @@ public class DashUIAnimManager : MonoBehaviour {
   private GameObject Dash2;
   [SerializeField]
   private GameObject Dash3;
+  [SerializeField]
+  private GameObject Dash4;
 
 	// Use this for initialization
 	void Start ()
@@ -28,6 +30,7 @@ public class DashUIAnimManager : MonoBehaviour {
     Dash1.GetComponent<tk2dSpriteAnimator>().AnimationEventTriggered = UpdateAnimWaitState;
     Dash2.GetComponent<tk2dSpriteAnimator>().AnimationEventTriggered = UpdateAnimWaitState;
     Dash3.GetComponent<tk2dSpriteAnimator>().AnimationEventTriggered = UpdateAnimWaitState;
+    Dash4.GetComponent<tk2dSpriteAnimator>().AnimationEventTriggered = UpdateAnimWaitState;
   }
 
   /*The maximum number of Dash objects are active by default. 
@@ -37,11 +40,23 @@ public class DashUIAnimManager : MonoBehaviour {
     if(DashAmount == 1)
     {
       Dash2.SetActive(false);
+      Dash2.GetComponent<MeshRenderer>().enabled = false;
       Dash3.SetActive(false);
+      Dash3.GetComponent<MeshRenderer>().enabled = false;
+      Dash4.SetActive(false);
+      Dash4.GetComponent<MeshRenderer>().enabled = false;
     }
     else if(DashAmount == 2)
     {
       Dash3.SetActive(false);
+      Dash3.GetComponent<MeshRenderer>().enabled = false;
+      Dash4.SetActive(false);
+      Dash4.GetComponent<MeshRenderer>().enabled = false;
+    }
+    else if(DashAmount == 3)
+    {
+      Dash4.SetActive(false);
+      Dash4.GetComponent<MeshRenderer>().enabled = false;
     }
   }
 
@@ -61,7 +76,11 @@ public class DashUIAnimManager : MonoBehaviour {
   public void PlayEmptyAnim(int curDashes)
   {
     //If the number of dashes is at x and we're about to dash...
-    if(curDashes == 3)
+    if(curDashes == 4)
+    {
+      Dash4.GetComponent<tk2dSpriteAnimator>().Play("DashArrow_FulltoEmpty");
+    }
+    else if(curDashes == 3)
     {
       Dash3.GetComponent<tk2dSpriteAnimator>().Play("DashArrow_FulltoEmpty");
     }
@@ -96,6 +115,12 @@ public class DashUIAnimManager : MonoBehaviour {
     }
     //This shouldn't ever be called
     else if (curDashes == 3)
+    {
+      Dash4.GetComponent<tk2dSpriteAnimator>().Play("DashArrow_EmptytoFull");
+    }
+
+    //This shouldn't ever be called
+    else if (curDashes == 4)
     {
       print("If this is called something is wrong.");
       return;
