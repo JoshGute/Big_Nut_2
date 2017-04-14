@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/Scenes/RobotSelect.unity
   - enabled: 1
     path: Assets/Scenes/GlenTestLeve.unity
+  - enabled: 1
+    path: Assets/Scenes/Results.unity

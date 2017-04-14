@@ -19,6 +19,7 @@ written consent of DigiPen Institute of Technology is prohibited.
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HUD : MonoBehaviour
 {
@@ -119,11 +120,14 @@ public class HUD : MonoBehaviour
 
     void UpdateWinner(string inWinner)
     {
+        
+
         if (inWinner == "Player1")
         {
             WinText.gameObject.SetActive(true);
             WinText.text = "Player 1 Wins!";
             ResultsTracker.GetComponent<GameResults>().Results = 1;
+            //SceneManager.LoadScene(2);
         }
 
         else if (inWinner == "Player2")
@@ -131,10 +135,12 @@ public class HUD : MonoBehaviour
             WinText.gameObject.SetActive(true);
             WinText.text = "Player 2 Wins!";
             ResultsTracker.GetComponent<GameResults>().Results = 2;
+            //SceneManager.LoadScene(2);
         }
 
-        RestartButton.gameObject.SetActive(true);
-        Cursor.visible = true;
+        //RestartButton.gameObject.SetActive(true);
+        //Cursor.visible = true;
+        StartCoroutine("DelayLoad");
     }
 
     public void GetPlayer(GameObject gPlayer_, int iPlayer_)
@@ -148,5 +154,11 @@ public class HUD : MonoBehaviour
         {
             PlayerTwo = gPlayer_.GetComponent<PlayerControllerVer2>();
         }
+    }
+
+    IEnumerator DelayLoad()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(2);
     }
 }
