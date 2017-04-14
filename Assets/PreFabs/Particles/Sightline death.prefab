@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54568128610802040}
   - component: {fileID: 114650037406168234}
   - component: {fileID: 65393590678686950}
+  - component: {fileID: 114911902549199908}
   m_Layer: 0
   m_Name: Sightline_Gib6
   m_TagString: Gib
@@ -46,6 +47,7 @@ GameObject:
   - component: {fileID: 54608644640566396}
   - component: {fileID: 114492301825380770}
   - component: {fileID: 65489253483662346}
+  - component: {fileID: 114074494709854376}
   m_Layer: 0
   m_Name: Sightline_Gib1
   m_TagString: Gib
@@ -67,6 +69,7 @@ GameObject:
   - component: {fileID: 54391646112029696}
   - component: {fileID: 114806141911254728}
   - component: {fileID: 65384850480937694}
+  - component: {fileID: 114967633226045374}
   m_Layer: 0
   m_Name: Sightline_Gib5
   m_TagString: Gib
@@ -105,6 +108,7 @@ GameObject:
   - component: {fileID: 54957623369466948}
   - component: {fileID: 114888405829236534}
   - component: {fileID: 65727190804992832}
+  - component: {fileID: 114144682283219544}
   m_Layer: 0
   m_Name: Sightline_Gib7
   m_TagString: Gib
@@ -126,6 +130,7 @@ GameObject:
   - component: {fileID: 54174083773761124}
   - component: {fileID: 114967230028543638}
   - component: {fileID: 65365781533714704}
+  - component: {fileID: 114979623932752638}
   m_Layer: 0
   m_Name: Sightline_Gib2
   m_TagString: Gib
@@ -165,6 +170,7 @@ GameObject:
   - component: {fileID: 54349200279442994}
   - component: {fileID: 114661907185786286}
   - component: {fileID: 65077059809141242}
+  - component: {fileID: 114142310269072528}
   m_Layer: 0
   m_Name: Sightline_Gib4
   m_TagString: Gib
@@ -186,6 +192,7 @@ GameObject:
   - component: {fileID: 54915497803453544}
   - component: {fileID: 114671314358700060}
   - component: {fileID: 65002248761898594}
+  - component: {fileID: 114281226969477026}
   m_Layer: 0
   m_Name: Sightline_Gib3
   m_TagString: Gib
@@ -853,6 +860,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114074494709854376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1091862096946808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c935119e2bb6ea47a8a142f220749fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114108882127972090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -877,6 +895,39 @@ MonoBehaviour:
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
   renderLayer: 2
+--- !u!114 &114142310269072528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1787191759629108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c935119e2bb6ea47a8a142f220749fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114144682283219544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1388341819596116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c935119e2bb6ea47a8a142f220749fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114281226969477026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1878694897972034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c935119e2bb6ea47a8a142f220749fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114303086031244168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1087,6 +1138,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c935119e2bb6ea47a8a142f220749fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114911902549199908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007807836385256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c935119e2bb6ea47a8a142f220749fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114921671438721946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1112,6 +1174,28 @@ MonoBehaviour:
   meshColliderMesh: {fileID: 0}
   renderLayer: 2
 --- !u!114 &114967230028543638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1566193228312456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c935119e2bb6ea47a8a142f220749fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114967633226045374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168097085695494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c935119e2bb6ea47a8a142f220749fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114979623932752638
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
