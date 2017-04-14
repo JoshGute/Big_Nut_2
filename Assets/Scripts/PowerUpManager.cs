@@ -30,7 +30,7 @@ public class PowerUpManager : MonoBehaviour
     private void SpawnPowerUp()
     {
         print("Hell");
-        //Destroy(gPowerUp);
+        Destroy(gPowerUp);
 
         int randSpawn = Random.Range(0, PowerSpawns.Length);
         int randPower = Random.Range(0, PowerUps.Length);
