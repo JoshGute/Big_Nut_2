@@ -131,15 +131,14 @@ public class FollowCam : MonoBehaviour
                 if (NewTargetDistance > (OldTargetDistance + 1) && transform.position.z > ZOOMOUTCAP)
                 {
                     target.z -= ZoomOutRate;
-                    BackGroundImage.transform.position = new Vector3(BackGroundImage.transform.position.x, BackGroundImage.transform.position.y, BackGroundImage.transform.position.z - ZoomOutRate);
-
+                    //BackGroundImage.transform.position = new Vector3(BackGroundImage.transform.position.x, BackGroundImage.transform.position.y, BackGroundImage.transform.position.z - ZoomOutRate);
                 }
 
                 //Checks if our distance decreased and if we are too zoomed out.
                 else if (CanZoomIn && NewTargetDistance < (OldTargetDistance - 1) && transform.position.z < ZOOMINCAP)
                 {
                     target.z += ZoomInRate;
-                    BackGroundImage.transform.position = new Vector3(BackGroundImage.transform.position.x, BackGroundImage.transform.position.y, BackGroundImage.transform.position.z + ZoomInRate);
+                    //BackGroundImage.transform.position = new Vector3(BackGroundImage.transform.position.x, BackGroundImage.transform.position.y, BackGroundImage.transform.position.z + ZoomInRate);
                 }
 
                 transform.position = Vector3.Lerp(transform.position, target, 100f);
@@ -185,7 +184,6 @@ public class FollowCam : MonoBehaviour
         if (sOwner_ == "PLAYER1")
         {
             StartCoroutine(ZoomingIn(gPlayer1.transform.position));
-
         }
 
         else
@@ -193,6 +191,7 @@ public class FollowCam : MonoBehaviour
             StartCoroutine(ZoomingIn(gPlayer2.transform.position));
         }
     }
+
     IEnumerator ZoomingIn(Vector3 vTarget)
     {
         transform.position = new Vector3(vTarget.x, vTarget.y, -150);
