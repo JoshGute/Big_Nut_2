@@ -25,6 +25,8 @@ public class ResultsController : MonoBehaviour
     public Sprite S76Bot;
     public Sprite FlackBot;
 
+    public Text WinnerText;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -66,6 +68,7 @@ public class ResultsController : MonoBehaviour
 
     public void P1Wins()
     {
+        WinnerText.GetComponent<Text>().text = "1";
         if(SelectedRobots.GetComponent<PlayerHolder>().Player1Robot == 0)
         {
             WinningBot.GetComponent<Image>().sprite = DVaBot;
@@ -82,6 +85,7 @@ public class ResultsController : MonoBehaviour
 
     public void P2Wins()
     {
+        WinnerText.GetComponent<Text>().text = "2";
         if (SelectedRobots.GetComponent<PlayerHolder>().Player2Robot == 0)
         {
             WinningBot.GetComponent<Image>().sprite = DVaBot;

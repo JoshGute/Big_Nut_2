@@ -5,7 +5,7 @@ using System.Collections;
 public class LoadOtherLevel : MonoBehaviour {
 
 	[SerializeField]
-	private string level;
+	public string level;
 
 	// Use this for initialization
 	void Start () 
@@ -19,7 +19,7 @@ public class LoadOtherLevel : MonoBehaviour {
 	
 	}
 
-	void LoadLevel()
+	public void LoadLevel()
 	{
 		SceneManager.LoadScene (level);
 	}

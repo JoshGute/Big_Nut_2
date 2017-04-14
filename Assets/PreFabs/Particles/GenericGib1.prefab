@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114196557964727254}
   - component: {fileID: 54601792220165814}
   - component: {fileID: 65528450039449498}
+  - component: {fileID: 114336438818130092}
   m_Layer: 0
   m_Name: GenericGib1
   m_TagString: Untagged
@@ -133,3 +134,14 @@ MonoBehaviour:
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
   renderLayer: 2
+--- !u!114 &114336438818130092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1305226682734284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c935119e2bb6ea47a8a142f220749fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
