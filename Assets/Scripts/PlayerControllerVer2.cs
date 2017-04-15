@@ -339,6 +339,7 @@ public class PlayerControllerVer2 : MonoBehaviour
                   DashUI.GetComponent<DashUIAnimManager>().PlayEmptyAnim(curDashes);
 
                   curDashes -= 1;
+                  regentime = 0;
                   Dash(rotateAxisH, rotateAxisV);
               }
 

@@ -118,6 +118,13 @@ MonoBehaviour:
       eventFloat: 0
     - spriteCollection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
         type: 2}
+      spriteId: 25
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
+        type: 2}
       spriteId: 26
       triggerEvent: 0
       eventInfo: 
@@ -151,6 +158,13 @@ MonoBehaviour:
       eventFloat: 0
     - spriteCollection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
         type: 2}
+      spriteId: 30
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
+        type: 2}
       spriteId: 31
       triggerEvent: 0
       eventInfo: 
@@ -171,6 +185,13 @@ MonoBehaviour:
     - spriteCollection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
         type: 2}
       spriteId: 34
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
+        type: 2}
+      spriteId: 35
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
@@ -255,9 +276,30 @@ MonoBehaviour:
       eventFloat: 0
     - spriteCollection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
         type: 2}
+      spriteId: 44
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
+        type: 2}
       spriteId: 45
       triggerEvent: 1
       eventInfo: DashArrow_ToFullComplete
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
+        type: 2}
+      spriteId: 45
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
+        type: 2}
+      spriteId: 45
+      triggerEvent: 0
+      eventInfo: 
       eventInt: 0
       eventFloat: 0
     fps: 30
@@ -288,6 +330,13 @@ MonoBehaviour:
       eventFloat: 0
     - spriteCollection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
         type: 2}
+      spriteId: 48
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
+        type: 2}
       spriteId: 49
       triggerEvent: 0
       eventInfo: 
@@ -298,6 +347,20 @@ MonoBehaviour:
       spriteId: 50
       triggerEvent: 1
       eventInfo: DashArrow_ToEmptyComplete
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
+        type: 2}
+      spriteId: 50
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 114233199942698242, guid: f53c742b503af054e8fd7bb78ebe5407,
+        type: 2}
+      spriteId: 50
+      triggerEvent: 0
+      eventInfo: 
       eventInt: 0
       eventFloat: 0
     fps: 30

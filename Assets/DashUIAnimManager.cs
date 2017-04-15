@@ -7,6 +7,12 @@ public class DashUIAnimManager : MonoBehaviour {
   [SerializeField]
   private GameObject Bot;
 
+  [SerializeField]
+  private Color FullColor;
+
+  [SerializeField]
+  private Color EmptyColor;
+
   //The number of dashes this bot has
   [SerializeField]
   private int DashAmount;
@@ -65,10 +71,12 @@ public class DashUIAnimManager : MonoBehaviour {
     if(clip.name == "DashArrow_EmptytoFull")
     {
       Animator.Play("DashArrow_Full");
+      Animator.gameObject.GetComponent<tk2dSprite>().color = FullColor;
     }
     else if(clip.name == "DashArrow_FulltoEmpty")
     {
       Animator.Play("DashArrow_Empty");
+      Animator.gameObject.GetComponent<tk2dSprite>().color = EmptyColor;
     }
   }
 
