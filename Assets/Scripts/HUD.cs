@@ -52,6 +52,7 @@ public class HUD : MonoBehaviour
     {
        PlayerControllerVer2.Die += UpdateBotsLeft;
        PlayerControllerVer2.Hit += UpdateHealth;
+       HealthPowerUp.PowerUpCollected += UpdateHealth;
     }
 
     void OnDisable()

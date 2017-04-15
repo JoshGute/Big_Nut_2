@@ -29,23 +29,21 @@ public class PowerUpManager : MonoBehaviour
 
     private void SpawnPowerUp()
     {
-        print("Hell");
+        //print("Hell");
         Destroy(gPowerUp);
+        GameObject newPowerUp;
 
         int randSpawn = Random.Range(0, PowerSpawns.Length);
         int randPower = Random.Range(0, PowerUps.Length);
 
-        gPowerUp = Instantiate(PowerUps[randPower].gameObject, PowerSpawns[randSpawn].transform.position, PowerUps[randPower].transform.rotation) as GameObject;
-        PowerUpSpawned(gPowerUp);
+        newPowerUp = Instantiate(PowerUps[randPower].gameObject, PowerSpawns[randSpawn].transform.position, PowerUps[randPower].transform.rotation) as GameObject;
+        gPowerUp = newPowerUp;
+
+        PowerUpSpawned(newPowerUp);
         CancelInvoke("SpawnPowerUp");
     }
 
-    public void StopPowerUps()
-    {
-        CancelInvoke("SpawnPowerUp");
-    }
-
-    public void StartPowerUps()
+    public void StartPowerUps(string sOwner_)
     {
         InvokeRepeating("SpawnPowerUp", 5, 5);
     }
