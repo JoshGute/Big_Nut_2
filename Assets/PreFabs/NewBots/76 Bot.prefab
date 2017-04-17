@@ -1710,6 +1710,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bot: {fileID: 1078152592453778}
+  FullColor: {r: 1, g: 1, b: 1, a: 1}
+  EmptyColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   DashAmount: 3
   Dash1: {fileID: 1690163985831618}
   Dash2: {fileID: 1134509083247816}
