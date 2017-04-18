@@ -586,7 +586,7 @@ public class PlayerControllerVer2 : MonoBehaviour
   private void Explode()
     {
         Instantiate(gDeathObject, gameObject.transform.position, gameObject.transform.rotation);
-        StartCoroutine(Vibrate(1, 1));
+        StartCoroutine(Vibrate(1, 0.5f));
         StartCoroutine(Death());
     }
 
@@ -610,10 +610,12 @@ public class PlayerControllerVer2 : MonoBehaviour
     private IEnumerator Death()
     {
         robotSkin.color = Color.clear;
-        bDisabled = true;
+        bDisabled = true;  
+        yield return new WaitForSeconds(0.5f);
         Die(sOwner);
+        yield return new WaitForSeconds(0.5f);       
         Destroy(gameObject);
-        yield return new WaitForSeconds(0);
+        //yield return new WaitForSeconds(0.25f);
     }
 
     public void TagRobot(string sOwner_)

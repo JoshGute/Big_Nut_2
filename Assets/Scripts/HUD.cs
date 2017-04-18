@@ -159,7 +159,23 @@ public class HUD : MonoBehaviour
 
     IEnumerator DelayLoad()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.1f);
         SceneManager.LoadScene(2);
+    }
+
+    public int CheckForWinner()
+    {
+        if (P1Kills >= MaxKills)
+        {
+            return 1;
+        }
+        else if (P2Kills >= MaxKills)
+        {
+            return 2;
+        }
+        else
+        {
+            return 0;
+        } 
     }
 }
