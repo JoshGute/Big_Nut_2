@@ -31,7 +31,7 @@ public class BorderHider : MonoBehaviour {
 
 	}
 
-    void OnTriggerEnter(Collider col)
+    void OnTriggerStay(Collider col)
     {
         if (col.GetComponent<PlayerControllerVer2>())
         {
