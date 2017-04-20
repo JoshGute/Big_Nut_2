@@ -43,6 +43,7 @@ public class ResultsController : MonoBehaviour
         Debug.Log(State.Buttons.Start);
         if(State.Buttons.Start == ButtonState.Pressed && PrevState.Buttons.Start == ButtonState.Released)
         {
+            Destroy(FindObjectOfType<PlayerHolder>().gameObject);
             SceneManager.LoadScene(0);
             Debug.Log("Start was pressed");
         }
