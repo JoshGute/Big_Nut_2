@@ -48,7 +48,8 @@ public class HUD : MonoBehaviour
 
     public GameObject ResultsTracker;
 
-    public GameObject pIndicator;
+    public GameObject pIndicator1;
+    public GameObject pIndicator2;
 
     void OnEnable()
     {
@@ -151,18 +152,22 @@ public class HUD : MonoBehaviour
         if (iPlayer_ == 1)
         {
             PlayerOne = gPlayer_.GetComponent<PlayerControllerVer2>();
+            GameObject Indicator;
+            Indicator = Instantiate(pIndicator1, pIndicator1.transform.position, pIndicator1.transform.rotation) as GameObject;
+            Indicator.GetComponent<PlayerIndicator>().PlayertoDisplay = gPlayer_.GetComponent<PlayerControllerVer2>().sOwner;
+            Indicator.GetComponent<PlayerIndicator>().Player = gPlayer_;
+            Indicator.GetComponent<PlayerIndicator>().UpdateSprite();
         }
 
         else
         {
             PlayerTwo = gPlayer_.GetComponent<PlayerControllerVer2>();
+            GameObject Indicator;
+            Indicator = Instantiate(pIndicator2, pIndicator2.transform.position, pIndicator2.transform.rotation) as GameObject;
+            Indicator.GetComponent<PlayerIndicator>().PlayertoDisplay = gPlayer_.GetComponent<PlayerControllerVer2>().sOwner;
+            Indicator.GetComponent<PlayerIndicator>().Player = gPlayer_;
+            Indicator.GetComponent<PlayerIndicator>().UpdateSprite();
         }
-
-        GameObject Indicator;
-        Indicator = Instantiate(pIndicator, pIndicator.transform.position, pIndicator.transform.rotation) as GameObject;
-        Indicator.GetComponent<PlayerIndicator>().PlayertoDisplay = gPlayer_.GetComponent<PlayerControllerVer2>().sOwner;
-        Indicator.GetComponent<PlayerIndicator>().Player = gPlayer_;
-        Indicator.GetComponent<PlayerIndicator>().UpdateSprite();
     }
 
     IEnumerator DelayLoad()
