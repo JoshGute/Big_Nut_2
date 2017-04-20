@@ -106,7 +106,7 @@ public class PlayerControllerVer2 : MonoBehaviour
   private SoundEffectDecisionMaker NoiseMaker;
     public AudioClip acHitNoise;
     public AudioClip acShieldNoise;
-    public AudioClip acShootNoise;
+    
     public AudioClip acDashNoise;
     public AudioClip acEngineNoise;
 
@@ -517,7 +517,7 @@ public class PlayerControllerVer2 : MonoBehaviour
     {
       aController.PlayShootAnimation();
       ShootScript.Shoot();
-      NoiseMaker.PlaySFX(acShootNoise, 2);
+      
             StartCoroutine(Vibrate(0.2f, 0.3f));
     }
   }

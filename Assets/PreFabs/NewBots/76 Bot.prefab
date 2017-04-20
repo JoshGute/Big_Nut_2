@@ -1308,8 +1308,7 @@ MonoBehaviour:
   iHealth: 3
   acHitNoise: {fileID: 8300000, guid: b069d49ba6e2c6c419d7c8f0b7e0acf6, type: 3}
   acShieldNoise: {fileID: 8300000, guid: 50714a94174923d42a7b31cdd432bc6c, type: 3}
-  acShootNoise: {fileID: 8300000, guid: 4ed0d646606840342be44469e5d965d3, type: 3}
-  acDashNoise: {fileID: 8300000, guid: 3e0f808964793a54fa741e578a30b75d, type: 3}
+  acDashNoise: {fileID: 8300000, guid: bca791afa8e89fb49a23258640558115, type: 3}
   acEngineNoise: {fileID: 8300000, guid: eb7152a8455603548a16f2beb66a82cd, type: 3}
   gDeathObject: {fileID: 1382753324070256, guid: 718d9365a14d4ea439ca50fd0113b31d,
     type: 2}
@@ -1454,8 +1453,8 @@ MonoBehaviour:
   iNumberofTicks: 1
   fLengthOfTick: 0.3
   fBulletSpacing: 0.1
+  acShootNoise: {fileID: 8300000, guid: 4ed0d646606840342be44469e5d965d3, type: 3}
   ReloadNoise: {fileID: 8300000, guid: 5e6e6d26b356f9d47900c2540475a1ac, type: 3}
-  RobotAudioSource: {fileID: 0}
   Reticle: {fileID: 114337076774624332}
   GunShot: {fileID: 1945534561638118, guid: cb10ed3381764df4fa1eef8d4a3f961a, type: 2}
 --- !u!114 &114223561194942016
