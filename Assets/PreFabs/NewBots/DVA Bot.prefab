@@ -418,7 +418,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1851812481687626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -922.5133, y: 1241.7393, z: -1218.8057}
+  m_LocalPosition: {x: -129.13564, y: 1202.2219, z: -206.66835}
   m_LocalScale: {x: 5.5, y: 5.5, z: 1}
   m_Children:
   - {fileID: 4774459198400174}
@@ -457,7 +457,7 @@ Transform:
   m_GameObject: {fileID: 1193440262877128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.18181816, y: 0.18181816, z: 1}
+  m_LocalScale: {x: 0.1818182, y: 0.1818182, z: 1}
   m_Children:
   - {fileID: 4820276743569424}
   - {fileID: 4845970926428332}
@@ -1529,7 +1529,7 @@ MonoBehaviour:
   iNumberofTicks: 1
   fLengthOfTick: 0.3
   fBulletSpacing: 0.1
-  acShootNoise: {fileID: 8300000, guid: 644bda237c228f248b8cdfbfc83a8cc3, type: 3}
+  acShootNoise: {fileID: 8300000, guid: bd86b97094fe1004db3e176512f7a4da, type: 3}
   ReloadNoise: {fileID: 8300000, guid: 5e6e6d26b356f9d47900c2540475a1ac, type: 3}
   Reticle: {fileID: 114079080738940476}
   GunShot: {fileID: 1945534561638118, guid: cb10ed3381764df4fa1eef8d4a3f961a, type: 2}
@@ -1635,8 +1635,8 @@ MonoBehaviour:
   secDashRegenTime: 2
   DashSpeed: 16
   TurnSpeed: 8
-  maxSpeed: 300
-  Speed: 1500
+  maxSpeed: 400
+  Speed: 2000
   aController: {fileID: 114111899545833076}
   Shield: {fileID: 1613834187410458}
   onHit: {fileID: 1945534561638118, guid: cb10ed3381764df4fa1eef8d4a3f961a, type: 2}
