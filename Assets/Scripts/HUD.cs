@@ -47,6 +47,7 @@ public class HUD : MonoBehaviour
     public FollowCam fCam;
 
     public GameObject ResultsTracker;
+    public PlayerIndicator pIndicator;
 
     void OnEnable()
     {
@@ -79,16 +80,16 @@ public class HUD : MonoBehaviour
 
     void UpdateHealth(string sOwner_)
     {
-        fCam.Shake(20.0f);
-
         if (sOwner_ == "PLAYER1")
         {
             P1hp.GetComponent<Text>().text = PlayerOne.iHealth.ToString();
+            fCam.Shake(20.0f);
         }
 
         else if (sOwner_ == "PLAYER2")
         {
             P2hp.GetComponent<Text>().text = PlayerTwo.iHealth.ToString();
+            fCam.Shake(20.0f);
         }
     }
 
@@ -149,11 +150,15 @@ public class HUD : MonoBehaviour
         if (iPlayer_ == 1)
         {
             PlayerOne = gPlayer_.GetComponent<PlayerControllerVer2>();
+            pIndicator.PlayertoDisplay = gPlayer_.GetComponent<PlayerControllerVer2>().sOwner;
+            pIndicator.UpdateSprite();
         }
 
         else
         {
             PlayerTwo = gPlayer_.GetComponent<PlayerControllerVer2>();
+            pIndicator.PlayertoDisplay = gPlayer_.GetComponent<PlayerControllerVer2>().sOwner;
+            pIndicator.UpdateSprite();
         }
     }
 

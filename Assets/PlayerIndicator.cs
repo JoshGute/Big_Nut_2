@@ -8,7 +8,7 @@ public class PlayerIndicator : MonoBehaviour {
   public Color Player2Color;
 
   //Which player to display?
-  private string PlayertoDisplay;
+  public string PlayertoDisplay;
 
   //Which player are we following?
   private GameObject Player;
@@ -22,14 +22,14 @@ public class PlayerIndicator : MonoBehaviour {
 	}
 	
   //Update which sprite to display based on what player this is for.
-  void UpdateSprite ()
+  public void UpdateSprite ()
   {
-    if(PlayertoDisplay == "Player1")
+    if(PlayertoDisplay == "PLAYER1")
     {
       gameObject.GetComponent<tk2dSprite>().SetSprite("PlayerNumber_1");
       gameObject.GetComponent<tk2dSprite>().color = Player1Color;
     }
-    else if(PlayertoDisplay == "Player2")
+    else if(PlayertoDisplay == "PLAYER2")
     {
       gameObject.GetComponent<tk2dSprite>().SetSprite("PlayerNumber_2");
       gameObject.GetComponent<tk2dSprite>().color = Player2Color;
