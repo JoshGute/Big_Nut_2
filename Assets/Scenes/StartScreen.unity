@@ -203,7 +203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &109904205
 RectTransform:
   m_ObjectHideFlags: 0
@@ -698,7 +698,7 @@ Animator:
   m_GameObject: {fileID: 561492680}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 29ebb8eb697af58479f4e9603e7918de, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1251,7 +1251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1044814798
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1590,7 +1590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1451720134
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1794,7 +1794,7 @@ Animator:
   m_GameObject: {fileID: 1739518741}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 29ebb8eb697af58479f4e9603e7918de, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2082,6 +2082,8 @@ MonoBehaviour:
   DigipenSplashScreen: {fileID: 109904205}
   GameSplashScreen: {fileID: 231384614}
   StartButtonAnimator: {fileID: 2088687778}
+  HTPButtonAnimator: {fileID: 1739518744}
+  QuitButtonAnimator: {fileID: 561492683}
 --- !u!1 &1842627670
 GameObject:
   m_ObjectHideFlags: 0
