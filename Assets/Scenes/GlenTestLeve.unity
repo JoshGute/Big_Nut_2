@@ -3088,6 +3088,18 @@ Prefab:
       value: 
       objectReference: {fileID: 1145026198410178, guid: a2c69fdc3e6d54947b7610bf3b93ccea,
         type: 2}
+    - target: {fileID: 114000013753539094, guid: 332134ab5684e394492f093235ddd913,
+        type: 2}
+      propertyPath: pIndicator1
+      value: 
+      objectReference: {fileID: 1145026198410178, guid: a2c69fdc3e6d54947b7610bf3b93ccea,
+        type: 2}
+    - target: {fileID: 114000013753539094, guid: 332134ab5684e394492f093235ddd913,
+        type: 2}
+      propertyPath: pIndicator2
+      value: 
+      objectReference: {fileID: 1421821212551904, guid: 0b54d45c1bf7d1c44835ba16ec4e45cf,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 332134ab5684e394492f093235ddd913, type: 2}
   m_IsPrefabParent: 0

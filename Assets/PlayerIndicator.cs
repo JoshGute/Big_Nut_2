@@ -43,7 +43,9 @@ public class PlayerIndicator : MonoBehaviour {
   {
         if(bTracking && Player != null)
         {
-            gameObject.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + 30, Player.transform.position.z);
+            gameObject.transform.position = new Vector3(Player.transform.position.x + OffsetPosFromPlayer.x,
+                                                        Player.transform.position.y + OffsetPosFromPlayer.y, 
+                                                        Player.transform.position.z + OffsetPosFromPlayer.z);
         }
         else if (bTracking && Player == null)
         {
