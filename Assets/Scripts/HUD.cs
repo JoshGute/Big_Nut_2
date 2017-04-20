@@ -47,7 +47,8 @@ public class HUD : MonoBehaviour
     public FollowCam fCam;
 
     public GameObject ResultsTracker;
-    public PlayerIndicator pIndicator;
+
+    public GameObject pIndicator;
 
     void OnEnable()
     {
@@ -75,8 +76,8 @@ public class HUD : MonoBehaviour
         P1hp.GetComponent<Text>().text = PlayerOne.iHealth.ToString();
         P1hp.GetComponent<Text>().text = PlayerOne.iHealth.ToString();
     }
-	
-	// Update is called once per frame
+
+    // Update is called once per frame
 
     void UpdateHealth(string sOwner_)
     {
@@ -150,16 +151,18 @@ public class HUD : MonoBehaviour
         if (iPlayer_ == 1)
         {
             PlayerOne = gPlayer_.GetComponent<PlayerControllerVer2>();
-            pIndicator.PlayertoDisplay = gPlayer_.GetComponent<PlayerControllerVer2>().sOwner;
-            pIndicator.UpdateSprite();
         }
 
         else
         {
             PlayerTwo = gPlayer_.GetComponent<PlayerControllerVer2>();
-            pIndicator.PlayertoDisplay = gPlayer_.GetComponent<PlayerControllerVer2>().sOwner;
-            pIndicator.UpdateSprite();
         }
+
+        GameObject Indicator;
+        Indicator = Instantiate(pIndicator, pIndicator.transform.position, pIndicator.transform.rotation) as GameObject;
+        Indicator.GetComponent<PlayerIndicator>().PlayertoDisplay = gPlayer_.GetComponent<PlayerControllerVer2>().sOwner;
+        Indicator.GetComponent<PlayerIndicator>().Player = gPlayer_;
+        Indicator.GetComponent<PlayerIndicator>().UpdateSprite();
     }
 
     IEnumerator DelayLoad()
