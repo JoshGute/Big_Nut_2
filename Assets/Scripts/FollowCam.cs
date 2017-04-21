@@ -46,6 +46,7 @@ public class FollowCam : MonoBehaviour
     private float ZOOMOUTCAP;
 
     private bool CanZoomIn = true;
+    private Vector3 PositionToResetToAfterDeath;
 
     public GameObject BackGroundImage;
 
@@ -178,6 +179,7 @@ public class FollowCam : MonoBehaviour
 
     private void DeadZoom(string sOwner_)
     {
+        PositionToResetToAfterDeath = transform.position;
         bFollow = false;
         bShake = false;
 
@@ -199,7 +201,8 @@ public class FollowCam : MonoBehaviour
         Time.timeScale = 0.5f;
         yield return new WaitForSeconds(1f);
         Time.timeScale = 1f;
-        bFollow = true;
+        transform.position = PositionToResetToAfterDeath;
+        bFollow = true;       
     }
 
     IEnumerator ScreenShaker(float fShakeAmount_)

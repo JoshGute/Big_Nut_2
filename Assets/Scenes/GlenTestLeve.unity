@@ -341,7 +341,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ab748985e98b2d849a45053e67dbe3ed, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -460,7 +460,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 2000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -1264,7 +1264,7 @@ Transform:
   m_GameObject: {fileID: 676131157}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -556, y: -851, z: 0}
-  m_LocalScale: {x: 231.3023, y: 4807.905, z: 20.421463}
+  m_LocalScale: {x: 231.3023, y: 4807.905, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -1533,7 +1533,7 @@ Transform:
   m_GameObject: {fileID: 803216893}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1300, y: -139, z: 0}
-  m_LocalScale: {x: 231.30212, y: 3663.5212, z: 20.421463}
+  m_LocalScale: {x: 231.30212, y: 3663.5212, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -2652,7 +2652,7 @@ Transform:
   m_GameObject: {fileID: 1594422343}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 579, y: 851, z: 0}
-  m_LocalScale: {x: 231.3023, y: 4807.905, z: 20.421463}
+  m_LocalScale: {x: 231.3023, y: 4807.905, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
@@ -2797,7 +2797,7 @@ Transform:
   m_GameObject: {fileID: 1711282153}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1300, y: -449, z: 0}
-  m_LocalScale: {x: 231.30212, y: 3663.5212, z: 20.421463}
+  m_LocalScale: {x: 231.30212, y: 3663.5212, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -3082,6 +3082,24 @@ Prefab:
       propertyPath: ResultsTracker
       value: 
       objectReference: {fileID: 2000741893}
+    - target: {fileID: 114000013753539094, guid: 332134ab5684e394492f093235ddd913,
+        type: 2}
+      propertyPath: pIndicator
+      value: 
+      objectReference: {fileID: 1145026198410178, guid: a2c69fdc3e6d54947b7610bf3b93ccea,
+        type: 2}
+    - target: {fileID: 114000013753539094, guid: 332134ab5684e394492f093235ddd913,
+        type: 2}
+      propertyPath: pIndicator1
+      value: 
+      objectReference: {fileID: 1145026198410178, guid: a2c69fdc3e6d54947b7610bf3b93ccea,
+        type: 2}
+    - target: {fileID: 114000013753539094, guid: 332134ab5684e394492f093235ddd913,
+        type: 2}
+      propertyPath: pIndicator2
+      value: 
+      objectReference: {fileID: 1421821212551904, guid: 0b54d45c1bf7d1c44835ba16ec4e45cf,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 332134ab5684e394492f093235ddd913, type: 2}
   m_IsPrefabParent: 0

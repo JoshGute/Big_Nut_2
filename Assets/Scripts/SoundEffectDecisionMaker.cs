@@ -33,15 +33,9 @@ public class SoundEffectDecisionMaker : MonoBehaviour
         {
             if (PlayingSFX == false || OverRide)
             {
-                if (INfAudioPriority != 128)
-                {
-                    RobotAudioSource.priority = INfAudioPriority;
-                }
+                RobotAudioSource.priority = INfAudioPriority;
 
-                if (INfAudioVolume != 0.5)
-                {
-                    RobotAudioSource.volume = INfAudioVolume;
-                }
+                RobotAudioSource.volume = INfAudioVolume;
 
                 RobotAudioSource.PlayOneShot(INacSFXtoPlay);
                 CurrentAudioClip = INacSFXtoPlay;

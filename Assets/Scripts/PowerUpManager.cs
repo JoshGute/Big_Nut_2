@@ -39,7 +39,7 @@ public class PowerUpManager : MonoBehaviour
         newPowerUp = Instantiate(PowerUps[randPower].gameObject, PowerSpawns[randSpawn].transform.position, PowerUps[randPower].transform.rotation) as GameObject;
         gPowerUp = newPowerUp;
 
-        PowerUpSpawned(newPowerUp);
+        //PowerUpSpawned(newPowerUp);
         CancelInvoke("SpawnPowerUp");
     }
 

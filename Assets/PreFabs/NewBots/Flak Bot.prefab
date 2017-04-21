@@ -510,7 +510,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1605760969047222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1052.4702, y: 1651.3882, z: -1558.3501}
+  m_LocalPosition: {x: -131.14374, y: 1219.7434, z: -295.78552}
   m_LocalScale: {x: 5.5, y: 5.5, z: 1}
   m_Children:
   - {fileID: 4190474345538020}
@@ -1634,8 +1634,8 @@ MonoBehaviour:
   iNumberofTicks: 1
   fLengthOfTick: 0.3
   fBulletSpacing: 0.1
+  acShootNoise: {fileID: 8300000, guid: 8b53cc22ee859ff479af2aa0c5804c1f, type: 3}
   ReloadNoise: {fileID: 8300000, guid: 5e6e6d26b356f9d47900c2540475a1ac, type: 3}
-  RobotAudioSource: {fileID: 0}
   Reticle: {fileID: 114971991601162182}
   GunShot: {fileID: 1945534561638118, guid: cb10ed3381764df4fa1eef8d4a3f961a, type: 2}
 --- !u!114 &114617546431773108
@@ -1975,8 +1975,8 @@ MonoBehaviour:
   secDashRegenTime: 2
   DashSpeed: 16
   TurnSpeed: 8
-  maxSpeed: 300
-  Speed: 1500
+  maxSpeed: 400
+  Speed: 2000
   aController: {fileID: 114900817012096540}
   Shield: {fileID: 1531540229936308}
   onHit: {fileID: 1945534561638118, guid: cb10ed3381764df4fa1eef8d4a3f961a, type: 2}
@@ -1987,8 +1987,7 @@ MonoBehaviour:
   iHealth: 3
   acHitNoise: {fileID: 8300000, guid: b069d49ba6e2c6c419d7c8f0b7e0acf6, type: 3}
   acShieldNoise: {fileID: 8300000, guid: 50714a94174923d42a7b31cdd432bc6c, type: 3}
-  acShootNoise: {fileID: 8300000, guid: 8b53cc22ee859ff479af2aa0c5804c1f, type: 3}
-  acDashNoise: {fileID: 8300000, guid: 3e0f808964793a54fa741e578a30b75d, type: 3}
+  acDashNoise: {fileID: 8300000, guid: bca791afa8e89fb49a23258640558115, type: 3}
   acEngineNoise: {fileID: 8300000, guid: eb7152a8455603548a16f2beb66a82cd, type: 3}
   gDeathObject: {fileID: 1075299018474024, guid: 8b84e56e156789d49b6ff74094bce2ca,
     type: 2}

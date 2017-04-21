@@ -63,68 +63,75 @@ public class TeamManager : MonoBehaviour
         bool bSpawned = false;
         int randNum = Random.Range(0, sSpawnPoints.Length);
         //int botRandNum = Random.Range(0, gTeam.Length);
-
-        if (bPrioritySpawn)
+        if (hHUD.CheckForWinner() != 0)
         {
-            if (sOwner_ == "PLAYER1")
-            {
-                //print("priority spawn");
-                GameObject gRobot = Instantiate(gTeam[pHolder.Player1Robot], sPrioritySpawn1.transform.position, gTeam[pHolder.Player1Robot].transform.rotation) as GameObject;
-                gRobot.GetComponent<PlayerControllerVer2>().TagRobot(sOwner_);
 
-                bSpawned = true;
-
-                cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 1);
-                hHUD.GetPlayer(gRobot, 1);
-                Instantiate(SpawnBurst, sPrioritySpawn1.transform.position, sPrioritySpawn1.transform.rotation);
-            }
-
-            else
-            {
-                //print("priority spawn");
-                GameObject gRobot = Instantiate(gTeam[pHolder.Player2Robot], sPrioritySpawn2.transform.position, gTeam[pHolder.Player2Robot].transform.rotation) as GameObject;
-                gRobot.GetComponent<PlayerControllerVer2>().TagRobot(sOwner_);
-
-                bSpawned = true;
-
-                cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 2);
-                hHUD.GetPlayer(gRobot, 2);
-                Instantiate(SpawnBurst, sPrioritySpawn2.transform.position, sPrioritySpawn2.transform.rotation);
-            }
         }
-
         else
         {
-            //print("random spawn");
-            while (!bSpawned)
+            if (bPrioritySpawn)
             {
-                if (sSpawnPoints[randNum].bIsSafe)
+                if (sOwner_ == "PLAYER1")
                 {
+                    print("priority spawn");
+                    GameObject gRobot = Instantiate(gTeam[pHolder.Player1Robot], sPrioritySpawn1.transform.position, gTeam[pHolder.Player1Robot].transform.rotation) as GameObject;
+                    gRobot.GetComponent<PlayerControllerVer2>().TagRobot(sOwner_);
+
                     bSpawned = true;
-                    Instantiate(SpawnBurst, sSpawnPoints[randNum].transform.position, sSpawnPoints[randNum].transform.rotation);
 
-                    if (sOwner_ == "PLAYER1")
-                    {
-                        GameObject gRobot = Instantiate(gTeam[pHolder.Player1Robot], sSpawnPoints[randNum].transform.position, gTeam[pHolder.Player1Robot].transform.rotation) as GameObject;
-                        gRobot.GetComponent<PlayerControllerVer2>().TagRobot(sOwner_);
-                        cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 1);
-                        hHUD.GetPlayer(gRobot, 1);
-                    }
-
-                    else
-                    {
-                        GameObject gRobot = Instantiate(gTeam[pHolder.Player2Robot], sSpawnPoints[randNum].transform.position, gTeam[pHolder.Player2Robot].transform.rotation) as GameObject;
-                        gRobot.GetComponent<PlayerControllerVer2>().TagRobot(sOwner_);
-                        cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 2);
-                        hHUD.GetPlayer(gRobot, 2);
-                    }
+                    cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 1);
+                    hHUD.GetPlayer(gRobot, 1);
+                    Instantiate(SpawnBurst, sPrioritySpawn1.transform.position, sPrioritySpawn1.transform.rotation);
                 }
 
                 else
                 {
-                    randNum = Random.Range(0, sSpawnPoints.Length);
+                    print("priority spawn");
+                    GameObject gRobot = Instantiate(gTeam[pHolder.Player2Robot], sPrioritySpawn2.transform.position, gTeam[pHolder.Player2Robot].transform.rotation) as GameObject;
+                    gRobot.GetComponent<PlayerControllerVer2>().TagRobot(sOwner_);
+
+                    bSpawned = true;
+
+                    cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 2);
+                    hHUD.GetPlayer(gRobot, 2);
+                    Instantiate(SpawnBurst, sPrioritySpawn2.transform.position, sPrioritySpawn2.transform.rotation);
                 }
             }
-        }
+
+            else
+            {
+                print("random spawn");
+                while (!bSpawned)
+                {
+                    if (sSpawnPoints[randNum].bIsSafe)
+                    {
+                        print("trying");
+                        bSpawned = true;
+                        Instantiate(SpawnBurst, sSpawnPoints[randNum].transform.position, sSpawnPoints[randNum].transform.rotation);
+
+                        if (sOwner_ == "PLAYER1")
+                        {
+                            GameObject gRobot = Instantiate(gTeam[pHolder.Player1Robot], sSpawnPoints[randNum].transform.position, gTeam[pHolder.Player1Robot].transform.rotation) as GameObject;
+                            gRobot.GetComponent<PlayerControllerVer2>().TagRobot(sOwner_);
+                            cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 1);
+                            hHUD.GetPlayer(gRobot, 1);
+                        }
+
+                        else
+                        {
+                            GameObject gRobot = Instantiate(gTeam[pHolder.Player2Robot], sSpawnPoints[randNum].transform.position, gTeam[pHolder.Player2Robot].transform.rotation) as GameObject;
+                            gRobot.GetComponent<PlayerControllerVer2>().TagRobot(sOwner_);
+                            cCamera.GetComponent<FollowCam>().GetTarget(gRobot, 2);
+                            hHUD.GetPlayer(gRobot, 2);
+                        }
+                    }
+
+                    else
+                    {
+                        randNum = Random.Range(0, sSpawnPoints.Length);
+                    }
+                }
+            }
+        }     
     }
 }

@@ -48,6 +48,9 @@ public class HUD : MonoBehaviour
 
     public GameObject ResultsTracker;
 
+    public GameObject pIndicator1;
+    public GameObject pIndicator2;
+
     void OnEnable()
     {
        PlayerControllerVer2.Die += UpdateBotsLeft;
@@ -74,21 +77,21 @@ public class HUD : MonoBehaviour
         P1hp.GetComponent<Text>().text = PlayerOne.iHealth.ToString();
         P1hp.GetComponent<Text>().text = PlayerOne.iHealth.ToString();
     }
-	
-	// Update is called once per frame
+
+    // Update is called once per frame
 
     void UpdateHealth(string sOwner_)
     {
-        fCam.Shake(20.0f);
-
         if (sOwner_ == "PLAYER1")
         {
             P1hp.GetComponent<Text>().text = PlayerOne.iHealth.ToString();
+            fCam.Shake(20.0f);
         }
 
         else if (sOwner_ == "PLAYER2")
         {
             P2hp.GetComponent<Text>().text = PlayerTwo.iHealth.ToString();
+            fCam.Shake(20.0f);
         }
     }
 
@@ -149,17 +152,43 @@ public class HUD : MonoBehaviour
         if (iPlayer_ == 1)
         {
             PlayerOne = gPlayer_.GetComponent<PlayerControllerVer2>();
+            GameObject Indicator;
+            Indicator = Instantiate(pIndicator1, pIndicator1.transform.position, pIndicator1.transform.rotation) as GameObject;
+            Indicator.GetComponent<PlayerIndicator>().PlayertoDisplay = gPlayer_.GetComponent<PlayerControllerVer2>().sOwner;
+            Indicator.GetComponent<PlayerIndicator>().Player = gPlayer_;
+            Indicator.GetComponent<PlayerIndicator>().UpdateSprite();
         }
 
         else
         {
             PlayerTwo = gPlayer_.GetComponent<PlayerControllerVer2>();
+            GameObject Indicator;
+            Indicator = Instantiate(pIndicator2, pIndicator2.transform.position, pIndicator2.transform.rotation) as GameObject;
+            Indicator.GetComponent<PlayerIndicator>().PlayertoDisplay = gPlayer_.GetComponent<PlayerControllerVer2>().sOwner;
+            Indicator.GetComponent<PlayerIndicator>().Player = gPlayer_;
+            Indicator.GetComponent<PlayerIndicator>().UpdateSprite();
         }
     }
 
     IEnumerator DelayLoad()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.1f);
         SceneManager.LoadScene(2);
+    }
+
+    public int CheckForWinner()
+    {
+        if (P1Kills >= MaxKills)
+        {
+            return 1;
+        }
+        else if (P2Kills >= MaxKills)
+        {
+            return 2;
+        }
+        else
+        {
+            return 0;
+        } 
     }
 }
