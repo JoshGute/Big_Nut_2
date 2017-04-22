@@ -85,13 +85,13 @@ public class HUD : MonoBehaviour
         if (sOwner_ == "PLAYER1")
         {
             P1hp.GetComponent<Text>().text = PlayerOne.iHealth.ToString();
-            fCam.Shake(20.0f);
+            fCam.Shake(10.0f);
         }
 
         else if (sOwner_ == "PLAYER2")
         {
             P2hp.GetComponent<Text>().text = PlayerTwo.iHealth.ToString();
-            fCam.Shake(20.0f);
+            fCam.Shake(10.0f);
         }
     }
 

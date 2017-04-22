@@ -2,7 +2,9 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class SplashScreenController : MonoBehaviour {
+public class SplashScreenController : MonoBehaviour
+{
+    public Button startingButton;
 
 	[SerializeField]
 	private Animator DigipenSplashScreenAnimator;
@@ -38,9 +40,10 @@ public class SplashScreenController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		//Interrupting the splash screens
-		if (Input.anyKeyDown) 
+        //Interrupting the splash screens
+        if (Input.anyKeyDown || Input.GetButtonDown("Submit"))
 		{
+            startingButton.Select();
 			//Hiding unnecessary screens
 			DigipenSplashScreenAnimator.enabled = false;
 			TeamSplashScreenAnimator.enabled = false;
@@ -89,7 +92,8 @@ public class SplashScreenController : MonoBehaviour {
 
 	IEnumerator ShowStartScreen()
 	{
-		GameSplashScreenAnimator.SetBool("Activate", true);
+        startingButton.Select();
+        GameSplashScreenAnimator.SetBool("Activate", true);
 		StartButtonAnimator.SetBool ("Activate", true);
         HTPButtonAnimator.SetBool("Activate", true);
         QuitButtonAnimator.SetBool("Activate", true);
