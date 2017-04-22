@@ -133,7 +133,7 @@ public class RobotSelectLogic : MonoBehaviour
             StartText.GetComponent<Text>().enabled = true;
             if(State.Buttons.Start == ButtonState.Pressed && PrevState.Buttons.Start == ButtonState.Released)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
         }
 
