@@ -20,6 +20,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using XInputDotNetPure;
 
 public class HUD : MonoBehaviour
 {
@@ -171,8 +172,10 @@ public class HUD : MonoBehaviour
     }
 
     IEnumerator DelayLoad()
-    {
+    {     
         yield return new WaitForSeconds(1.1f);
+        GamePad.SetVibration(PlayerOne.playerIndex, 0, 0);
+        GamePad.SetVibration(PlayerTwo.playerIndex, 0, 0);
         SceneManager.LoadScene("Results");
     }
 

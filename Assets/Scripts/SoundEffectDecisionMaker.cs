@@ -44,13 +44,13 @@ public class SoundEffectDecisionMaker : MonoBehaviour
             }
             else
             {
-                print("can't override");
+                //print("can't override");
             }
         }
 
         else
         {
-            print("More Important Sound " + CurrentAudioClip);
+            //print("More Important Sound " + CurrentAudioClip);
         }
     }
 }

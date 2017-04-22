@@ -58,12 +58,16 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             Pause();
+            GamePad.SetVibration(playerIndex, 0, 0);
+            GamePad.SetVibration(playerIndex2, 0, 0);
         }
 
         if (state.Buttons.Start == ButtonState.Pressed && prevState.Buttons.Start == ButtonState.Released || 
             state2.Buttons.Start == ButtonState.Pressed && prevState2.Buttons.Start == ButtonState.Released)
         {
             Pause();
+            GamePad.SetVibration(playerIndex, 0, 0);
+            GamePad.SetVibration(playerIndex2, 0, 0);
         }
     }
 

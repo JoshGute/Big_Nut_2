@@ -133,6 +133,10 @@ public class RobotSelectLogic : MonoBehaviour
             StartText.GetComponent<Text>().enabled = true;
             if(State.Buttons.Start == ButtonState.Pressed && PrevState.Buttons.Start == ButtonState.Released)
             {
+                foreach (RobotSelectLogic billy in FindObjectsOfType<RobotSelectLogic>())
+                {
+                    GamePad.SetVibration(billy.playerIndex, 0, 0);
+                }
                 SceneManager.LoadScene(2);
             }
         }
