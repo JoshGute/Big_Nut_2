@@ -58,7 +58,7 @@ public class TeamManager : MonoBehaviour
     private void Spawn(string sOwner_)
     {
         //hoo boy
-        print("spawn called");
+        //print("spawn called");
 
         bool bSpawned = false;
         int randNum = Random.Range(0, sSpawnPoints.Length);
@@ -73,7 +73,7 @@ public class TeamManager : MonoBehaviour
             {
                 if (sOwner_ == "PLAYER1")
                 {
-                    print("priority spawn");
+                    //print("priority spawn");
                     GameObject gRobot = Instantiate(gTeam[pHolder.Player1Robot], sPrioritySpawn1.transform.position, gTeam[pHolder.Player1Robot].transform.rotation) as GameObject;
                     gRobot.GetComponent<PlayerControllerVer2>().TagRobot(sOwner_);
 
@@ -86,7 +86,7 @@ public class TeamManager : MonoBehaviour
 
                 else
                 {
-                    print("priority spawn");
+                    //print("priority spawn");
                     GameObject gRobot = Instantiate(gTeam[pHolder.Player2Robot], sPrioritySpawn2.transform.position, gTeam[pHolder.Player2Robot].transform.rotation) as GameObject;
                     gRobot.GetComponent<PlayerControllerVer2>().TagRobot(sOwner_);
 
@@ -100,12 +100,12 @@ public class TeamManager : MonoBehaviour
 
             else
             {
-                print("random spawn");
+                //print("random spawn");
                 while (!bSpawned)
                 {
                     if (sSpawnPoints[randNum].bIsSafe)
                     {
-                        print("trying");
+                        //print("trying");
                         bSpawned = true;
                         Instantiate(SpawnBurst, sSpawnPoints[randNum].transform.position, sSpawnPoints[randNum].transform.rotation);
 

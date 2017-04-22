@@ -33,7 +33,6 @@ public class BorderHider : MonoBehaviour {
 
     void OnTriggerStay(Collider col)
     {
-        print("bool");
         if (col.GetComponent<PlayerControllerVer2>())
         {
             RevealObject = true;
