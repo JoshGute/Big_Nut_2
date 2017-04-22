@@ -29,6 +29,8 @@ public class SplashScreenController : MonoBehaviour
     [SerializeField]
     private Animator HTPButtonAnimator;
     [SerializeField]
+    private Animator CreditsButtonAnimator;
+    [SerializeField]
     private Animator QuitButtonAnimator;
 
 	// Use this for initialization
@@ -96,6 +98,7 @@ public class SplashScreenController : MonoBehaviour
         GameSplashScreenAnimator.SetBool("Activate", true);
 		StartButtonAnimator.SetBool ("Activate", true);
         HTPButtonAnimator.SetBool("Activate", true);
+        CreditsButtonAnimator.SetBool("Activate", true);
         QuitButtonAnimator.SetBool("Activate", true);
 	}
 }
