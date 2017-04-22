@@ -57,7 +57,7 @@ public class SplashScreenController : MonoBehaviour
 			StopCoroutine ("ActivateAnimation");
 
 			//Skipping to the start screen
-			StartCoroutine (ShowStartScreen());
+			ShowStartScreen();
 		}
 	}
 
@@ -87,17 +87,15 @@ public class SplashScreenController : MonoBehaviour
 
 		yield return new WaitForSeconds (1f);
 
-		StartCoroutine(ShowStartScreen ());
+        ShowStartScreen();
 	}
 
-	IEnumerator ShowStartScreen()
+	public void ShowStartScreen()
 	{
         startingButton.Select();
         GameSplashScreenAnimator.SetBool("Activate", true);
 		StartButtonAnimator.SetBool ("Activate", true);
         HTPButtonAnimator.SetBool("Activate", true);
         QuitButtonAnimator.SetBool("Activate", true);
-
-		yield return new WaitForSeconds (100f);
 	}
 }
