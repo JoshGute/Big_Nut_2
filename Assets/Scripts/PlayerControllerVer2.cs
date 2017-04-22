@@ -111,6 +111,7 @@ public class PlayerControllerVer2 : MonoBehaviour
     public AudioClip acEngineNoise;
 
     public GameObject gDeathObject;
+    public GameObject gDeathExplosion;
     public ParticleSpawner particleSpawner;
 
     public tk2dSprite robotSkin;
@@ -586,6 +587,7 @@ public class PlayerControllerVer2 : MonoBehaviour
   private void Explode()
     {
         Instantiate(gDeathObject, gameObject.transform.position, gameObject.transform.rotation);
+        Instantiate(gDeathExplosion, gameObject.transform.position, gameObject.transform.rotation);
         StartCoroutine(Vibrate(1, 0.5f));
         StartCoroutine(Death());
     }

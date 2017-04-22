@@ -416,8 +416,8 @@ MonoBehaviour:
     - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
         type: 2}
       spriteId: 84
-      triggerEvent: 0
-      eventInfo: 
+      triggerEvent: 1
+      eventInfo: Completed
       eventInt: 0
       eventFloat: 0
     fps: 30
@@ -470,8 +470,8 @@ MonoBehaviour:
     - spriteCollection: {fileID: 114243465905051110, guid: 9654b4894c4161943885205bd4de5c90,
         type: 2}
       spriteId: 91
-      triggerEvent: 0
-      eventInfo: 
+      triggerEvent: 1
+      eventInfo: Completed
       eventInt: 0
       eventFloat: 0
     fps: 30

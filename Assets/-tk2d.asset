@@ -2759,6 +2759,16 @@ MonoBehaviour:
     - DashArrow_FulltoEmpty/2
     - DashArrow_FulltoEmpty/3
     - DashArrow_FulltoEmpty/4
+    - Button_No/0
+    - Button_Yes/0
+    - Button_StartGame/0
+    - Button_AreYouSure/0
+    - Button_Credits/0
+    - Button_HowtoPlay/0
+    - Button_QuitGame/0
+    - Button_Options/0
+    - Title_BoltBlitz/0
+    - Sign_Fight/0
     spriteTextureGUIDs:
     - d3bc9acbb049d4b4891e424a1404fc1f
     - 296a7b31cf477f54b8069a804703ce9a
@@ -2811,6 +2821,16 @@ MonoBehaviour:
     - 1e62a5a10324d3d4d94d1a816f72c63a
     - 1e62a5a10324d3d4d94d1a816f72c63a
     - 1e62a5a10324d3d4d94d1a816f72c63a
+    - 71d6a54767a24d04b8d4f68e950389eb
+    - 377ec4a8b55aac843ade634d4d32b352
+    - b352769fbce3cb549ab7f93b93becc90
+    - 14b71361aae8fff42b617d9eae7edd33
+    - 7bcb191fe0a3a344f82966148b3222fa
+    - e0897191c35453743a45098abcf04cd0
+    - 57d12b2703b8fd44996fed0b9d259153
+    - 391eb6d173a8faf4fad4ce27c5ef534d
+    - 6b0d22d27a959274194a319c3b45cc77
+    - 8fcf1e6d78a128940b26deb4a75a08a8
     spriteTextureTimeStamps:
     - 1489765458.9567
     - 1490813713.08444
@@ -2863,6 +2883,16 @@ MonoBehaviour:
     - 1492116416.48259
     - 1492116416.48259
     - 1492116416.48259
+    - 1492715842.21835
+    - 1492715826.35498
+    - 1492715748.14117
+    - 1492715877.87919
+    - 1492715811.10516
+    - 1492715797.57027
+    - 1492715765.8528
+    - 1492715780.84622
+    - 1492715982.72783
+    - 1492716353.50977
     managedSpriteCollection: 0
     loadable: 0
     assetName: 
@@ -3368,14 +3398,14 @@ MonoBehaviour:
     - 1ba30a959d42bb943a60ecc6070574f8
     - 1ba30a959d42bb943a60ecc6070574f8
     spriteTextureTimeStamps:
-    - 1489766894.63542
-    - 1489766892.75259
+    - 1492719780.43574
+    - 1492717613.25657
     - 1489766890.59402
     - 1489766888.42475
-    - 1489151668.67022
+    - 1492717673.25881
     - 1489151686.51927
     - 1489151702.71681
-    - 1489151719.10647
+    - 1492717637.30456
     - 1489767582.97953
     - 1492029515.15396
     - 1492029515.15396
