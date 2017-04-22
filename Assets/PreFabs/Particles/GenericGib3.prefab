@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114907310297783092}
   m_Layer: 0
   m_Name: GenericGib3
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

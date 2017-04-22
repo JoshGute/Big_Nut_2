@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 114911902549199908}
   m_Layer: 0
   m_Name: Sightline_Gib6
-  m_TagString: Gib
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 114074494709854376}
   m_Layer: 0
   m_Name: Sightline_Gib1
-  m_TagString: Gib
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 114967633226045374}
   m_Layer: 0
   m_Name: Sightline_Gib5
-  m_TagString: Gib
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 114144682283219544}
   m_Layer: 0
   m_Name: Sightline_Gib7
-  m_TagString: Gib
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 114979623932752638}
   m_Layer: 0
   m_Name: Sightline_Gib2
-  m_TagString: Gib
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 114303086031244168}
   m_Layer: 0
   m_Name: OilSpring
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 114142310269072528}
   m_Layer: 0
   m_Name: Sightline_Gib4
-  m_TagString: Gib
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 114281226969477026}
   m_Layer: 0
   m_Name: Sightline_Gib3
-  m_TagString: Gib
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

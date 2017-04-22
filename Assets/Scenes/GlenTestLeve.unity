@@ -749,7 +749,7 @@ GameObject:
   - component: {fileID: 277146891}
   - component: {fileID: 277146890}
   - component: {fileID: 277146889}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: TopReveal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -839,7 +839,7 @@ GameObject:
   - component: {fileID: 349164260}
   - component: {fileID: 349164259}
   - component: {fileID: 349164258}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: LeftReveal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1379,7 +1379,7 @@ GameObject:
   - component: {fileID: 704457331}
   - component: {fileID: 704457330}
   - component: {fileID: 704457329}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: SBRevealTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1881,7 +1881,7 @@ GameObject:
   - component: {fileID: 767626636}
   - component: {fileID: 767626635}
   - component: {fileID: 767626634}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: SBRevealLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2024,7 +2024,7 @@ GameObject:
   - component: {fileID: 884285121}
   - component: {fileID: 884285120}
   - component: {fileID: 884285123}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: BotReveal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2142,7 +2142,7 @@ GameObject:
   - component: {fileID: 1019332761}
   - component: {fileID: 1019332760}
   - component: {fileID: 1019332759}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: RightReveal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2204,7 +2204,7 @@ GameObject:
   - component: {fileID: 1078492103}
   - component: {fileID: 1078492102}
   - component: {fileID: 1078492101}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: SBRevealRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2938,7 +2938,7 @@ GameObject:
   - component: {fileID: 1393582531}
   - component: {fileID: 1393582530}
   - component: {fileID: 1393582529}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: SBRevealBot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

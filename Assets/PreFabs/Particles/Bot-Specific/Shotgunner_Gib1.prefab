@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114196557964727254}
   m_Layer: 0
   m_Name: Shotgunner_Gib1
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

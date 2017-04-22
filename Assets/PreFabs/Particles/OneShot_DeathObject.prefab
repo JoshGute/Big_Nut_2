@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114274412676736010}
   m_Layer: 0
   m_Name: OneShot_DeathObject
-  m_TagString: Untagged
+  m_TagString: Gib
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114632121859456202}
   m_Layer: 0
   m_Name: OneShot_Gib3
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +65,7 @@ GameObject:
   - component: {fileID: 114641892726539278}
   m_Layer: 0
   m_Name: OneShot_Gib6
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 114971416702290824}
   m_Layer: 0
   m_Name: OneShot_Gib7
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 114558581905080782}
   m_Layer: 0
   m_Name: OneShot_Gib4
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 114048872102578628}
   m_Layer: 0
   m_Name: OneShot_Gib2
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 65651018504553322}
   m_Layer: 0
   m_Name: OneShot_Gib1
-  m_TagString: Gib
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 114440199746866036}
   m_Layer: 0
   m_Name: OilSpring
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 114576991901706150}
   m_Layer: 0
   m_Name: OneShot_Gib5
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

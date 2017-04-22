@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114393110361430750}
   m_Layer: 0
   m_Name: Shotgunner_Gib1
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 114099585694662174}
   m_Layer: 0
   m_Name: Shotgunner_Gib4
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +65,7 @@ GameObject:
   - component: {fileID: 114120603319132674}
   m_Layer: 0
   m_Name: ShotGunner_DeathObject
-  m_TagString: Untagged
+  m_TagString: Gib
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 114019518080177812}
   m_Layer: 0
   m_Name: Shotgunner_Gib6
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 114050351836590884}
   m_Layer: 0
   m_Name: Shotgunner_Gib5
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 114505766676729102}
   m_Layer: 0
   m_Name: Shotgunner_Gib2
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 114681871668192216}
   m_Layer: 0
   m_Name: Shotgunner_Gib3
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 114423879807620288}
   m_Layer: 0
   m_Name: Shotgunner_Gib7
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 114019098731692940}
   m_Layer: 0
   m_Name: OilSpring
-  m_TagString: Untagged
+  m_TagString: Bits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

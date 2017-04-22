@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -436,13 +436,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIndex: 0
+  playerIndex2: 1
   WinningBot: {fileID: 1560916034}
   LosingBot: {fileID: 2124898751}
   SelectedRobots: {fileID: 0}
   GameResults: {fileID: 0}
-  DVaBot: {fileID: 21300000, guid: 9327aaa0203a4c444abaf4fc7f13167a, type: 3}
-  S76Bot: {fileID: 21300000, guid: 10923d5fd273728429937d5eebb75393, type: 3}
-  FlackBot: {fileID: 21300000, guid: fc930e07474716541a1a0ccfd8f8f24b, type: 3}
+  Bots:
+  - {fileID: 21300000, guid: 9327aaa0203a4c444abaf4fc7f13167a, type: 3}
+  - {fileID: 21300000, guid: fc930e07474716541a1a0ccfd8f8f24b, type: 3}
+  - {fileID: 21300000, guid: 10923d5fd273728429937d5eebb75393, type: 3}
   WinnerText: {fileID: 1642378735}
 --- !u!1 &432404153
 GameObject:
@@ -476,7 +478,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -19.793001}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -650, y: 193}
+  m_AnchoredPosition: {x: -535, y: 186}
   m_SizeDelta: {x: 313, y: 284}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &432404155
@@ -544,7 +546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 693, y: -200}
+  m_AnchoredPosition: {x: 594, y: -200}
   m_SizeDelta: {x: 512, y: 386}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &591810009
@@ -628,7 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -720,7 +722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -863,7 +865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -990,7 +992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 792, y: 244}
+  m_AnchoredPosition: {x: 597, y: 244}
   m_SizeDelta: {x: 512, y: 386}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1188302987
@@ -1379,7 +1381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1471,7 +1473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1532,7 +1534,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -649, y: -313}
+  m_AnchoredPosition: {x: -540, y: -152}
   m_SizeDelta: {x: 302, y: 267}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1685986220
@@ -4313,7 +4315,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.8698519}
   m_AnchorMax: {x: 0.47700003, y: 1}
-  m_AnchoredPosition: {x: 397, y: -144}
+  m_AnchoredPosition: {x: 276, y: -144}
   m_SizeDelta: {x: -538, y: -0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870416365
@@ -4328,7 +4330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4345,8 +4347,8 @@ MonoBehaviour:
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Results!
 --- !u!222 &1870416366
@@ -4371,7 +4373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1936579387
 RectTransform:
   m_ObjectHideFlags: 0

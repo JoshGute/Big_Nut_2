@@ -136,7 +136,7 @@ public class FollowCam : MonoBehaviour
                 }
 
                 //Checks if our distance decreased and if we are too zoomed out.
-                else if (CanZoomIn && NewTargetDistance < (OldTargetDistance - 1) && transform.position.z < ZOOMINCAP)
+                else if (CanZoomIn && NewTargetDistance < (OldTargetDistance - 1) && transform.position.z < ZOOMINCAP && CanZoomIn)
                 {
                     target.z += ZoomInRate;
                     //BackGroundImage.transform.position = new Vector3(BackGroundImage.transform.position.x, BackGroundImage.transform.position.y, BackGroundImage.transform.position.z + ZoomInRate);

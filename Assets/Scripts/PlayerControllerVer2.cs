@@ -525,11 +525,15 @@ public class PlayerControllerVer2 : MonoBehaviour
 
   void OnCollisionEnter(Collision collision)
   {
-    if (collision.gameObject.tag == "Bullet" && collision.gameObject.GetComponent<BulletScript>().sOwner != sOwner 
-      && !lockShoot)
-    {
-      TakeDamage();
-    }
+      if (collision.gameObject.tag == null)
+      {
+          if (collision.gameObject.tag == "Bullet" && collision.gameObject.GetComponent<BulletScript>().sOwner != sOwner
+                                                                                                            && !lockShoot)
+          {
+              TakeDamage();
+          }
+      }
+    
   }
 
   void OnTriggerEnter(Collider trigger)
