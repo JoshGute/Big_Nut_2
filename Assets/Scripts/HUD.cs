@@ -131,7 +131,7 @@ public class HUD : MonoBehaviour
             WinText.gameObject.SetActive(true);
             WinText.text = "Player 1 Wins!";
             ResultsTracker.GetComponent<GameResults>().Results = 1;
-            //SceneManager.LoadScene(2);
+            //SceneManager.LoadScene("Results");
         }
 
         else if (inWinner == "Player2")
@@ -139,7 +139,7 @@ public class HUD : MonoBehaviour
             WinText.gameObject.SetActive(true);
             WinText.text = "Player 2 Wins!";
             ResultsTracker.GetComponent<GameResults>().Results = 2;
-            //SceneManager.LoadScene(2);
+            //SceneManager.LoadScene("Results");
         }
 
         //RestartButton.gameObject.SetActive(true);
@@ -173,7 +173,7 @@ public class HUD : MonoBehaviour
     IEnumerator DelayLoad()
     {
         yield return new WaitForSeconds(1.1f);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Results");
     }
 
     public int CheckForWinner()

@@ -196,7 +196,7 @@ public class FollowCam : MonoBehaviour
 
     IEnumerator ZoomingIn(Vector3 vTarget)
     {
-        transform.position = new Vector3(vTarget.x, vTarget.y, -60);
+        transform.position = new Vector3(vTarget.x, vTarget.y, -300);
         //BackGroundImage.transform.position = new Vector3(BackGroundImage.transform.position.x, BackGroundImage.transform.position.y, BackGroundImage.transform.position.z -150);
         Time.timeScale = 0.5f;
         yield return new WaitForSeconds(1f);
