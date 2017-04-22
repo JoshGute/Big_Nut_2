@@ -617,7 +617,7 @@ public class PlayerControllerVer2 : MonoBehaviour
     {
         robotSkin.color = Color.clear;
         bDisabled = true;  
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         Die(sOwner);
         yield return new WaitForSeconds(0.5f);       
         Destroy(gameObject);

@@ -65,7 +65,7 @@ public class TeamManager : MonoBehaviour
         //int botRandNum = Random.Range(0, gTeam.Length);
         if (hHUD.CheckForWinner() != 0)
         {
-
+            return;
         }
         else
         {
