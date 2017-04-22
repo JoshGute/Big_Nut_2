@@ -20,6 +20,8 @@ using UnityEngine;
 using System.Collections;
 using XInputDotNetPure;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -27,12 +29,16 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject gPauseMenu;
 
-    public GameObject gstartingButton;
+    public Button startingButton;
     public EventSystem eEventSystem;
 
     public PlayerIndex playerIndex;
     GamePadState state;
     GamePadState prevState;
+
+    public PlayerIndex playerIndex2;
+    GamePadState state2;
+    GamePadState prevState2;
 
     // Use this for initialization
     void Start ()
@@ -46,12 +52,16 @@ public class PauseMenu : MonoBehaviour
         prevState = state;
         state = GamePad.GetState(playerIndex);
 
+        prevState2 = state2;
+        state2 = GamePad.GetState(playerIndex2);
+
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             Pause();
         }
 
-        if (state.Buttons.Start == ButtonState.Pressed && prevState.Buttons.Start == ButtonState.Released)
+        if (state.Buttons.Start == ButtonState.Pressed && prevState.Buttons.Start == ButtonState.Released || 
+            state2.Buttons.Start == ButtonState.Pressed && prevState2.Buttons.Start == ButtonState.Released)
         {
             Pause();
         }
@@ -84,7 +94,7 @@ public class PauseMenu : MonoBehaviour
                     tChild.gameObject.SetActive(false);
                 }
             }
-
+            
             gPauseMenu.SetActive(false);
         }
 
@@ -104,9 +114,8 @@ public class PauseMenu : MonoBehaviour
             {
                 pController.bDisabled = true;
             }
-
+            startingButton.Select();
             gPauseMenu.SetActive(true);
-            ChangeButton(gstartingButton);
         }
 
     }
@@ -132,7 +141,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Reset()
     {
-        Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
         gPauseMenu.SetActive(false);
 
