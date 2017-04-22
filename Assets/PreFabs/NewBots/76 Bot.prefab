@@ -1312,6 +1312,8 @@ MonoBehaviour:
   acEngineNoise: {fileID: 8300000, guid: eb7152a8455603548a16f2beb66a82cd, type: 3}
   gDeathObject: {fileID: 1382753324070256, guid: 718d9365a14d4ea439ca50fd0113b31d,
     type: 2}
+  gDeathExplosion: {fileID: 1708465492270392, guid: 165cb344b350e7547a108b273dc061fc,
+    type: 2}
   particleSpawner: {fileID: 114969668316601498}
   robotSkin: {fileID: 114726913090235934}
 --- !u!114 &114059671182751854

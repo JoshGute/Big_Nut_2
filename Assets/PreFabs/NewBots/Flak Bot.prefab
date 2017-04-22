@@ -1991,6 +1991,8 @@ MonoBehaviour:
   acEngineNoise: {fileID: 8300000, guid: eb7152a8455603548a16f2beb66a82cd, type: 3}
   gDeathObject: {fileID: 1075299018474024, guid: 8b84e56e156789d49b6ff74094bce2ca,
     type: 2}
+  gDeathExplosion: {fileID: 1708465492270392, guid: 165cb344b350e7547a108b273dc061fc,
+    type: 2}
   particleSpawner: {fileID: 114714656997507916}
   robotSkin: {fileID: 114136715064901194}
 --- !u!135 &135250115800931152
