@@ -91,20 +91,20 @@ public class BulletScript : MonoBehaviour
     {
         if (trigger.gameObject.layer != 5 && trigger.gameObject.layer != 2)
         {
-            print("In There " + trigger.gameObject.layer);
+            //print("In There " + trigger.gameObject.layer);
             if(trigger.gameObject.layer == 10 && trigger.gameObject.GetComponent<PlayerControllerVer2>())
             {
-                print("Play? " + trigger.gameObject.layer);
+                //print("Play? " + trigger.gameObject.layer);
                 if (trigger.gameObject.GetComponent<PlayerControllerVer2>().sOwner == sOwner)
                 {
-                    print("Hit SELF");
+                    //print("Hit SELF");
                     return;
                 }
             }
 
             else
             {
-                print("working as intended " + trigger.gameObject.layer);
+                //print("working as intended " + trigger.gameObject.layer);
                 KillBullet();
             }
         }

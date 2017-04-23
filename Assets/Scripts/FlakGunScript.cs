@@ -69,7 +69,7 @@ public class FlakGunScript : BulletScript {
 
     void OnTriggerEnter(Collider trigger)
     {
-        if (trigger.gameObject.layer != 5)
+        if (trigger.gameObject.layer != 5 && trigger.gameObject.layer != 2)
         {
             if (trigger.gameObject.layer == 10 && trigger.gameObject.GetComponent<PlayerControllerVer2>())
             {
