@@ -79,7 +79,8 @@ public class ResultsController : MonoBehaviour
         if(State.Buttons.Start == ButtonState.Pressed && PrevState.Buttons.Start == ButtonState.Released ||
            state2.Buttons.Start == ButtonState.Pressed && prevState2.Buttons.Start == ButtonState.Released)
         {
-            Destroy(FindObjectOfType<PlayerHolder>().gameObject);
+            Destroy(SelectedRobots.gameObject);
+            Destroy(GameResults.gameObject);
             SceneManager.LoadScene(1);
             //Debug.Log("Start was pressed");
         }
