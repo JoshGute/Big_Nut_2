@@ -1,4 +1,4 @@
-﻿/*******************************  SpaceTube  *********************************
+﻿/*******************************  Ducks in a Row   *********************************
 Author: Glen Aro
 Contributors: Matty Lanouette, Josh Gutenberg
 Course: GAM400
