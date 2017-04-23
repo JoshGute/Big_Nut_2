@@ -157,9 +157,9 @@ public class PauseMenu : MonoBehaviour
     }
 
 
-    public void ChangeButton(GameObject gTarget_)
+    public void ChangeButton(Button Selectable_)
     {
-        eEventSystem.SetSelectedGameObject(gTarget_);
+        Selectable_.Select();
     }
 
 }
