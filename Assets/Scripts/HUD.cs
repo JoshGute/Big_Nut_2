@@ -47,7 +47,7 @@ public class HUD : MonoBehaviour
 
     public FollowCam fCam;
 
-    public GameObject ResultsTracker;
+    public GameResults ResultsTracker;
 
     public GameObject pIndicator1;
     public GameObject pIndicator2;
@@ -127,24 +127,16 @@ public class HUD : MonoBehaviour
     {
         
 
-        if (inWinner == "Player1")
+        if (inWinner == "PLAYER2")
         {
-            WinText.gameObject.SetActive(true);
-            WinText.text = "Player 1 Wins!";
-            ResultsTracker.GetComponent<GameResults>().Results = 1;
-            //SceneManager.LoadScene("Results");
+            ResultsTracker.Results = 1;
         }
 
-        else if (inWinner == "Player2")
+        else if (inWinner == "PLAYER1")
         {
-            WinText.gameObject.SetActive(true);
-            WinText.text = "Player 2 Wins!";
-            ResultsTracker.GetComponent<GameResults>().Results = 2;
-            //SceneManager.LoadScene("Results");
+            ResultsTracker.Results = 2;
         }
 
-        //RestartButton.gameObject.SetActive(true);
-        //Cursor.visible = true;
         StartCoroutine("DelayLoad");
     }
 
