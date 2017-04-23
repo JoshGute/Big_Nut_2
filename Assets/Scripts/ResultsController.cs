@@ -33,10 +33,10 @@ public class ResultsController : MonoBehaviour
 	void Start ()
     {
         //Debug.Log("im actually running");
-        SelectedRobots = GameObject.FindObjectOfType<PlayerHolder>();
-        GameResults = GameObject.FindObjectOfType<GameResults>();
+        SelectedRobots = FindObjectOfType<PlayerHolder>();
+        GameResults = FindObjectOfType<GameResults>();
 
-        if (GameResults.Results == 0)
+        if (GameResults.Results == 1)
         {
             WinnerText.GetComponent<Text>().text = "1";
             SetBots(SelectedRobots.Player1Robot, SelectedRobots.Player2Robot);
